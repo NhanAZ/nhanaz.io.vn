@@ -41,8 +41,10 @@ jobs:
           cache: yarn
       - name: Install dependencies
         run: yarn install --frozen-lockfile --non-interactive
+      - name: Clean build directory
+        run: rm -rf build
       - name: Build
-        run: yarn build --verbose
+        run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
