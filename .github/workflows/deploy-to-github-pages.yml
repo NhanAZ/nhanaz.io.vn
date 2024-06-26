@@ -41,7 +41,7 @@ jobs:
           node-version: 16.x
           cache: npm
       - name: Install dependencies
-        run: npx install --frozen-lockfile --non-interactive
+        run: npm ci --ignore-scripts --no-audit --prefer-offline
       - name: Build
         run: npx build
       # 👆 Build steps
