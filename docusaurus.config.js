@@ -8,7 +8,7 @@ const config = {
 	tagline: 'AZDocs are cool',
 	favicon: 'img/favicon.ico',
 
-	url: 'https://nhanaz.tech',
+	url: 'https://nhanaz.io.vn',
 	baseUrl: '/',
 
 	organizationName: 'NhanAZ',
