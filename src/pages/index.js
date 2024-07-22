@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -21,25 +20,11 @@ function HomepageHeader() {
 					<Link
 						className="button button--secondary button--lg"
 						to="/blog">
-						Explore Stardust Blog
+						Explore Stardust Blog 🔮
 					</Link>
 				</div>
 			</div>
 		</header>
-	);
-}
-
-function StardustIntro() {
-	return (
-		<section className={styles.features}>
-			<div className="container">
-				<Heading as="h2">Welcome to Stardust</Heading>
-				<p>
-					Stardust is a personal blog where I share my thoughts, experiences, and insights on various topics.
-					From technology to personal growth, join me on this journey of exploration and discovery.
-				</p>
-			</div>
-		</section>
 	);
 }
 
@@ -51,8 +36,7 @@ export default function Home() {
 			description="Stardust - A personal blog about technology, life, and everything in between.">
 			<HomepageHeader />
 			<main>
-				<StardustIntro />
-				<HomepageFeatures />
+				{/* <HomepageFeatures /> */}
 			</main>
 		</Layout>
 	);
