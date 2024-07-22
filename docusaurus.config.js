@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Stardust',
-	tagline: 'Trivial things like stardust',
+	tagline: 'Trivial things like stardust 🌠',
 	favicon: 'img/favicon.ico',
 
 	url: 'https://nhanaz.io.vn',
