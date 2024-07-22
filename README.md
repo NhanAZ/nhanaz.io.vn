@@ -1,3 +1,6 @@
+> [!NOTE]
+> Currently, I am intending to develop this website as a personal blog but do not have free time to do so.
+
 # Website
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
