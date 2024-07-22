@@ -117,7 +117,7 @@ const config = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} Nguyen Thanh Nhan. Open-source on GitHub. Built with Docusaurus. MIT License.`,
 			},
 			prism: {
 				theme: prismThemes.github,
