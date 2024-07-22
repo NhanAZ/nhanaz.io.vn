@@ -19,8 +19,8 @@ const config = {
 	onBrokenMarkdownLinks: 'warn',
 
 	i18n: {
-		defaultLocale: 'vi',
-		locales: ['vi', 'en'],
+		defaultLocale: 'en',
+		locales: ['en', 'vi'],
 	},
 
 	presets: [
