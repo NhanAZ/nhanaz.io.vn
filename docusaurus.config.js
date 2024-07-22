@@ -4,15 +4,15 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'AZDocs',
-	tagline: 'AZDocs are cool',
+	title: 'Stardust',
+	tagline: 'Trivial things like stardust',
 	favicon: 'img/favicon.ico',
 
 	url: 'https://nhanaz.io.vn',
 	baseUrl: '/',
 
 	organizationName: 'NhanAZ',
-	projectName: 'AZDocs',
+	projectName: 'Stardust',
 	trailingSlash: false,
 
 	onBrokenLinks: 'throw',
@@ -31,12 +31,12 @@ const config = {
 				docs: {
 					sidebarPath: './sidebars.js',
 					editUrl:
-						'https://github.com/NhanAZ/AZDocs/tree/main/',
+						'https://github.com/NhanAZ/Stardust/tree/main/',
 				},
 				blog: {
 					showReadingTime: true,
 					editUrl:
-						'https://github.com/NhanAZ/AZDocs/tree/main/',
+						'https://github.com/NhanAZ/Stardust/tree/main/',
 				},
 				theme: {
 					customCss: './src/css/custom.css',
@@ -50,9 +50,9 @@ const config = {
 		({
 			image: 'img/docusaurus-social-card.jpg',
 			navbar: {
-				title: 'AZDocs',
+				title: 'Stardust',
 				logo: {
-					alt: 'AZDocs Logo',
+					alt: 'Stardust Logo',
 					src: 'img/logo.svg',
 				},
 				items: [
