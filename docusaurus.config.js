@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Stardust',
-	tagline: 'Trivial things like stardust 🌠',
+	tagline: 'Những điều vụn vặt như bụi sao 🌠',
 	favicon: 'img/favicon.ico',
 
 	url: 'https://nhanaz.io.vn',
@@ -19,7 +19,7 @@ const config = {
 
 	i18n: {
 		defaultLocale: 'vi',
-		locales: ['vi', 'en']
+		locales: ['vi']
 	},
 
 	presets: [
@@ -51,10 +51,6 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
-					{
-						type: 'localeDropdown',
-						position: 'right',
-					}
 				],
 			},
 			footer: {
