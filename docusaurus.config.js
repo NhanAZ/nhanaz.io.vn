@@ -13,23 +13,29 @@ const config = {
 
 	organizationName: 'NhanAZ',
 	projectName: 'Stardust',
-	trailingSlash: false,
 
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
+
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en']
+	},
 
 	presets: [
 		[
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
+				docs: false,
 				blog: {
+					routeBasePath: '/',
 					showReadingTime: true,
-					editUrl:
-						'https://github.com/NhanAZ/Stardust/tree/main/',
+					editUrl: 'https://github.com/NhanAZ/Stardust/tree/main/',
+					postsPerPage: 'ALL'
 				},
 				theme: {
-					customCss: './src/css/custom.css',
+					customCss: './src/custom.css',
 				},
 			}),
 		],
@@ -38,7 +44,6 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			image: 'img/docusaurus-social-card.jpg',
 			navbar: {
 				title: 'Stardust',
 				logo: {
@@ -46,18 +51,9 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
-					{ to: '/blog', label: 'Blog', position: 'left' },
-					{
-						href: 'https://github.com/facebook/docusaurus',
-						label: 'GitHub',
-						position: 'right',
-					}
 				],
 			},
 			footer: {
-				style: 'dark',
-				links: [
-				],
 			},
 			prism: {
 				theme: prismThemes.github,
