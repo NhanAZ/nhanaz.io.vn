@@ -28,11 +28,6 @@ const config = {
 			'classic',
 			/** @type {import('@docusaurus/preset-classic').Options} */
 			({
-				docs: {
-					sidebarPath: './sidebars.js',
-					editUrl:
-						'https://github.com/NhanAZ/Stardust/tree/main/',
-				},
 				blog: {
 					showReadingTime: true,
 					editUrl:
