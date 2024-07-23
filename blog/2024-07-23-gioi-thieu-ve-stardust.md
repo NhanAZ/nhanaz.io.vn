@@ -1,5 +1,5 @@
 ---
-slug: introduction-to-stardust
+slug: gioi-thieu-ve-stardust
 title: Giới thiệu về Stardust
 authors: [NhanAZ]
 tags: [Stardust]
