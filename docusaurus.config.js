@@ -18,11 +18,6 @@ const config = {
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 
-	i18n: {
-		defaultLocale: 'en',
-		locales: ['en'],
-	},
-
 	presets: [
 		[
 			'classic',
@@ -56,10 +51,6 @@ const config = {
 						href: 'https://github.com/facebook/docusaurus',
 						label: 'GitHub',
 						position: 'right',
-					},
-					{
-						type: 'localeDropdown',
-						position: 'right'
 					}
 				],
 			},
