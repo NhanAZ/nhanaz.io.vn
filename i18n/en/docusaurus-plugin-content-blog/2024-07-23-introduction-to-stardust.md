@@ -1,11 +1,13 @@
 ---
-slug: introduction-to-stardust
+slug: gioi-thieu-ve-stardust
 title: Giới thiệu về Stardust
 authors: [NhanAZ]
 tags: [Stardust]
 ---
 
 Stardust is a unique personal blog project that I've built with intense passion and unwavering dedication. Hosted on GitHub - one of the most popular and reliable source code hosting platforms today, this project leverages the power of Docusaurus - a modern, flexible static website generator with strong community development. The combination of GitHub and Docusaurus not only ensures high stability and security for the blog but also creates a user-friendly interface, easy navigation, and fast page loading speed.
+
+<!--truncate-->
 
 As an open-source project, Stardust opens its doors to community contributions and improvements. I warmly welcome all ideas, suggestions, and contributions from the community, regardless of their scale. If you have any improvements or new features you'd like to add to the project, don't hesitate to open a Pull Request on GitHub. This process not only helps improve the quality of Stardust but also creates opportunities for developers, designers, and technology enthusiasts to learn and share experiences. I commit to carefully reviewing all contributions, appreciating community support, and always being ready to discuss new ideas to develop Stardust.
 
