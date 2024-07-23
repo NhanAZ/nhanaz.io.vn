@@ -5,7 +5,7 @@ authors: [NhanAZ]
 tags: [Stardust]
 ---
 
-Chào mừng đến với Stardust! This is our first blog post...
+Welcome to Stardust! This is our first blog post...
 
 ## What is Stardust?
 

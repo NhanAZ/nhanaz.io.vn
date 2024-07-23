@@ -18,8 +18,8 @@ const config = {
 	onBrokenMarkdownLinks: 'warn',
 
 	i18n: {
-		defaultLocale: 'en',
-		locales: ['en']
+		defaultLocale: 'vi',
+		locales: ['vi', 'en']
 	},
 
 	presets: [
@@ -51,6 +51,10 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
+					{
+						type: 'localeDropdown',
+						position: 'right',
+					}
 				],
 			},
 			footer: {
