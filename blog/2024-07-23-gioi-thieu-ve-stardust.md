@@ -4,10 +4,8 @@ title: Giới thiệu về Stardust
 authors: [NhanAZ]
 tags: [Stardust]
 ---
-
-Stardust là một dự án blog cá nhân độc đáo, được tôi xây dựng với niềm đam mê mãnh liệt và sự tận tâm không ngừng. Được lưu trữ trên nền tảng GitHub - một trong những nền tảng lưu trữ mã nguồn phổ biến và đáng tin cậy nhất hiện nay, dự án này tận dụng sức mạnh của Docusaurus - một công cụ tạo trang web tĩnh hiện đại, linh hoạt và được cộng đồng phát triển mạnh mẽ. Sự kết hợp giữa GitHub và Docusaurus không chỉ đảm bảo tính ổn định và bảo mật cao cho blog, mà còn tạo ra một giao diện người dùng thân thiện, dễ điều hướng và tốc độ tải trang nhanh chóng.
-
 <!--truncate-->
+Stardust là một dự án blog cá nhân độc đáo, được tôi xây dựng với niềm đam mê mãnh liệt và sự tận tâm không ngừng. Được lưu trữ trên nền tảng GitHub - một trong những nền tảng lưu trữ mã nguồn phổ biến và đáng tin cậy nhất hiện nay, dự án này tận dụng sức mạnh của Docusaurus - một công cụ tạo trang web tĩnh hiện đại, linh hoạt và được cộng đồng phát triển mạnh mẽ. Sự kết hợp giữa GitHub và Docusaurus không chỉ đảm bảo tính ổn định và bảo mật cao cho blog, mà còn tạo ra một giao diện người dùng thân thiện, dễ điều hướng và tốc độ tải trang nhanh chóng.
 
 Là một dự án nguồn mở, Stardust mở rộng cánh cửa cho cộng đồng đóng góp và cải thiện. Tôi nhiệt liệt chào đón mọi ý tưởng, đề xuất và đóng góp từ cộng đồng, bất kể quy mô lớn nhỏ. Nếu bạn có bất kỳ cải tiến hoặc tính năng mới nào muốn thêm vào dự án, đừng ngần ngại mở một Pull Request trên GitHub. Quá trình này không chỉ giúp cải thiện chất lượng của Stardust mà còn tạo cơ hội cho các nhà phát triển, nhà thiết kế và những người đam mê công nghệ học hỏi và chia sẻ kinh nghiệm. Tôi cam kết xem xét mọi đóng góp một cách cẩn thận, đánh giá cao sự hỗ trợ từ cộng đồng và luôn sẵn sàng thảo luận về các ý tưởng mới để phát triển Stardust.
 
