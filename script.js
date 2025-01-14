@@ -20,18 +20,28 @@ const posts = [
         url: "posts/xu-huong-phat-trien-web-2024.html",
         date: "2024-03-15",
         category: "Công nghệ",
-        tags: ["#Web", "#JavaScript"]
+        tags: ["#Test"]
     },
     {
         id: 2,
         title: "Định hướng quan trọng chuẩn bị nhân sự Đại hội Đảng XIV",
-        summary: "Các tiêu chí quan trọng trong việc lựa chọn nhân sự cho Ban Chấp hành Trung ương khóa XIV, nhấn mạnh vào việc loại bỏ những cán bộ có khuyết điểm về đạo đức, năng lực và phẩm chất chính trị.",
+        summary: "Các tiêu chí quan trọng trong việc lựa chọn nhân sự cho Ban Chấp hành Trung ương khóa XIV.",
         url: "posts/dinh-huong-quan-trong-chuan-bi-nhan-su-dai-hoi-dang-xiv.html",
         date: "2024-03-17",
         category: "Chính trị",
-        tags: ["#ChinhTri", "#DaiHoiDang", "#NhanSu"]
+        tags: ["#Test"]
+    },
+    {
+        id: 3,
+        title: "MultiVersion Cho Server Minecraft: Cứu Cánh Hay Rắc Rối?",
+        summary: "Phân tích ưu và nhược điểm của MultiVersion cho server PocketMine-MP",
+        url: "posts/phan-tich-multiversion-pocketmine-mp.html",
+        date: "2024-11-03",
+        category: "Minecraft",
+        tags: ["#PocketMine-MP"]
     }
 ];
+
 
 // Utility functions
 function sanitizeHTML(str) {
@@ -164,7 +174,7 @@ function updateSelectedTagsDisplay() {
     if (!container) return;
 
     container.innerHTML = '';
-    
+
     if (selectedTags.size > 0) {
         const clearAllBtn = document.createElement('button');
         clearAllBtn.className = 'btn btn-sm btn-outline-secondary me-2 mb-2';
@@ -197,10 +207,10 @@ function filterBySelectedTags() {
     const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
     const category = categorySelect ? categorySelect.value : 'all';
 
-    const filteredPosts = posts.filter(post => 
-        Array.from(selectedTags).every(tag => post.tags.includes(tag)) &&
-        (post.title.toLowerCase().includes(searchTerm) ||
-         post.summary.toLowerCase().includes(searchTerm)) &&
+    const filteredPosts = posts.filter(post =>
+        Array.from(selectedTags).some(tag => post.tags.includes(tag))
+            (post.title.toLowerCase().includes(searchTerm) ||
+                post.summary.toLowerCase().includes(searchTerm)) &&
         (category === 'all' || post.category === category)
     );
 
