@@ -1,1 +1,41 @@
-Thành Nhân hông thích code gì ở đây cả :)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌻</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fefae0;
+            margin: 0;
+            font-size: 50px;
+        }
+        #flower-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80vw;
+            max-width: 800px;
+        }
+        .sunflower {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="flower-container"></div>
+    <script>
+        function addSunflower() {
+            const container = document.getElementById('flower-container');
+            const sunflower = document.createElement('div');
+            sunflower.textContent = '🌻';
+            sunflower.classList.add('sunflower');
+            container.appendChild(sunflower);
+        }
+        setInterval(addSunflower, 500);
+    </script>
+</body>
+</html>
