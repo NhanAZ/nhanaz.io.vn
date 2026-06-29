@@ -625,7 +625,7 @@ a.project-row:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 36px;
-  align-items: end;
+  align-items: center;
   padding: 64px 48px;
 }
 
@@ -669,8 +669,8 @@ a.project-row:hover {
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
   gap: clamp(50px, 8vw, 110px);
   align-items: end;
-  min-height: 420px;
-  padding: 90px 0 78px;
+  min-height: 0;
+  padding: 52px 0 64px;
   border-bottom: 1px solid var(--line);
 }
 
