@@ -16,6 +16,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Giới thiệu: https://nhanaz.io.vn/about/
 - Bài viết: https://nhanaz.io.vn/blog/
 - Dự án: https://nhanaz.io.vn/projects/
+- Vibe-code: https://nhanaz.io.vn/vibe-code/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -28,6 +29,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - PocketMine-MP
 - Web cá nhân
 - Connect Brandbook
+- Vibe-code và các project được dựng nhanh với AI
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
 ## Liên kết ngoài

@@ -1001,26 +1001,31 @@ a.project-row:hover {
   text-align: right;
 }
 
-.project-detail {
+.project-detail,
+.vibe-card {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr) 250px;
   border-bottom: 1px solid var(--line);
 }
 
-.project-detail > * {
+.project-detail > *,
+.vibe-card > * {
   margin: 0;
   padding: 58px 30px;
 }
 
-.project-detail > *:first-child {
+.project-detail > *:first-child,
+.vibe-card > *:first-child {
   padding-left: 0;
 }
 
-.project-detail > * + * {
+.project-detail > * + *,
+.vibe-card > * + * {
   border-left: 1px solid var(--line);
 }
 
-.project-detail h2 {
+.project-detail h2,
+.vibe-card h2 {
   max-width: 600px;
   margin: 0 0 22px;
   font-size: clamp(26px, 3vw, 34px);
@@ -1029,7 +1034,8 @@ a.project-row:hover {
   line-height: 1.05;
 }
 
-.project-detail p {
+.project-detail p,
+.vibe-card p {
   max-width: 640px;
   color: var(--muted);
   font-size: 16px;
@@ -1145,6 +1151,45 @@ a.project-row:hover {
   margin: 4px 0 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.vibe-teaser p,
+.vibe-intro .section-body p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+
+.vibe-board {
+  padding-bottom: 88px;
+}
+
+.vibe-story-points {
+  max-width: 740px;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.vibe-story-points div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.vibe-story-points dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.vibe-story-points dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
 }
 
 .tag {
@@ -1459,11 +1504,13 @@ a.project-row:hover {
     max-width: 560px;
   }
 
-  .project-detail {
+  .project-detail,
+  .vibe-card {
     grid-template-columns: 90px minmax(0, 1fr);
   }
 
-  .project-detail aside {
+  .project-detail aside,
+  .vibe-card aside {
     grid-column: 1 / -1;
     padding-left: 90px;
     border-top: 1px solid var(--line);
@@ -1494,7 +1541,7 @@ a.project-row:hover {
 
   .site-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0;
     min-height: 48px;
     margin-top: 8px;
@@ -1502,7 +1549,7 @@ a.project-row:hover {
   }
 
   .site-nav a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .site-search {
@@ -1773,30 +1820,41 @@ a.project-row:hover {
     text-align: left;
   }
 
-  .project-detail {
+  .project-detail,
+  .vibe-card {
     grid-template-columns: 1fr;
   }
 
-  .project-detail > * {
+  .project-detail > *,
+  .vibe-card > * {
     padding: 30px 0;
   }
 
-  .project-detail > *:first-child {
+  .project-detail > *:first-child,
+  .vibe-card > *:first-child {
     padding: 18px 0;
   }
 
-  .project-detail > * + * {
+  .project-detail > * + *,
+  .vibe-card > * + * {
     border-top: 1px solid var(--line);
     border-left: 0;
   }
 
-  .project-detail aside {
+  .project-detail aside,
+  .vibe-card aside {
     grid-column: auto;
     padding-left: 0;
   }
 
-  .project-detail h2 {
+  .project-detail h2,
+  .vibe-card h2 {
     font-size: 28px;
+  }
+
+  .vibe-story-points div {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .about-grid {

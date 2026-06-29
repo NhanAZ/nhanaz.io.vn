@@ -40,6 +40,20 @@ const SITE_SEARCH_INDEX = [
     keywords: "project portfolio sản phẩm",
   },
   {
+    title: "Vibe-code",
+    type: "Kho project",
+    url: "/vibe-code/",
+    excerpt: "Những câu chuyện ngắn về project được dựng nhanh với AI, code, vài lượt sửa tay và các quyết định đáng giữ lại.",
+    keywords: "vibe-code vibe coding AI project AI-assisted coding project cá nhân open source GitHub thử nghiệm",
+  },
+  {
+    title: "Câu chuyện project vibe-code",
+    type: "Vibe-code",
+    url: "/vibe-code/",
+    excerpt: "Khung kể chuyện cho mỗi project gồm ý tưởng ban đầu, phần AI hỗ trợ, phần tự sửa và điều còn giữ lại.",
+    keywords: "câu chuyện project AI prompt demo repo lỗi vui quyết định sản phẩm",
+  },
+  {
     title: "nhanaz.io.vn",
     type: "Dự án",
     url: "/projects/#nhanaz",
