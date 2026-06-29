@@ -117,17 +117,18 @@ textarea {
 }
 
 .brand-mark {
-  display: grid;
+  display: flex;
   width: 34px;
   height: 34px;
-  place-items: center;
+  align-items: flex-start;
+  justify-content: center;
   background: var(--ink);
   color: var(--paper);
   font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 500;
   line-height: 1;
-  padding-bottom: 4px;
+  padding-top: 7px;
 }
 
 .site-nav {
