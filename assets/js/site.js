@@ -8,14 +8,14 @@ const SITE_SEARCH_INDEX = [
     type: "Giới thiệu",
     url: "/about/",
     excerpt: "Thông tin về Nhân, NhanAZ, open source, Minecraft, PocketMine-MP và cách liên hệ.",
-    keywords: "NhanAZ nhanaz.io.vn itsnhanaz@gmail.com Discord Bà Rịa Vũng Tàu Thành phố Hồ Chí Minh sinh ngày 02/08/2005",
+    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Bà Rịa Vũng Tàu Thành phố Hồ Chí Minh sinh ngày 02.08.2005",
   },
   {
     title: "NhanAZ",
     type: "Trang chủ",
     url: "/",
     excerpt: "Góc nhỏ của Nguyễn Thành Nhân cho code, kiến thức, dự án, thành tích và ghi chép cá nhân.",
-    keywords: "Nguyễn Thành Nhân NhanAZ personal archive open source GitHub",
+    keywords: "Nguyễn Thành Nhân NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu personal archive open source GitHub",
   },
   {
     title: "Bài viết",
@@ -204,19 +204,16 @@ const initSiteSearch = () => {
 const initAchievementFilters = () => {
   const list = document.querySelector(".records-list");
   const searchInput = document.querySelector("[data-achievement-search]");
-  const categoryContainer = document.querySelector("[data-achievement-category]");
-  const yearContainer = document.querySelector("[data-achievement-year]");
+  const categorySelect = document.querySelector("[data-achievement-category]");
+  const yearSelect = document.querySelector("[data-achievement-year]");
   const sortSelect = document.querySelector("[data-achievement-sort]");
   const countElement = document.querySelector("[data-achievement-count]");
   const emptyElement = document.querySelector("[data-achievement-empty]");
   const resetButton = document.querySelector("[data-achievement-reset]");
 
-  if (!list || !searchInput || !categoryContainer || !yearContainer || !sortSelect) {
+  if (!list || !searchInput || !categorySelect || !yearSelect || !sortSelect) {
     return;
   }
-
-  let selectedCategory = "";
-  let selectedYear = "";
 
   const records = Array.from(list.querySelectorAll(".record-item")).map((item, index) => {
     const timeElement = item.querySelector("time");
@@ -248,35 +245,10 @@ const initAchievementFilters = () => {
     };
   });
 
-  const collator = new Intl.Collator("vi");
-
-  const createChip = (label, value, onSelect) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "filter-chip";
-    button.textContent = label;
-    button.dataset.value = value;
-    button.setAttribute("aria-pressed", "false");
-    button.addEventListener("click", () => onSelect(value));
-    return button;
-  };
-
-  const syncChips = () => {
-    categoryContainer.querySelectorAll(".filter-chip").forEach((button) => {
-      const isActive = button.dataset.value === selectedCategory;
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", isActive ? "true" : "false");
-    });
-
-    yearContainer.querySelectorAll(".filter-chip").forEach((button) => {
-      const isActive = button.dataset.value === selectedYear;
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", isActive ? "true" : "false");
-    });
-  };
-
   const applyFilters = () => {
     const tokens = normalizeText(searchInput.value).split(/\s+/).filter(Boolean);
+    const selectedCategory = categorySelect.value;
+    const selectedYear = yearSelect.value;
     const sortMode = sortSelect.value;
 
     const sortedRecords = records.slice().sort((a, b) => {
@@ -315,46 +287,17 @@ const initAchievementFilters = () => {
     if (resetButton) {
       resetButton.disabled = !searchInput.value.trim() && !selectedCategory && !selectedYear && sortMode === "default";
     }
-
-    syncChips();
   };
 
-  const categories = [...new Set(records.map((record) => record.category).filter(Boolean))].sort(collator.compare);
-  const years = [...new Set(records.map((record) => record.year).filter(Boolean))].sort((a, b) => b.localeCompare(a));
-
-  categoryContainer.append(
-    createChip("Tất cả", "", (value) => {
-      selectedCategory = value;
-      applyFilters();
-    }),
-    ...categories.map((category) =>
-      createChip(category, category, (value) => {
-        selectedCategory = value;
-        applyFilters();
-      }),
-    ),
-  );
-
-  yearContainer.append(
-    createChip("Tất cả", "", (value) => {
-      selectedYear = value;
-      applyFilters();
-    }),
-    ...years.map((year) =>
-      createChip(year, year, (value) => {
-        selectedYear = value;
-        applyFilters();
-      }),
-    ),
-  );
-
   searchInput.addEventListener("input", applyFilters);
+  categorySelect.addEventListener("change", applyFilters);
+  yearSelect.addEventListener("change", applyFilters);
   sortSelect.addEventListener("change", applyFilters);
 
   resetButton?.addEventListener("click", () => {
     searchInput.value = "";
-    selectedCategory = "";
-    selectedYear = "";
+    categorySelect.value = "";
+    yearSelect.value = "";
     sortSelect.value = "default";
     applyFilters();
     searchInput.focus();
@@ -369,5 +312,19 @@ const initAchievementFilters = () => {
   }
 };
 
+const initCanvaEmbeds = () => {
+  document.querySelectorAll("[data-canva-embed]").forEach((embed) => {
+    const frame = embed.querySelector("[data-canva-frame]");
+    if (!frame) {
+      return;
+    }
+
+    frame.addEventListener("load", () => {
+      embed.classList.add("is-loaded");
+    }, { once: true });
+  });
+};
+
 initSiteSearch();
 initAchievementFilters();
+initCanvaEmbeds();
