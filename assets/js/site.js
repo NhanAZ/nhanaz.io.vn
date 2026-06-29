@@ -54,6 +54,14 @@ const SITE_SEARCH_INDEX = [
     keywords: "câu chuyện project AI prompt demo repo lỗi vui quyết định sản phẩm",
   },
   {
+    title: "glyph, một tool sinh ra vì sợ một trang wiki biến mất",
+    type: "Vibe-code",
+    url: "/vibe-code/glyph/",
+    date: "2026-06-30",
+    excerpt: "Câu chuyện về glyph, tool Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu.",
+    keywords: "NhanAZ glyph Minecraft Bedrock custom emoji glyph atlas Bedrock Wiki PocketMine-MP GitHub nhanaz.github.io/glyph",
+  },
+  {
     title: "nhanaz.io.vn",
     type: "Dự án",
     url: "/projects/#nhanaz",

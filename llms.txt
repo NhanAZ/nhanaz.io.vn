@@ -17,6 +17,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Bài viết: https://nhanaz.io.vn/blog/
 - Dự án: https://nhanaz.io.vn/projects/
 - Vibe-code: https://nhanaz.io.vn/vibe-code/
+- Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -30,6 +31,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Web cá nhân
 - Connect Brandbook
 - Vibe-code và các project được dựng nhanh với AI
+- glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
 ## Liên kết ngoài
