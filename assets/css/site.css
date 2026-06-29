@@ -667,7 +667,6 @@ a.project-row:hover {
 }
 
 .achievement-story,
-.achievement-groups,
 .timeline-section {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -677,7 +676,6 @@ a.project-row:hover {
 }
 
 .achievement-story h2,
-.groups-heading h2,
 .timeline-heading h2 {
   max-width: 200px;
   margin: 15px 0 0;
@@ -688,7 +686,6 @@ a.project-row:hover {
 }
 
 .achievement-story > div:last-child,
-.groups-list,
 .timeline {
   padding-left: 42px;
   border-left: 1px solid var(--line);
@@ -709,33 +706,8 @@ a.project-row:hover {
   line-height: 1.5;
 }
 
-.groups-list,
 .timeline {
   border-top: 1px solid var(--line);
-}
-
-.achievement-group {
-  display: grid;
-  grid-template-columns: 54px 210px minmax(0, 1fr);
-  gap: 24px;
-  align-items: baseline;
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.achievement-group strong {
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.achievement-group span {
-  font-weight: 500;
-}
-
-.achievement-group p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
 }
 
 .timeline-item {
@@ -773,24 +745,67 @@ a.project-row:hover {
   font-size: 15px;
 }
 
-.achievement-note {
+.achievement-records {
+  padding: 78px 0 90px;
+  border-bottom: 1px solid var(--line);
+}
+
+.records-heading {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 48px;
-  margin: 64px 0 80px;
-  padding: 30px;
-  background: var(--soft);
+  margin-bottom: 32px;
 }
 
-.achievement-note strong {
+.records-heading h2 {
+  max-width: 320px;
+  margin: 15px 0 0;
+  font-size: 28px;
   font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
 }
 
-.achievement-note p {
-  max-width: 760px;
-  margin: 0;
+.records-list {
+  border-top: 1px solid var(--line);
+}
+
+.record-item {
+  display: grid;
+  grid-template-columns: 54px 112px minmax(0, 1fr) 170px;
+  gap: 22px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.record-number,
+.record-item time,
+.record-item > span:last-child {
+  padding-top: 3px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.record-item h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+
+.record-item p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.record-item > span:last-child {
+  text-align: right;
 }
 
 .project-detail {
@@ -1339,7 +1354,6 @@ a.project-row:hover {
   }
 
   .achievement-story,
-  .achievement-groups,
   .timeline-section {
     grid-template-columns: 1fr;
     gap: 34px;
@@ -1347,14 +1361,12 @@ a.project-row:hover {
   }
 
   .achievement-story h2,
-  .groups-heading h2,
   .timeline-heading h2 {
     max-width: 300px;
     font-size: 28px;
   }
 
   .achievement-story > div:last-child,
-  .groups-list,
   .timeline {
     padding-left: 0;
     border-left: 0;
@@ -1362,15 +1374,6 @@ a.project-row:hover {
 
   .achievement-story .story-lead {
     font-size: 19px;
-  }
-
-  .achievement-group {
-    grid-template-columns: 42px minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .achievement-group p {
-    grid-column: 2;
   }
 
   .timeline-item {
@@ -1386,11 +1389,38 @@ a.project-row:hover {
     font-size: 19px;
   }
 
-  .achievement-note {
+  .achievement-records {
+    padding: 62px 0 72px;
+  }
+
+  .records-heading {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 48px 0 64px;
-    padding: 24px;
+    gap: 24px;
+  }
+
+  .records-heading h2 {
+    max-width: 340px;
+    font-size: 26px;
+  }
+
+  .record-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 12px 16px;
+    padding: 18px 0;
+  }
+
+  .record-item time {
+    grid-column: 1;
+  }
+
+  .record-item div {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .record-item > span:last-child {
+    grid-column: 2;
+    text-align: left;
   }
 
   .project-detail {
