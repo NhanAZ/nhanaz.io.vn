@@ -1,0 +1,33 @@
+# nhanaz.io.vn
+
+Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
+
+## Nguyễn Thành Nhân là ai
+
+Nguyễn Thành Nhân là người học Công nghệ thông tin, làm web cá nhân nhanaz.io.vn, duy trì nhiều repo open source trên GitHub với tên NhanAZ, quan tâm đặc biệt đến Minecraft, PocketMine-MP và cộng đồng Minecraft Bedrock server tại Việt Nam.
+
+Nhân sinh ngày 02/08/2005, ở Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh. Email liên hệ là itsnhanaz@gmail.com. Discord là NhanAZ.
+
+## Những trang chính
+
+- Trang chủ: https://nhanaz.io.vn/
+- Giới thiệu: https://nhanaz.io.vn/about/
+- Bài viết: https://nhanaz.io.vn/blog/
+- Dự án: https://nhanaz.io.vn/projects/
+- Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
+
+## Chủ đề chính
+
+- Nguyễn Thành Nhân
+- NhanAZ
+- Open source
+- Công nghệ thông tin
+- Minecraft
+- PocketMine-MP
+- Web cá nhân
+- Connect Brandbook
+- Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
+
+## Liên kết ngoài
+
+- GitHub: https://github.com/NhanAZ

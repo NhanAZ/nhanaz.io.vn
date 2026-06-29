@@ -4,15 +4,77 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Nhật ký cá nhân của Nhân - code, kiến thức, dự án và những chuyện đời thường.">
-  <meta property="og:title" content="NhanAZ - Personal Archive">
-  <meta property="og:description" content="Code, kiến thức, dự án và những chuyện đời thường.">
+  <meta name="description" content="Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ. Nơi lưu bài viết, dự án, thành tích, open source và những ghi chép về code, Minecraft, PocketMine-MP.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nguyễn Thành Nhân">
+  <meta name="keywords" content="Nguyễn Thành Nhân, NhanAZ, nhanaz.io.vn, itsnhanaz, PocketMine-MP Việt Nam, Minecraft, open source, Công nghệ thông tin">
+  <meta property="og:title" content="Nguyễn Thành Nhân (NhanAZ)">
+  <meta property="og:description" content="Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ. Code, dự án, thành tích, open source và những ghi chép đáng giữ lại.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nhanaz.io.vn/">
+  <meta property="og:site_name" content="nhanaz.io.vn">
+  <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nguyễn Thành Nhân (NhanAZ)">
+  <meta name="twitter:description" content="Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.">
+  <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <link rel="canonical" href="https://nhanaz.io.vn/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-6">
-  <title>NhanAZ - Personal Archive</title>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-10">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://nhanaz.io.vn/#person",
+          "name": "Nguyễn Thành Nhân",
+          "alternateName": "NhanAZ",
+          "url": "https://nhanaz.io.vn/",
+          "image": "https://nhanaz.io.vn/assets/images/portrait.png",
+          "email": "mailto:itsnhanaz@gmail.com",
+          "birthDate": "2005-08-02",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Thành phố Hồ Chí Minh",
+            "addressCountry": "VN"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Trường Cao đẳng bán công Công nghệ và Quản trị Doanh nghiệp"
+          },
+          "knowsAbout": [
+            "Công nghệ thông tin",
+            "Open source",
+            "Minecraft",
+            "PocketMine-MP",
+            "Thiết kế web",
+            "Thiết kế đồ họa"
+          ],
+          "sameAs": [
+            "https://github.com/NhanAZ"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://nhanaz.io.vn/#website",
+          "url": "https://nhanaz.io.vn/",
+          "name": "nhanaz.io.vn",
+          "alternateName": "NhanAZ",
+          "inLanguage": "vi",
+          "publisher": {
+            "@id": "https://nhanaz.io.vn/#person"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://nhanaz.io.vn/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+  </script>
+  <title>Nguyễn Thành Nhân (NhanAZ) - Personal Archive</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
@@ -30,6 +92,14 @@
     </nav>
   </header>
 
+  <section class="site-search shell" aria-label="Tìm kiếm toàn trang">
+    <form class="site-search-box" role="search" data-site-search-form>
+      <label for="site-search-input">Tìm kiếm</label>
+      <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, dự án, thành tích..." data-site-search>
+    </form>
+    <div class="site-search-results" data-site-search-results hidden></div>
+  </section>
+
   <main id="main" class="shell">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
@@ -40,7 +110,7 @@
       <aside class="hero-aside" aria-label="Giới thiệu ngắn">
         <div>
           <p class="mono-label">Đôi lời</p>
-          <p>Chào, mình là Nhân. Đây là góc nhỏ để gom kiến thức, nhật ký, thành tích và những thứ mình đã làm.</p>
+          <p>Chào, mình là Nguyễn Thành Nhân, còn dùng tên NhanAZ. Đây là góc nhỏ để gom kiến thức, nhật ký, thành tích và những thứ mình đã làm.</p>
         </div>
         <dl class="status-list">
           <div><dt>Nơi ở</dt><dd>Việt Nam</dd></div>
@@ -140,6 +210,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=20260630-10" defer></script>
 </body>
 </html>

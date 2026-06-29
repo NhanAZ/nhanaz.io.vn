@@ -5,10 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
   <meta name="description" content="Thành tích học tập, hoạt động Đoàn Thanh niên, Hội Sinh viên và tình nguyện của Nguyễn Thành Nhân tại Trường Cao đẳng bán công Công nghệ và Quản trị Doanh nghiệp.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nguyễn Thành Nhân">
+  <meta property="og:title" content="Dấu mốc của Nguyễn Thành Nhân / NhanAZ">
+  <meta property="og:description" content="Thành tích học tập, hoạt động Đoàn Thanh niên, Hội Sinh viên và tình nguyện của Nguyễn Thành Nhân.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nhanaz.io.vn/achievements/">
+  <meta property="og:site_name" content="nhanaz.io.vn">
+  <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dấu mốc của Nguyễn Thành Nhân / NhanAZ">
+  <meta name="twitter:description" content="Thành tích học tập, hoạt động Đoàn Thanh niên, Hội Sinh viên và tình nguyện.">
+  <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <link rel="canonical" href="https://nhanaz.io.vn/achievements/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-6">
-  <title>Dấu mốc - NhanAZ</title>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-10">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": "https://nhanaz.io.vn/achievements/#collection",
+      "url": "https://nhanaz.io.vn/achievements/",
+      "name": "Dấu mốc của Nguyễn Thành Nhân / NhanAZ",
+      "inLanguage": "vi",
+      "about": {
+        "@id": "https://nhanaz.io.vn/#person"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Thành tích và vai trò của Nguyễn Thành Nhân",
+        "numberOfItems": 46
+      }
+    }
+  </script>
+  <title>Dấu mốc - Nguyễn Thành Nhân / NhanAZ</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
@@ -21,6 +51,14 @@
       <a href="/about/">Giới thiệu</a>
     </nav>
   </header>
+
+  <section class="site-search shell" aria-label="Tìm kiếm toàn trang">
+    <form class="site-search-box" role="search" data-site-search-form>
+      <label for="site-search-input">Tìm kiếm</label>
+      <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, dự án, thành tích..." data-site-search>
+    </form>
+    <div class="site-search-results" data-site-search-results hidden></div>
+  </section>
 
   <main id="main" class="shell">
     <header class="page-heading">
@@ -118,8 +156,37 @@
     <section class="achievement-records" aria-labelledby="records-title">
       <div class="records-heading">
         <p class="section-index">Danh sách thành tích</p>
-        <h2 id="records-title">Đầy đủ theo từng lần được ghi nhận</h2>
+        <h2 id="records-title">Những lần được ghi nhận</h2>
       </div>
+      <div class="records-tools" aria-label="Tìm và lọc thành tích">
+        <label class="records-search" for="achievement-search">
+          <span>Tìm kiếm</span>
+          <input id="achievement-search" type="search" autocomplete="off" placeholder="Nhập tên hoạt động, danh hiệu, đơn vị..." data-achievement-search>
+        </label>
+        <div class="records-filters">
+          <fieldset class="records-filter-group">
+            <legend>Nhóm</legend>
+            <div class="records-chip-row" data-achievement-category></div>
+          </fieldset>
+          <fieldset class="records-filter-group">
+            <legend>Năm</legend>
+            <div class="records-chip-row" data-achievement-year></div>
+          </fieldset>
+          <label class="records-sort">
+            <span>Sắp xếp</span>
+            <select data-achievement-sort>
+              <option value="default">Theo danh sách gốc</option>
+              <option value="newest">Mới nhất trước</option>
+              <option value="oldest">Cũ nhất trước</option>
+            </select>
+          </label>
+        </div>
+        <div class="records-tool-meta">
+          <p data-achievement-count>Đang hiển thị đầy đủ.</p>
+          <button class="records-reset" type="button" data-achievement-reset>Đặt lại</button>
+        </div>
+      </div>
+      <p class="records-empty" data-achievement-empty hidden>Không thấy mục nào khớp. Thử đổi từ khóa hoặc bỏ bớt bộ lọc.</p>
       <div class="records-list">
         <article class="record-item">
           <span class="record-number">01</span>
@@ -405,6 +472,6 @@
     <div><p class="footer-title">Còn nhiều thứ để làm.</p><a class="footer-email" href="/projects/">Xem dự án →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/site.js?v=20260630-10" defer></script>
 </body>
 </html>
