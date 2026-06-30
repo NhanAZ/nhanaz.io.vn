@@ -1438,6 +1438,64 @@ a.project-row:hover {
   font-size: 0.9em;
 }
 
+.prose pre {
+  max-width: 860px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 22px 24px;
+  font: 14px/1.65 "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  tab-size: 2;
+}
+
+.prose pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.technical-table-wrap {
+  width: 100%;
+  max-width: 920px;
+  min-width: 0;
+  margin-top: 30px;
+  margin-bottom: 36px;
+  overflow-x: auto;
+  border-top: 1px solid var(--ink);
+}
+
+.technical-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.technical-table th,
+.technical-table td {
+  padding: 14px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.technical-table th:last-child,
+.technical-table td:last-child {
+  border-right: 0;
+}
+
+.technical-table th {
+  background: var(--soft);
+  font-weight: 700;
+}
+
 .article-end {
   margin-top: 62px;
   padding-top: 20px;
@@ -1910,13 +1968,14 @@ a.project-row:hover {
 
   .article-meta ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     margin-top: 28px;
   }
 
   .article-meta li {
     font-size: 10px;
+    overflow-wrap: anywhere;
   }
 
   .article-title {
@@ -1956,6 +2015,15 @@ a.project-row:hover {
   .prose blockquote {
     padding: 22px;
     font-size: 22px;
+  }
+
+  .prose pre {
+    width: calc(100% + 32px);
+    max-width: calc(100% + 32px);
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 18px 16px;
+    font-size: 12px;
   }
 
   .not-found {

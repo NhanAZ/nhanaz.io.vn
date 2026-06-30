@@ -33,6 +33,14 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "internet blog cá nhân căn nhà số",
   },
   {
+    title: "Zalo PC mã hóa bản backup để bảo vệ ai?",
+    type: "Bài viết kỹ thuật",
+    url: "/posts/dich-nguoc-zalo-pc-backup/",
+    date: "2026-06-30",
+    excerpt: "Mổ xẻ .zl.zip, uin trong bộ nhớ Zalo, AES-256-CBC, TAR và giới hạn thật sự của lớp mã hóa backup.",
+    keywords: "NhanAZ Zalo PC backup Zalo dịch ngược reverse engineering bảo mật security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
+  },
+  {
     title: "Dự án",
     type: "Kho dự án",
     url: "/projects/",
@@ -164,6 +172,14 @@ const SITE_SEARCH_INDEX_EN = [
     date: "2026-06-29",
     excerpt: "The opening post for nhanaz.io.vn, my home on the internet.",
     keywords: "internet personal blog digital home",
+  },
+  {
+    title: "Who does Zalo PC backup encryption protect?",
+    type: "Technical writing",
+    url: "/en/posts/dich-nguoc-zalo-pc-backup/",
+    date: "2026-06-30",
+    excerpt: "A technical look at .zl.zip, uin in Zalo process memory, AES-256-CBC, TAR, and the practical limits of backup encryption.",
+    keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
     title: "Projects",

@@ -18,6 +18,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Dự án: https://nhanaz.io.vn/projects/
 - Vibe-code: https://nhanaz.io.vn/vibe-code/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
+- Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -32,6 +33,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Connect Brandbook
 - Vibe-code và các project được dựng nhanh với AI
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
+- Dịch ngược backup Zalo PC, AES-256-CBC, bộ nhớ tiến trình Windows, TAR, NDJSON và bảo mật ứng dụng
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
 ## Liên kết ngoài
@@ -60,6 +62,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Projects: https://nhanaz.io.vn/en/projects/
 - Vibe-code: https://nhanaz.io.vn/en/vibe-code/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
+- Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
 
 ## Main topics
@@ -74,6 +77,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Connect Brandbook
 - Vibe-code and projects built quickly with AI
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
+- Reverse engineering Zalo PC backups, AES-256-CBC, Windows process memory, TAR, NDJSON, and application security
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 
 ## External links
