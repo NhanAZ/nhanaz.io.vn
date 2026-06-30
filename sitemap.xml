@@ -1,35 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nhanaz.io.vn/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/projects/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/projects/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/projects/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/projects/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/vibe-code/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/vibe-code/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/vibe-code/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/vibe-code/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/vibe-code/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/vibe-code/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/vibe-code/glyph/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/vibe-code/glyph/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/vibe-code/glyph/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/vibe-code/glyph/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/vibe-code/glyph/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/vibe-code/glyph/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/achievements/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/achievements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/achievements/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/achievements/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/achievements/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/achievements/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/about/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/about/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/about/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/about/" />
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/posts/chao-internet/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/chao-internet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/chao-internet/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/chao-internet/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/chao-internet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/chao-internet/" />
     <lastmod>2026-06-30</lastmod>
   </url>
 </urlset>

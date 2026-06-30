@@ -2,7 +2,7 @@ document.querySelectorAll("[data-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
-const SITE_SEARCH_INDEX = [
+const SITE_SEARCH_INDEX_VI = [
   {
     title: "Nguyễn Thành Nhân",
     type: "Giới thiệu",
@@ -135,6 +135,162 @@ const SITE_SEARCH_INDEX = [
   },
 ];
 
+const SITE_SEARCH_INDEX_EN = [
+  {
+    title: "Nguyễn Thành Nhân",
+    type: "About",
+    url: "/en/about/",
+    excerpt: "About Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, and how to get in touch.",
+    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Ba Ria Vung Tau Ho Chi Minh City born 02.08.2005",
+  },
+  {
+    title: "NhanAZ",
+    type: "Home",
+    url: "/en/",
+    excerpt: "Nguyễn Thành Nhân’s corner for code, knowledge, projects, achievements, and personal notes.",
+    keywords: "Nguyễn Thành Nhân NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu personal archive open source GitHub",
+  },
+  {
+    title: "Writing",
+    type: "Archive",
+    url: "/en/blog/",
+    excerpt: "Nhân’s notes on code, learning, projects, and everyday life.",
+    keywords: "blog journal writing knowledge notes",
+  },
+  {
+    title: "Hello internet, I rebuilt this little home",
+    type: "Writing",
+    url: "/en/posts/chao-internet/",
+    date: "2026-06-29",
+    excerpt: "The opening post for nhanaz.io.vn, my home on the internet.",
+    keywords: "internet personal blog digital home",
+  },
+  {
+    title: "Projects",
+    type: "Project archive",
+    url: "/en/projects/",
+    excerpt: "Things Nhân has made, is making, and the process behind them.",
+    keywords: "project portfolio product work",
+  },
+  {
+    title: "Vibe-code",
+    type: "Project archive",
+    url: "/en/vibe-code/",
+    excerpt: "Short stories about projects built quickly with AI, code, manual fixes, and decisions worth keeping.",
+    keywords: "vibe-code vibe coding AI project AI-assisted coding personal project open source GitHub experiments",
+  },
+  {
+    title: "Vibe-code project stories",
+    type: "Vibe-code",
+    url: "/en/vibe-code/",
+    excerpt: "Each story covers the starting idea, where AI helped, what needed fixing, and what remained worth keeping.",
+    keywords: "project story AI prompt demo repository failure product decision",
+  },
+  {
+    title: "glyph, a tool born from the fear that a wiki might disappear",
+    type: "Vibe-code",
+    url: "/en/vibe-code/glyph/",
+    date: "2026-06-30",
+    excerpt: "The story of glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki.",
+    keywords: "NhanAZ glyph Minecraft Bedrock custom emoji glyph atlas Bedrock Wiki PocketMine-MP GitHub nhanaz.github.io/glyph",
+  },
+  {
+    title: "nhanaz.io.vn",
+    type: "Project",
+    url: "/en/projects/#nhanaz",
+    date: "2026",
+    excerpt: "A personal website built with HTML, CSS, and JavaScript, deployed through GitHub Pages.",
+    keywords: "personal website github pages html css javascript",
+  },
+  {
+    title: "Connect Brandbook",
+    type: "Project",
+    url: "/en/projects/#connect",
+    date: "2026",
+    excerpt: "A Graphic Design graduation project graded 9.5 out of 10.",
+    keywords: "brandbook connect graphic design graduation project canva",
+  },
+  {
+    title: "Milestones",
+    type: "Achievements",
+    url: "/en/achievements/",
+    excerpt: "Academic achievements, Youth Union and Students’ Association work, and volunteer activities.",
+    keywords: "achievements Nguyễn Thành Nhân Five-Good Student Information Technology graduate",
+  },
+  {
+    title: "Youth Union and Students’ Association work",
+    type: "Achievement category",
+    url: "/en/achievements/#records-title",
+    excerpt: "Roles in the Youth Union and Students’ Association Office, Executive Committee, Standing Committee, and media team.",
+    keywords: "Youth Union Students Association Office Executive Committee Standing Committee media team lead",
+  },
+  {
+    title: "Five-Good Student and academics",
+    type: "Achievement category",
+    url: "/en/achievements/#records-title",
+    excerpt: "College-level Five-Good Student twice, strong academic and conduct results, and an Information Technology diploma.",
+    keywords: "Five-Good Student academic performance excellent conduct Information Technology graduation",
+  },
+  {
+    title: "Spring Volunteer Campaign",
+    type: "Achievement category",
+    url: "/en/achievements/#records-title",
+    excerpt: "Recognition from Spring Volunteer Campaigns, including a city-level Certificate of Merit in 2025.",
+    keywords: "Spring Volunteer Campaign volunteering community city-level certificate merit",
+  },
+  {
+    title: "Skills and engagement",
+    type: "Achievement category",
+    url: "/en/achievements/#records-title",
+    excerpt: "AI skills training, personal finance learning, and student engagement activities.",
+    keywords: "AI personal finance Five-Good Challenges skills engagement",
+  },
+  {
+    title: "PocketMine-MP Vietnam",
+    type: "Community",
+    url: "/en/about/",
+    excerpt: "A PocketMine-MP Vietnam group founded by Nhân in 2019, now with over 350 members and still active.",
+    keywords: "PocketMine-MP Vietnam Minecraft Bedrock server plugin",
+  },
+  {
+    title: "Minecraft",
+    type: "Interest",
+    url: "/en/about/",
+    excerpt: "Minecraft played a large role in Nhân’s path through servers, plugins, configuration, and community work.",
+    keywords: "Minecraft Pocket Edition Bedrock server PocketMine",
+  },
+  {
+    title: "GitHub NhanAZ",
+    type: "Open source",
+    url: "https://github.com/NhanAZ",
+    excerpt: "NhanAZ’s open source repositories on GitHub.",
+    keywords: "GitHub NhanAZ open source repository code",
+  },
+];
+
+const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+const SITE_SEARCH_INDEX = isEnglish ? SITE_SEARCH_INDEX_EN : SITE_SEARCH_INDEX_VI;
+
+const initLanguageSwitch = () => {
+  const navigation = document.querySelector(".site-nav");
+  if (!navigation || navigation.querySelector(".language-switch")) {
+    return;
+  }
+
+  const currentPath = window.location.pathname;
+  const targetPath = isEnglish
+    ? currentPath.replace(/^\/en(?=\/|$)/, "") || "/"
+    : `/en${currentPath === "/" ? "/" : currentPath}`;
+  const link = document.createElement("a");
+  link.className = "language-switch";
+  link.href = targetPath;
+  link.hreflang = isEnglish ? "vi" : "en";
+  link.lang = isEnglish ? "vi" : "en";
+  link.textContent = isEnglish ? "VI" : "EN";
+  link.setAttribute("aria-label", isEnglish ? "Read this page in Vietnamese" : "Đọc trang này bằng tiếng Anh");
+  navigation.append(link);
+};
+
 const normalizeText = (value = "") =>
   value
     .toString()
@@ -186,7 +342,10 @@ const initSiteSearch = () => {
     results.hidden = false;
 
     if (!currentMatches.length) {
-      const empty = createText("p", "site-search-empty", "Chưa thấy kết quả phù hợp. Thử gõ ngắn hơn hoặc bỏ dấu.");
+      const emptyMessage = isEnglish
+        ? "No matching results. Try a shorter search."
+        : "Chưa thấy kết quả phù hợp. Thử gõ ngắn hơn hoặc bỏ dấu.";
+      const empty = createText("p", "site-search-empty", emptyMessage);
       results.append(empty);
       return;
     }
@@ -299,7 +458,9 @@ const initAchievementFilters = () => {
     });
 
     if (countElement) {
-      countElement.textContent = `Đang hiện ${visibleCount}/${records.length} mục.`;
+      countElement.textContent = isEnglish
+        ? `Showing ${visibleCount} of ${records.length} entries.`
+        : `Đang hiện ${visibleCount}/${records.length} mục.`;
     }
 
     if (emptyElement) {
@@ -347,6 +508,7 @@ const initCanvaEmbeds = () => {
   });
 };
 
+initLanguageSwitch();
 initSiteSearch();
 initAchievementFilters();
 initCanvaEmbeds();

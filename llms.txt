@@ -37,3 +37,45 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 ## Liên kết ngoài
 
 - GitHub: https://github.com/NhanAZ
+
+---
+
+# nhanaz.io.vn in English
+
+Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
+
+## Who is Nguyễn Thành Nhân
+
+Nguyễn Thành Nhân is an Information Technology graduate who runs the personal website nhanaz.io.vn and maintains hundreds of open source repositories on GitHub under the name NhanAZ. He has a particular interest in Minecraft, PocketMine-MP, and the Vietnamese Minecraft Bedrock server community.
+
+Nhân was born on 02.08.2005 and lives in Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City. His contact email is itsnhanaz@gmail.com and his Discord username is NhanAZ.
+
+Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, and nhan0ngu.
+
+## Main English pages
+
+- Home: https://nhanaz.io.vn/en/
+- About: https://nhanaz.io.vn/en/about/
+- Writing: https://nhanaz.io.vn/en/blog/
+- Projects: https://nhanaz.io.vn/en/projects/
+- Vibe-code: https://nhanaz.io.vn/en/vibe-code/
+- Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
+- Milestones and achievements: https://nhanaz.io.vn/en/achievements/
+
+## Main topics
+
+- Nguyễn Thành Nhân
+- NhanAZ
+- Open source
+- Information Technology
+- Minecraft
+- PocketMine-MP
+- Personal websites
+- Connect Brandbook
+- Vibe-code and projects built quickly with AI
+- glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
+- Academic achievements, Youth Union work, Students’ Association work, and volunteering
+
+## External links
+
+- GitHub: https://github.com/NhanAZ

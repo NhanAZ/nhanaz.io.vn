@@ -139,7 +139,7 @@ textarea {
 .site-nav {
   display: flex;
   align-self: stretch;
-  gap: 28px;
+  gap: clamp(16px, 2vw, 28px);
 }
 
 .site-nav a {
@@ -173,6 +173,12 @@ textarea {
 .site-nav a[aria-current="page"]::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.site-nav .language-switch {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .site-search {
@@ -1541,7 +1547,7 @@ a.project-row:hover {
 
   .site-nav {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
     min-height: 48px;
     margin-top: 8px;
@@ -1549,6 +1555,7 @@ a.project-row:hover {
   }
 
   .site-nav a {
+    min-height: 48px;
     font-size: 12px;
   }
 
