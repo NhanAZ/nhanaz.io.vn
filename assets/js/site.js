@@ -25,6 +25,14 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "blog nhật ký bài viết kiến thức",
   },
   {
+    title: "Minecraft từ 2015, trước khi mình biết IP là gì",
+    type: "Bài viết",
+    url: "/posts/hanh-trinh-minecraft-tu-2015/",
+    date: "2026-07-01",
+    excerpt: "Hành trình từ xem YouTube, chơi Minecraft PE qua MCPE Master, server list, staff, command block đến PocketMine-MP và Công nghệ thông tin.",
+    keywords: "Minecraft 2015 Minecraft PE MCPE Master Multiplayer Master Omlet Arcade FunCraft SurvivalCraft MineFRK FCA LOR PocketMine-MP PMMP server list command block Công nghệ thông tin",
+  },
+  {
     title: "Chào internet, mình dựng lại căn nhà này",
     type: "Bài viết",
     url: "/posts/chao-internet/",
@@ -41,11 +49,11 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "NhanAZ Zalo PC backup Zalo dịch ngược reverse engineering bảo mật security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP, nơi tôi bắt đầu với code",
+    title: "PocketMine-MP là gì?",
     type: "Bài viết",
     url: "/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "Một bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và vì sao đây là nơi Nhân bắt đầu với code.",
+    excerpt: "PocketMine-MP là gì, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và hiện trạng dự án.",
     keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Việt Nam Công nghệ thông tin",
   },
   {
@@ -216,6 +224,14 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "blog journal writing knowledge notes",
   },
   {
+    title: "Minecraft since 2015, before I knew what an IP was",
+    type: "Writing",
+    url: "/en/posts/hanh-trinh-minecraft-tu-2015/",
+    date: "2026-07-01",
+    excerpt: "From YouTube, Minecraft PE and MCPE Master to server lists, staff roles, command blocks, PocketMine-MP and Information Technology.",
+    keywords: "Minecraft 2015 Minecraft PE MCPE Master Multiplayer Master Omlet Arcade FunCraft SurvivalCraft MineFRK FCA LOR PocketMine-MP PMMP server list command block Information Technology",
+  },
+  {
     title: "Hello internet, I rebuilt this little home",
     type: "Writing",
     url: "/en/posts/chao-internet/",
@@ -232,11 +248,11 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP, where I started with code",
+    title: "What is PocketMine-MP?",
     type: "Writing",
     url: "/en/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "A long personal piece on PocketMine-MP, PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps, and why it became NhanAZ’s root.",
+    excerpt: "What PocketMine-MP is, with PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps and the project’s current state.",
     keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Vietnam Information Technology",
   },
   {

@@ -4,39 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="What PocketMine-MP is, its history, how it works technically, and why it sits near the root of NhanAZ.">
+  <meta name="description" content="What PocketMine-MP is, the PocketMine - PMMP history, how a PHP Bedrock server works, and where the project stands now.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Nguyễn Thành Nhân">
   <meta name="keywords" content="PocketMine-MP, PMMP, PocketMine, Minecraft Bedrock, Minecraft Pocket Edition, PocketMine-MP plugins, Poggit, dktapps, Shoghi Cervantes, NhanAZ, PMMPVN">
-  <meta property="og:title" content="PocketMine-MP, where I started with code">
-  <meta property="og:description" content="A long personal piece on PocketMine-MP, its history, technical shape, current state, and why it keeps appearing on NhanAZ’s website.">
+  <meta property="og:title" content="What is PocketMine-MP?">
+  <meta property="og:description" content="A focused explanation of PocketMine-MP, from PHP plugins and Bedrock networking to Poggit, dktapps and the project’s current state.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
   <meta property="og:site_name" content="nhanaz.io.vn">
   <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <meta property="article:published_time" content="2026-06-30">
-  <meta property="article:modified_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-07-01">
   <meta property="article:author" content="Nguyễn Thành Nhân">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PocketMine-MP, where I started with code">
-  <meta name="twitter:description" content="A long personal piece on PocketMine-MP, its history, technical shape, current state, and why it keeps appearing on NhanAZ’s website.">
+  <meta name="twitter:title" content="What is PocketMine-MP?">
+  <meta name="twitter:description" content="A focused explanation of PocketMine-MP, from PHP plugins and Bedrock networking to Poggit, dktapps and the project’s current state.">
   <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <link rel="canonical" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
   <link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/">
   <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
   <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/">
   <link rel="icon" href="/assets/favicon.svg?v=20260630-29" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-34">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260701-02">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "@id": "https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/#post",
       "mainEntityOfPage": "https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/",
-      "headline": "PocketMine-MP, where I started with code",
-      "description": "What PocketMine-MP is, its history, how it works technically, and why it sits near the root of NhanAZ.",
+      "headline": "What is PocketMine-MP?",
+      "description": "What PocketMine-MP is, the PocketMine - PMMP history, how a PHP Bedrock server works, and where the project stands now.",
       "datePublished": "2026-06-30",
-      "dateModified": "2026-06-30",
+      "dateModified": "2026-07-01",
       "inLanguage": "en",
       "image": "https://nhanaz.io.vn/assets/images/portrait.png",
       "about": [
@@ -53,7 +53,7 @@
       }
     }
   </script>
-  <title>PocketMine-MP, where I started with code - Nguyễn Thành Nhân - NhanAZ</title>
+  <title>What is PocketMine-MP? - Nguyễn Thành Nhân - NhanAZ</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -85,25 +85,22 @@
           <ul>
             <li>30.06.2026</li>
             <li>PocketMine-MP</li>
-            <li>16 min read</li>
+            <li>11 min read</li>
           </ul>
         </div>
         <div class="article-title">
-          <h1>PocketMine-MP, where I started with code.</h1>
-          <p>Before the GitHub organizations, the piles of repositories and this personal website, there was a Samsung phone running a Minecraft Bedrock server at home, and a kid editing plugins because the server could not simply look like everyone else’s.</p>
+          <h1>What is PocketMine-MP?</h1>
+          <p>An unofficial Minecraft Bedrock server, written mostly in PHP, kept alive by plugins and customization, with plenty of limits of its own.</p>
         </div>
       </header>
 
       <div class="article-layout">
         <aside class="article-rail"><a class="text-link" href="/en/blog/">← All writing</a></aside>
         <div class="prose">
-          <p>If you read this website for long enough, PocketMine-MP starts showing up everywhere. In the about page. In the GitHub corner. In organizations like NhanAZ-Plugins, NhanAZ-Libraries, pm-pl and PMMPVN. In stories about Minecraft, open source, archiving community resources and the small tools I still build for fun.</p>
-          <p>The reason is simple. PocketMine-MP is almost the root of everything I do with code.</p>
-          <p>I played Minecraft first. Only after that did I start wondering how to run servers. It was not fancy. I once hosted a server on my mother’s Samsung phone and left it running like a tiny server at home. Later I became staff on a few servers, watched communities being run, watched plugins working, watched errors appear in the console, and started asking what those things were made of.</p>
-          <p>That led to translating plugins into Vietnamese, editing config, changing a few lines in <code>plugin.yml</code>, even changing author fields in the clumsy way a younger me thought was harmless. It is not exactly something to brag about, but it is true. Those awkward little edits became the first door into understanding authorship, other people’s code and why writing something properly feels better than renaming someone else’s file.</p>
-          <p>By ninth grade, I had already decided that Information Technology was the path I wanted. Not because of a career talk. Because of Minecraft Bedrock servers, PocketMine-MP plugins and the feeling of fixing a bug, restarting the server and seeing it finally run.</p>
+          <p>PocketMine-MP appears often on this website because it sits near the root of many things I later built. NhanAZ-Plugins, NhanAZ-Libraries, pm-pl, PMMPVN, Minecraft Bedrock tools and my habit of archiving community resources all trace back to that world in one way or another.</p>
+          <p>But this page stays focused on PocketMine-MP itself. My Minecraft path from 2015, through MCPE Master, server lists, staff roles, command blocks and a Samsung phone running a small server, now lives in a separate post so this one can keep its technical thread clean.</p>
 
-          <blockquote>For me, PocketMine-MP is not only server software. It is where I learned to open things up and look inside.</blockquote>
+          <blockquote>In short, PMMP is a mostly PHP Minecraft Bedrock server, strong at plugins and customization, weak at pretending to be vanilla.</blockquote>
 
           <h2>What PocketMine-MP is</h2>
           <p>PocketMine-MP is open source server software for Minecraft Bedrock Edition. It is written mostly in PHP, with parts in C and C++. The main repository describes it as Bedrock server software built from scratch, not a modified copy of Mojang’s official server.</p>
@@ -148,21 +145,15 @@
           <p>So if someone says “it is hard to get a PR into PMMP now”, I understand the feeling. But I would not write that the project has closed PRs, because the official text does not say that. A fairer reading is that PMMP still accepts contributions, but the door into core is narrow, standards are high, reviewers are limited and large changes need a clearer process.</p>
 
           <h2>Why PMMP appears so much on this website</h2>
-          <p>Because almost every branch of my work grew from it.</p>
+          <p>Because many branches of my work grew from it.</p>
           <p>NhanAZ-Plugins is where I keep PocketMine-MP plugins I wrote or touched. NhanAZ-Libraries holds virions and small libraries. pm-pl came from the fear that community plugins might disappear, authors might delete repositories, Poggit might go down, or old links might stop working. PMMPVN is a piece of the Vietnamese PocketMine-MP community I started in 2019.</p>
           <p>Even later web tools and vibe-code projects still carry PMMP’s shadow. glyph is one example. It is about Minecraft Bedrock, resource packs, custom emojis and a real need from server developers. I made that tool from the same old fear. What if a useful resource disappears one day?</p>
-          <p>The habits of saving repositories, forking, archiving, writing tools, making static websites, collecting documentation and leaving notes all came from those server days. The feeling of “if I do not keep this, it may disappear” followed me from PMMP to GitHub, open source and this personal site.</p>
-
-          <h2>The Samsung phone and the longer road</h2>
-          <p>Looking back, it is a little funny. A kid plays Minecraft, borrows his mother’s Samsung phone to host a server, becomes staff, learns how players behave, handles server drama, backs up worlds, installs plugins, then slowly learns how to edit plugins.</p>
-          <p>At first, I did not call that programming. I only wanted the server to behave the way I imagined. I wanted English text translated into Vietnamese. I wanted a plugin to stop throwing errors. I wanted a command to work differently. I wanted my server to have something of its own.</p>
-          <p>Those small needs made me learn. Not for exams. Because if I did not learn, the server would not run. If I did not understand code, I could only wait for someone else to fix things. After every red console line, I wanted to be a little less helpless next time.</p>
-          <p>By the time I had to choose a field, Information Technology did not feel like a strange option. It felt like a path that had quietly opened years earlier, starting with Minecraft, servers, plugins and a phone left running overnight.</p>
+          <p>The habits of saving repositories, forking, archiving, writing tools, making static websites, collecting documentation and leaving notes all came from those server days. The more personal side is in <a href="/en/posts/hanh-trinh-minecraft-tu-2015/">Minecraft since 2015, before I knew what an IP was</a>.</p>
 
           <h2>PMMP is not perfect, but it is open enough</h2>
           <p>PocketMine-MP has limits. It is not vanilla. It has gameplay gaps. Plugins can age quickly. Major API changes force plugin updates. Touching internal network code is accepting breakage. The community has noisy seasons, quiet seasons and tired seasons.</p>
           <p>But PMMP is open enough for a beginner to step in. Open enough to read code. Open enough to write a first plugin. Open enough to show that servers are not magic. Open enough for a kid running a server on a phone to realize software is built by real people, with real bugs, real limits and very real debug nights.</p>
-          <p>So if you ask why PocketMine-MP appears here so often, the answer is that I do not want to cut off the root. Many things I do now look like web work, GitHub, open source or AI, but the old thread is still there. It starts with Minecraft Bedrock. Then PocketMine-MP. Then plugins. Then code.</p>
+          <p>So if you ask why PocketMine-MP appears here so often, the answer is that I do not want to cut off the root. Many things I do now look like web work, GitHub, open source or AI, but the old thread is still there. Minecraft Bedrock, then PocketMine-MP, then plugins, then code.</p>
 
           <h2>Places worth reading next</h2>
           <ul>
@@ -185,6 +176,6 @@
     <div><p class="footer-title">That is the end of this one.</p><a class="footer-email" href="/en/blog/">More writing →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260630-34" defer></script>
+  <script src="/assets/js/site.js?v=20260701-02" defer></script>
 </body>
 </html>

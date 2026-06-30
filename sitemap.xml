@@ -4,25 +4,25 @@
     <loc>https://nhanaz.io.vn/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/projects/</loc>
@@ -124,12 +124,24 @@
     <loc>https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/" />
+    <lastmod>2026-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/" />
+    <lastmod>2026-07-01</lastmod>
   </url>
 </urlset>

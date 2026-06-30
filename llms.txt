@@ -20,7 +20,8 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - GitHub và các tổ chức: https://nhanaz.io.vn/github/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
-- Bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock và vì sao nó là cái gốc trong đường đi với code của Nhân: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
+- Bài giải thích PocketMine-MP là gì, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và hiện trạng dự án: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
+- Bài kể hành trình Minecraft từ 2015 của Nhân, từ YouTube, MCPE Master, server list, staff, command block đến PocketMine-MP và Công nghệ thông tin: https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -36,7 +37,8 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Connect Brandbook
 - Vibe-code và các project được dựng nhanh với AI
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
-- PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit, PMMPVN và hành trình học Công nghệ thông tin của Nhân
+- PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit, PMMPVN và lịch sử cộng đồng Minecraft PE
+- Hành trình Minecraft từ 2015 của Nhân, gồm YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA và LOR
 - Dịch ngược backup Zalo PC, AES-256-CBC, bộ nhớ tiến trình Windows, TAR, NDJSON và bảo mật ứng dụng
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
@@ -68,7 +70,8 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
-- Long article on PocketMine-MP, PMMP history, Bedrock server internals, and why it became the root of Nhân’s path into code: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
+- Article explaining what PocketMine-MP is, PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps, and the project’s current state: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
+- Personal article on Nhân’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
 
 ## Main topics
@@ -84,7 +87,8 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Connect Brandbook
 - Vibe-code and projects built quickly with AI
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
-- PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, PMMPVN, and Nhân’s path into Information Technology
+- PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, PMMPVN, and Minecraft PE community history
+- Nhân’s Minecraft journey since 2015, including YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA, and LOR
 - Reverse engineering Zalo PC backups, AES-256-CBC, Windows process memory, TAR, NDJSON, and application security
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 

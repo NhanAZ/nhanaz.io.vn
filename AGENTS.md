@@ -26,7 +26,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 
 ## Phong cách viết
 
-- Tiếng Việt dùng “mình”, không dùng “tui” trong nội dung web.
+- Tiếng Việt dùng “mình”, không dùng “tui” hoặc “tôi” trong nội dung web.
 - Giọng viết nên thẳng, đời, có chút khô hài khi hợp ngữ cảnh. Tránh văn phong công ty, văn phong tuyển dụng và văn mẫu A.I.
 - Tránh kiểu câu đóng nhãn cứng như `Nhãn: nội dung`. Nếu cần giải thích, viết thành câu tự nhiên.
 - Không dùng chữ viết tắt nếu người ngoài khó hiểu. Ví dụ phải viết rõ Đoàn Thanh niên, Hội Sinh viên, Ban Chấp hành.
