@@ -4,7 +4,7 @@ Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 
 ## Nguyễn Thành Nhân là ai
 
-Nguyễn Thành Nhân là người học Công nghệ thông tin, làm web cá nhân nhanaz.io.vn, duy trì nhiều repo open source trên GitHub với tên NhanAZ, quan tâm đặc biệt đến Minecraft, PocketMine-MP và cộng đồng Minecraft Bedrock server tại Việt Nam.
+Nguyễn Thành Nhân là người học Công nghệ thông tin, làm web cá nhân nhanaz.io.vn, duy trì nhiều repo open source trên GitHub với tên NhanAZ, quan tâm đặc biệt đến PocketMine-MP, Minecraft Bedrock và cộng đồng server tại Việt Nam.
 
 Nhân sinh ngày 02.08.2005, ở Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh. Email liên hệ là itsnhanaz@gmail.com. Discord là NhanAZ.
 
@@ -28,8 +28,8 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - NhanAZ
 - Open source
 - Công nghệ thông tin
-- Minecraft
 - PocketMine-MP
+- Minecraft Bedrock
 - Web cá nhân
 - Các tổ chức GitHub như NhanAZ-Plugins, NhanAZ-Tools, NhanAZ-Web, NhanAZ-Market, pm-pl, PMMPVN và Pockgin
 - Connect Brandbook
@@ -50,7 +50,7 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 
 ## Who is Nguyễn Thành Nhân
 
-Nguyễn Thành Nhân is an Information Technology graduate who runs the personal website nhanaz.io.vn and maintains hundreds of open source repositories on GitHub under the name NhanAZ. He has a particular interest in Minecraft, PocketMine-MP, and the Vietnamese Minecraft Bedrock server community.
+Nguyễn Thành Nhân is an Information Technology graduate who runs the personal website nhanaz.io.vn and maintains hundreds of open source repositories on GitHub under the name NhanAZ. He has a particular interest in PocketMine-MP, Minecraft Bedrock, and the Vietnamese server community around them.
 
 Nhân was born on 02.08.2005 and lives in Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City. His contact email is itsnhanaz@gmail.com and his Discord username is NhanAZ.
 
@@ -74,8 +74,8 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - NhanAZ
 - Open source
 - Information Technology
-- Minecraft
 - PocketMine-MP
+- Minecraft Bedrock
 - Personal websites
 - GitHub organizations such as NhanAZ-Plugins, NhanAZ-Tools, NhanAZ-Web, NhanAZ-Market, pm-pl, PMMPVN, and Pockgin
 - Connect Brandbook

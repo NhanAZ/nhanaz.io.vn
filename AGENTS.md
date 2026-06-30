@@ -19,6 +19,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Tránh font quá to hoặc quá nhỏ. Tiêu đề có thể lớn vừa đủ, nội dung đọc nên giữ trong khoảng dễ đọc.
 - Không viết hoa toàn bộ chữ trong giao diện, trừ acronym kỹ thuật bắt buộc như HTML, CSS, API, AI, JSON, ZIP, TAR, AES.
 - Không dùng dấu `/` làm ký hiệu phân tách nếu có thể thay bằng ` - ` hoặc dấu chấm.
+- Không dùng dấu `;` trong văn bản hiển thị theo kiểu văn phòng. Nếu không phải cú pháp bắt buộc, đổi sang dấu phẩy, dấu chấm hoặc tách câu tự nhiên hơn.
 - Không dùng bullet tròn trong nội dung. Danh sách trên web phải dùng dấu `-` hoặc cấu trúc custom tương đương.
 
 ## Phong cách viết

@@ -59,7 +59,7 @@ const SITE_SEARCH_INDEX_VI = [
     type: "Open source",
     url: "/github/",
     excerpt: "Bản đồ nhỏ cho các org GitHub của NhanAZ, từ plugin PocketMine-MP đến tool, archive, web tĩnh và các dự án đã drop.",
-    keywords: "GitHub organizations NhanAZ-Plugins NhanAZ-Tools NhanAZ-Web NhanAZ-Market pm-pl PMMPVN Pockgin ReinfyTeam thebigcrafter PocketMine-MP Minecraft plugin archive",
+    keywords: "GitHub organizations NhanAZ-Plugins NhanAZ-Tools NhanAZ-Web NhanAZ-Market pm-pl PMMPVN Pockgin ReinfyTeam thebigcrafter PocketMine-MP plugin archive Minecraft Bedrock",
   },
   {
     title: "NhanAZ-Plugins",
@@ -242,7 +242,7 @@ const SITE_SEARCH_INDEX_EN = [
     type: "Open source",
     url: "/en/github/",
     excerpt: "A small map of NhanAZ’s GitHub organizations, from PocketMine-MP plugins to tools, archives, static web utilities, and dropped projects.",
-    keywords: "GitHub organizations NhanAZ-Plugins NhanAZ-Tools NhanAZ-Web NhanAZ-Market pm-pl PMMPVN Pockgin ReinfyTeam thebigcrafter PocketMine-MP Minecraft plugin archive",
+    keywords: "GitHub organizations NhanAZ-Plugins NhanAZ-Tools NhanAZ-Web NhanAZ-Market pm-pl PMMPVN Pockgin ReinfyTeam thebigcrafter PocketMine-MP plugin archive Minecraft Bedrock",
   },
   {
     title: "NhanAZ-Plugins",

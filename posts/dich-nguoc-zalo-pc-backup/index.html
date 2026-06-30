@@ -105,7 +105,7 @@
           <p>Mọi quan sát trong bài đều được thực hiện với dữ liệu của chính mình và phiên Zalo mình có quyền sử dụng. Đây là bài phân tích một thiết kế kỹ thuật, không phải hướng dẫn truy cập tài khoản hay dữ liệu của người khác.</p>
 
           <h2>Một bản xuất dữ liệu nhưng chưa thật sự được trao cho người dùng</h2>
-          <p>Meta làm việc này theo cách dễ hiểu hơn. Tài liệu chính thức của Facebook cho phép người dùng chọn HTML hoặc JSON. Gói HTML được tải về dưới dạng ZIP, giải nén rồi mở file <code>index</code>; JSON dành cho xử lý bằng máy hoặc chuyển sang dịch vụ khác. Mật khẩu và bước xác minh bổ sung được đặt trước lúc tải xuống, tức quyền truy cập được kiểm tra trước khi dữ liệu rời dịch vụ.</p>
+          <p>Meta làm việc này theo cách dễ hiểu hơn. Tài liệu chính thức của Facebook cho phép người dùng chọn HTML hoặc JSON. Gói HTML được tải về dưới dạng ZIP, giải nén rồi mở file <code>index</code>. JSON dành cho xử lý bằng máy hoặc chuyển sang dịch vụ khác. Mật khẩu và bước xác minh bổ sung được đặt trước lúc tải xuống, tức quyền truy cập được kiểm tra trước khi dữ liệu rời dịch vụ.</p>
           <p>Điểm mình muốn so sánh không phải Meta tốt còn Zalo xấu. Hai hệ thống có threat model và lịch sử khác nhau. Nhưng với một tính năng mang tên xuất dữ liệu, định dạng HTML, JSON hoặc một ZIP bình thường nói rõ rằng dữ liệu sau khi xác minh là của người dùng. Một ciphertext riêng của ứng dụng lại phát ra thông điệp hơi lạ. Bạn được phép mang dữ liệu về, chỉ là chưa chắc được đọc nó bằng công cụ mình chọn.</p>
 
           <h2>Cái đuôi ZIP chỉ là tấm bảng treo ngoài cửa</h2>
