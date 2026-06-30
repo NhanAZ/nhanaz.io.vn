@@ -47,6 +47,18 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Bản tiếng Anh nằm trong thư mục `en/` và nên được cập nhật song song khi nội dung chính có bản dịch.
 - Khi thêm trang mới, cập nhật sitemap, `llms.txt`, search index trong `assets/js/site.js`, các link liên quan trên index nếu cần.
 
+## Mục lục bài viết và liên kết đề mục
+
+- Tất cả bài viết con trong `posts/<slug>/index.html` và `en/posts/<slug>/index.html` dùng layout `.article-layout`, `.article-rail` và `.prose`.
+- Mục lục bên trái của bài viết được sinh tự động bằng `initArticleToc()` trong `assets/js/site.js`, lấy từ các heading `h2` và `h3` bên trong `.prose`.
+- Không hardcode mục lục thủ công vào từng bài nếu không có lý do thật sự đặc biệt. Khi thêm bài mới, chỉ cần viết heading rõ ràng bằng `h2` và `h3` trong `.prose`.
+- JavaScript tự tạo `id` sạch cho heading, tự tránh trùng, tự gắn link trong mục lục và tự cập nhật URL hash khi người đọc bấm vào mục lục hoặc bấm trực tiếp lên heading.
+- Người dùng phải copy được URL có hash và gửi cho người khác để mở thẳng tới đúng đề mục. Không phá hành vi này khi sửa bài viết, sửa `.article-rail`, `.prose`, scroll hoặc animation.
+- Khi nhảy tới heading từ TOC hoặc từ URL hash, heading phải hiện đầy đủ, không bị che bởi `.site-header` sticky và không bắt đầu từ đoạn văn bên dưới tiêu đề.
+- CSS của mục lục nằm trong `assets/css/site.css` với `.article-toc`. Desktop để mục lục sticky trong rail bên trái, mobile đưa mục lục lên phía trên nội dung bài.
+- Focus style của heading/permalink phải vuông góc, không bo tròn, không dùng outline mặc định lệch hoặc thừa viền.
+- Khi đổi CSS hoặc JS liên quan bài viết, nhớ tăng query version của `site.css` hoặc `site.js` trong các file HTML để tránh cache cũ.
+
 ## SEO và dữ liệu máy đọc
 
 - Mỗi trang quan trọng cần có title, description, canonical, Open Graph, Twitter meta và JSON-LD phù hợp.
@@ -61,6 +73,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Tìm kiếm toàn site lấy dữ liệu từ `SITE_SEARCH_INDEX_VI` và `SITE_SEARCH_INDEX_EN`.
 - Filter thành tích dựa vào dữ liệu trong DOM của `.record-item`; khi sửa markup phần này phải kiểm tra lại việc ẩn hiện thật sự.
 - Code block trong bài viết được enhance bằng JavaScript để có nút sao chép và màu cú pháp nhẹ. Không cần bọc tay từng block nếu không có nhu cầu riêng.
+- Mục lục bài viết và permalink heading được enhance bằng `initArticleToc()`. Nếu sửa logic này, phải kiểm tra bài dài có nhiều heading và bài ngắn có ít heading.
 
 ## CSS hiện có
 
@@ -69,6 +82,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Inline code và code block có màu riêng. Không đưa code block về trắng đen phẳng.
 - Code block dùng nền theme Dracula `#282a36`, chữ sáng, keyword hồng, function cyan, string xanh lá, comment xanh xám.
 - Biểu đồ kỹ thuật nên dùng SVG trong `assets/images/` khi cần tải xuống hoặc tái sử dụng.
+- Mục lục bài viết dùng `.article-toc`, nằm trong `.article-rail`. Không làm rail quá chật, không thêm hiệu ứng nặng và không phá mobile layout.
 
 ## Thành tích
 
@@ -82,5 +96,6 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Nếu sửa script build tiếng Anh, chạy `node --check scripts/build-english.mjs`.
 - Chạy `rg -n "tui|NhanAZ.io.vn"` khi thay đổi nội dung tiếng Việt hoặc domain.
 - Chạy `git diff --check` để bắt lỗi whitespace.
-- Mở local bằng static server nếu thay đổi layout, filter, search, code block hoặc embed.
+- Mở local bằng static server nếu thay đổi layout, filter, search, code block, TOC bài viết hoặc embed.
+- Khi sửa TOC hoặc layout bài viết, test ít nhất một bài dài trong `posts/`: mục lục phải hiện, bấm mục lục phải đổi URL hash, heading phải hiện đầy đủ sau khi nhảy, bấm heading phải đổi URL hash, mở URL có hash phải cuộn tới đúng đề mục.
 - Không commit hoặc push nếu người dùng chưa yêu cầu trong lượt hiện tại.

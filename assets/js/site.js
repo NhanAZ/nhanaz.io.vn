@@ -733,6 +733,7 @@ const initArticleToc = () => {
   const title = document.createElement("p");
   const list = document.createElement("ol");
   const links = new Map();
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   toc.className = "article-toc";
   toc.setAttribute("aria-label", isEnglish ? "Article table of contents" : "Mục lục bài viết");
@@ -761,7 +762,6 @@ const initArticleToc = () => {
       }
 
       history.pushState(null, "", `${location.pathname}${location.search}#${id}`);
-      heading.focus({ preventScroll: true });
       links.forEach((tocLink) => tocLink.classList.remove("is-active"));
       link.classList.add("is-active");
     });
@@ -777,6 +777,54 @@ const initArticleToc = () => {
     links.forEach((link) => link.classList.toggle("is-active", link.dataset.tocTarget === id));
   };
 
+  const getScrollOffset = () => {
+    const header = document.querySelector(".site-header");
+
+    if (!header) {
+      return 24;
+    }
+
+    const headerStyle = window.getComputedStyle(header);
+
+    if (headerStyle.position !== "sticky" && headerStyle.position !== "fixed") {
+      return 24;
+    }
+
+    return Math.ceil(header.getBoundingClientRect().bottom + 34);
+  };
+
+  const scrollToHeading = (target, { updateHash = true, focus = false } = {}) => {
+    const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset();
+
+    if (updateHash) {
+      history.pushState(null, "", `${location.pathname}${location.search}#${target.id}`);
+    }
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+
+    if (focus) {
+      target.focus({ preventScroll: true });
+    }
+
+    setActiveLink(target.id);
+  };
+
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const target = document.getElementById(link.dataset.tocTarget);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      scrollToHeading(target, { focus: false });
+    });
+  });
+
   setActiveLink(headings[0].id);
 
   const scrollToCurrentHash = () => {
@@ -788,8 +836,7 @@ const initArticleToc = () => {
     }
 
     window.requestAnimationFrame(() => {
-      target.scrollIntoView({ block: "start" });
-      setActiveLink(target.id);
+      scrollToHeading(target, { updateHash: false, focus: false });
     });
   };
 

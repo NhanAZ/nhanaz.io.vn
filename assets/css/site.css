@@ -1734,7 +1734,7 @@ a.project-row:hover {
 
 .prose h2,
 .prose h3 {
-  scroll-margin-top: 24px;
+  scroll-margin-top: 126px;
 }
 
 .prose .is-anchor-heading {
@@ -1743,6 +1743,21 @@ a.project-row:hover {
 
 .prose .is-anchor-heading:hover {
   color: var(--muted);
+}
+
+.prose .is-anchor-heading:focus,
+.prose .is-anchor-heading:target {
+  outline: 0;
+  border-radius: 0;
+}
+
+.prose .is-anchor-heading:focus-visible,
+.prose .is-anchor-heading:target {
+  outline: 0;
+  border-radius: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 
 .prose blockquote {
@@ -2515,6 +2530,11 @@ a.project-row:hover {
     padding: 52px 0 82px;
     border-top: 1px solid var(--line);
     border-left: 0;
+  }
+
+  .prose h2,
+  .prose h3 {
+    scroll-margin-top: 24px;
   }
 
   .prose p,
