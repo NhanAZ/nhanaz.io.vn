@@ -584,8 +584,12 @@ const initAchievementFilters = () => {
 
     if (countElement) {
       countElement.textContent = isEnglish
-        ? `Showing ${visibleCount} of ${records.length} entries.`
-        : `Đang hiện ${visibleCount}/${records.length} mục.`;
+        ? visibleCount === records.length
+          ? "Viewing the full list."
+          : `Viewing ${visibleCount} of ${records.length} entries.`
+        : visibleCount === records.length
+          ? "Đang xem toàn bộ danh sách."
+          : `Đang xem ${visibleCount} trong ${records.length} thành tích.`;
     }
 
     if (emptyElement) {
