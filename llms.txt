@@ -17,6 +17,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Bài viết: https://nhanaz.io.vn/blog/
 - Dự án: https://nhanaz.io.vn/projects/
 - Vibe-code: https://nhanaz.io.vn/vibe-code/
+- GitHub và các tổ chức: https://nhanaz.io.vn/github/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
@@ -30,6 +31,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Minecraft
 - PocketMine-MP
 - Web cá nhân
+- Các tổ chức GitHub như NhanAZ-Plugins, NhanAZ-Tools, NhanAZ-Web, NhanAZ-Market, pm-pl, PMMPVN và Pockgin
 - Connect Brandbook
 - Vibe-code và các project được dựng nhanh với AI
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
@@ -61,6 +63,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Writing: https://nhanaz.io.vn/en/blog/
 - Projects: https://nhanaz.io.vn/en/projects/
 - Vibe-code: https://nhanaz.io.vn/en/vibe-code/
+- GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
@@ -74,6 +77,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Minecraft
 - PocketMine-MP
 - Personal websites
+- GitHub organizations such as NhanAZ-Plugins, NhanAZ-Tools, NhanAZ-Web, NhanAZ-Market, pm-pl, PMMPVN, and Pockgin
 - Connect Brandbook
 - Vibe-code and projects built quickly with AI
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki

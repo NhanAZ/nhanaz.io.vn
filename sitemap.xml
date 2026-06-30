@@ -49,6 +49,18 @@
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
+    <loc>https://nhanaz.io.vn/github/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/github/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/github/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/github/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/github/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/github/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
     <loc>https://nhanaz.io.vn/vibe-code/glyph/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/vibe-code/glyph/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/vibe-code/glyph/" />

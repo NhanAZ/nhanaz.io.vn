@@ -135,7 +135,7 @@ textarea {
   width: 34px;
   height: 34px;
   overflow: hidden;
-  background: url("/assets/favicon.svg?v=20260630-28") center / contain no-repeat;
+  background: url("/assets/favicon.svg?v=20260630-29") center / contain no-repeat;
   color: transparent;
   font-size: 0;
   line-height: 0;
@@ -1211,6 +1211,203 @@ a.project-row:hover {
   color: var(--ink);
 }
 
+/* GitHub */
+.github-overview {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  padding: 76px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.github-overview h2 {
+  max-width: 220px;
+  margin: 15px 0 0;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.github-overview > div:last-child {
+  padding-left: 42px;
+  border-left: 1px solid var(--line);
+}
+
+.github-lead,
+.github-note {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+
+.github-note {
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.github-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--line);
+}
+
+.github-stats div {
+  padding: 28px 22px;
+}
+
+.github-stats div + div {
+  border-left: 1px solid var(--line);
+}
+
+.github-stats strong,
+.github-stats span {
+  display: block;
+}
+
+.github-stats strong {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.github-stats span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.github-section {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  padding: 78px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.github-section-heading h2 {
+  max-width: 210px;
+  margin: 15px 0 0;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.github-section-heading p:last-child {
+  max-width: 210px;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.github-org-list {
+  min-width: 0;
+  padding-left: 42px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.github-org-card {
+  border-bottom: 1px solid var(--line);
+}
+
+.github-org-card summary {
+  display: grid;
+  position: relative;
+  grid-template-columns: 180px minmax(0, 1fr) 150px 22px;
+  gap: 22px;
+  align-items: start;
+  padding: 22px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.github-org-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.github-org-card summary::after {
+  content: "+";
+  color: var(--muted);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: right;
+}
+
+.github-org-card[open] summary::after {
+  content: "-";
+}
+
+.github-org-name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+.github-org-copy {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.github-org-meta {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.github-org-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 30px;
+  padding: 0 0 28px 180px;
+}
+
+.github-org-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.github-related {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-width: 0;
+}
+
+.github-related a {
+  display: inline-flex;
+  width: fit-content;
+  border-bottom: 1px solid var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.github-excluded {
+  padding: 34px 0 92px 268px;
+}
+
+.github-excluded p:last-child {
+  max-width: 780px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr);
@@ -2066,6 +2263,69 @@ a.project-row:hover {
   .vibe-story-points div {
     grid-template-columns: 1fr;
     gap: 6px;
+  }
+
+  .github-overview,
+  .github-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 62px 0;
+  }
+
+  .github-overview h2,
+  .github-section-heading h2,
+  .github-section-heading p:last-child {
+    max-width: 340px;
+  }
+
+  .github-overview > div:last-child,
+  .github-org-list {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .github-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .github-stats div {
+    padding: 22px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .github-stats div:nth-child(3) {
+    border-left: 0;
+  }
+
+  .github-org-card summary {
+    grid-template-columns: 1fr 24px;
+    gap: 8px 16px;
+    padding: 20px 0;
+  }
+
+  .github-org-name,
+  .github-org-copy,
+  .github-org-meta {
+    grid-column: 1;
+  }
+
+  .github-org-card summary::after {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .github-org-meta {
+    text-align: left;
+  }
+
+  .github-org-body {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 0 26px;
+  }
+
+  .github-excluded {
+    padding: 30px 0 70px;
   }
 
   .about-grid {

@@ -38,6 +38,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Blog index ở `blog/index.html`.
 - Dự án ở `projects/index.html`.
 - Vibe-code ở `vibe-code/index.html` và từng project ở `vibe-code/<slug>/index.html`.
+- Góc GitHub ở `github/index.html`, dùng để mô tả các tổ chức GitHub liên quan đến NhanAZ.
 - Dấu mốc và thành tích ở `achievements/index.html`.
 - Giới thiệu ở `about/index.html`.
 - Bản tiếng Anh nằm trong thư mục `en/` và nên được cập nhật song song khi nội dung chính có bản dịch.
