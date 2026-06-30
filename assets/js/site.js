@@ -41,11 +41,11 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "NhanAZ Zalo PC backup Zalo dịch ngược reverse engineering bảo mật security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP, cái gốc của đường đi với code",
+    title: "PocketMine-MP, nơi tôi bắt đầu với code",
     type: "Bài viết",
     url: "/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "Một bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và vì sao nó là cái gốc của NhanAZ.",
+    excerpt: "Một bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và vì sao đây là nơi Nhân bắt đầu với code.",
     keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Việt Nam Công nghệ thông tin",
   },
   {
@@ -232,7 +232,7 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP, the root of my path into code",
+    title: "PocketMine-MP, where I started with code",
     type: "Writing",
     url: "/en/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
@@ -737,7 +737,6 @@ const initMotion = () => {
     ".manifesto",
     ".site-footer",
     ".article-header",
-    ".article-layout",
     ".archive-toolbar",
     ".archive .entry",
     ".project-detail",
