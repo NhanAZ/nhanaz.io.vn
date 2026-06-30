@@ -20,6 +20,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - GitHub và các tổ chức: https://nhanaz.io.vn/github/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
+- Bài tổng hợp PocketMine-MP là gì và vì sao nó dẫn Nhân vào Công nghệ thông tin: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -35,6 +36,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Connect Brandbook
 - Vibe-code và các project được dựng nhanh với AI
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
+- PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit, PMMPVN và hành trình học Công nghệ thông tin của Nhân
 - Dịch ngược backup Zalo PC, AES-256-CBC, bộ nhớ tiến trình Windows, TAR, NDJSON và bảo mật ứng dụng
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
@@ -66,6 +68,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
+- Article explaining PocketMine-MP and how it led Nhân into Information Technology: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
 
 ## Main topics
@@ -81,6 +84,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Connect Brandbook
 - Vibe-code and projects built quickly with AI
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
+- PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, PMMPVN, and Nhân’s path into Information Technology
 - Reverse engineering Zalo PC backups, AES-256-CBC, Windows process memory, TAR, NDJSON, and application security
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 

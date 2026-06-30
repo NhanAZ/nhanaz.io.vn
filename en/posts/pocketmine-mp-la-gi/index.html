@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="What PocketMine-MP is, how it differs from vanilla Bedrock servers, and why this PHP plugin ecosystem pulled NhanAZ into Minecraft Bedrock servers and Information Technology.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nguyễn Thành Nhân">
+  <meta name="keywords" content="PocketMine-MP, PMMP, Minecraft Bedrock, Minecraft Pocket Edition, PocketMine-MP plugins, Poggit, NhanAZ, NhanAZ-Plugins, PocketMine-MP Vietnam">
+  <meta property="og:title" content="What PocketMine-MP is, and why it pulled me into Information Technology">
+  <meta property="og:description" content="A personal guide to PocketMine-MP, its PHP plugin ecosystem, Poggit, strengths, tradeoffs, and its place in NhanAZ’s story.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
+  <meta property="og:site_name" content="nhanaz.io.vn">
+  <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
+  <meta property="article:published_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-06-30">
+  <meta property="article:author" content="Nguyễn Thành Nhân">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What PocketMine-MP is, and why it pulled me into Information Technology">
+  <meta name="twitter:description" content="A personal guide to PocketMine-MP, its PHP plugin ecosystem, Poggit, strengths, tradeoffs, and its place in NhanAZ’s story.">
+  <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
+  <link rel="canonical" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
+  <link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/">
+  <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/">
+  <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/">
+  <link rel="icon" href="/assets/favicon.svg?v=20260630-29" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-32">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/#post",
+      "mainEntityOfPage": "https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/",
+      "headline": "What PocketMine-MP is, and why it pulled me into Information Technology",
+      "description": "What PocketMine-MP is, how it differs from vanilla Bedrock servers, and why this PHP plugin ecosystem pulled NhanAZ into Minecraft Bedrock servers and Information Technology.",
+      "datePublished": "2026-06-30",
+      "dateModified": "2026-06-30",
+      "inLanguage": "en",
+      "image": "https://nhanaz.io.vn/assets/images/portrait.png",
+      "about": [
+        "PocketMine-MP",
+        "Minecraft Bedrock",
+        "Poggit",
+        "PocketMine-MP plugin development"
+      ],
+      "author": {
+        "@id": "https://nhanaz.io.vn/#person"
+      },
+      "publisher": {
+        "@id": "https://nhanaz.io.vn/#person"
+      }
+    }
+  </script>
+  <title>What PocketMine-MP is, and why it pulled me into Information Technology - Nguyễn Thành Nhân - NhanAZ</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="/en/" aria-label="NhanAZ - Home"><span class="brand-mark" aria-hidden="true">“</span><span>nhanaz.io.vn</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/en/blog/" aria-current="page">Writing</a>
+      <a href="/en/projects/">Projects</a>
+      <a href="/en/vibe-code/">Vibe-code</a>
+      <a href="/en/github/">GitHub</a>
+      <a href="/en/achievements/">Milestones</a>
+      <a href="/en/about/">About</a>
+    </nav>
+  </header>
+
+  <section class="site-search shell" aria-label="Site-wide search">
+    <form class="site-search-box" role="search" data-site-search-form>
+      <label for="site-search-input">Search</label>
+      <input id="site-search-input" type="search" autocomplete="off" placeholder="Search writing, projects, vibe-code..." data-site-search>
+    </form>
+    <div class="site-search-results" data-site-search-results hidden></div>
+  </section>
+
+  <main id="main" class="shell">
+    <article>
+      <header class="article-header">
+        <div class="article-meta">
+          <span>Note - 003</span>
+          <ul>
+            <li>30.06.2026</li>
+            <li>PocketMine-MP</li>
+            <li>12 min read</li>
+          </ul>
+        </div>
+        <div class="article-title">
+          <h1>What PocketMine-MP is, and why it pulled me into Information Technology.</h1>
+          <p>A small Minecraft Bedrock doorway opened with PHP, plugins, and far too many nights spent staring at red console lines.</p>
+        </div>
+      </header>
+
+      <div class="article-layout">
+        <aside class="article-rail"><a class="text-link" href="/en/blog/">← All writing</a></aside>
+        <div class="prose">
+          <p>If I had to pick one thing that pulled me into Information Technology in a very practical way, I would pick PocketMine-MP. Not because it is the “best” way to run a Minecraft Bedrock server. Not because it perfectly mirrors vanilla. It matters to me because it is where I first learned what a server is, what a plugin is, what config means, what a console error feels like, and why one missing bracket can ruin a peaceful evening.</p>
+          <p>PocketMine-MP, often shortened to PMMP, is open source server software for Minecraft Bedrock Edition. It is written mainly in PHP, with some C and C++. The official website describes it as a highly customizable Bedrock server. The GitHub repository makes the important part clearer, it is built from scratch rather than being a modified copy of Mojang’s Bedrock server.</p>
+
+          <blockquote>PocketMine-MP is not just “running a Minecraft server”. It is an ecosystem for bending gameplay through plugins.</blockquote>
+
+          <h2>It is not a vanilla server</h2>
+          <p>The first thing worth saying is that PocketMine-MP is not Mojang’s Bedrock Dedicated Server. It is its own implementation, with its own protocol handling, worlds, entities, items, events, commands and API. That makes it very good for custom servers, minigames, lobbies, economies, ranks, quests, admin utilities and systems that are not trying to behave exactly like vanilla survival.</p>
+          <p>The tradeoff is obvious. If the goal is the most faithful vanilla survival server possible, PocketMine-MP is usually not the nicest choice. The PMMP repository says this plainly. Vanilla-style world generation, redstone, mob AI and many gameplay mechanics may be missing, different or left to plugins.</p>
+          <p>Short version, if you want “as close to Minecraft as possible”, consider the official server. If you want “Bedrock, but I can change the rules”, PocketMine-MP starts to make sense.</p>
+
+          <h2>Why PHP shows up here</h2>
+          <p>From the outside, PHP can sound unexpected. Newcomers often imagine a game server should be written in C++, Java, Go or something that looks more dramatic. But in the PocketMine-MP world, PHP is part of why people get started. Install the server, open a plugin file, change a few lines, reload, read the error, fix it, repeat. That loop is fast and strangely friendly to beginners.</p>
+          <p>The API is where PMMP becomes interesting. A plugin can listen for players joining, chat messages, block placement, block breaking, item use, commands, permissions, world operations, forms, scheduled tasks and data storage. A normal Bedrock server can become a minigame server, a survival server with its own rules, or a pile of experiments someone invented at three in the morning.</p>
+          <p>PHP being easy to start with does not mean plugins are easy to make well. Real plugins need to care about ticks, data reads and writes, async tasks, memory, player data and API compatibility after major versions. PMMP teaches this quite directly. If something is wrong, the console tells you. Sometimes at length. Sometimes with the energy of a teacher who has seen this mistake too many times.</p>
+
+          <h2>The ecosystem around PMMP</h2>
+          <p>PocketMine-MP does not stand alone. Around it are docs, API docs, GitHub, Discord, Poggit, DevTools, ExamplePlugin, virions and years of community plugins.</p>
+          <p>Poggit is probably the place most server owners meet first when searching for plugins. It is both a reviewed plugin release platform and a GitHub-based build system that produces phar files. For server owners, Poggit is where they download plugins. For developers, it is where builds, checks and releases become less manual.</p>
+          <p>DevTools is another familiar tool for plugin developers. It can generate plugin skeletons, load folder plugins during development, build plugins into phar archives and expose a few small debugging helpers. ExamplePlugin is exactly what the name suggests, a sample plugin showing basic API usage. The API docs are regenerated for releases and become the place to check classes, methods and signatures once a plugin grows past what memory can hold.</p>
+          <p>Virion is a very Poggit-shaped idea. You can think of it as a small library for PocketMine-MP plugins, bundled with a plugin at build time. It lets several plugins reuse code without requiring server owners to manage dependencies like a traditional PHP application.</p>
+
+          <h2>Versions keep chasing Bedrock</h2>
+          <p>One constant pain in the Minecraft Bedrock world is that the game keeps updating. When Bedrock changes protocol, servers have to catch up. PocketMine-MP does the same. Server owners wait for a compatible PMMP release, and plugin developers wait to see whether the API moved under their feet.</p>
+          <p>The checkpoint for this article is 30.06.2026. The latest GitHub release I checked is PocketMine-MP 5.44.2, published on 24.06.2026, targeting Minecraft Bedrock 1.26.30, display version v26.30. The release also points PM5 users to the recommended PHP 8.2 binary.</p>
+          <p>Version details look dry, but this is everyday server life. A player updates the game in the morning, cannot join in the afternoon, the admin reads changelogs at night, and plugin developers quietly hope the API did not move too much.</p>
+
+          <h2>Where PocketMine-MP is strong</h2>
+          <p>Its biggest strength is customization. PocketMine-MP exists for people who want to reach deeply into the server. The plugin API makes changing gameplay feel normal rather than ceremonial.</p>
+          <ul>
+            <li>You want a custom command, doable.</li>
+            <li>You want to block a player action, doable.</li>
+            <li>You want ranks, coins, lobbies, minigames, forms or special items, doable.</li>
+            <li>You want to store player data and connect it to a website or bot, also doable, as long as the code does not shoot itself in the foot.</li>
+          </ul>
+          <p>The second strength is community. It is not perfect, but it is large enough for beginners to find plugins, examples, old answers and sometimes a stranger willing to point out a tiny mistake in <code>plugin.yml</code>.</p>
+          <p>The third strength is a sense of ownership. With PocketMine-MP, a server is not a black box. I can read the API, write plugins, fix plugins, fork plugins, archive plugins I fear losing, or create whole GitHub organizations just to preserve things that may disappear. That sounds a little obsessive. It is also exactly what I did.</p>
+
+          <h2>The weak points deserve honesty too</h2>
+          <p>PocketMine-MP is not magic. It does not turn a Bedrock server into everything at once. Poor plugins can make servers lag. Random plugin piles can make servers unstable. Expecting perfect vanilla survival can lead to disappointment.</p>
+          <p>Another weak point is dependence on community plugins. Many are good, many are abandoned, many only work on old API versions, and many were once lifesavers before becoming fossils. This is part of why I keep plugin archives and forks. The internet does not promise to preserve anything for us.</p>
+          <p>For beginners, PHP and the PMMP API are approachable, but debugging a real server is still a lesson. Crashes are not always obvious. Version incompatibility can look like your own mistake. Some bugs only appear when dozens of players do something no developer expected.</p>
+
+          <h2>What it did to me</h2>
+          <p>I came to Minecraft around 2015, then gradually drifted into Minecraft Pocket Edition, Bedrock servers, plugins and PocketMine-MP. At first it was just downloading the game, playing it and opening servers for fun. Then came config files, ports, backups, console errors, plugin hunting, Vietnamese translations, Poggit, reading other people’s code and writing my first plugins.</p>
+          <p>PocketMine-MP plugins were the thing that led me into Information Technology. It did not begin with a textbook. It began with a very specific need. I wanted a server to do something, the plugin either did not exist or did not work the way I wanted, so I had to change it. If I could not change it, I had to learn. After learning, I wanted to change more. A dangerous loop for sleep.</p>
+          <p>Later I created <a href="https://github.com/NhanAZ-Plugins">NhanAZ-Plugins</a> for plugins, <a href="https://github.com/NhanAZ-Libraries">NhanAZ-Libraries</a> for virions and small libraries, <a href="https://github.com/NhanAZ-Web">NhanAZ-Web</a> for web tools, <a href="https://github.com/pm-pl">pm-pl</a> to archive PocketMine-MP plugins because community resources vanish too easily, and <a href="https://github.com/PMMPVN">PMMPVN</a> as a fragment of the Vietnamese PocketMine-MP community.</p>
+          <p>In 2019, I founded the PocketMine-MP Vietnam group. It is not huge, a little over 350 members, but it is still there. To me, it feels like a small corner for people who have wrestled with Bedrock servers, plugins, API changes, console errors and the strange joy of finally making something run.</p>
+
+          <h2>If I were starting today</h2>
+          <p>If someone is new to PocketMine-MP, I would start with a clean server, very few plugins, the installation docs, then add plugins one by one. Do not download a random pack, throw it into the server, see that it boots and assume everything is fine. It might be fine. Or it might be waiting for real traffic to take revenge.</p>
+          <p>If you want to write plugins, read ExamplePlugin, check the API docs, try a small event, create a tiny command, save a config file, then think about bigger systems. A first plugin does not need to be impressive. It only needs to teach the plugin lifecycle, how PMMP dispatches events, and why the main server thread dislikes heavy work.</p>
+          <p>If you want to run a serious server, learn backups, logs, file permissions, resource limits, PHP versions, PMMP versions, plugin versions and changelogs. Minecraft servers are fun, but player data is not a toy.</p>
+
+          <h2>Why I still think it is worth keeping</h2>
+          <p>PocketMine-MP is a strange and valuable project. It sits between games, community, open source, plugins, light protocol-level reverse engineering and the very ordinary wish to have a server of your own. It is not perfect, but it is open enough for people to learn by making.</p>
+          <p>For me, PMMP is part of my technical memory. It taught me that code is not only something inside books. Code can be a small plugin that gives players daily rewards. A crash that keeps a server from starting. A deleted repository I wish I had saved. A tool written because I do not want to depend on a page that might disappear.</p>
+          <p>Maybe that is why seeing the words PocketMine-MP still gives me a very specific feeling. It is not only server software. It is a small path that led me to many other things.</p>
+
+          <h2>Places worth reading next</h2>
+          <ul>
+            <li><a href="https://pmmp.io/">PocketMine-MP official website</a> for the overview, Discord, docs, API docs and Poggit links.</li>
+            <li><a href="https://github.com/pmmp/PocketMine-MP">The pmmp/PocketMine-MP GitHub repository</a> for the README, license, changelog and source code.</li>
+            <li><a href="https://github.com/pmmp/PocketMine-MP/releases/tag/5.44.2">PocketMine-MP 5.44.2</a>, the latest release I checked while writing this article.</li>
+            <li><a href="https://apidoc.pmmp.io/">PocketMine-MP API docs</a> for classes, methods and release-generated developer references.</li>
+            <li><a href="https://poggit.pmmp.io/">Poggit</a> for plugin releases, GitHub-based builds and virion material.</li>
+          </ul>
+
+          <p class="article-end">- NhanAZ - 30.06.2026</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer shell">
+    <div><p class="footer-title">That is the end of this one.</p><a class="footer-email" href="/en/blog/">More writing →</a></div>
+    <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
+  </footer>
+  <script src="/assets/js/site.js?v=20260630-32" defer></script>
+</body>
+</html>

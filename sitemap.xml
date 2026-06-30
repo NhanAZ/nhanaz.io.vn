@@ -120,4 +120,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/" />
     <lastmod>2026-06-30</lastmod>
   </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/" />
+    <lastmod>2026-06-30</lastmod>
+  </url>
 </urlset>
