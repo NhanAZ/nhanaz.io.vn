@@ -66,14 +66,14 @@ const SITE_SEARCH_INDEX_VI = [
     type: "GitHub org",
     url: "/github/#nhanaz-plugins",
     excerpt: "Nơi Nhân lưu plugin PocketMine-MP tự viết, sửa tay, copy paste và các dấu vết Poggit cũ.",
-    keywords: "NhanAZ-Plugins nhanaz-pm-pl Poggit PocketMine-MP plugin 87600 downloads",
+    keywords: "NhanAZ-Plugins nhanaz-pm-pl Poggit PocketMine-MP plugin downloads",
   },
   {
     title: "pm-pl",
     type: "GitHub org",
     url: "/github/#pm-pl",
-    excerpt: "Kho lưu plugin PocketMine-MP và Poggit với hơn 1.1k public repo.",
-    keywords: "pm-pl PocketMine-MP Plugins archive poggit plugin storage 1142 repositories",
+    excerpt: "Kho lưu plugin PocketMine-MP và Poggit, sinh ra vì sợ các tài nguyên cộng đồng biến mất quá dễ.",
+    keywords: "pm-pl PocketMine-MP Plugins archive poggit plugin storage repositories",
   },
   {
     title: "NhanAZ-Tools",
@@ -86,8 +86,8 @@ const SITE_SEARCH_INDEX_VI = [
     title: "NhanAZ-Market",
     type: "GitHub org",
     url: "/github/#nhanaz-market",
-    excerpt: "Kho private lớn vì bản quyền và pháp luật, được chia sẻ chọn lọc trong cộng đồng.",
-    keywords: "NhanAZ-Market private repositories copyright legal AI training data Minecraft market",
+    excerpt: "Kho lưu trữ nhạy cảm vì bản quyền và pháp luật, chỉ có thể chia sẻ rất chọn lọc.",
+    keywords: "NhanAZ-Market copyright legal limited access AI training data Minecraft market",
   },
   {
     title: "PMMPVN và Pockgin",
@@ -255,7 +255,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "pm-pl",
     type: "GitHub org",
     url: "/en/github/#pm-pl",
-    excerpt: "A PocketMine-MP plugin archive with over 1.1k public repositories.",
+    excerpt: "A PocketMine-MP plugin archive shaped by the fear that community resources can disappear too easily.",
     keywords: "pm-pl PocketMine-MP Plugins archive poggit plugin storage repositories",
   },
   {
