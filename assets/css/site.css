@@ -131,18 +131,14 @@ textarea {
 }
 
 .brand-mark {
-  display: flex;
+  display: block;
   width: 34px;
   height: 34px;
-  align-items: flex-start;
-  justify-content: center;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: "Space Grotesk", Arial, sans-serif;
-  font-size: 34px;
-  font-weight: 500;
-  line-height: 1;
-  padding-top: 7px;
+  overflow: hidden;
+  background: var(--ink) url("/assets/favicon.svg?v=20260630-26") center / contain no-repeat;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
 }
 
 .site-nav {
