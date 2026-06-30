@@ -20,7 +20,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - GitHub và các tổ chức: https://nhanaz.io.vn/github/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
-- Bài tổng hợp PocketMine-MP là gì và vì sao nó dẫn Nhân vào Công nghệ thông tin: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
+- Bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock và vì sao nó là cái gốc trong đường đi với code của Nhân: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -68,7 +68,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
-- Article explaining PocketMine-MP and how it led Nhân into Information Technology: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
+- Long article on PocketMine-MP, PMMP history, Bedrock server internals, and why it became the root of Nhân’s path into code: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
 
 ## Main topics

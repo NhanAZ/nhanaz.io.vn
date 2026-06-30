@@ -41,12 +41,12 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "NhanAZ Zalo PC backup Zalo dịch ngược reverse engineering bảo mật security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP là gì, và vì sao nó kéo mình vào Công nghệ thông tin",
+    title: "PocketMine-MP, cái gốc của đường đi với code",
     type: "Bài viết",
     url: "/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "Một bài tổng hợp về PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit và cách PMMP dẫn Nhân vào Công nghệ thông tin.",
-    keywords: "PocketMine-MP PMMP Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Việt Nam Công nghệ thông tin",
+    excerpt: "Một bài dài về PocketMine-MP, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và vì sao nó là cái gốc của NhanAZ.",
+    keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Việt Nam Công nghệ thông tin",
   },
   {
     title: "Dự án",
@@ -232,12 +232,12 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "What PocketMine-MP is, and why it pulled me into Information Technology",
+    title: "PocketMine-MP, the root of my path into code",
     type: "Writing",
     url: "/en/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "A personal guide to PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, and how PMMP led Nhân into Information Technology.",
-    keywords: "PocketMine-MP PMMP Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Vietnam Information Technology",
+    excerpt: "A long personal piece on PocketMine-MP, PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps, and why it became NhanAZ’s root.",
+    keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Vietnam Information Technology",
   },
   {
     title: "Projects",
