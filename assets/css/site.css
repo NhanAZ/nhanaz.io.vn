@@ -135,7 +135,7 @@ textarea {
   width: 34px;
   height: 34px;
   overflow: hidden;
-  background: var(--ink) url("/assets/favicon.svg?v=20260630-26") center / contain no-repeat;
+  background: url("/assets/favicon.svg?v=20260630-27") center / contain no-repeat;
   color: transparent;
   font-size: 0;
   line-height: 0;
