@@ -26,7 +26,7 @@
   <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-23">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-24">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -134,11 +134,16 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
           <p>The interesting part is not breaking AES. AES is doing its job. The issue is the key lifecycle in a desktop application. While Zalo is running, a legitimate process must retain enough state to work with the current account. Another process in the same user context can use read-only Windows APIs such as <code>VirtualQueryEx</code> and <code>ReadProcessMemory</code> to inspect suitable memory regions.</p>
           <p>Potential <code>uin</code> values can be found as hexadecimal strings in ASCII and UTF-16LE. For each candidate, derive the key and IV, then decrypt only the first block of the file. TAR has a 512-byte header and a checksum field at a fixed position, making it a convenient known-plaintext check. A wrong candidate is extraordinarily unlikely to produce both a valid checksum and a readable first entry name.</p>
 
-          <pre><code>for each readable Zalo renderer memory region
-    find plausible uin candidates
-    derive AES key and IV
-    decrypt the first 512 bytes
-    accept only a structurally valid TAR header</code></pre>
+          <pre><code>for region in readable_memory_regions:
+    candidates = find_uin_like_strings(region)
+
+    for uin in candidates:
+        key = SHA256(UTF8(uin))
+        iv = UTF8("zie" + uin[:13])
+        header = decrypt_first_block(backup, key, iv)
+
+        if looks_like_tar_header(header):
+            accept(uin)</code></pre>
 
           <blockquote>No one is breaking AES here. The key is found where the application is forced to use it, and TAR confirms that the right key was picked up.</blockquote>
           <p>This does not prove that encryption is useless in every situation. If someone obtains only the backup file without the machine, session, or related account data, ciphertext still creates an extra barrier. If an attacker can already execute code under the same Windows account and read process memory, however, the story has moved to a different layer. Backup encryption cannot rescue an endpoint that has already been compromised.</p>
@@ -217,6 +222,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">There is always more beneath a file extension.</p><a class="footer-email" href="/en/blog/">More writing →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260630-23" defer></script>
+  <script src="/assets/js/site.js?v=20260630-24" defer></script>
 </body>
 </html>

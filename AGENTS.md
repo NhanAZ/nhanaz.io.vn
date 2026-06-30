@@ -63,6 +63,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - CSS chính nằm ở `assets/css/site.css`.
 - Khi đổi CSS hoặc JS, nên tăng query version trong các file HTML để tránh cache cũ.
 - Inline code và code block có màu riêng. Không đưa code block về trắng đen phẳng.
+- Code block dùng palette kiểu Dracula: nền tím đen, chữ sáng, keyword hồng, function cyan, string xanh lá, comment xanh xám.
 - Biểu đồ kỹ thuật nên dùng SVG trong `assets/images/` khi cần tải xuống hoặc tái sử dụng.
 
 ## Thành tích

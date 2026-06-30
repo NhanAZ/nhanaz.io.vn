@@ -534,7 +534,8 @@ const escapeCodeHtml = (value) =>
   }[character]));
 
 const highlightCode = (value) => {
-  const tokenPattern = /(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\/\/[^\n]*|#[^\n]*|\b[A-Z][A-Z0-9_-]{2,}\b|\b\d+(?:\.\d+)?\b|\b(?:for|each|readable|renderer|memory|region|find|plausible|candidates|derive|key|and|iv|decrypt|first|bytes|accept|only|structurally|valid|header|plaintext|ciphertext|uin|from|without|salt|checksum)\b|[=()+,\[\]:])/gi;
+  const codeKeywords = new Set(["for", "in", "if", "else", "return", "while"]);
+  const tokenPattern = /(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\/\/[^\n]*|#[^\n]*|\b[A-Za-z_][A-Za-z0-9_]*(?=\()|\b[A-Z][A-Z0-9_-]{2,}\b|\b\d+(?:\.\d+)?\b|\b(?:for|in|if|else|return|while)\b|[=()+,\[\]:])/g;
   let result = "";
   let lastIndex = 0;
 
@@ -542,20 +543,22 @@ const highlightCode = (value) => {
     result += escapeCodeHtml(value.slice(lastIndex, offset));
 
     const lowerToken = token.toLowerCase();
-    let tokenClass = "keyword";
+    let tokenClass = "property";
 
     if (/^["'`]/.test(token)) {
       tokenClass = "string";
     } else if (/^(?:\/\/|#)/.test(token)) {
       tokenClass = "comment";
+    } else if (value[offset + token.length] === "(") {
+      tokenClass = "function";
     } else if (/^[A-Z][A-Z0-9_-]{2,}$/.test(token)) {
       tokenClass = "constant";
     } else if (/^\d/.test(token)) {
       tokenClass = "number";
     } else if (/^[=()+,\[\]:]$/.test(token)) {
       tokenClass = "operator";
-    } else if (["sha256", "utf8", "aes_256_cbc_decrypt"].includes(lowerToken)) {
-      tokenClass = "function";
+    } else if (codeKeywords.has(lowerToken)) {
+      tokenClass = "keyword";
     }
 
     result += `<span class="code-token ${tokenClass}">${escapeCodeHtml(token)}</span>`;

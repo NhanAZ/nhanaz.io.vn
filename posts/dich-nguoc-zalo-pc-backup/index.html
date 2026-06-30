@@ -26,7 +26,7 @@
   <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-23">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-24">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -134,11 +134,16 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
           <p>Phần thú vị không nằm ở việc phá AES. AES vẫn làm đúng việc của AES. Vấn đề nằm ở vòng đời của khóa trên một ứng dụng desktop. Khi Zalo đang chạy, tiến trình hợp lệ cần giữ đủ trạng thái để làm việc với tài khoản hiện tại. Một tiến trình khác trong cùng ngữ cảnh người dùng có thể dùng các API Windows chỉ đọc như <code>VirtualQueryEx</code> và <code>ReadProcessMemory</code> để quan sát những vùng nhớ phù hợp.</p>
           <p>Các ứng viên <code>uin</code> có thể được tìm dưới dạng chuỗi hex ở ASCII và UTF-16LE. Với mỗi ứng viên, chỉ cần dẫn xuất key, IV rồi giải mã block đầu của file. TAR có header 512 byte và trường checksum ở vị trí cố định, nên nó trở thành một phép kiểm tra known-plaintext rất tiện. Ứng viên sai gần như không thể đồng thời tạo ra checksum hợp lệ và tên entry đầu tiên có thể đọc được.</p>
 
-          <pre><code>for each readable Zalo renderer memory region
-    find plausible uin candidates
-    derive AES key and IV
-    decrypt the first 512 bytes
-    accept only a structurally valid TAR header</code></pre>
+          <pre><code>for region in readable_memory_regions:
+    candidates = find_uin_like_strings(region)
+
+    for uin in candidates:
+        key = SHA256(UTF8(uin))
+        iv = UTF8("zie" + uin[:13])
+        header = decrypt_first_block(backup, key, iv)
+
+        if looks_like_tar_header(header):
+            accept(uin)</code></pre>
 
           <blockquote>Không ai bẻ khóa AES ở đây. Chiếc chìa khóa được tìm ở nơi ứng dụng buộc phải sử dụng nó, còn TAR xác nhận đã nhặt đúng chìa.</blockquote>
           <p>Điều này không chứng minh mã hóa vô dụng trong mọi tình huống. Nếu ai đó chỉ lấy được file backup nhưng không có máy, phiên đăng nhập hoặc dữ liệu liên quan, ciphertext vẫn tạo thêm một rào cản. Nhưng nếu kẻ tấn công đã chạy được mã dưới cùng tài khoản Windows và đọc được bộ nhớ tiến trình, câu chuyện đã sang một cấp độ khác. Lúc đó lớp mã hóa backup không cứu được endpoint đã bị kiểm soát.</p>
@@ -217,6 +222,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">Còn nhiều thứ nằm dưới một cái đuôi file.</p><a class="footer-email" href="/blog/">Bài viết khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260630-23" defer></script>
+  <script src="/assets/js/site.js?v=20260630-24" defer></script>
 </body>
 </html>
