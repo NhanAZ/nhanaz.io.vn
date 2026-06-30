@@ -425,6 +425,16 @@ const normalizeText = (value = "") =>
     .toLowerCase()
     .trim();
 
+const createSlug = (value = "", fallback = "section") => {
+  const slug = normalizeText(value)
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+
+  return slug || fallback;
+};
+
 const initSiteSearch = () => {
   const form = document.querySelector("[data-site-search-form]");
   const input = document.querySelector("[data-site-search]");
@@ -683,6 +693,126 @@ const highlightCode = (value) => {
   return result;
 };
 
+const initArticleToc = () => {
+  const article = document.querySelector(".article-layout");
+  const rail = article?.querySelector(".article-rail");
+  const prose = article?.querySelector(".prose");
+
+  if (!article || !rail || !prose) {
+    return;
+  }
+
+  const headings = Array.from(prose.querySelectorAll("h2, h3"));
+
+  if (!headings.length || rail.querySelector(".article-toc")) {
+    return;
+  }
+
+  const reservedIds = new Set(
+    Array.from(document.querySelectorAll("[id]"))
+      .filter((element) => !headings.includes(element))
+      .map((element) => element.id),
+  );
+  const usedIds = new Set();
+
+  const getUniqueId = (heading, index) => {
+    const base = heading.id || createSlug(heading.textContent, `section-${index + 1}`);
+    let id = base;
+    let count = 2;
+
+    while (reservedIds.has(id) || usedIds.has(id)) {
+      id = `${base}-${count}`;
+      count += 1;
+    }
+
+    usedIds.add(id);
+    return id;
+  };
+
+  const toc = document.createElement("nav");
+  const title = document.createElement("p");
+  const list = document.createElement("ol");
+  const links = new Map();
+
+  toc.className = "article-toc";
+  toc.setAttribute("aria-label", isEnglish ? "Article table of contents" : "Mục lục bài viết");
+  title.className = "article-toc-title";
+  title.textContent = isEnglish ? "In this post" : "Trong bài này";
+
+  headings.forEach((heading, index) => {
+    const id = getUniqueId(heading, index);
+    const item = document.createElement("li");
+    const link = document.createElement("a");
+
+    heading.id = id;
+    heading.tabIndex = -1;
+    heading.classList.add("is-anchor-heading");
+    heading.title = isEnglish ? "Click to copy this section URL" : "Bấm để lấy liên kết tới mục này";
+
+    item.className = `article-toc-item article-toc-item-${heading.tagName.toLowerCase()}`;
+    link.href = `#${id}`;
+    link.textContent = heading.textContent.trim();
+    link.dataset.tocTarget = id;
+    links.set(id, link);
+
+    heading.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) {
+        return;
+      }
+
+      history.pushState(null, "", `${location.pathname}${location.search}#${id}`);
+      heading.focus({ preventScroll: true });
+      links.forEach((tocLink) => tocLink.classList.remove("is-active"));
+      link.classList.add("is-active");
+    });
+
+    item.append(link);
+    list.append(item);
+  });
+
+  toc.append(title, list);
+  rail.append(toc);
+
+  const setActiveLink = (id) => {
+    links.forEach((link) => link.classList.toggle("is-active", link.dataset.tocTarget === id));
+  };
+
+  setActiveLink(headings[0].id);
+
+  const scrollToCurrentHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const target = id ? document.getElementById(id) : null;
+
+    if (!target || !headings.includes(target)) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      target.scrollIntoView({ block: "start" });
+      setActiveLink(target.id);
+    });
+  };
+
+  scrollToCurrentHash();
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    }, {
+      rootMargin: "-18% 0px -68% 0px",
+      threshold: 0,
+    });
+
+    headings.forEach((heading) => observer.observe(heading));
+  }
+
+  window.addEventListener("hashchange", scrollToCurrentHash);
+};
+
 const writeClipboard = async (value) => {
   if (navigator.clipboard && window.isSecureContext) {
     await navigator.clipboard.writeText(value);
@@ -807,4 +937,5 @@ initSiteSearch();
 initAchievementFilters();
 initCanvaEmbeds();
 initCodeBlocks();
+initArticleToc();
 initMotion();
