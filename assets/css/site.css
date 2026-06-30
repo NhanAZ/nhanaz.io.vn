@@ -46,6 +46,9 @@
   --code-orange: #ffb86c;
   --code-pink: #ff79c6;
   --code-purple: #bd93f9;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 180ms;
+  --motion-base: 420ms;
 }
 
 * {
@@ -69,6 +72,21 @@ body {
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+.motion-ready .motion-item {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--motion-base) var(--motion-ease),
+    transform var(--motion-base) var(--motion-ease);
+  transition-delay: calc(var(--motion-order, 0) * 38ms);
+  will-change: opacity, transform;
+}
+
+.motion-ready .motion-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 ::selection {
@@ -128,6 +146,11 @@ textarea {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.04em;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.brand:hover {
+  transform: translateY(-1px);
 }
 
 .brand-mark {
@@ -154,6 +177,7 @@ textarea {
   color: var(--muted);
   font-size: 15px;
   font-weight: 500;
+  transition: color var(--motion-fast) ease;
 }
 
 .site-nav a::after {
@@ -166,7 +190,7 @@ textarea {
   background: var(--ink);
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 180ms ease;
+  transition: transform var(--motion-fast) var(--motion-ease);
 }
 
 .site-nav a:hover,
@@ -397,7 +421,7 @@ textarea {
 .inverse-link span,
 .text-link span {
   display: inline-block;
-  transition: transform 160ms ease;
+  transition: transform var(--motion-fast) var(--motion-ease);
 }
 
 .inverse-link:hover span {
@@ -478,12 +502,16 @@ textarea {
   min-height: 94px;
   padding: 20px 18px;
   border-bottom: 1px solid var(--line);
-  transition: background-color 140ms ease, color 140ms ease;
+  transition:
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease);
 }
 
 a.entry:hover {
   background: var(--ink);
   color: var(--paper);
+  transform: translateX(3px);
 }
 
 .entry time,
@@ -540,12 +568,16 @@ a.entry:hover time {
   min-height: 108px;
   padding: 20px 18px;
   border-bottom: 1px solid var(--line);
-  transition: background-color 140ms ease, color 140ms ease;
+  transition:
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease);
 }
 
 a.project-row:hover {
   background: var(--ink);
   color: var(--paper);
+  transform: translateX(3px);
 }
 
 .project-row strong,
@@ -999,6 +1031,14 @@ a.project-row:hover {
   align-items: start;
   padding: 18px 0;
   border-bottom: 1px solid var(--line);
+  transition:
+    background-color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.record-item:hover {
+  background: color-mix(in srgb, var(--soft) 72%, transparent);
+  transform: translateX(2px);
 }
 
 .record-number,
@@ -1311,6 +1351,14 @@ a.project-row:hover {
   padding: 22px 0;
   cursor: pointer;
   list-style: none;
+  transition:
+    background-color var(--motion-fast) ease,
+    transform var(--motion-fast) var(--motion-ease);
+}
+
+.github-org-card summary:hover {
+  background: color-mix(in srgb, var(--soft) 58%, transparent);
+  transform: translateX(2px);
 }
 
 .github-org-card summary::-webkit-details-marker {
@@ -1324,10 +1372,12 @@ a.project-row:hover {
   font-weight: 300;
   line-height: 1;
   text-align: right;
+  transition: transform var(--motion-fast) var(--motion-ease);
 }
 
 .github-org-card[open] summary::after {
   content: "-";
+  transform: rotate(180deg);
 }
 
 .github-org-name {
@@ -2436,6 +2486,15 @@ a.project-row:hover {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-ready .motion-item {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

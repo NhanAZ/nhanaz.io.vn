@@ -704,8 +704,72 @@ const initCodeBlocks = () => {
   });
 };
 
+const initMotion = () => {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    return;
+  }
+
+  const motionSelectors = [
+    ".site-search",
+    ".hero-copy > *",
+    ".hero-aside",
+    ".ticker",
+    ".page-heading",
+    ".split-section",
+    ".manifesto",
+    ".site-footer",
+    ".article-header",
+    ".article-layout",
+    ".archive-toolbar",
+    ".archive .entry",
+    ".project-detail",
+    ".vibe-card",
+    ".github-overview",
+    ".github-section",
+    ".about-grid",
+    ".records-heading",
+    ".records-tools",
+    ".record-item",
+    ".achievement-hero",
+    ".achievement-story",
+    ".timeline-section",
+  ];
+
+  const items = Array.from(document.querySelectorAll(motionSelectors.join(",")));
+
+  if (!items.length) {
+    return;
+  }
+
+  items.forEach((item, index) => {
+    item.classList.add("motion-item");
+    item.style.setProperty("--motion-order", String(Math.min(index % 6, 5)));
+  });
+
+  document.documentElement.classList.add("motion-ready");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    rootMargin: "0px 0px -8% 0px",
+    threshold: 0.08,
+  });
+
+  items.forEach((item) => observer.observe(item));
+};
+
 initLanguageSwitch();
 initSiteSearch();
 initAchievementFilters();
 initCanvaEmbeds();
 initCodeBlocks();
+initMotion();

@@ -21,6 +21,8 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Không dùng dấu `/` làm ký hiệu phân tách nếu có thể thay bằng ` - ` hoặc dấu chấm.
 - Không dùng dấu `;` trong văn bản hiển thị theo kiểu văn phòng. Nếu không phải cú pháp bắt buộc, đổi sang dấu phẩy, dấu chấm hoặc tách câu tự nhiên hơn.
 - Không dùng bullet tròn trong nội dung. Danh sách trên web phải dùng dấu `-` hoặc cấu trúc custom tương đương.
+- Animation chỉ nên nhẹ, tinh tế và phục vụ cảm giác đọc. Ưu tiên opacity, transform nhỏ, easing mượt và thời lượng ngắn. Không dùng hiệu ứng lố, nhấp nháy, parallax nặng, blur lớn hoặc animation chạy liên tục nếu không thật sự cần.
+- Mọi animation phải tôn trọng `prefers-reduced-motion`. Tránh animate các thuộc tính gây layout như width, height, top, left.
 
 ## Phong cách viết
 
