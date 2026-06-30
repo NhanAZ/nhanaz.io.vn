@@ -524,7 +524,108 @@ const initCanvaEmbeds = () => {
   });
 };
 
+const escapeCodeHtml = (value) =>
+  value.replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;",
+  }[character]));
+
+const highlightCode = (value) => {
+  const tokenPattern = /(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\/\/[^\n]*|#[^\n]*|\b[A-Z][A-Z0-9_-]{2,}\b|\b\d+(?:\.\d+)?\b|\b(?:for|each|readable|renderer|memory|region|find|plausible|candidates|derive|key|and|iv|decrypt|first|bytes|accept|only|structurally|valid|header|plaintext|ciphertext|uin|from|without|salt|checksum)\b|[=()+,\[\]:])/gi;
+  let result = "";
+  let lastIndex = 0;
+
+  value.replace(tokenPattern, (token, offset) => {
+    result += escapeCodeHtml(value.slice(lastIndex, offset));
+
+    const lowerToken = token.toLowerCase();
+    let tokenClass = "keyword";
+
+    if (/^["'`]/.test(token)) {
+      tokenClass = "string";
+    } else if (/^(?:\/\/|#)/.test(token)) {
+      tokenClass = "comment";
+    } else if (/^[A-Z][A-Z0-9_-]{2,}$/.test(token)) {
+      tokenClass = "constant";
+    } else if (/^\d/.test(token)) {
+      tokenClass = "number";
+    } else if (/^[=()+,\[\]:]$/.test(token)) {
+      tokenClass = "operator";
+    } else if (["sha256", "utf8", "aes_256_cbc_decrypt"].includes(lowerToken)) {
+      tokenClass = "function";
+    }
+
+    result += `<span class="code-token ${tokenClass}">${escapeCodeHtml(token)}</span>`;
+    lastIndex = offset + token.length;
+    return token;
+  });
+
+  result += escapeCodeHtml(value.slice(lastIndex));
+  return result;
+};
+
+const writeClipboard = async (value) => {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const field = document.createElement("textarea");
+  field.value = value;
+  field.setAttribute("readonly", "");
+  field.style.position = "fixed";
+  field.style.top = "-999px";
+  document.body.append(field);
+  field.select();
+  document.execCommand("copy");
+  field.remove();
+};
+
+const initCodeBlocks = () => {
+  document.querySelectorAll(".prose pre").forEach((pre) => {
+    if (pre.closest(".code-shell")) {
+      return;
+    }
+
+    const code = pre.querySelector("code");
+    const rawCode = code ? code.textContent : pre.textContent;
+    const wrapper = document.createElement("div");
+    const button = document.createElement("button");
+    const copyLabel = isEnglish ? "Copy" : "Sao chép";
+    const copiedLabel = isEnglish ? "Copied" : "Đã chép";
+
+    wrapper.className = "code-shell";
+    button.className = "code-copy";
+    button.type = "button";
+    button.textContent = copyLabel;
+    button.setAttribute("aria-label", isEnglish ? "Copy code" : "Sao chép code");
+
+    if (code) {
+      code.innerHTML = highlightCode(rawCode);
+    }
+
+    pre.before(wrapper);
+    wrapper.append(pre, button);
+
+    button.addEventListener("click", async () => {
+      try {
+        await writeClipboard(rawCode);
+        button.textContent = copiedLabel;
+        window.setTimeout(() => {
+          button.textContent = copyLabel;
+        }, 1400);
+      } catch {
+        button.textContent = isEnglish ? "Failed" : "Lỗi";
+      }
+    });
+  });
+};
+
 initLanguageSwitch();
 initSiteSearch();
 initAchievementFilters();
 initCanvaEmbeds();
+initCodeBlocks();

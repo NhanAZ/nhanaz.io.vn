@@ -26,7 +26,7 @@
   <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-22">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-23">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -110,15 +110,15 @@
           <h2>Cái đuôi ZIP chỉ là tấm bảng treo ngoài cửa</h2>
           <p>Quan sát cấu trúc file cho thấy <code>.zl.zip</code> không có header ZIP quen thuộc. Sau khi giải mã đúng, plaintext xuất hiện dưới dạng TAR. Luồng dữ liệu có thể tóm lại như sau.</p>
 
-          <pre class="technical-flow"><code>TAR plaintext
-    |
-    | AES-256-CBC
-    v
-.zl.zip ciphertext
-    |
-    | tìm uin -&gt; dựng key và IV -&gt; giải mã
-    v
-TAR plaintext -&gt; kiểm tra -&gt; giải nén</code></pre>
+          <figure class="technical-diagram">
+            <a class="technical-diagram-image" href="/assets/images/zalo-backup-flow-vi.svg" download>
+              <img src="/assets/images/zalo-backup-flow-vi.svg" alt="Sơ đồ TAR plaintext được mã hóa thành .zl.zip ciphertext, rồi được giải mã bằng key và IV dựng từ uin để trở lại TAR plaintext.">
+            </a>
+            <figcaption>
+              <span>Luồng nhìn gọn của một file <code>.zl.zip</code> sau khi bóc lớp tên gọi bên ngoài.</span>
+              <a class="diagram-download" href="/assets/images/zalo-backup-flow-vi.svg" download>Tải ảnh sơ đồ</a>
+            </figcaption>
+          </figure>
 
           <p>Cách tạo key và IV mình quan sát được khá ngắn.</p>
 
@@ -217,6 +217,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">Còn nhiều thứ nằm dưới một cái đuôi file.</p><a class="footer-email" href="/blog/">Bài viết khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260630-22" defer></script>
+  <script src="/assets/js/site.js?v=20260630-23" defer></script>
 </body>
 </html>

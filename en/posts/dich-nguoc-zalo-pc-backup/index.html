@@ -26,7 +26,7 @@
   <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-22">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260630-23">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -110,15 +110,15 @@
           <h2>The ZIP extension is only the sign on the door</h2>
           <p>The <code>.zl.zip</code> file does not carry a normal ZIP header. Once correctly decrypted, the plaintext appears as TAR. The data flow can be summarized like this.</p>
 
-          <pre class="technical-flow"><code>TAR plaintext
-    |
-    | AES-256-CBC
-    v
-.zl.zip ciphertext
-    |
-    | find uin -&gt; derive key and IV -&gt; decrypt
-    v
-TAR plaintext -&gt; validate -&gt; extract</code></pre>
+          <figure class="technical-diagram">
+            <a class="technical-diagram-image" href="/assets/images/zalo-backup-flow-en.svg" download>
+              <img src="/assets/images/zalo-backup-flow-en.svg" alt="Diagram showing TAR plaintext encrypted into .zl.zip ciphertext, then decrypted with a uin-derived key and IV back into TAR plaintext.">
+            </a>
+            <figcaption>
+              <span>A compact view of a <code>.zl.zip</code> file after looking past the filename.</span>
+              <a class="diagram-download" href="/assets/images/zalo-backup-flow-en.svg" download>Download diagram</a>
+            </figcaption>
+          </figure>
 
           <p>The observed key and IV derivation is short.</p>
 
@@ -217,6 +217,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">There is always more beneath a file extension.</p><a class="footer-email" href="/en/blog/">More writing →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260630-22" defer></script>
+  <script src="/assets/js/site.js?v=20260630-23" defer></script>
 </body>
 </html>

@@ -37,6 +37,12 @@
   --muted: #6b6b66;
   --line: #d7d7d2;
   --page: 1180px;
+  --code-bg: #17130f;
+  --code-paper: #f7ead7;
+  --code-line: #3a2d21;
+  --code-accent: #d8a95f;
+  --code-blue: #91b9ff;
+  --code-green: #a9d18e;
 }
 
 * {
@@ -1410,6 +1416,29 @@ a.project-row:hover {
   line-height: 1.7;
 }
 
+.prose ul {
+  margin: 1.35em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prose li {
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.prose li + li {
+  margin-top: 0.45em;
+}
+
+.prose li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .prose h2 {
   margin-top: 2.2em;
   margin-bottom: 0.65em;
@@ -1433,7 +1462,9 @@ a.project-row:hover {
 
 .prose code {
   padding: 2px 5px;
-  border: 1px solid var(--line);
+  border: 1px solid #e2d7c3;
+  background: #f7f2e8;
+  color: #2e261e;
   font-family: "Space Grotesk", monospace;
   font-size: 0.9em;
 }
@@ -1443,9 +1474,9 @@ a.project-row:hover {
   margin-top: 28px;
   margin-bottom: 28px;
   overflow-x: auto;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--paper);
+  border: 1px solid var(--code-line);
+  background: var(--code-bg);
+  color: var(--code-paper);
   padding: 22px 24px;
   font: 14px/1.65 "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
   tab-size: 2;
@@ -1457,6 +1488,112 @@ a.project-row:hover {
   background: transparent;
   color: inherit;
   font: inherit;
+}
+
+.code-shell {
+  position: relative;
+  max-width: 860px;
+  margin: 28px 0;
+  border: 1px solid var(--ink);
+  background: var(--code-bg);
+}
+
+.code-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--code-accent);
+}
+
+.code-shell pre {
+  max-width: none;
+  margin: 0;
+  border: 0;
+  padding-right: 92px;
+}
+
+.code-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #5b4a36;
+  background: #f7ead7;
+  color: #17130f;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.code-copy:hover,
+.code-copy:focus-visible {
+  background: var(--code-accent);
+  color: var(--ink);
+}
+
+.code-token.keyword,
+.code-token.operator {
+  color: var(--code-accent);
+}
+
+.code-token.constant,
+.code-token.function {
+  color: var(--code-blue);
+}
+
+.code-token.string {
+  color: var(--code-green);
+}
+
+.code-token.number {
+  color: #f1c27d;
+}
+
+.code-token.comment {
+  color: #8f8378;
+}
+
+.technical-diagram {
+  max-width: 920px;
+  margin: 34px 0 36px;
+}
+
+.technical-diagram-image {
+  display: block;
+  border: 1px solid var(--ink);
+  background: var(--soft);
+}
+
+.technical-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.technical-diagram figcaption {
+  display: flex;
+  gap: 18px;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.technical-diagram figcaption code {
+  font-size: 0.95em;
+}
+
+.diagram-download {
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .technical-table-wrap {
@@ -2017,13 +2154,39 @@ a.project-row:hover {
     font-size: 22px;
   }
 
-  .prose pre {
+  .code-shell {
     width: calc(100% + 32px);
     max-width: calc(100% + 32px);
     margin-right: -16px;
     margin-left: -16px;
+  }
+
+  .prose pre {
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
     padding: 18px 16px;
     font-size: 12px;
+  }
+
+  .code-shell pre {
+    padding-right: 16px;
+    padding-bottom: 52px;
+  }
+
+  .code-copy {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .technical-diagram figcaption {
+    display: grid;
+    gap: 10px;
+  }
+
+  .diagram-download {
+    justify-self: start;
   }
 
   .not-found {
