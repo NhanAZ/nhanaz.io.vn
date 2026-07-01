@@ -7,7 +7,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Nguyễn Thành Nhân",
     type: "Giới thiệu",
     url: "/about/",
-    excerpt: "Thông tin về Nhân, NhanAZ, open source, Minecraft, PocketMine-MP và cách liên hệ.",
+    excerpt: "Thông tin về Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP và cách liên hệ.",
     keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Bà Rịa Vũng Tàu Thành phố Hồ Chí Minh sinh ngày 02.08.2005",
   },
   {
@@ -28,7 +28,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "NhanAZ là ai?",
     type: "Trả lời ngắn",
     url: "/#answers-title",
-    excerpt: "NhanAZ là tên Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, cũng là tên gắn với nhanaz.io.vn.",
+    excerpt: "NhanAZ là tên Nguyễn Thành Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, cũng là tên gắn với nhanaz.io.vn.",
     keywords: "NhanAZ là ai Nguyễn Thành Nhân GitHub Minecraft PocketMine-MP open source",
   },
   {
@@ -42,7 +42,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Bài viết",
     type: "Kho lưu trữ",
     url: "/blog/",
-    excerpt: "Các ghi chép của Nhân về code, việc học và đời thường.",
+    excerpt: "Các ghi chép của NhanAZ về code, việc học và đời thường.",
     keywords: "blog nhật ký bài viết kiến thức",
   },
   {
@@ -81,7 +81,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Dự án",
     type: "Kho dự án",
     url: "/projects/",
-    excerpt: "Những thứ Nhân đã làm, đang làm và đủ tự tin để kể lại quá trình.",
+    excerpt: "Những thứ NhanAZ đã làm, đang làm và đủ tự tin để kể lại quá trình.",
     keywords: "project portfolio sản phẩm",
   },
   {
@@ -102,7 +102,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "NhanAZ-Plugins",
     type: "GitHub org",
     url: "/github/#nhanaz-plugins",
-    excerpt: "Nơi Nhân lưu plugin PocketMine-MP tự viết, sửa tay, copy paste và các dấu vết Poggit cũ.",
+    excerpt: "Nơi NhanAZ lưu plugin PocketMine-MP tự viết, sửa tay, copy paste và các dấu vết Poggit cũ.",
     keywords: "NhanAZ-Plugins nhanaz-pm-pl Poggit PocketMine-MP plugin downloads",
   },
   {
@@ -203,14 +203,14 @@ const SITE_SEARCH_INDEX_VI = [
     title: "PocketMine-MP Việt Nam",
     type: "Cộng đồng",
     url: "/about/",
-    excerpt: "Group PocketMine-MP Việt Nam do Nhân lập từ năm 2019, hiện hơn 350 thành viên và vẫn duy trì.",
+    excerpt: "Group PocketMine-MP Việt Nam do Thành Nhân lập từ năm 2019, hiện hơn 350 thành viên và vẫn duy trì.",
     keywords: "PocketMine-MP Việt Nam Minecraft Bedrock server plugin",
   },
   {
     title: "Minecraft",
     type: "Sở thích",
     url: "/about/",
-    excerpt: "Minecraft là một phần lớn trong hành trình học server, plugin, cấu hình và cộng đồng của Nhân.",
+    excerpt: "Minecraft là một phần lớn trong hành trình học server, plugin, cấu hình và cộng đồng của NhanAZ.",
     keywords: "Minecraft Pocket Edition Bedrock server PocketMine",
   },
   {
@@ -227,7 +227,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Nguyễn Thành Nhân",
     type: "About",
     url: "/en/about/",
-    excerpt: "About Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, and how to get in touch.",
+    excerpt: "About Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, and how to get in touch.",
     keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Ba Ria Vung Tau Ho Chi Minh City born 02.08.2005",
   },
   {
@@ -248,7 +248,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Who is NhanAZ?",
     type: "Short answer",
     url: "/en/#answers-title",
-    excerpt: "NhanAZ is the name Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities.",
+    excerpt: "NhanAZ is the name Nguyễn Thành Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities.",
     keywords: "NhanAZ GitHub Minecraft PocketMine-MP open source Nguyễn Thành Nhân",
   },
   {
@@ -262,7 +262,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Writing",
     type: "Archive",
     url: "/en/blog/",
-    excerpt: "Nhân’s notes on code, learning, projects, and everyday life.",
+    excerpt: "NhanAZ’s notes on code, learning, projects, and everyday life.",
     keywords: "blog journal writing knowledge notes",
   },
   {
@@ -301,7 +301,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Projects",
     type: "Project archive",
     url: "/en/projects/",
-    excerpt: "Things Nhân has made, is making, and the process behind them.",
+    excerpt: "Things NhanAZ has made, is making, and the process behind them.",
     keywords: "project portfolio product work",
   },
   {
@@ -416,14 +416,14 @@ const SITE_SEARCH_INDEX_EN = [
     title: "PocketMine-MP Vietnam",
     type: "Community",
     url: "/en/about/",
-    excerpt: "A PocketMine-MP Vietnam group founded by Nhân in 2019, now with over 350 members and still active.",
+    excerpt: "A PocketMine-MP Vietnam group founded by Thành Nhân in 2019, now with over 350 members and still active.",
     keywords: "PocketMine-MP Vietnam Minecraft Bedrock server plugin",
   },
   {
     title: "Minecraft",
     type: "Interest",
     url: "/en/about/",
-    excerpt: "Minecraft played a large role in Nhân’s path through servers, plugins, configuration, and community work.",
+    excerpt: "Minecraft played a large role in NhanAZ’s path through servers, plugins, configuration, and community work.",
     keywords: "Minecraft Pocket Edition Bedrock server PocketMine",
   },
   {

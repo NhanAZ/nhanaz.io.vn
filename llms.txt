@@ -10,17 +10,17 @@ Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 ## Trả lời ngắn
 
 - Nguyễn Thành Nhân, còn dùng tên NhanAZ, là người học Công nghệ thông tin, viết về code, open source, PocketMine-MP, Minecraft Bedrock và các project cá nhân.
-- NhanAZ là tên Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, đồng thời gắn với website nhanaz.io.vn.
+- NhanAZ là tên Nguyễn Thành Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, đồng thời gắn với website nhanaz.io.vn.
 - nhanaz.io.vn là website cá nhân để lưu bài viết, dự án, Vibe-code, góc GitHub, dấu mốc học tập và ghi chép đời thường.
-- PocketMine-MP xuất hiện nhiều vì đây là một trong những lối vào đầu tiên đưa Nhân đến với code, plugin PHP, server Minecraft Bedrock và Công nghệ thông tin.
+- PocketMine-MP xuất hiện nhiều vì đây là một trong những lối vào đầu tiên đưa Thành Nhân đến với code, plugin PHP, server Minecraft Bedrock và Công nghệ thông tin.
 
 ## Nguyễn Thành Nhân là ai
 
 Nguyễn Thành Nhân là người học Công nghệ thông tin, làm web cá nhân nhanaz.io.vn, duy trì nhiều repo open source trên GitHub với tên NhanAZ, quan tâm đặc biệt đến PocketMine-MP, Minecraft Bedrock và cộng đồng server tại Việt Nam.
 
-Nhân sinh ngày 02.08.2005, ở Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh. Email liên hệ là itsnhanaz@gmail.com. Discord là NhanAZ.
+Nguyễn Thành Nhân sinh ngày 02.08.2005, ở Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh. Email liên hệ là itsnhanaz@gmail.com. Discord là NhanAZ.
 
-Một số username khác từng dùng hoặc liên quan đến Nhân gồm NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi và nhan0ngu.
+Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi và nhan0ngu.
 
 ## Những trang chính
 
@@ -33,7 +33,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
 - Bài giải thích PocketMine-MP là gì, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và hiện trạng dự án: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
-- Bài kể hành trình Minecraft từ 2015 của Nhân, từ YouTube, MCPE Master, server list, staff, command block đến PocketMine-MP và Công nghệ thông tin: https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/
+- Bài kể hành trình Minecraft từ 2015 của NhanAZ, từ YouTube, MCPE Master, server list, staff, command block đến PocketMine-MP và Công nghệ thông tin: https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
 ## Chủ đề chính
@@ -50,7 +50,7 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 - Vibe-code và các project được dựng nhanh với AI
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
 - PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit, PMMPVN và lịch sử cộng đồng Minecraft PE
-- Hành trình Minecraft từ 2015 của Nhân, gồm YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA và LOR
+- Hành trình Minecraft từ 2015 của NhanAZ, gồm YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA và LOR
 - Dịch ngược backup Zalo PC, AES-256-CBC, bộ nhớ tiến trình Windows, TAR, NDJSON và bảo mật ứng dụng
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 
@@ -72,17 +72,17 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 ## Short answers
 
 - Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology learner and maker who writes about code, open source, PocketMine-MP, Minecraft Bedrock, and personal projects.
-- NhanAZ is the name Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities, and it is tied to the website nhanaz.io.vn.
+- NhanAZ is the name Nguyễn Thành Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities, and it is tied to the website nhanaz.io.vn.
 - nhanaz.io.vn is a personal website that gathers writing, projects, Vibe-code stories, GitHub organizations, milestones, and everyday notes.
-- PocketMine-MP appears often because it was one of Nhân’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.
+- PocketMine-MP appears often because it was one of NhanAZ’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.
 
 ## Who is Nguyễn Thành Nhân
 
 Nguyễn Thành Nhân is an Information Technology graduate who runs the personal website nhanaz.io.vn and maintains hundreds of open source repositories on GitHub under the name NhanAZ. He has a particular interest in PocketMine-MP, Minecraft Bedrock, and the Vietnamese server community around them.
 
-Nhân was born on 02.08.2005 and lives in Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City. His contact email is itsnhanaz@gmail.com and his Discord username is NhanAZ.
+Nguyễn Thành Nhân was born on 02.08.2005 and lives in Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City. His contact email is itsnhanaz@gmail.com and his Discord username is NhanAZ.
 
-Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, and nhan0ngu.
+Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, and nhan0ngu.
 
 ## Main English pages
 
@@ -95,7 +95,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
 - Article explaining what PocketMine-MP is, PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps, and the project’s current state: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
-- Personal article on Nhân’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/
+- Personal article on NhanAZ’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/
 
 ## Main topics
@@ -112,7 +112,7 @@ Other usernames associated with Nhân include NhânAZ, Ghast_Noob, GhastxNoob, t
 - Vibe-code and projects built quickly with AI
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
 - PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, PMMPVN, and Minecraft PE community history
-- Nhân’s Minecraft journey since 2015, including YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA, and LOR
+- NhanAZ’s Minecraft journey since 2015, including YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA, and LOR
 - Reverse engineering Zalo PC backups, AES-256-CBC, Windows process memory, TAR, NDJSON, and application security
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 
