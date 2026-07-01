@@ -494,6 +494,46 @@ textarea {
   border-top: 1px solid var(--line);
 }
 
+.answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.answer-card {
+  min-height: 178px;
+  padding: 24px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.answer-card:nth-child(even) {
+  border-left: 1px solid var(--line);
+}
+
+.answer-card h3 {
+  max-width: 360px;
+  margin: 0;
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.answer-card p {
+  max-width: 520px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.answer-card a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
 .entry {
   display: grid;
   grid-template-columns: 112px 100px minmax(0, 1fr) 24px;
@@ -2156,6 +2196,19 @@ a.project-row:hover {
 
   .entry strong {
     font-size: 18px;
+  }
+
+  .answer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-card {
+    min-height: 0;
+    padding-inline: 4px;
+  }
+
+  .answer-card:nth-child(even) {
+    border-left: 0;
   }
 
   .section-link {

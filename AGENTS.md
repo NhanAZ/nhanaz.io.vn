@@ -66,12 +66,13 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Các alias hữu ích cho SEO gồm NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu.
 - Nếu thêm bài tiếng Anh, dùng `hreflang` giữa bản Việt và bản Anh.
 - `llms.txt` nên mô tả trang theo cách agent có thể hiểu nhanh Nguyễn Thành Nhân là ai, NhanAZ là gì và các nội dung chính nằm ở đâu.
+- AEO nên dựa vào câu trả lời ngắn, nội dung thật trên trang, JSON-LD khớp với phần người đọc thấy và `llms.txt`. Không nhồi từ khóa hoặc viết giọng bot.
 
 ## JavaScript hiện có
 
 - `assets/js/site.js` chứa tìm kiếm toàn site, đổi ngôn ngữ, filter thành tích, loader Canva và các enhancer nhẹ.
 - Tìm kiếm toàn site lấy dữ liệu từ `SITE_SEARCH_INDEX_VI` và `SITE_SEARCH_INDEX_EN`.
-- Filter thành tích dựa vào dữ liệu trong DOM của `.record-item`; khi sửa markup phần này phải kiểm tra lại việc ẩn hiện thật sự.
+- Filter thành tích dựa vào dữ liệu trong DOM của `.record-item`. Khi sửa markup phần này phải kiểm tra lại việc ẩn hiện thật sự.
 - Code block trong bài viết được enhance bằng JavaScript để có nút sao chép và màu cú pháp nhẹ. Không cần bọc tay từng block nếu không có nhu cầu riêng.
 - Mục lục bài viết và permalink heading được enhance bằng `initArticleToc()`. Nếu sửa logic này, phải kiểm tra bài dài có nhiều heading và bài ngắn có ít heading.
 
