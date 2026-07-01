@@ -47,6 +47,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Giới thiệu ở `about/index.html`.
 - Bản tiếng Anh nằm trong thư mục `en/` và nên được cập nhật song song khi nội dung chính có bản dịch.
 - Khi thêm trang mới, cập nhật sitemap, `llms.txt`, search index trong `assets/js/site.js`, các link liên quan trên index nếu cần.
+- Nguồn máy đọc gồm `llms.txt`, `llms-full.txt` và `entity.json`. Khi đổi danh tính, trang chính, AEO hoặc GEO thì kiểm tra ba file này cùng nhau.
 
 ## Mục lục bài viết và liên kết đề mục
 
@@ -98,6 +99,8 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Chạy `node --check assets/js/site.js` sau khi sửa JavaScript.
 - Nếu sửa script build tiếng Anh, chạy `node --check scripts/build-english.mjs`.
 - Chạy `rg -n "tui|NhanAZ.io.vn"` khi thay đổi nội dung tiếng Việt hoặc domain.
+- Khi sửa cách gọi tên chủ website, rà lại để không còn tên ngắn một âm tiết đứng riêng trong nội dung, search index, `llms.txt`, `llms-full.txt` và `entity.json`.
+- Khi sửa JSON-LD hoặc `entity.json`, parse JSON trước khi bàn giao.
 - Chạy `git diff --check` để bắt lỗi whitespace.
 - Mở local bằng static server nếu thay đổi layout, filter, search, code block, TOC bài viết hoặc embed.
 - Khi sửa TOC hoặc layout bài viết, test ít nhất một bài dài trong `posts/`: mục lục phải hiện, bấm mục lục phải đổi URL hash, heading phải hiện đầy đủ sau khi nhảy, bấm heading phải đổi URL hash, mở URL có hash phải cuộn tới đúng đề mục.
