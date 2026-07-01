@@ -2,6 +2,11 @@
 
 Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 
+## Nguồn máy đọc
+
+- Bản đầy đủ cho AI agent - https://nhanaz.io.vn/llms-full.txt
+- Entity graph JSON-LD - https://nhanaz.io.vn/entity.json
+
 ## Trả lời ngắn
 
 - Nguyễn Thành Nhân, còn dùng tên NhanAZ, là người học Công nghệ thông tin, viết về code, open source, PocketMine-MP, Minecraft Bedrock và các project cá nhân.
@@ -58,6 +63,11 @@ Một số username khác từng dùng hoặc liên quan đến Nhân gồm Nhâ
 # nhanaz.io.vn in English
 
 Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
+
+## Machine-readable sources
+
+- Full AI-agent context - https://nhanaz.io.vn/llms-full.txt
+- Entity graph JSON-LD - https://nhanaz.io.vn/entity.json
 
 ## Short answers
 

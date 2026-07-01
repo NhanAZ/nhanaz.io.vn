@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nhanaz.io.vn/sitemap.xml
+
+# Machine-readable context for AI agents
+# https://nhanaz.io.vn/llms.txt
+# https://nhanaz.io.vn/llms-full.txt
+# https://nhanaz.io.vn/entity.json

@@ -1,0 +1,139 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://nhanaz.io.vn/#person",
+      "name": "Nguyễn Thành Nhân",
+      "alternateName": [
+        "NhanAZ",
+        "NhânAZ",
+        "Ghast_Noob",
+        "GhastxNoob",
+        "thanhnhanaz",
+        "nhanhuongloi",
+        "nhan0ngu"
+      ],
+      "description": "Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology learner and maker who writes about code, open source, PocketMine-MP, Minecraft Bedrock, Vibe-code, and personal projects.",
+      "url": "https://nhanaz.io.vn/",
+      "mainEntityOfPage": "https://nhanaz.io.vn/about/",
+      "image": "https://nhanaz.io.vn/assets/images/portrait.png",
+      "email": "mailto:itsnhanaz@gmail.com",
+      "birthDate": "2005-08-02",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thành phố Hồ Chí Minh",
+        "addressCountry": "VN"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Trường Cao đẳng bán công Công nghệ và Quản trị Doanh nghiệp",
+        "alternateName": "CTIM"
+      },
+      "knowsAbout": [
+        "Open source",
+        "PocketMine-MP",
+        "Minecraft Bedrock",
+        "PHP plugins",
+        "Poggit",
+        "Vibe-code",
+        "AI-assisted coding",
+        "Web design",
+        "Application security",
+        "Reverse engineering"
+      ],
+      "sameAs": [
+        "https://github.com/NhanAZ",
+        "https://nhanaz.io.vn/about/"
+      ],
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "name": "Nguyễn Thành Nhân - NhanAZ",
+          "url": "https://nhanaz.io.vn/"
+        },
+        {
+          "@type": "ProfilePage",
+          "name": "Nguyễn Thành Nhân - NhanAZ - Giới thiệu",
+          "url": "https://nhanaz.io.vn/about/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "GitHub và các tổ chức",
+          "url": "https://nhanaz.io.vn/github/"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Dấu mốc",
+          "url": "https://nhanaz.io.vn/achievements/"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://nhanaz.io.vn/#website",
+      "name": "nhanaz.io.vn",
+      "alternateName": "NhanAZ",
+      "url": "https://nhanaz.io.vn/",
+      "inLanguage": [
+        "vi",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://nhanaz.io.vn/#person"
+      },
+      "about": {
+        "@id": "https://nhanaz.io.vn/#person"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://nhanaz.io.vn/#canonical-pages",
+      "name": "Canonical pages for AI citation",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "url": "https://nhanaz.io.vn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "url": "https://nhanaz.io.vn/about/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Minecraft journey",
+          "url": "https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "PocketMine-MP",
+          "url": "https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "GitHub organizations",
+          "url": "https://nhanaz.io.vn/github/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Achievements",
+          "url": "https://nhanaz.io.vn/achievements/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Vibe-code glyph",
+          "url": "https://nhanaz.io.vn/vibe-code/glyph/"
+        }
+      ]
+    }
+  ]
+}
