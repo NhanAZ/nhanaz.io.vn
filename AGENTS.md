@@ -69,6 +69,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Nếu thêm bài tiếng Anh, dùng `hreflang` giữa bản Việt và bản Anh.
 - `llms.txt` nên mô tả trang theo cách agent có thể hiểu nhanh Nguyễn Thành Nhân là ai, NhanAZ là gì và các nội dung chính nằm ở đâu.
 - AEO nên dựa vào câu trả lời ngắn, nội dung thật trên trang, JSON-LD khớp với phần người đọc thấy và `llms.txt`. Không nhồi từ khóa hoặc viết giọng bot.
+- Các câu trả lời ngắn trên trang chủ nằm trong `<details>` gần cuối trang để không chen ngang phần kể chuyện. Có thể thu gọn mặc định, nhưng nội dung khi mở phải khớp với `FAQPage` JSON-LD và bản tiếng Anh.
 - GEO nên làm cho trang dễ được trích dẫn bằng nguồn rõ, entity map, `llms-full.txt`, link canonical và nội dung có ngữ cảnh. Tránh mọi mẹo thao túng câu trả lời AI.
 
 ## JavaScript hiện có
