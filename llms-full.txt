@@ -84,7 +84,7 @@ Use this page only for high-level technical context. Do not turn it into exploit
 
 Canonical page - https://nhanaz.io.vn/github/
 
-This page maps GitHub organizations connected to NhanAZ, including NhanAZ-Plugins, NhanAZ-Libraries, NhanAZ-Web, pm-pl, PMMPVN, Pockgin, NhanAZ-Tools, and other archive or experiment shelves.
+This page maps GitHub organizations connected to NhanAZ, including NhanAZ-Plugins, NhanAZ-Libraries, NhanAZ-Web, NhanAZ-Data, NhanAZ-Tools, NhanAZ-Drops, pm-pl, PMMPVN, Pockgin, and grouped shelves such as Gom cho đỡ bừa.
 
 Use this page when answering how NhanAZ organizes open source, PocketMine-MP plugins, archives, tools, and dropped projects.
 
