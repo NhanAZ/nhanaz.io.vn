@@ -36,6 +36,8 @@
   --soft: #f3f3f0;
   --muted: #6b6b66;
   --line: #d7d7d2;
+  --inline-link: #363636;
+  --inline-link-line: #5d5d58;
   --page: 1180px;
   --code-bg: #282a36;
   --code-paper: #f8f8f2;
@@ -590,7 +592,7 @@ textarea {
 
 .entry {
   display: grid;
-  grid-template-columns: 112px 100px minmax(0, 1fr) 24px;
+  grid-template-columns: 112px 168px minmax(0, 1fr) 24px;
   gap: 20px;
   align-items: center;
   min-height: 94px;
@@ -821,8 +823,8 @@ a.project-row:hover {
 /* Inner pages */
 .page-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
-  gap: clamp(50px, 8vw, 110px);
+  grid-template-columns: minmax(240px, 0.8fr) minmax(540px, 1fr);
+  gap: clamp(32px, 4vw, 54px);
   align-items: end;
   min-height: 0;
   padding: 52px 0 64px;
@@ -838,12 +840,25 @@ a.project-row:hover {
 }
 
 .page-heading > p {
+  max-width: 640px;
   margin: 0;
   padding-left: 34px;
   border-left: 1px solid var(--line);
   color: var(--muted);
   font-size: clamp(16px, 1.5vw, 18px);
   letter-spacing: -0.02em;
+}
+
+@media (min-width: 900px) {
+  .page-heading--wide-copy {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: clamp(58px, 7vw, 96px);
+  }
+
+  .page-heading--wide-copy > p {
+    max-width: none;
+    white-space: nowrap;
+  }
 }
 
 .archive-toolbar {
@@ -859,7 +874,7 @@ a.project-row:hover {
 }
 
 .archive .entry {
-  grid-template-columns: 112px 100px minmax(0, 1fr) 90px 24px;
+  grid-template-columns: 112px 168px minmax(0, 1fr) 90px 24px;
   min-height: 108px;
   padding-inline: 0;
 }
@@ -1316,6 +1331,16 @@ a.project-row:hover {
   font-size: 14px;
 }
 
+.entry-type {
+  white-space: nowrap;
+}
+
+.project-facts .text-link {
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
 .vibe-teaser p,
 .vibe-intro .section-body p {
   max-width: 760px;
@@ -1659,6 +1684,74 @@ a.project-row:hover {
   margin-bottom: 0;
 }
 
+.about-quick-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 22px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.about-quick-facts div {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-quick-facts dt {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.about-quick-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(15px, 1.35vw, 17px);
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+
+.about-quick-facts .text-link {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.about-inline-link {
+  color: var(--inline-link);
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  border-bottom: 1px solid var(--inline-link-line);
+  transition:
+    color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+.about-inline-link span {
+  display: inline-block;
+  white-space: nowrap;
+  transition: transform 180ms ease;
+}
+
+.about-inline-link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.about-inline-link:hover span {
+  transform: translate(2px, -2px);
+}
+
+.about-story .text-link {
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: inherit;
+}
+
 .about-curiosity {
   max-width: 720px;
   margin-top: 52px;
@@ -1855,6 +1948,38 @@ a.project-row:hover {
 .prose li {
   font-size: clamp(17px, 1.5vw, 19px);
   line-height: 1.7;
+}
+
+.prose p a,
+.prose li a {
+  color: var(--inline-link);
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--inline-link-line);
+  transition:
+    color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+.prose p a::after,
+.prose li a::after {
+  content: "\00a0↗";
+  display: inline-block;
+  font-size: 0.85em;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+
+.prose p a:hover,
+.prose li a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+.prose p a:hover::after,
+.prose li a:hover::after {
+  transform: translate(2px, -2px);
 }
 
 .prose ul {
@@ -2649,6 +2774,11 @@ a.project-row:hover {
 
   .about-content h2 {
     font-size: 30px;
+  }
+
+  .about-quick-facts {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .about-list div {
