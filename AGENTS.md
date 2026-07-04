@@ -17,6 +17,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Layout dựa trên `.shell`, `.site-header`, `.page-heading`, `.split-section`, `.article-header`, `.article-layout`, `.prose`.
 - Đường kẻ mảnh là một phần của nhận diện. Khi thêm block mới, ưu tiên border rõ ràng thay vì shadow nặng.
 - Tránh font quá to hoặc quá nhỏ. Tiêu đề có thể lớn vừa đủ, nội dung đọc nên giữ trong khoảng dễ đọc.
+- Tránh để dòng cuối chỉ còn 1-2 chữ. Dùng `text-wrap: balance` cho tiêu đề và `text-wrap: pretty` cho nội dung, không dùng căn đều hai bên làm giãn khoảng trắng.
 - Không viết hoa toàn bộ chữ trong giao diện, trừ acronym kỹ thuật bắt buộc như HTML, CSS, API, AI, JSON, ZIP, TAR, AES.
 - Không dùng dấu `/` làm ký hiệu phân tách nếu có thể thay bằng ` - ` hoặc dấu chấm.
 - Không dùng dấu `;` trong văn bản hiển thị theo kiểu văn phòng. Nếu không phải cú pháp bắt buộc, đổi sang dấu phẩy, dấu chấm hoặc tách câu tự nhiên hơn.
