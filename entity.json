@@ -40,7 +40,14 @@
         "AI-assisted coding",
         "Web design",
         "Application security",
-        "Reverse engineering"
+        "Reverse engineering",
+        "Moral philosophy",
+        "Special relativity",
+        "General relativity",
+        "Quantum physics",
+        "Black holes",
+        "Spacetime",
+        "Extraterrestrial life"
       ],
       "sameAs": [
         "https://github.com/NhanAZ",
@@ -66,6 +73,11 @@
           "@type": "WebPage",
           "name": "Dấu mốc",
           "url": "https://nhanaz.io.vn/achievements/"
+        },
+        {
+          "@type": "BlogPosting",
+          "name": "Mấy câu hỏi hơi quá khổ cho một đời người",
+          "url": "https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/"
         }
       ]
     },

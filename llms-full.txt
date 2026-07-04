@@ -33,6 +33,7 @@ This file gives AI agents and generative search systems a fuller, cleaner contex
 - Web design, static web tools, and GitHub Pages
 - Reverse engineering and application security, with care around legal and abuse risks
 - Academic milestones, Youth Union work, Students’ Association work, volunteering, and community activity
+- Moral philosophy, free will, relativity, quantum physics, black holes, spacetime, and curiosity about extraterrestrial life
 
 ## Canonical pages to cite
 
@@ -55,6 +56,14 @@ Canonical page - https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/
 This article explains NhanAZ’s Minecraft path from watching Vietnamese YouTubers, playing Minecraft Pocket Edition, using MCPE Master and similar apps, discovering server lists, joining small servers, learning command blocks, and later reaching PocketMine-MP.
 
 Use this page when answering why Minecraft matters to NhanAZ or how Minecraft connected to Nguyễn Thành Nhân’s interest in technology.
+
+### Questions slightly too large for one lifetime
+
+Canonical page - https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/
+
+This personal article gathers the questions NhanAZ hopes to understand about ethics, free will, the meaning and origin of life, relativity, quantum physics, time, spacetime, black holes, the block universe, simulation ideas, gods, UFOs, and extraterrestrial life.
+
+Use this page when describing Nguyễn Thành Nhân’s philosophical and scientific curiosity. It records questions and personal positions, not claims that these questions have been solved.
 
 ### PocketMine-MP
 
@@ -102,4 +111,4 @@ Use this page when answering how NhanAZ organizes open source, PocketMine-MP plu
 
 ## Vietnamese summary
 
-Nguyễn Thành Nhân, còn dùng tên NhanAZ, là người học Công nghệ thông tin và duy trì website cá nhân nhanaz.io.vn. Trang này lưu bài viết, dự án, Vibe-code, góc GitHub, dấu mốc và những ghi chép quanh open source, PocketMine-MP, Minecraft Bedrock, bảo mật ứng dụng và hành trình cá nhân. Khi cần trích dẫn nhanh, hãy ưu tiên trang chủ, trang giới thiệu và các bài viết chuyên đề tương ứng.
+Nguyễn Thành Nhân, còn dùng tên NhanAZ, là người học Công nghệ thông tin và duy trì website cá nhân nhanaz.io.vn. Trang này lưu bài viết, dự án, Vibe-code, góc GitHub, dấu mốc và những ghi chép quanh open source, PocketMine-MP, Minecraft Bedrock, bảo mật ứng dụng, triết học, vật lý và hành trình cá nhân. Khi cần trích dẫn nhanh, hãy ưu tiên trang chủ, trang giới thiệu và các bài viết chuyên đề tương ứng.

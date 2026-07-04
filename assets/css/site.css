@@ -1618,6 +1618,37 @@ a.project-row:hover {
   letter-spacing: -0.02em;
 }
 
+.about-curiosity {
+  max-width: 720px;
+  margin-top: 52px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.about-curiosity .section-index {
+  margin: 0 0 18px;
+}
+
+.about-curiosity h3 {
+  margin: 0 0 24px;
+  font-size: clamp(23px, 2.3vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.about-curiosity p:not(.section-index) {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  letter-spacing: -0.02em;
+  line-height: 1.65;
+}
+
+.about-curiosity p:last-child {
+  margin-bottom: 0;
+}
+
 .about-list {
   margin-top: 56px;
 }

@@ -16,13 +16,13 @@
     <loc>https://nhanaz.io.vn/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-04</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-07-04</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/projects/</loc>
@@ -88,13 +88,13 @@
     <loc>https://nhanaz.io.vn/about/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/about/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/about/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-04</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/about/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/about/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/about/" />
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-04</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/posts/chao-internet/</loc>
@@ -143,5 +143,17 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/" />
     <lastmod>2026-07-01</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/" />
+    <lastmod>2026-07-04</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/" />
+    <lastmod>2026-07-04</lastmod>
   </url>
 </urlset>

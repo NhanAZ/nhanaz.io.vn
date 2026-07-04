@@ -93,6 +93,8 @@ const translations = {
   "Có gì hay thì nói nha.": "Found something interesting? Tell me.",
 
   // Blog index
+  "Bài viết của Nguyễn Thành Nhân, NhanAZ, về code, việc học, dự án cá nhân, triết học, vật lý và đời thường.": "Writing by Nguyễn Thành Nhân, NhanAZ, about code, learning, personal projects, philosophy, physics, and everyday life.",
+  "Code, việc học, dự án cá nhân, triết học, vật lý và vài suy nghĩ đáng giữ lại.": "Code, learning, personal projects, philosophy, physics, and a few thoughts worth keeping.",
   "Bài viết của Nguyễn Thành Nhân, NhanAZ, về code, việc học, dự án cá nhân và đời thường.": "Writing by Nguyễn Thành Nhân, NhanAZ, about code, learning, personal projects, and everyday life.",
   "Bài viết của Nguyễn Thành Nhân - NhanAZ": "Writing by Nguyễn Thành Nhân - NhanAZ",
   "Code, việc học, dự án cá nhân và vài suy nghĩ đáng giữ lại.": "Code, learning, personal projects, and a few thoughts worth keeping.",
@@ -323,6 +325,10 @@ const translations = {
   "Xem dự án →": "See projects →",
 
   // About
+  "Đôi nét về Nguyễn Thành Nhân, NhanAZ, open source, Minecraft, triết học, vật lý và những câu hỏi về vũ trụ.": "A little about Nguyễn Thành Nhân, NhanAZ, open source, Minecraft, philosophy, physics, and questions about the universe.",
+  "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, Minecraft, PocketMine-MP, open source, triết học, đạo đức, thuyết tương đối, vật lý lượng tử, hố đen, không thời gian": "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, Minecraft, PocketMine-MP, open source, philosophy, ethics, relativity, quantum physics, black holes, spacetime",
+  "Open source, Minecraft, PocketMine-MP, triết học, vật lý và những câu hỏi Thành Nhân vẫn muốn theo đến tận cùng.": "Open source, Minecraft, PocketMine-MP, philosophy, physics, and the questions Thành Nhân still wants to follow all the way down.",
+  "Open source, Minecraft, PocketMine-MP, triết học, vật lý và vài nét về Thành Nhân.": "Open source, Minecraft, PocketMine-MP, philosophy, physics, and a little about Thành Nhân.",
   "Đôi nét về Nguyễn Thành Nhân, NhanAZ, open source, Minecraft và lý do website này tồn tại.": "A little about Nguyễn Thành Nhân, NhanAZ, open source, Minecraft, and why this website exists.",
   "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, Minecraft, PocketMine-MP, open source": "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, Minecraft, PocketMine-MP, open source",
   "Đôi nét về Nguyễn Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP và cách liên hệ.": "A little about Nguyễn Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, and how to get in touch.",
@@ -334,9 +340,28 @@ const translations = {
   "Câu này được Brand nói ở Hackers Conference đầu tiên vào mùa thu 1984, một cuộc gặp của cộng đồng hacker thời đầu quanh phần mềm, máy tính cá nhân và đạo đức chia sẻ. Bản ghi sau đó xuất hiện trên Whole Earth Review tháng 5.1985, tạp chí kế thừa tinh thần của Whole Earth Catalog. Ý đầy đủ không phải chỉ là “mọi thứ nên miễn phí”. Brand đặt nó giữa hai phía. Thông tin có giá trị nên người tạo ra nó muốn được trả công. Nhưng khi công nghệ làm việc sao chép, truyền đi và biến đổi thông tin ngày càng rẻ, thông tin cũng tự nhiên muốn được lan rộng hơn.": "Brand said this at the first Hackers Conference in the autumn of 1984, a gathering of the early hacker community around software, personal computers, and the ethics of sharing. A transcript later appeared in the May 1985 issue of Whole Earth Review, the magazine that carried on the spirit of the Whole Earth Catalog. The full idea was not simply that everything should cost nothing. Brand placed information between two forces. Valuable information makes its creators want to be paid, while technology keeps making information cheaper to copy, transmit, and transform, so it also has a natural pull toward wider circulation.",
   "Mình thích nửa sau của câu này vì mình tin kiến thức nên được chia sẻ thay vì bị khóa lại sau những lớp mã hóa, xáo trộn, bằng sáng chế hay hàng rào bản quyền. Một xã hội tiến bộ, với mình, là nơi nhiều thứ hữu ích được mở ra miễn phí, tự do hơn và ít bị kiểm duyệt hơn. Mình biết thế giới khó màu hồng như vậy, nhưng đó vẫn là lý tưởng mình muốn đi theo. Hàng trăm repo trên GitHub của mình là cách mình để lại bằng chứng nhỏ cho điều đó.": "I am drawn to the second half because I believe knowledge should be shared instead of being locked behind obfuscation, encryption, patents, or copyright barriers. To me, a more progressive society is one where useful things are open, free to access, and less constrained by censorship. I know the world is rarely that ideal, but it remains something I want to work toward. The hundreds of repositories on my GitHub are my small, practical evidence of that belief.",
   "Chào, mình là Nhân.": "Hi, I’m Nhân.",
+  "Chào, mình là Thành Nhân.": "Hi, I’m Thành Nhân.",
   "Mình sinh ngày 02.08.2005, ở Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh. Mình thích hiểu cách mọi thứ hoạt động, biến ý tưởng thành thứ có thể dùng được và ghi lại những gì mình học trên đường đi.": "I was born on 02.08.2005 and live in Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City. I like understanding how things work, turning ideas into something useful, and writing down what I learn along the way.",
   "Minecraft là một phần khá lớn trong cách mình bắt đầu đụng vào kỹ thuật. Từ khoảng năm 2015, mình bắt đầu xem, tải và chơi Minecraft Pocket Edition. Sau đó là server, plugin, PocketMine-MP, mở port, backup dữ liệu, sửa lỗi console và những đêm loay hoay với config. Nhiều thứ mình có bây giờ bén duyên từ thế giới khối vuông đó.": "Minecraft played a large part in how I first found my way into technology. Around 2015, I started watching, downloading, and playing Minecraft Pocket Edition. Then came servers, plugins, PocketMine-MP, port forwarding, backups, console errors, and late nights wrestling with config files. Much of what I know today can be traced back to that blocky world.",
   "Năm 2019, mình lập group PocketMine-MP Việt Nam. Group không quá lớn, hơn 350 thành viên, nhưng vẫn được duy trì đến giờ như một góc nhỏ cho những người còn quan tâm đến PocketMine, Minecraft Bedrock server và ký ức một thời tự dựng server để chơi cùng nhau.": "In 2019, I started the PocketMine-MP Vietnam group. It is not huge - a little over 350 members - but it is still around as a small corner for people interested in PocketMine, Minecraft Bedrock servers, and the memory of building a server just to play together.",
+  "Mấy câu hỏi chưa có đáy": "Questions with no bottom",
+  "Mình hay mắc kẹt ở chữ “tại sao”.": "I tend to get stuck on the word “why.”",
+  "Mình thích những vấn đề triết học liên quan đến đạo đức, tự do ý chí và ý nghĩa của sự sống. Càng hỏi thì ranh giới đúng sai càng khó đứng yên. Nếu mọi thứ đã được định sẵn, con người còn tự do để chịu trách nhiệm cho lựa chọn của mình không? Sự sống có ý nghĩa sẵn, hay chính mình phải tự đặt ý nghĩa vào quãng thời gian đang có?": "I enjoy philosophical questions about ethics, free will, and the meaning of life. The longer I ask, the less stable the line between right and wrong becomes. If everything is determined, are people still free enough to be responsible for their choices? Does life arrive with meaning, or do we place meaning into the time we have?",
+  "Vật lý là nơi những câu hỏi đó trở nên kỳ lạ theo một cách rất thật. Mình bị cuốn vào thuyết tương đối, vật lý lượng tử, hố đen, không thời gian và các trường lực. Tại sao vận tốc ánh sáng lại cố định? Vì sao chuyển động và trọng lực có thể làm thời gian trôi khác đi? Bên trong nguyên tử còn gì, và bên kia chân trời sự kiện của hố đen là thứ gì?": "Physics is where those questions become strange in a very real way. I am drawn to relativity, quantum physics, black holes, spacetime, and fields. Why is the speed of light fixed? Why can motion and gravity change how time passes? What remains inside an atom, and what lies beyond a black hole’s event horizon?",
+  "Rồi câu hỏi cứ lớn dần đến vũ trụ, thần thánh, ma trận thông tin, UFO và sự sống ngoài Trái Đất. Mình thường đứng về phía vô thần, hoặc chính xác hơn là chưa thấy bằng chứng đủ để tin. Nhưng mình vẫn muốn biết ngoài những ngôi sao xa kia có gì, muốn được bay, nhìn thế giới từ trên cao và đi xa đến mức có thể nhìn lại nơi mình bắt đầu.": "Then the questions keep growing into the universe, gods, information matrices, UFOs, and extraterrestrial life. I generally stand on the atheist side, or more precisely, I have not found enough evidence to believe. I still want to know what exists around distant stars, to fly, to see the world from above, and to travel far enough to look back at where I began.",
+  "Mình gom mấy câu hỏi hơi quá khổ đó vào bài": "I gathered those overgrown questions in",
+  "Mấy câu hỏi hơi quá khổ cho một đời người": "Questions slightly too large for one lifetime",
+  "Triết học - Vật lý": "Philosophy - Physics",
+  "13 phút đọc": "13 min read",
+  "05 bài": "05 posts",
+  "Triết học": "Philosophy",
+  "Vật lý": "Physics",
+  "Triết học đạo đức": "Moral philosophy",
+  "Thuyết tương đối": "Relativity",
+  "Vật lý lượng tử": "Quantum physics",
+  "Hố đen": "Black holes",
+  "Không thời gian": "Spacetime",
+  "Sự sống ngoài Trái Đất": "Extraterrestrial life",
   "Ngày sinh": "Born",
   "Ở đâu": "Location",
   "Bà Rịa - Vũng Tàu, nay thuộc Thành phố Hồ Chí Minh.": "Bà Rịa - Vũng Tàu, now part of Ho Chi Minh City.",
@@ -374,11 +399,19 @@ const translations = {
 
 const replacementEntries = Object.entries(translations).sort((a, b) => b[0].length - a[0].length);
 
+const englishRouteAliases = new Map([
+  ["/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/", "/en/posts/questions-slightly-too-large-for-one-lifetime/"],
+]);
+
 const absoluteEnglishUrl = (value) => {
   const base = "https://nhanaz.io.vn";
   if (!value.startsWith(base)) return value;
 
   const suffix = value.slice(base.length) || "/";
+  if (englishRouteAliases.has(suffix)) {
+    return `${base}${englishRouteAliases.get(suffix)}`;
+  }
+
   if (suffix.startsWith("/assets/") || suffix === "/#person" || suffix.startsWith("/en/")) {
     return value;
   }
@@ -387,6 +420,10 @@ const absoluteEnglishUrl = (value) => {
 };
 
 const localEnglishUrl = (value) => {
+  if (englishRouteAliases.has(value)) {
+    return englishRouteAliases.get(value);
+  }
+
   if (
     !value.startsWith("/") ||
     value.startsWith("/assets/") ||
@@ -401,7 +438,7 @@ const localEnglishUrl = (value) => {
 
 const alternates = (route) => {
   const viUrl = `https://nhanaz.io.vn${route}`;
-  const enUrl = `https://nhanaz.io.vn/en${route}`;
+  const enUrl = `https://nhanaz.io.vn${englishRouteAliases.get(route) || `/en${route}`}`;
   return [
     `  <link rel="alternate" hreflang="vi" href="${viUrl}">`,
     `  <link rel="alternate" hreflang="en" href="${enUrl}">`,

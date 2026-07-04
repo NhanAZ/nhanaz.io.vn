@@ -7,8 +7,15 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Nguyễn Thành Nhân",
     type: "Giới thiệu",
     url: "/about/",
-    excerpt: "Thông tin về Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP và cách liên hệ.",
-    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Bà Rịa Vũng Tàu Thành phố Hồ Chí Minh sinh ngày 02.08.2005",
+    excerpt: "Thông tin về Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, triết học, vật lý và cách liên hệ.",
+    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Bà Rịa Vũng Tàu Thành phố Hồ Chí Minh sinh ngày 02.08.2005 triết học vật lý vũ trụ",
+  },
+  {
+    title: "Mấy câu hỏi chưa có đáy",
+    type: "Sở thích",
+    url: "/about/#about-curiosity-title",
+    excerpt: "Những câu hỏi Thành Nhân thích theo đến tận gốc, từ đạo đức và tự do ý chí đến thuyết tương đối, vật lý lượng tử, hố đen, không thời gian và sự sống ngoài Trái Đất.",
+    keywords: "triết học đạo đức tự do ý chí thuyết tương đối hẹp thuyết tương đối rộng vật lý lượng tử hố đen không thời gian vận tốc ánh sáng trường lực vũ trụ khối ma trận thông tin UFO alien người ngoài hành tinh vô thần",
   },
   {
     title: "NhanAZ",
@@ -35,8 +42,16 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Bài viết",
     type: "Kho lưu trữ",
     url: "/blog/",
-    excerpt: "Các ghi chép của NhanAZ về code, việc học và đời thường.",
-    keywords: "blog nhật ký bài viết kiến thức",
+    excerpt: "Các ghi chép của NhanAZ về code, việc học, triết học, vật lý và đời thường.",
+    keywords: "blog nhật ký bài viết kiến thức triết học vật lý",
+  },
+  {
+    title: "Mấy câu hỏi hơi quá khổ cho một đời người",
+    type: "Bài viết",
+    url: "/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/",
+    date: "2026-07-04",
+    excerpt: "Một nơi gom những câu hỏi về đạo đức, ý nghĩa sự sống, thời gian, lượng tử, hố đen, vũ trụ khối, thần thánh và sự sống ngoài Trái Đất.",
+    keywords: "triết học đạo đức ý nghĩa sự sống tự do ý chí thuyết tương đối vật lý lượng tử hố đen không thời gian vận tốc ánh sáng vũ trụ khối ma trận thông tin thần thánh đấng tối cao UFO alien người ngoài hành tinh",
   },
   {
     title: "Minecraft từ 2015, trước khi mình biết IP là gì",
@@ -234,8 +249,15 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Nguyễn Thành Nhân",
     type: "About",
     url: "/en/about/",
-    excerpt: "About Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, and how to get in touch.",
-    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Ba Ria Vung Tau Ho Chi Minh City born 02.08.2005",
+    excerpt: "About Thành Nhân, NhanAZ, open source, Minecraft, PocketMine-MP, philosophy, physics, and how to get in touch.",
+    keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Ba Ria Vung Tau Ho Chi Minh City born 02.08.2005 philosophy physics universe",
+  },
+  {
+    title: "Questions with no bottom",
+    type: "Interest",
+    url: "/en/about/#about-curiosity-title",
+    excerpt: "Questions Thành Nhân likes to follow all the way down, from ethics and free will to relativity, quantum physics, black holes, spacetime, and extraterrestrial life.",
+    keywords: "philosophy ethics free will special relativity general relativity quantum physics black holes spacetime speed of light fields block universe information matrix UFO alien extraterrestrial life atheist",
   },
   {
     title: "NhanAZ",
@@ -262,8 +284,16 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Writing",
     type: "Archive",
     url: "/en/blog/",
-    excerpt: "NhanAZ’s notes on code, learning, projects, and everyday life.",
-    keywords: "blog journal writing knowledge notes",
+    excerpt: "NhanAZ’s notes on code, learning, projects, philosophy, physics, and everyday life.",
+    keywords: "blog journal writing knowledge notes philosophy physics",
+  },
+  {
+    title: "Questions slightly too large for one lifetime",
+    type: "Writing",
+    url: "/en/posts/questions-slightly-too-large-for-one-lifetime/",
+    date: "2026-07-04",
+    excerpt: "A place for questions about ethics, the meaning of life, time, quantum physics, black holes, the block universe, gods, and extraterrestrial life.",
+    keywords: "philosophy ethics meaning of life free will relativity quantum physics black holes spacetime speed of light block universe information matrix god supreme being UFO alien extraterrestrial life",
   },
   {
     title: "Minecraft since 2015, before I knew what an IP was",
@@ -466,14 +496,19 @@ const initLanguageSwitch = () => {
   }
 
   const currentPath = window.location.pathname;
-  const targetPath = isEnglish
+  const targetLanguage = isEnglish ? "vi" : "en";
+  const alternate = document.querySelector(`link[rel="alternate"][hreflang="${targetLanguage}"]`);
+  const alternateUrl = alternate ? new URL(alternate.getAttribute("href"), window.location.origin) : null;
+  const targetPath = alternateUrl
+    ? `${alternateUrl.pathname}${alternateUrl.search}${alternateUrl.hash}`
+    : (isEnglish
     ? currentPath.replace(/^\/en(?=\/|$)/, "") || "/"
-    : `/en${currentPath === "/" ? "/" : currentPath}`;
+    : `/en${currentPath === "/" ? "/" : currentPath}`);
   const link = document.createElement("a");
   link.className = "language-switch";
   link.href = targetPath;
-  link.hreflang = isEnglish ? "vi" : "en";
-  link.lang = isEnglish ? "vi" : "en";
+  link.hreflang = targetLanguage;
+  link.lang = targetLanguage;
   link.textContent = isEnglish ? "VI" : "EN";
   link.setAttribute("aria-label", isEnglish ? "Read this page in Vietnamese" : "Đọc trang này bằng tiếng Anh");
   navigation.append(link);
