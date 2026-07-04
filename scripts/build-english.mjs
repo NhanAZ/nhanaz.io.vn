@@ -38,7 +38,7 @@ const translations = {
   "Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ. Code, dự án, Vibe-code, thành tích, open source và những ghi chép đáng giữ lại.": "The personal website of Nguyễn Thành Nhân, also known as NhanAZ. Code, projects, vibe-code, achievements, open source work, and notes worth keeping.",
   "Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ. Có bài viết, dự án, Vibe-code và ghi chép cá nhân.": "The personal website of Nguyễn Thành Nhân, also known as NhanAZ, with writing, projects, vibe-code, and personal notes.",
   "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, nhanaz.io.vn, itsnhanaz, PocketMine-MP Việt Nam, Minecraft, open source, Công nghệ thông tin, Vibe-code, AI-assisted coding": "Nguyễn Thành Nhân, NhanAZ, NhânAZ, Ghast_Noob, GhastxNoob, thanhnhanaz, nhanhuongloi, nhan0ngu, nhanaz.io.vn, itsnhanaz, PocketMine-MP Vietnam, Minecraft, open source, Information Technology, Vibe-code, AI-assisted coding",
-  "Nguyễn Thành Nhân - NhanAZ - Personal Archive": "Nguyễn Thành Nhân - NhanAZ - Personal Archive",
+  "Nguyễn Thành Nhân - NhanAZ": "Nguyễn Thành Nhân - NhanAZ",
   "Ghi chép cá nhân - 2026-∞": "Personal notes - 2026-∞",
   "Nhân viết,": "Nhân writes,",
   "làm và lưu lại.": "builds and keeps things.",
