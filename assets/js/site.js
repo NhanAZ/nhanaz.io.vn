@@ -46,6 +46,14 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "blog nhật ký bài viết kiến thức triết học vật lý",
   },
   {
+    title: "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng",
+    type: "Bài viết",
+    url: "/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/",
+    date: "2026-07-05",
+    excerpt: "Một vài lưu ý để bài thu hoạch lớp bồi dưỡng nhận thức về Đảng trả lời đúng đề, có lý luận chắc, liên hệ bản thân cụ thể và trình bày sạch.",
+    keywords: "bài thu hoạch lớp bồi dưỡng nhận thức về Đảng bồi dưỡng nhận thức về Đảng động cơ vào Đảng đạo đức cách mạng tư tưởng Hồ Chí Minh liên hệ bản thân việc học",
+  },
+  {
     title: "Mấy câu hỏi hơi quá khổ cho một đời người",
     type: "Bài viết",
     url: "/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/",
@@ -286,6 +294,14 @@ const SITE_SEARCH_INDEX_EN = [
     url: "/en/blog/",
     excerpt: "NhanAZ’s notes on code, learning, projects, philosophy, physics, and everyday life.",
     keywords: "blog journal writing knowledge notes philosophy physics",
+  },
+  {
+    title: "A few notes for a better Party-awareness course reflection paper",
+    type: "Writing",
+    url: "/en/posts/party-awareness-reflection-paper-notes/",
+    date: "2026-07-05",
+    excerpt: "Notes on writing a Party-awareness course reflection paper that answers the prompt, uses theory carefully, connects to real experience, and reads cleanly.",
+    keywords: "Party-awareness course reflection paper Communist Party of Vietnam revolutionary ethics Ho Chi Minh thought personal reflection learning",
   },
   {
     title: "Questions slightly too large for one lifetime",

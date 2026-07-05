@@ -30,6 +30,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Tiếng Việt dùng “mình”, không dùng “tui” hoặc “tôi” trong nội dung web.
 - Không gọi chủ website bằng tên ngắn một âm tiết. Dùng “Thành Nhân”, “Nguyễn Thành Nhân”, “NhanAZ” hoặc “mình” tùy ngữ cảnh.
 - Giọng viết nên thẳng, đời, có chút khô hài khi hợp ngữ cảnh. Tránh văn phong công ty, văn phong tuyển dụng và văn mẫu A.I.
+- Hạn chế dùng dấu `:` trong văn bản hiển thị và nội dung bài viết. Trừ cú pháp bắt buộc như URL, thời gian, JSON-LD, HTML attributes, code hoặc khi dấu này thật sự cần cho nghĩa. Nếu đang dùng dấu này để dẫn giải, ưu tiên dấu chấm, dấu phẩy, dấu gạch ngang hoặc viết thành câu tự nhiên hơn.
 - Tránh kiểu câu đóng nhãn cứng như `Nhãn: nội dung`. Nếu cần giải thích, viết thành câu tự nhiên.
 - Không dùng chữ viết tắt nếu người ngoài khó hiểu. Ví dụ phải viết rõ Đoàn Thanh niên, Hội Sinh viên, Ban Chấp hành.
 - Không khoe theo kiểu tự nâng mình lên. Nếu nói thành tích, nói bằng dữ kiện, ngữ cảnh và lý do nó đáng được giữ lại.

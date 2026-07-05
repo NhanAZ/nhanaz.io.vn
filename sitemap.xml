@@ -16,13 +16,13 @@
     <loc>https://nhanaz.io.vn/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-05</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-07-05</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/projects/</loc>
@@ -155,5 +155,17 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/" />
     <lastmod>2026-07-04</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/" />
+    <lastmod>2026-07-05</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/" />
+    <lastmod>2026-07-05</lastmod>
   </url>
 </urlset>
