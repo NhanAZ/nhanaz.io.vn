@@ -607,6 +607,49 @@ textarea {
   text-underline-offset: 0.16em;
 }
 
+.answer-card-title {
+  display: block;
+  max-width: 360px;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.08;
+}
+
+.prose .article-answer-section {
+  max-width: 720px;
+  margin-top: 2.8em;
+  border-top: 1px solid var(--line);
+}
+
+.prose .article-answer-section .answer-details summary {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 20px;
+  padding: 24px 0;
+}
+
+.prose .article-answer-section .answer-details summary .section-index {
+  grid-column: 1 / -1;
+}
+
+.prose .article-answer-section .answer-grid {
+  grid-template-columns: 1fr;
+}
+
+.prose .article-answer-section .answer-card {
+  min-height: 0;
+  padding: 22px 0;
+}
+
+.prose .article-answer-section .answer-card + .answer-card {
+  border-left: 0;
+}
+
+.prose .article-answer-section .answer-card p {
+  max-width: 650px;
+}
+
 .entry {
   display: grid;
   grid-template-columns: 112px 168px minmax(0, 1fr) 24px;
