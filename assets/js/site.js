@@ -525,7 +525,17 @@ const ARTICLE_COMMENTS_CONFIG = {
   repoId: "R_kgDOMOlsIA",
   category: "General",
   categoryId: "DIC_kwDOMOlsIM4DA7S2",
-  theme: "https://nhanaz.io.vn/assets/css/giscus.css?v=20260711-01",
+  themes: {
+    light: "https://nhanaz.io.vn/assets/css/giscus.css?v=20260711-02",
+    dark: "https://nhanaz.io.vn/assets/css/giscus-dark.css?v=20260711-01",
+  },
+};
+
+const getArticleCommentsTheme = () => {
+  const theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  return window.location.protocol === "https:"
+    ? ARTICLE_COMMENTS_CONFIG.themes[theme]
+    : theme;
 };
 
 const initLanguageSwitch = () => {
@@ -1053,6 +1063,21 @@ const initArticleComments = () => {
     window.removeEventListener("message", handleGiscusMessage);
   };
 
+  const syncCommentsTheme = () => {
+    const frame = embed.querySelector("iframe.giscus-frame, iframe");
+    if (!frame?.contentWindow) {
+      return;
+    }
+
+    frame.contentWindow.postMessage({
+      giscus: {
+        setConfig: {
+          theme: getArticleCommentsTheme(),
+        },
+      },
+    }, "https://giscus.app");
+  };
+
   section.className = "article-comments";
   section.setAttribute("aria-labelledby", "article-comments-title");
   rail.className = "article-comments-rail";
@@ -1082,9 +1107,7 @@ const initArticleComments = () => {
   script.dataset.reactionsEnabled = "1";
   script.dataset.emitMetadata = "0";
   script.dataset.inputPosition = "top";
-  script.dataset.theme = window.location.protocol === "https:"
-    ? ARTICLE_COMMENTS_CONFIG.theme
-    : "light";
+  script.dataset.theme = getArticleCommentsTheme();
   script.dataset.lang = isEnglish ? "en" : "vi";
   script.dataset.loading = "lazy";
   script.crossOrigin = "anonymous";
@@ -1106,6 +1129,7 @@ const initArticleComments = () => {
   articleLayout.after(section);
   watchGiscusFrame.observe(giscusTarget, { childList: true });
   window.addEventListener("message", handleGiscusMessage);
+  window.addEventListener("site:theme-change", syncCommentsTheme);
   embed.append(loader);
   giscusTarget.append(script);
   embed.append(giscusTarget);

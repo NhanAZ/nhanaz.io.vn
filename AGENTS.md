@@ -94,6 +94,16 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Biểu đồ kỹ thuật nên dùng SVG trong `assets/images/` khi cần tải xuống hoặc tái sử dụng.
 - Mục lục bài viết dùng `.article-toc`, nằm trong `.article-rail`. Không làm rail quá chật, không thêm hiệu ứng nặng và không phá mobile layout.
 
+## Dark mode và màu giao diện
+
+- Dark mode dùng các token màu ở đầu `assets/css/site.css`. Khi thêm block, bài viết hoặc tính năng mới, ưu tiên dùng `var(--ink)`, `var(--paper)`, `var(--soft)`, `var(--muted)`, `var(--line)` và các token semantic sẵn có thay vì viết màu sáng tối riêng trong từng selector.
+- Không tạo một bộ CSS dark mode riêng cho từng bài viết. Nội dung mới dùng đúng layout và token chung thì phải tự hoạt động ở cả hai giao diện.
+- Nếu thật sự cần màu mới, đặt một token có tên theo vai trò của màu trong `:root`, thêm giá trị tương ứng trong `html[data-theme="dark"]`, rồi dùng token đó ở component. Tránh đặt tên token theo màu cụ thể như `--white` hoặc `--black`.
+- `assets/js/theme.js` phải được nạp trong `<head>` trước `site.css` để áp dụng lựa chọn đã lưu mà không chớp nền sáng khi tải trang. Trang HTML mới cần giữ thứ tự này và dùng cùng query version hiện hành.
+- Nút chuyển giao diện dùng ô vuông đặc, đen ở light mode và trắng ở dark mode, được tạo tự động trong `.site-nav`. Không hardcode thêm nút ở từng trang.
+- Theme lần đầu đi theo `prefers-color-scheme`, sau đó tôn trọng lựa chọn đã lưu. Animation chuyển theme chỉ nội suy token màu, phải tiếp tục tôn trọng `prefers-reduced-motion` và không animate layout.
+- Với iframe hoặc widget ngoài như Giscus, đồng bộ theme bằng sự kiện `site:theme-change`. Hình ảnh và SVG có nền riêng có thể giữ nguyên nếu đó là một tài liệu hoặc biểu đồ độc lập, nhưng phải kiểm tra độ tương phản khi đặt trên nền tối.
+
 ## Thành tích
 
 - Trang `achievements/index.html` cần giữ đủ các thành tích đã được chuẩn hóa từ file Excel nguồn.
@@ -108,6 +118,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Khi sửa cách gọi tên chủ website, rà lại để không còn tên ngắn một âm tiết đứng riêng trong nội dung, search index, `llms.txt`, `llms-full.txt` và `entity.json`.
 - Khi sửa JSON-LD hoặc `entity.json`, parse JSON trước khi bàn giao.
 - Chạy `git diff --check` để bắt lỗi whitespace.
+- Khi sửa màu, component dùng nền, header, navigation, form, loader, code hoặc embed, kiểm tra cả light mode và dark mode ở desktop lẫn mobile. Bài viết văn bản thông thường không cần thêm CSS riêng cho dark mode.
 - Mở local bằng static server nếu thay đổi layout, filter, search, code block, TOC bài viết hoặc embed.
 - Khi sửa TOC hoặc layout bài viết, test ít nhất một bài dài trong `posts/`: mục lục phải hiện, bấm mục lục phải đổi URL hash, heading phải hiện đầy đủ sau khi nhảy, bấm heading phải đổi URL hash, mở URL có hash phải cuộn tới đúng đề mục.
 - Không commit hoặc push nếu người dùng chưa yêu cầu trong lượt hiện tại.
