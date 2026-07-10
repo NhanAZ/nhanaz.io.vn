@@ -1012,7 +1012,46 @@ const initArticleComments = () => {
   const title = document.createElement("h2");
   const description = document.createElement("p");
   const embed = document.createElement("div");
+  const giscusTarget = document.createElement("div");
+  const loader = document.createElement("div");
+  const loaderBar = document.createElement("span");
+  const loaderText = document.createElement("p");
   const script = document.createElement("script");
+  let commentsLoaded = false;
+
+  const markCommentsLoaded = () => {
+    if (commentsLoaded) {
+      return;
+    }
+
+    commentsLoaded = true;
+    embed.classList.add("is-loaded");
+    watchGiscusFrame.disconnect();
+    window.removeEventListener("message", handleGiscusMessage);
+    loader.setAttribute("aria-hidden", "true");
+    loader.removeAttribute("role");
+    loader.removeAttribute("aria-live");
+  };
+
+  const watchGiscusFrame = new MutationObserver(() => {
+    const frame = embed.querySelector("iframe.giscus-frame, iframe");
+
+    if (!frame || frame.dataset.commentsWatched) {
+      return;
+    }
+
+    frame.dataset.commentsWatched = "true";
+    frame.addEventListener("load", markCommentsLoaded, { once: true });
+  });
+
+  const handleGiscusMessage = (event) => {
+    if (event.origin !== "https://giscus.app" || !event.data?.giscus) {
+      return;
+    }
+
+    markCommentsLoaded();
+    window.removeEventListener("message", handleGiscusMessage);
+  };
 
   section.className = "article-comments";
   section.setAttribute("aria-labelledby", "article-comments-title");
@@ -1026,7 +1065,12 @@ const initArticleComments = () => {
   description.textContent = isEnglish
     ? "Add a thought, correction, or question here. The conversation is stored publicly on GitHub Discussions."
     : "Có điều muốn thêm, sửa hoặc hỏi tiếp thì để lại ở đây. Phần trao đổi được lưu công khai trên GitHub Discussions.";
-  embed.className = "article-comments-embed giscus";
+  embed.className = "article-comments-embed";
+  giscusTarget.className = "article-comments-giscus giscus";
+  loader.className = "article-comments-loader";
+  loader.setAttribute("role", "status");
+  loader.setAttribute("aria-live", "polite");
+  loaderText.textContent = isEnglish ? "Loading comments..." : "Đang tải bình luận...";
 
   script.src = "https://giscus.app/client.js";
   script.dataset.repo = ARTICLE_COMMENTS_CONFIG.repo;
@@ -1045,13 +1089,26 @@ const initArticleComments = () => {
   script.dataset.loading = "lazy";
   script.crossOrigin = "anonymous";
   script.async = true;
+  script.addEventListener("error", () => {
+    embed.classList.add("has-error");
+    watchGiscusFrame.disconnect();
+    window.removeEventListener("message", handleGiscusMessage);
+    loaderText.textContent = isEnglish
+      ? "Comments could not be loaded. Please refresh the page."
+      : "Chưa tải được bình luận. Bạn thử tải lại trang nhé.";
+  }, { once: true });
 
   rail.append(label);
   header.append(title, description);
+  loader.append(loaderBar, loaderText);
   body.append(header, embed);
   section.append(rail, body);
   articleLayout.after(section);
-  embed.append(script);
+  watchGiscusFrame.observe(giscusTarget, { childList: true });
+  window.addEventListener("message", handleGiscusMessage);
+  embed.append(loader);
+  giscusTarget.append(script);
+  embed.append(giscusTarget);
 };
 
 const writeClipboard = async (value) => {
