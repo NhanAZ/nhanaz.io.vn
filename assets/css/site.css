@@ -2316,6 +2316,71 @@ a.project-row:hover {
   letter-spacing: 0.07em;
 }
 
+.article-comments {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 46px;
+  border-top: 1px solid var(--ink);
+}
+
+.article-comments-rail {
+  padding: 48px 30px 0 0;
+}
+
+.article-comments-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.article-comments-body {
+  min-width: 0;
+  padding: 44px 0 100px 46px;
+  border-left: 1px solid var(--line);
+}
+
+.article-comments-header,
+.article-comments-embed {
+  width: 100%;
+  max-width: 720px;
+}
+
+.article-comments-header {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-comments-header h2 {
+  margin: 0 0 10px;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.article-comments-header p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.article-comments-embed {
+  min-height: 170px;
+}
+
+.article-comments-embed .giscus-frame {
+  display: block;
+  width: 100%;
+  border: 0;
+  color-scheme: light;
+}
+
 .not-found {
   display: grid;
   min-height: calc(100vh - 4px);
@@ -2950,6 +3015,29 @@ a.project-row:hover {
     top: auto;
     right: 12px;
     bottom: 12px;
+  }
+
+  .article-comments {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .article-comments-rail {
+    padding: 30px 0 20px;
+  }
+
+  .article-comments-body {
+    padding: 36px 0 76px;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .article-comments-header h2 {
+    font-size: 34px;
+  }
+
+  .article-comments-embed {
+    min-height: 150px;
   }
 
   .technical-diagram figcaption {

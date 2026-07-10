@@ -520,6 +520,13 @@ const SITE_SEARCH_INDEX_EN = [
 
 const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
 const SITE_SEARCH_INDEX = isEnglish ? SITE_SEARCH_INDEX_EN : SITE_SEARCH_INDEX_VI;
+const ARTICLE_COMMENTS_CONFIG = {
+  repo: "NhanAZ/nhanaz.io.vn",
+  repoId: "R_kgDOMOlsIA",
+  category: "General",
+  categoryId: "DIC_kwDOMOlsIM4DA7S2",
+  theme: "https://nhanaz.io.vn/assets/css/giscus.css?v=20260711-01",
+};
 
 const initLanguageSwitch = () => {
   const navigation = document.querySelector(".site-nav");
@@ -990,6 +997,63 @@ const initArticleToc = () => {
   window.addEventListener("hashchange", scrollToCurrentHash);
 };
 
+const initArticleComments = () => {
+  const articleLayout = document.querySelector("main > article > .article-layout");
+
+  if (!articleLayout || articleLayout.parentElement?.querySelector(":scope > .article-comments")) {
+    return;
+  }
+
+  const section = document.createElement("section");
+  const rail = document.createElement("div");
+  const label = document.createElement("p");
+  const body = document.createElement("div");
+  const header = document.createElement("header");
+  const title = document.createElement("h2");
+  const description = document.createElement("p");
+  const embed = document.createElement("div");
+  const script = document.createElement("script");
+
+  section.className = "article-comments";
+  section.setAttribute("aria-labelledby", "article-comments-title");
+  rail.className = "article-comments-rail";
+  label.className = "article-comments-label";
+  label.textContent = "GitHub Discussions";
+  body.className = "article-comments-body";
+  header.className = "article-comments-header";
+  title.id = "article-comments-title";
+  title.textContent = isEnglish ? "Comments" : "Bình luận";
+  description.textContent = isEnglish
+    ? "Add a thought, correction, or question here. The conversation is stored publicly on GitHub Discussions."
+    : "Có điều muốn thêm, sửa hoặc hỏi tiếp thì để lại ở đây. Phần trao đổi được lưu công khai trên GitHub Discussions.";
+  embed.className = "article-comments-embed giscus";
+
+  script.src = "https://giscus.app/client.js";
+  script.dataset.repo = ARTICLE_COMMENTS_CONFIG.repo;
+  script.dataset.repoId = ARTICLE_COMMENTS_CONFIG.repoId;
+  script.dataset.category = ARTICLE_COMMENTS_CONFIG.category;
+  script.dataset.categoryId = ARTICLE_COMMENTS_CONFIG.categoryId;
+  script.dataset.mapping = "pathname";
+  script.dataset.strict = "1";
+  script.dataset.reactionsEnabled = "1";
+  script.dataset.emitMetadata = "0";
+  script.dataset.inputPosition = "top";
+  script.dataset.theme = window.location.protocol === "https:"
+    ? ARTICLE_COMMENTS_CONFIG.theme
+    : "light";
+  script.dataset.lang = isEnglish ? "en" : "vi";
+  script.dataset.loading = "lazy";
+  script.crossOrigin = "anonymous";
+  script.async = true;
+
+  rail.append(label);
+  header.append(title, description);
+  body.append(header, embed);
+  section.append(rail, body);
+  articleLayout.after(section);
+  embed.append(script);
+};
+
 const writeClipboard = async (value) => {
   if (navigator.clipboard && window.isSecureContext) {
     await navigator.clipboard.writeText(value);
@@ -1115,4 +1179,5 @@ initAchievementFilters();
 initCanvaEmbeds();
 initCodeBlocks();
 initArticleToc();
+initArticleComments();
 initMotion();
