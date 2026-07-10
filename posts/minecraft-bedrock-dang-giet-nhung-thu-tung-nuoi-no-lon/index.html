@@ -6,17 +6,26 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.">
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Nguyễn Thành Nhân">
+  <meta name="subject" content="Minecraft Bedrock, PocketMine-MP, NetherGames và server độc lập">
   <meta name="keywords" content="Minecraft Bedrock, PocketMine-MP, PMMP, NetherGames, Mojang, Microsoft, BDS, debug symbols, Bedrock Dedicated Server, Dragonfly, Galaxite, Lifeboat, server Minecraft Bedrock">
   <meta property="og:title" content="Minecraft Bedrock đang giết những thứ từng nuôi nó lớn">
   <meta property="og:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu chuyện Bedrock ngày càng khép thông tin kỹ thuật với server độc lập.">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/">
   <meta property="og:site_name" content="nhanaz.io.vn">
   <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <meta property="article:published_time" content="2026-07-10">
-  <meta property="article:modified_time" content="2026-07-10">
+  <meta property="article:modified_time" content="2026-07-11">
   <meta property="article:author" content="Nguyễn Thành Nhân">
+  <meta property="article:section" content="Minecraft Bedrock">
+  <meta property="article:tag" content="PocketMine-MP">
+  <meta property="article:tag" content="NetherGames">
+  <meta property="article:tag" content="Bedrock Dedicated Server">
+  <meta property="article:tag" content="Open source">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Minecraft Bedrock đang giết những thứ từng nuôi nó lớn">
   <meta name="twitter:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu chuyện Bedrock ngày càng khép thông tin kỹ thuật với server độc lập.">
@@ -35,28 +44,171 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#post",
-      "mainEntityOfPage": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
-      "headline": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
-      "description": "Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.",
-      "datePublished": "2026-07-10",
-      "dateModified": "2026-07-10",
-      "inLanguage": "vi",
-      "image": "https://nhanaz.io.vn/assets/images/portrait.png",
-      "about": [
-        "Minecraft Bedrock",
-        "PocketMine-MP",
-        "NetherGames",
-        "Bedrock Dedicated Server",
-        "Open source"
-      ],
-      "author": {
-        "@id": "https://nhanaz.io.vn/#person"
-      },
-      "publisher": {
-        "@id": "https://nhanaz.io.vn/#person"
-      }
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#post",
+          "mainEntityOfPage": {
+            "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#webpage"
+          },
+          "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
+          "headline": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
+          "alternativeHeadline": "PocketMine-MP, NetherGames và cái giá của một Bedrock ngày càng khép thông tin",
+          "description": "Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.",
+          "datePublished": "2026-07-10",
+          "dateModified": "2026-07-11",
+          "inLanguage": "vi",
+          "isAccessibleForFree": true,
+          "image": "https://nhanaz.io.vn/assets/images/portrait.png",
+          "articleSection": [
+            "Minecraft Bedrock",
+            "PocketMine-MP",
+            "Open source"
+          ],
+          "keywords": [
+            "Minecraft Bedrock",
+            "PocketMine-MP",
+            "NetherGames",
+            "Bedrock Dedicated Server",
+            "debug symbols",
+            "server độc lập",
+            "Information wants to be free"
+          ],
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Minecraft Bedrock",
+              "sameAs": "https://www.minecraft.net/"
+            },
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "PocketMine-MP",
+              "url": "https://pmmp.io/",
+              "sameAs": "https://github.com/pmmp/PocketMine-MP"
+            },
+            {
+              "@type": "Organization",
+              "name": "NetherGames",
+              "url": "https://support.nethergames.org/closure-announcement"
+            },
+            {
+              "@type": "Thing",
+              "name": "Bedrock Dedicated Server",
+              "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/getting-started?view=minecraft-bedrock-stable"
+            }
+          ],
+          "mentions": [
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "Dragonfly",
+              "url": "https://github.com/df-mc/dragonfly"
+            },
+            {
+              "@type": "Thing",
+              "name": "Stewart Brand",
+              "description": "Người gắn với câu Information wants to be free."
+            }
+          ],
+          "citation": [
+            "https://pmmp.io/",
+            "https://github.com/pmmp/PocketMine-MP",
+            "https://github.com/pmmp/PocketMine-MP/issues/6295",
+            "https://github.com/pmmp/doc.pmmp.io/blob/rtfd/source/developers/internals-docs/updating-minecraft-protocol.rst",
+            "https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/",
+            "https://support.nethergames.org/closure-announcement",
+            "https://www.minecraft.net/en-us/servers",
+            "https://www.minecraft.net/en-us/partner"
+          ],
+          "author": {
+            "@id": "https://nhanaz.io.vn/#person"
+          },
+          "publisher": {
+            "@id": "https://nhanaz.io.vn/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#webpage",
+          "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
+          "name": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
+          "inLanguage": "vi",
+          "isPartOf": {
+            "@id": "https://nhanaz.io.vn/#website"
+          },
+          "about": {
+            "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#post"
+          },
+          "breadcrumb": {
+            "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#breadcrumbs"
+          },
+          "mainEntity": {
+            "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#faq"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang chủ",
+              "item": "https://nhanaz.io.vn/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Bài viết",
+              "item": "https://nhanaz.io.vn/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
+              "item": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/#faq",
+          "inLanguage": "vi",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Bài này nói gì về Minecraft Bedrock?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bài này cho rằng Minecraft Bedrock đang làm server độc lập và software không chính thức khó sống hơn bằng cách đóng dần thông tin kỹ thuật, đẩy quyền truy cập quan trọng về phía partner và khiến chi phí cập nhật tăng quá cao."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vì sao PocketMine-MP và NetherGames được nhắc cùng nhau?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PocketMine-MP dừng hỗ trợ chính thức còn NetherGames đóng cửa, nhưng cả hai cùng chỉ vào một vấn đề rộng hơn. Server Bedrock độc lập phải theo kịp protocol, dữ liệu BDS và hệ phân phối ngày càng nghiêng về phía những bên được chọn."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Bài viết có khẳng định Mojang ra lệnh giết PMMP hay NetherGames không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Không. Bài viết không khẳng định có một lệnh nội bộ như vậy. Nó suy luận từ các sự kiện công khai, tài liệu kỹ thuật và trải nghiệm cộng đồng để chỉ ra một hướng lực khiến phần mềm và server độc lập bị bóp nghẹt dần."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vì sao phần cộng đồng Việt Nam quan trọng?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Phần cộng đồng Việt Nam cho thấy PMMP không chỉ là một repo phần mềm. Nó từng là đường vào Công nghệ thông tin của nhiều học sinh, chủ server nhỏ, người Việt hóa plugin và developer tự học."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
   <title>Minecraft Bedrock đang giết những thứ từng nuôi nó lớn - Nguyễn Thành Nhân - NhanAZ</title>
@@ -91,7 +243,7 @@
           <ul>
             <li>10.07.2026</li>
             <li>Minecraft Bedrock</li>
-            <li>34 phút đọc</li>
+            <li>38 phút đọc</li>
           </ul>
         </div>
         <div class="article-title">
@@ -111,11 +263,21 @@
           <p>Mình không có tài liệu nội bộ của Mojang hay Microsoft. Mình không thể nói có một phòng họp nào đó ra lệnh “giết PocketMine-MP” hay “giết NetherGames”. Nhưng cũng không nên giả vờ rằng chỉ những gì nằm trong thông cáo chính thức mới là thực tế. Thực tế đôi khi nằm ở chỗ các quyết định nối tiếp nhau tạo ra cùng một hướng lực. Và hướng lực ở đây khá rõ. Server Bedrock độc lập ngày càng phụ thuộc vào thông tin không công khai, vào quan hệ partner, vào một vài maintainer, vào tài trợ không ổn định và vào thiện chí của những bên đã được Mojang chọn.</p>
           <p>Đó là lý do mình thấy cần viết bài này như một lời chỉ trích, cũng là một lời chia buồn. Chia buồn PocketMine-MP. Chia buồn NetherGames. Chia buồn cho một phần Minecraft Bedrock từng rất mở, rất bụi, rất nhiều lỗi, nhưng cũng rất thật.</p>
 
+          <h2>Nếu cần nói ngắn</h2>
+          <h3>Bài này nói gì về Minecraft Bedrock?</h3>
+          <p>Bài này cho rằng Minecraft Bedrock đang làm server độc lập và software không chính thức khó sống hơn bằng cách đóng dần thông tin kỹ thuật, đẩy quyền truy cập quan trọng về phía partner và khiến chi phí cập nhật tăng quá cao.</p>
+          <h3>Vì sao PocketMine-MP và NetherGames được nhắc cùng nhau?</h3>
+          <p>PocketMine-MP dừng hỗ trợ chính thức còn NetherGames đóng cửa, nhưng cả hai cùng chỉ vào một vấn đề rộng hơn. Server Bedrock độc lập phải theo kịp protocol, dữ liệu BDS và hệ phân phối ngày càng nghiêng về phía những bên được chọn.</p>
+          <h3>Bài viết có khẳng định Mojang ra lệnh giết PMMP hay NetherGames không?</h3>
+          <p>Không. Bài viết không khẳng định có một lệnh nội bộ như vậy. Nó suy luận từ các sự kiện công khai, tài liệu kỹ thuật và trải nghiệm cộng đồng để chỉ ra một hướng lực khiến phần mềm và server độc lập bị bóp nghẹt dần.</p>
+          <h3>Vì sao phần cộng đồng Việt Nam quan trọng?</h3>
+          <p>Phần cộng đồng Việt Nam cho thấy PMMP không chỉ là một repo phần mềm. Nó từng là đường vào Công nghệ thông tin của nhiều học sinh, chủ server nhỏ, người Việt hóa plugin và developer tự học.</p>
+
           <h2>Một cái chết không xảy ra trong một đêm</h2>
           <p>Ngày 09.07.2026, repository chính của <a href="https://github.com/pmmp/PocketMine-MP">PocketMine-MP trên GitHub</a> được archive và chuyển sang read-only. Trước đó vài ngày, bản phát hành 5.44.3 vẫn còn được đưa ra vào 06.07.2026. Nhìn từ bên ngoài, chuyện này có vẻ đột ngột. Nhưng nếu đọc lại các dấu hiệu từ vài năm trước, PMMP không ngã xuống trong một đêm. Nó đi tới điểm cuối sau rất nhiều năm bị kéo căng.</p>
           <p><a href="https://pmmp.io/">Trang chủ PMMP</a> hiện đã thành một trang farewell với dòng 2012 - 2026. Nội dung chia tay nói khá thẳng. Một developer quan trọng rời Minecraft để theo đuổi điều khác, và đội PMMP không còn ai sẵn sàng cập nhật cho các phiên bản Minecraft mới. Họ đã gom tài liệu về quy trình update để ai muốn fork còn có thể tự đi tiếp, nhưng đội PMMP sẽ không cung cấp thêm cập nhật nào nữa.</p>
           <p>Nếu chỉ đọc đến đó, rất dễ kết luận PMMP chết vì thiếu người. Kết luận này đúng, nhưng chưa đủ. Thiếu người là triệu chứng cuối. Câu hỏi khó hơn là vì sao một dự án đã sống hơn mười năm, có hàng nghìn server phụ thuộc, có cộng đồng plugin, có repo nhiều nghìn sao, lại rơi vào trạng thái chỉ cần vài người rời đi là không còn đường cập nhật chính thức.</p>
-          <p>Muốn trả lời, phải quay về issue <a href="https://github.com/pmmp/PocketMine-MP/issues/6295">“I'm retiring”</a> của dktapps mở ngày 21.03.2024. Dylan nói mình sẽ rời vai trò ở PocketMine-MP và rời Minecraft. Ông đã mất đam mê với Minecraft từ nhiều năm, chỉ còn mở game lên để test thay đổi của PocketMine. Nhưng điều quan trọng hơn nằm ở phần nói về tương lai dự án. Dylan gọi PMMP là nền móng mà hàng nghìn server Minecraft đã phụ thuộc, nhưng cũng nói việc duy trì nó cần mức cam kết, trách nhiệm và chuyên môn rất lớn. Việc đó thường vô ơn và không trả tiền thuê nhà, trừ khi có một doanh nghiệp dùng nó đứng ra tài trợ.</p>
+          <p>Muốn trả lời, phải quay về issue <a href="https://github.com/pmmp/PocketMine-MP/issues/6295">“I'm retiring”</a> của dktapps mở ngày 21.03.2024. Dylan nói mình sẽ rời vai trò ở PocketMine-MP và rời Minecraft. Anh đã mất đam mê với Minecraft từ nhiều năm, chỉ còn mở game lên để test thay đổi của PocketMine. Nhưng điều quan trọng hơn nằm ở phần nói về tương lai dự án. Dylan gọi PMMP là nền móng mà hàng nghìn server Minecraft đã phụ thuộc, nhưng cũng nói việc duy trì nó cần mức cam kết, trách nhiệm và chuyên môn rất lớn. Việc đó thường vô ơn và không trả tiền thuê nhà, trừ khi có một doanh nghiệp dùng nó đứng ra tài trợ.</p>
           <p>Đây là một câu rất đau. PMMP không phải project đồ chơi. Nó là hạ tầng của rất nhiều server. Nhưng hạ tầng đó lại dựa vào vài người có thời gian, có năng lực reverse engineering, có sức chịu đựng với cộng đồng, và đôi khi có một partner như Lifeboat tài trợ. Một hệ sinh thái khỏe mạnh không nên đặt phần xương sống của mình lên một số ít người như vậy rồi tỏ vẻ ngạc nhiên khi họ mệt.</p>
           <p>Dylan cũng dự báo một tương lai rất gần với những gì mình đang thấy. Server lớn sẽ duy trì fork riêng. Server nhỏ sẽ chết dần. Không phải vì server nhỏ lười, mà vì chi phí hiểu Bedrock mới, cập nhật protocol, cập nhật dữ liệu và sửa plugin đã vượt khỏi tầm của đa số cộng đồng nhỏ.</p>
 
@@ -135,8 +297,8 @@
           <h2>Debug symbols nghe khô, nhưng đó là oxy</h2>
           <p>Để hiểu vì sao mọi chuyện nghiêm trọng, phải nói về debug symbols. Nghe hơi khô. Nhưng với phần mềm server Bedrock độc lập, đây gần như là oxy.</p>
           <p>Bedrock Dedicated Server, hay BDS, là server chính thức của Mojang. Một bản BDS bình thường chỉ là binary đã biên dịch. Nó chạy được, nhưng bên trong rất khó đọc. Debug symbols là lớp thông tin giúp ánh xạ những phần trong binary thành tên hàm, tên lớp, cấu trúc và các định danh dễ hiểu hơn. Có symbols, người làm reverse engineering biết mình đang nhìn vào đâu. Không có symbols, mọi thứ giống như đi trong một thành phố bị tháo hết biển đường.</p>
-          <p>Năm 2019, dktapps đã viết bài <a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">1.13, debug symbols and the Titanic</a> trên forum PMMP. Ông giải thích debug symbols là công cụ thiết yếu mà server và mod development đã dựa vào nhiều năm. Khi symbols bị gỡ, việc reverse engineer protocol trở nên khó hơn nhiều. Công cụ tự động có thể vô dụng, còn phân tích bằng tay mất nhiều công hơn. Ông cảnh báo update một phiên bản mới có thể từ vài ngày thành vài tuần hoặc vài tháng.</p>
-          <p>Lúc đó, dktapps vẫn không muốn nói Mojang đang cố giết server bên thứ ba. Ông nghiêng về cách hiểu rằng Mojang đang chống hacker, còn server third-party là thiệt hại ngoài ý muốn. Mình thấy thái độ đó rất đáng tôn trọng. Nó không vội kết tội. Nó cố công bằng với người bên kia. Nhưng đến năm 2026, bức tranh đã khác. Khi một quyết định bất lợi kéo dài nhiều năm, khi cộng đồng phản ứng, khi server lớn đóng cửa và khi tài liệu chính thức của PMMP phải ghi rằng dữ liệu cần thiết nằm sau quyền truy cập partner, rất khó tiếp tục gọi toàn bộ chuyện này là vô tình.</p>
+          <p>Năm 2019, dktapps đã viết bài <a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">1.13, debug symbols and the Titanic</a> trên forum PMMP. Anh giải thích debug symbols là công cụ thiết yếu mà server và mod development đã dựa vào nhiều năm. Khi symbols bị gỡ, việc reverse engineer protocol trở nên khó hơn nhiều. Công cụ tự động có thể vô dụng, còn phân tích bằng tay mất nhiều công hơn. Anh cảnh báo update một phiên bản mới có thể từ vài ngày thành vài tuần hoặc vài tháng.</p>
+          <p>Lúc đó, dktapps vẫn không muốn nói Mojang đang cố giết server bên thứ ba. Anh nghiêng về cách hiểu rằng Mojang đang chống hacker, còn server third-party là thiệt hại ngoài ý muốn. Mình thấy thái độ đó rất đáng tôn trọng. Nó không vội kết tội. Nó cố công bằng với người bên kia. Nhưng đến năm 2026, bức tranh đã khác. Khi một quyết định bất lợi kéo dài nhiều năm, khi cộng đồng phản ứng, khi server lớn đóng cửa và khi tài liệu chính thức của PMMP phải ghi rằng dữ liệu cần thiết nằm sau quyền truy cập partner, rất khó tiếp tục gọi toàn bộ chuyện này là vô tình.</p>
           <p>Tài liệu <a href="https://github.com/pmmp/doc.pmmp.io/blob/rtfd/source/developers/internals-docs/updating-minecraft-protocol.rst">Implementing new Minecraft version support in PocketMine-MP</a> nói rõ quy trình cập nhật cần BDS tương ứng, các repo BedrockProtocol, BedrockData, schema nâng cấp block và item, công cụ dump dữ liệu, packet traces giữa BDS và client, cùng các mod của BDS để trích xuất dữ liệu. Đáng chú ý nhất là ghi chú từ Bedrock 1.21.40. Mojang không còn public BDS build có debugging symbols. Muốn tạo dữ liệu cần thiết, người làm server phải có quyền truy cập build được cung cấp bởi server partner hoặc Marketplace partner. Tài liệu protocol công khai chỉ thay thế được một phần, không đủ hết. Kết luận của tài liệu là server bên thứ ba phụ thuộc vào thiện chí của Minecraft partners.</p>
           <p>Câu “phụ thuộc vào thiện chí” nghe nhẹ, nhưng rất nặng. Nó có nghĩa là phần mềm độc lập không còn đứng trên nền tài liệu công khai. Nó đứng trên các mối quan hệ. Hôm nay có partner tốt giúp thì sống. Ngày mai partner đổi ưu tiên, maintainer nghỉ, NDA siết, hoặc dữ liệu không được chia sẻ nữa, cả cộng đồng phải tự bơi trong bóng tối.</p>
 
@@ -148,7 +310,7 @@
           <p>Điều làm mình khó chịu là ngày trước chính các server và software không chính thức đã giúp Bedrock có đời sống cộng đồng mạnh hơn. Trước khi Marketplace bóng bẩy, trước khi Featured Servers thành cổng phân phối lớn, người chơi đã vào server bằng IP, tải plugin, xem YouTube hướng dẫn, tham gia forum, mở server nhỏ cho bạn bè, làm staff, build lobby, chỉnh rank và tạo ra hàng nghìn lý do để ở lại với game. Khi hệ sinh thái đủ lớn để thương mại hóa, phần từng giúp nó lớn lên lại bị đặt ở mép ngoài.</p>
 
           <h2>Dragonfly sống sót bằng một đường hẹp hơn</h2>
-          <p>Trong đoạn trò chuyện mình đọc được, Seb nói Dragonfly từng phụ thuộc vào sự tồn tại của PocketMine ở phần data generation. Khi được hỏi sau thông báo PMMP ngừng hỗ trợ thì Dragonfly còn phụ thuộc PMMP hay không, Seb nói việc cập nhật thậm chí dễ hơn nếu dùng các debug server có symbols, dù những thứ đó là private. Ông cũng nói debug server có symbols là cách duy nhất giúp nó được giữ sống đến giờ. May mắn là Dragonfly hiện chỉ cần dữ liệu từ BDS ở phần block upgrade schemas, và gần đây phần này gần như không cần cập nhật.</p>
+          <p>Trong đoạn trò chuyện mình đọc được, Seb nói Dragonfly từng phụ thuộc vào sự tồn tại của PocketMine ở phần data generation. Khi được hỏi sau thông báo PMMP ngừng hỗ trợ thì Dragonfly còn phụ thuộc PMMP hay không, Seb nói việc cập nhật thậm chí dễ hơn nếu dùng các debug server có symbols, dù những thứ đó là private. Anh cũng nói debug server có symbols là cách duy nhất giúp nó được giữ sống đến giờ. May mắn là Dragonfly hiện chỉ cần dữ liệu từ BDS ở phần block upgrade schemas, và gần đây phần này gần như không cần cập nhật.</p>
           <p>Đoạn này cần đọc cẩn thận. Nó không chứng minh công khai rằng Galaxite cấp file BDS private cho Dragonfly. Nó cũng không chứng minh mọi Featured Server đều nhận đầy đủ tài nguyên kỹ thuật giống nhau. Nhưng nó cho thấy một điều rất thực tế. Dự án nào ở gần một hệ sinh thái partner, có người có quyền truy cập build riêng, hoặc chỉ cần một phần nhỏ dữ liệu từ BDS, thì có cơ hội sống cao hơn dự án độc lập phải cập nhật nhiều lớp dữ liệu và protocol.</p>
           <p><a href="https://github.com/df-mc/dragonfly">Dragonfly</a> là server software Bedrock viết bằng Go, thiên về async và thường được dùng như library để mở rộng. Trong tổ chức df-mc còn có <a href="https://github.com/df-mc/datagen">datagen</a>, công cụ tạo dữ liệu từ BDS, và <a href="https://github.com/df-mc/mapping">mapping</a>, một mod tạo thông tin hữu ích từ BDS dựa nhiều trên pmmp/mapping. Điều này củng cố một thực tế rộng hơn. Dù viết bằng Go hay PHP, dù kiến trúc khác nhau, phần mềm server Bedrock độc lập vẫn cần dữ liệu từ thế giới BDS.</p>
           <p>Dragonfly có thể đi tiếp vì phạm vi dữ liệu cần ít hơn và vì nó có vị trí thuận lợi hơn. PMMP thì phải gánh một API plugin lớn, một hệ sinh thái cũ, một lịch sử dài, nhiều loại dữ liệu và vô số kỳ vọng. Nói cách khác, đây không chỉ là chuyện ngôn ngữ lập trình nào tốt hơn. Đây là chuyện ai có dữ liệu, ai có người, ai có quyền truy cập, ai có tiền và ai còn đủ sức tiếp tục.</p>
@@ -175,6 +337,12 @@
           <p>Câu của Stewart Brand không nên bị hiểu ngây thơ. Thông tin không tự do chỉ vì nó muốn. Có công ty giữ nó. Có luật giữ nó. Có NDA giữ nó. Có lợi ích thương mại giữ nó. Có nỗi sợ bảo mật giữ nó. Nhưng câu đó nhắc rằng thông tin có xu hướng tạo giá trị khi nó được lưu thông. Với phần mềm, điều này càng rõ. Tài liệu mở tạo developer. Protocol rõ tạo interoperability. Tooling công khai tạo fork. Schema công khai tạo server. Knowledge base mở tạo thế hệ mới.</p>
           <p>PocketMine-MP là một ví dụ sống động cho câu đó. Nó sống nhờ code mở, plugin mở, forum, Poggit, docs, ví dụ, những lần người này chỉ người kia sửa lỗi. NetherGames cũng bắt đầu từ mớ plugin công khai trên forum PocketMine trước khi lớn lên thành server tự phát triển in-house. Dragonfly cũng có repo mở, tool datagen, mapping và cộng đồng quanh nó. Hệ sinh thái này không sinh ra từ bí mật. Nó sinh ra từ việc nhiều người đủ khả năng nhìn, học, sửa, phá và dựng lại.</p>
           <p>Khi thông tin bị khóa, người giỏi nhất có thể vẫn tìm đường. Nhưng người mới mất cửa vào. Server nhỏ mất khả năng tự cứu. Plugin dev mất động lực. Maintainer phải dành thời gian đoán những thứ đáng lẽ được ghi rõ. Và cuối cùng, một thế hệ học code từ Minecraft sẽ ít hơn. Đó không phải thiệt hại nhỏ. Với mình, đó là mất một con đường học tập.</p>
+
+          <h2>Ở Việt Nam, đây không chỉ là chuyện của phần mềm</h2>
+          <p>Sau khi đọc lại những bài viết và bình luận trong nhóm PocketMine-MP Việt Nam, mình càng thấy đoạn chia tay này không nằm trên mây. Những ký ức đó không nên được dùng như một bảng mốc tuyệt đối, vì nhiều thứ được kể lại sau nhiều năm và chắc chắn có chỗ lẫn lộn. Nhưng chúng rất thật ở tầng cảm xúc. PMMP từng là nơi một nhóm học sinh mở port, chạy server trên điện thoại hoặc VPS rẻ, Việt hóa plugin, sửa config, viết plugin đầu đời, rồi từ đó đi vào Công nghệ thông tin.</p>
+          <p>Các bình luận cũng làm rõ một lớp địa phương mà nếu chỉ nhìn từ NetherGames hay tài liệu PMMP sẽ dễ bỏ sót. Ở Việt Nam, sự suy tàn không đến từ một nhát cắt duy nhất. Nó đi qua cú 1.2 làm thiết bị cũ và Xbox Live thành rào cản, qua cảnh YouTube bớt kéo người chơi, qua server mùa vụ, DDoS, plugin leak, gameplay Skyblock lặp lại, rồi tới PM3 lên PM4 khiến rất nhiều plugin và chủ server nhỏ không còn đủ sức đi tiếp. Có người nhớ thời Genisys Pro, ElyWing, Steadfast2, Allay, PM3, PM4. Có người nhớ những đêm tối ưu server chạy trên phần cứng yếu, những plugin chống Toolbox, Pickaxe Level, FarmingIsland, những lần dupe, crash, bug coin, mất data, build lại map. Nghe vừa buồn cười vừa đau, vì đó đúng là cách một cộng đồng học bằng va đập.</p>
+          <p>Những chia sẻ quanh Miheisu, Bravocraft và vài project cá nhân còn sót lại cũng cho thấy ngọn lửa chưa tắt hẳn. Nó chỉ nhỏ đi. Miheisu được kể như một server chọn sự ổn định và giản đơn, đi qua MineSAO, PuckVN rồi trở lại vào năm 2024. Một vài người vẫn sửa plugin cũ, vẫn giữ project riêng, vẫn gửi resource pack, vẫn hy vọng có thứ mới ra mắt. Nhưng cảm giác chung là PMMP Việt Nam không còn là quảng trường đông đúc nữa. Nó giống một nhóm người đứng quanh bếp than cuối ngày, vừa kể chuyện cũ vừa biết khó có chuyện quay lại y nguyên.</p>
+          <p>Vì vậy mình không muốn dùng những bài đăng đó để chứng minh thêm rằng Mojang đã làm gì. Chúng không phải tài liệu kỹ thuật hay nguồn chính thống. Nhưng chúng giúp bài này có đất hơn. Cái chết của PMMP không chỉ là một repo bị archive. Nó là tiếng thở dài của những người từng học code bằng cách sửa lỗi server, từng lớn lên từ những plugin vụng về, từng sai, từng phá, từng xin lỗi, từng làm lại, rồi cuối cùng nhận ra một phần tuổi trẻ của mình đã thành archive.</p>
 
           <h2>Cảm ơn PocketMine-MP</h2>
           <p>Mình muốn dành riêng một đoạn để cảm ơn PMMP, vì chỉ trích Mojang không có nghĩa là biến PMMP thành một biểu tượng trừu tượng rồi quên con người thật phía sau.</p>

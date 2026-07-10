@@ -34,6 +34,9 @@
         "Open source",
         "PocketMine-MP",
         "Minecraft Bedrock",
+        "Minecraft Bedrock independent servers",
+        "NetherGames",
+        "Bedrock Dedicated Server",
         "PHP plugins",
         "Poggit",
         "Vibe-code",
@@ -73,6 +76,11 @@
           "@type": "WebPage",
           "name": "Dấu mốc",
           "url": "https://nhanaz.io.vn/achievements/"
+        },
+        {
+          "@type": "BlogPosting",
+          "name": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
+          "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/"
         },
         {
           "@type": "BlogPosting",
@@ -144,6 +152,12 @@
           "position": 7,
           "name": "Vibe-code glyph",
           "url": "https://nhanaz.io.vn/vibe-code/glyph/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Minecraft Bedrock critique",
+          "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/"
         }
       ]
     }

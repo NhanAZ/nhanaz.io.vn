@@ -6,17 +6,26 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="A critical essay on how Minecraft Bedrock is closing off technical information, leaving PocketMine-MP, NetherGames, and independent servers exhausted.">
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Nguyễn Thành Nhân">
+  <meta name="subject" content="Minecraft Bedrock, PocketMine-MP, NetherGames, and independent servers">
   <meta name="keywords" content="Minecraft Bedrock, PocketMine-MP, PMMP, NetherGames, Mojang, Microsoft, BDS, debug symbols, Bedrock Dedicated Server, Dragonfly, Galaxite, Lifeboat, Minecraft Bedrock servers">
   <meta property="og:title" content="Minecraft Bedrock is killing the things that helped it grow">
   <meta property="og:description" content="PocketMine-MP ending support, NetherGames shutting down, and the wider story of Bedrock technical access moving behind partner gates.">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
   <meta property="og:url" content="https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/">
   <meta property="og:site_name" content="nhanaz.io.vn">
   <meta property="og:image" content="https://nhanaz.io.vn/assets/images/portrait.png">
   <meta property="article:published_time" content="2026-07-10">
-  <meta property="article:modified_time" content="2026-07-10">
+  <meta property="article:modified_time" content="2026-07-11">
   <meta property="article:author" content="Nguyễn Thành Nhân">
+  <meta property="article:section" content="Minecraft Bedrock">
+  <meta property="article:tag" content="PocketMine-MP">
+  <meta property="article:tag" content="NetherGames">
+  <meta property="article:tag" content="Bedrock Dedicated Server">
+  <meta property="article:tag" content="Open source">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Minecraft Bedrock is killing the things that helped it grow">
   <meta name="twitter:description" content="PocketMine-MP ending support, NetherGames shutting down, and the wider story of Bedrock technical access moving behind partner gates.">
@@ -35,28 +44,171 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#post",
-      "mainEntityOfPage": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
-      "headline": "Minecraft Bedrock is killing the things that helped it grow",
-      "description": "A critical essay on how Minecraft Bedrock is closing off technical information, leaving PocketMine-MP, NetherGames, and independent servers exhausted.",
-      "datePublished": "2026-07-10",
-      "dateModified": "2026-07-10",
-      "inLanguage": "en",
-      "image": "https://nhanaz.io.vn/assets/images/portrait.png",
-      "about": [
-        "Minecraft Bedrock",
-        "PocketMine-MP",
-        "NetherGames",
-        "Bedrock Dedicated Server",
-        "Open source"
-      ],
-      "author": {
-        "@id": "https://nhanaz.io.vn/#person"
-      },
-      "publisher": {
-        "@id": "https://nhanaz.io.vn/#person"
-      }
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#post",
+          "mainEntityOfPage": {
+            "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#webpage"
+          },
+          "url": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
+          "headline": "Minecraft Bedrock is killing the things that helped it grow",
+          "alternativeHeadline": "PocketMine-MP, NetherGames, and the cost of a Bedrock ecosystem closing technical information",
+          "description": "A critical essay on how Minecraft Bedrock is closing off technical information, leaving PocketMine-MP, NetherGames, and independent servers exhausted.",
+          "datePublished": "2026-07-10",
+          "dateModified": "2026-07-11",
+          "inLanguage": "en",
+          "isAccessibleForFree": true,
+          "image": "https://nhanaz.io.vn/assets/images/portrait.png",
+          "articleSection": [
+            "Minecraft Bedrock",
+            "PocketMine-MP",
+            "Open source"
+          ],
+          "keywords": [
+            "Minecraft Bedrock",
+            "PocketMine-MP",
+            "NetherGames",
+            "Bedrock Dedicated Server",
+            "debug symbols",
+            "independent servers",
+            "Information wants to be free"
+          ],
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Minecraft Bedrock",
+              "sameAs": "https://www.minecraft.net/"
+            },
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "PocketMine-MP",
+              "url": "https://pmmp.io/",
+              "sameAs": "https://github.com/pmmp/PocketMine-MP"
+            },
+            {
+              "@type": "Organization",
+              "name": "NetherGames",
+              "url": "https://support.nethergames.org/closure-announcement"
+            },
+            {
+              "@type": "Thing",
+              "name": "Bedrock Dedicated Server",
+              "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/bedrockserver/getting-started?view=minecraft-bedrock-stable"
+            }
+          ],
+          "mentions": [
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "Dragonfly",
+              "url": "https://github.com/df-mc/dragonfly"
+            },
+            {
+              "@type": "Thing",
+              "name": "Stewart Brand",
+              "description": "Associated with the quote Information wants to be free."
+            }
+          ],
+          "citation": [
+            "https://pmmp.io/",
+            "https://github.com/pmmp/PocketMine-MP",
+            "https://github.com/pmmp/PocketMine-MP/issues/6295",
+            "https://github.com/pmmp/doc.pmmp.io/blob/rtfd/source/developers/internals-docs/updating-minecraft-protocol.rst",
+            "https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/",
+            "https://support.nethergames.org/closure-announcement",
+            "https://www.minecraft.net/en-us/servers",
+            "https://www.minecraft.net/en-us/partner"
+          ],
+          "author": {
+            "@id": "https://nhanaz.io.vn/#person"
+          },
+          "publisher": {
+            "@id": "https://nhanaz.io.vn/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#webpage",
+          "url": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
+          "name": "Minecraft Bedrock is killing the things that helped it grow",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://nhanaz.io.vn/#website"
+          },
+          "about": {
+            "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#post"
+          },
+          "breadcrumb": {
+            "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#breadcrumbs"
+          },
+          "mainEntity": {
+            "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#faq"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://nhanaz.io.vn/en/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Writing",
+              "item": "https://nhanaz.io.vn/en/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Minecraft Bedrock is killing the things that helped it grow",
+              "item": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/#faq",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is this article saying about Minecraft Bedrock?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The article argues that Minecraft Bedrock is making independent servers and unofficial software harder to sustain by closing off technical information, moving important access toward partners, and raising the cost of keeping up with updates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why are PocketMine-MP and NetherGames connected here?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PocketMine-MP ended official support and NetherGames shut down, but both point toward a wider problem. Independent Bedrock servers must keep up with protocol changes, BDS data, and a distribution field increasingly tilted toward selected partners."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the article claim Mojang directly ordered PMMP or NetherGames to die?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The article does not claim there was an internal order. It draws an inference from public events, technical documentation, and community experience to describe a pressure pattern that slowly weakens independent software and servers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why does the Vietnamese community section matter?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Vietnamese community section shows that PMMP was not only a software repository. It was an entry point into Information Technology for students, small server owners, plugin translators, and self-taught developers."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
   <title>Minecraft Bedrock is killing the things that helped it grow - Nguyễn Thành Nhân - NhanAZ</title>
@@ -91,7 +243,7 @@
           <ul>
             <li>10.07.2026</li>
             <li>Minecraft Bedrock</li>
-            <li>34 min read</li>
+            <li>38 min read</li>
           </ul>
         </div>
         <div class="article-title">
@@ -110,6 +262,16 @@
           <p>Then Minecraft became stable, huge, commercial, and mature enough to have Marketplace, Realms, partners, Featured Servers, and a polished official funnel. The painful part is that the software and servers that helped the Bedrock community grow are now being pushed into a technical environment where surviving is harder every year.</p>
           <p>I do not have Mojang or Microsoft’s internal documents. I cannot claim there was a meeting where someone ordered PocketMine-MP or NetherGames to be killed. But pretending that only official press releases count as reality is also dishonest. Sometimes reality is in the direction created by many decisions stacked together. The direction here is clear enough. Independent Bedrock servers increasingly depend on non-public information, partner access, a few maintainers, unstable funding, and the goodwill of the very actors Mojang has already selected.</p>
           <p>That is why this is a criticism, and also a small obituary. Farewell PocketMine-MP. Farewell NetherGames. Farewell to a part of Minecraft Bedrock that was messy, open, buggy, human, and far more real than a curated server tab.</p>
+
+          <h2>If you need the short version</h2>
+          <h3>What is this article saying about Minecraft Bedrock?</h3>
+          <p>The article argues that Minecraft Bedrock is making independent servers and unofficial software harder to sustain by closing off technical information, moving important access toward partners, and raising the cost of keeping up with updates.</p>
+          <h3>Why are PocketMine-MP and NetherGames connected here?</h3>
+          <p>PocketMine-MP ended official support and NetherGames shut down, but both point toward a wider problem. Independent Bedrock servers must keep up with protocol changes, BDS data, and a distribution field increasingly tilted toward selected partners.</p>
+          <h3>Does the article claim Mojang directly ordered PMMP or NetherGames to die?</h3>
+          <p>No. The article does not claim there was an internal order. It draws an inference from public events, technical documentation, and community experience to describe a pressure pattern that slowly weakens independent software and servers.</p>
+          <h3>Why does the Vietnamese community section matter?</h3>
+          <p>The Vietnamese community section shows that PMMP was not only a software repository. It was an entry point into Information Technology for students, small server owners, plugin translators, and self-taught developers.</p>
 
           <h2>A death that did not happen overnight</h2>
           <p>On 09.07.2026, the main <a href="https://github.com/pmmp/PocketMine-MP">PocketMine-MP repository on GitHub</a> was archived and made read-only. Only a few days earlier, version 5.44.3 had been released on 06.07.2026. From the outside, this can look sudden. But if you read the signs from the last few years, PMMP did not collapse in one night. It reached the end after being stretched for years.</p>
@@ -175,6 +337,12 @@
           <p>Stewart Brand’s line should not be read naively. Information is not free just because it wants to be. Companies hold it. Laws hold it. NDAs hold it. Commercial incentives hold it. Security fears hold it. But the line reminds us that information creates value when it flows. In software, this is especially obvious. Open documentation creates developers. Clear protocol creates interoperability. Public tooling creates forks. Public schemas create servers. Open knowledge bases create the next generation.</p>
           <p>PocketMine-MP is a living example of that. It survived through open code, open plugins, forums, Poggit, docs, examples, and the endless loop of one person helping another fix a broken server. NetherGames also began with public PocketMine forum plugins before growing into a large in-house server network. Dragonfly has open repositories, datagen tools, mapping work, and a community around it. This ecosystem did not come from secrecy. It came from people being able to look, learn, modify, break, and rebuild.</p>
           <p>When information is locked away, the best people may still find a path. But beginners lose the door. Small servers lose the ability to rescue themselves. Plugin developers lose motivation. Maintainers spend time guessing things that should have been documented. Eventually, fewer people learn to code through Minecraft. That is not a small loss. To me, that is the loss of an educational path.</p>
+
+          <h2>In Vietnam, this was never only software</h2>
+          <p>Reading the Vietnamese Facebook posts and comment threads made this ending feel less abstract. I would not use those memories as a strict timeline, because many of them are being reconstructed after years and some details may be fuzzy. But emotionally, they are consistent. PMMP was where Vietnamese students opened ports, ran servers on phones or cheap VPS plans, translated plugins, edited configs, wrote their first plugins, and eventually found their way into Information Technology.</p>
+          <p>The comments also add a local layer that a global technical article can easily miss. The decline in Vietnam did not come from one cut. It passed through the 1.2 update making old devices and Xbox Live harder for young players, through weaker YouTube discovery, seasonal servers, DDoS, leaked plugins, repeated Skyblock formulas, and then the PM3 to PM4 transition that left many plugins and small owners behind. People remembered Genisys Pro, ElyWing, Steadfast2, Allay, PM3, PM4, servers pushed to run on weak hardware, anti-Toolbox work, Pickaxe Level, FarmingIsland, dupes, crashes, coin bugs, data loss, and maps rebuilt after mistakes. It sounds messy because it was. It also sounds alive because that mess was how people learned.</p>
+          <p>The mentions of Miheisu, Bravocraft, and a few private projects show that the flame is not completely out. It is just small. Miheisu is described as a server choosing stability and simplicity, passing through earlier names such as MineSAO and PuckVN before returning in 2024. Some people still fix old plugins, keep private projects, share resource packs, or hope a new server will launch. But the feeling is no longer a busy public square. It is a small circle around the last warm coals, telling old stories while knowing the old atmosphere will not return unchanged.</p>
+          <p>So I am not treating those posts as proof of what Mojang did. They are not technical documentation or official sources. What they do provide is texture. PMMP’s ending is not only a repository being archived. It is a sigh from people who learned code by repairing servers, grew up through awkward plugins, made mistakes, broke things, apologized, rebuilt, and eventually realized that part of their youth had become an archive.</p>
 
           <h2>Thank you, PocketMine-MP</h2>
           <p>I want to give PMMP its own farewell here, because criticizing Mojang should not turn PMMP into an abstract symbol and erase the real people behind it.</p>
