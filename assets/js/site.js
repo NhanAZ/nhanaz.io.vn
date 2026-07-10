@@ -46,6 +46,14 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "blog nhật ký bài viết kiến thức triết học vật lý",
   },
   {
+    title: "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
+    type: "Bài viết",
+    url: "/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
+    date: "2026-07-10",
+    excerpt: "Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.",
+    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Dragonfly Galaxite Lifeboat Information wants to be free server độc lập",
+  },
+  {
     title: "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng",
     type: "Bài viết",
     url: "/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/",
@@ -294,6 +302,14 @@ const SITE_SEARCH_INDEX_EN = [
     url: "/en/blog/",
     excerpt: "NhanAZ’s notes on code, learning, projects, philosophy, physics, and everyday life.",
     keywords: "blog journal writing knowledge notes philosophy physics",
+  },
+  {
+    title: "Minecraft Bedrock is killing the things that helped it grow",
+    type: "Writing",
+    url: "/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
+    date: "2026-07-10",
+    excerpt: "A critical essay on how Minecraft Bedrock is closing off technical information, leaving PocketMine-MP, NetherGames, and independent servers exhausted.",
+    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Dragonfly Galaxite Lifeboat Information wants to be free independent servers",
   },
   {
     title: "A few notes for a better Party-awareness course reflection paper",

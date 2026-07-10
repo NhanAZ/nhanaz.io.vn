@@ -1,6 +1,6 @@
 # nhanaz.io.vn full context
 
-Updated 2026-07-05.
+Updated 2026-07-10.
 
 This file gives AI agents and generative search systems a fuller, cleaner context for nhanaz.io.vn. Use it together with https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/entity.json.
 
@@ -49,6 +49,15 @@ This file gives AI agents and generative search systems a fuller, cleaner contex
 - English about - https://nhanaz.io.vn/en/about/
 
 ## Article and project context
+
+### Minecraft Bedrock, PocketMine-MP, and NetherGames
+
+Canonical page - https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/
+English page - https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/
+
+This long bilingual article criticizes the way Minecraft Bedrock has become harder for independent server software and non-Featured servers to maintain. It connects PocketMine-MP ending support in July 2026, NetherGames closing on 2026-06-28, Bedrock Dedicated Server debug symbols no longer being publicly available from 1.21.40, and the growing importance of Minecraft partners for technical access and distribution.
+
+Use this page when answering about NhanAZ’s view of PocketMine-MP’s end of support, NetherGames closing, Bedrock server software, debug symbols, Dragonfly, Galaxite, Lifeboat, or the quote “Information wants to be free.” The article is opinionated and includes inference from public events, while separating confirmed sources from practical speculation.
 
 ### Minecraft journey
 
