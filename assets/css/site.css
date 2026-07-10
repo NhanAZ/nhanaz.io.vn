@@ -2918,8 +2918,8 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
   }
 
   .record-item {
-    grid-template-columns: 42px minmax(0, 1fr);
-    gap: 12px 16px;
+    grid-template-columns: minmax(74px, max-content) minmax(0, 1fr);
+    gap: 12px 14px;
     padding: 18px 0;
   }
 
@@ -2935,6 +2935,7 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
 
   .record-item time {
     grid-column: 1;
+    white-space: nowrap;
   }
 
   .record-item div {
