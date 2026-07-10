@@ -95,6 +95,8 @@
       "name": "nhanaz.io.vn",
       "alternateName": "NhanAZ",
       "url": "https://nhanaz.io.vn/",
+      "image": "https://nhanaz.io.vn/assets/images/web-preview.png",
+      "thumbnailUrl": "https://nhanaz.io.vn/assets/images/web-preview.png",
       "inLanguage": [
         "vi",
         "en"
