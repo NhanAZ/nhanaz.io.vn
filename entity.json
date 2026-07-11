@@ -95,7 +95,11 @@
       "name": "nhanaz.io.vn",
       "alternateName": "NhanAZ",
       "url": "https://nhanaz.io.vn/",
-      "image": "https://nhanaz.io.vn/assets/images/web-preview.png",
+      "image": [
+        "https://nhanaz.io.vn/assets/images/web-preview-16x9.png",
+        "https://nhanaz.io.vn/assets/images/web-preview-4x3.png",
+        "https://nhanaz.io.vn/assets/images/web-preview-1x1.png"
+      ],
       "thumbnailUrl": "https://nhanaz.io.vn/assets/images/web-preview.png",
       "inLanguage": [
         "vi",

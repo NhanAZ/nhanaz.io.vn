@@ -73,8 +73,9 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - AEO nên dựa vào câu trả lời ngắn, nội dung thật trên trang, JSON-LD khớp với phần người đọc thấy và `llms.txt`. Không nhồi từ khóa hoặc viết giọng bot.
 - Các câu trả lời ngắn trên trang chủ nằm trong `<details>` gần cuối trang để không chen ngang phần kể chuyện. Có thể thu gọn mặc định, nhưng nội dung khi mở phải khớp với `FAQPage` JSON-LD và bản tiếng Anh.
 - GEO nên làm cho trang dễ được trích dẫn bằng nguồn rõ, entity map, `llms-full.txt`, link canonical và nội dung có ngữ cảnh. Tránh mọi mẹo thao túng câu trả lời AI.
-- Link preview mặc định của site nằm ở `assets/images/web-preview.png`, kích thước 1200x630. Khi chưa có preview riêng, các trang nên dùng ảnh này cho `og:image`, `twitter:image` và ảnh JSON-LD của bài viết hoặc trang nội dung.
-- Nếu sau này có preview riêng cho một bài viết, đặt ảnh trong `assets/images/`, ưu tiên 1200x630, rồi cập nhật đồng bộ `og:image`, `twitter:image`, `og:image:width`, `og:image:height`, `og:image:alt` và JSON-LD `image` của đúng trang đó. Không thay ảnh chân dung `portrait.png` trong `Person` schema nếu trang đang mô tả Nguyễn Thành Nhân.
+- Link preview mặc định của site nằm ở `assets/images/web-preview.png`, kích thước 1200x630, dùng cho `og:image` và `twitter:image`.
+- Structured data nên dùng bộ ảnh preview nhiều tỉ lệ cho Google, gồm `assets/images/web-preview-16x9.png` 1200x675, `assets/images/web-preview-4x3.png` 1200x900 và `assets/images/web-preview-1x1.png` 1200x1200 trong mảng JSON-LD `image` khi trang dùng ảnh preview mặc định.
+- Nếu sau này có preview riêng cho một bài viết, đặt ảnh trong `assets/images/`, ưu tiên có đủ bản 1200x630 cho social preview và các bản 16:9, 4:3, 1:1 cho JSON-LD, rồi cập nhật đồng bộ `og:image`, `twitter:image`, `og:image:width`, `og:image:height`, `og:image:alt` và JSON-LD `image` của đúng trang đó. Không thay ảnh chân dung `portrait.png` trong `Person` schema nếu trang đang mô tả Nguyễn Thành Nhân.
 - Favicon và search icon của web dùng `assets/favicon.svg`, `assets/favicon-48.png`, `assets/favicon-192.png`, `assets/apple-touch-icon.png` và `/favicon.ico`. Khi đổi logo hoặc mark nhận diện, cập nhật các file này cùng lúc để trình duyệt và Google không lấy nhầm cache cũ.
 
 ## JavaScript hiện có
