@@ -50,8 +50,8 @@ const SITE_SEARCH_INDEX_VI = [
     type: "Bài viết",
     url: "/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
     date: "2026-07-10",
-    excerpt: "Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.",
-    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Dragonfly Galaxite Lifeboat Information wants to be free server độc lập",
+    excerpt: "Phân tích thuế bảo trì của Minecraft Bedrock qua PocketMine-MP, NetherGames, Zeqa, Endstone và những con đường sống khác nhau của server độc lập.",
+    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free server độc lập",
   },
   {
     title: "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng",
@@ -308,8 +308,8 @@ const SITE_SEARCH_INDEX_EN = [
     type: "Writing",
     url: "/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
     date: "2026-07-10",
-    excerpt: "A critical essay on how Minecraft Bedrock is closing off technical information, leaving PocketMine-MP, NetherGames, and independent servers exhausted.",
-    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Dragonfly Galaxite Lifeboat Information wants to be free independent servers",
+    excerpt: "An analysis of Bedrock's maintenance tax through PocketMine-MP, NetherGames, Zeqa, Endstone, and the different survival paths available to independent servers.",
+    keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free independent servers",
   },
   {
     title: "A few notes for a better Party-awareness course reflection paper",

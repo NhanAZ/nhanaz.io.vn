@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.">
+  <meta name="description" content="Phân tích cách Minecraft Bedrock tăng thuế bảo trì cho PocketMine-MP và server độc lập, từ NetherGames, Zeqa đến Endstone và hệ partner.">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Nguyễn Thành Nhân">
-  <meta name="subject" content="Minecraft Bedrock, PocketMine-MP, NetherGames và server độc lập">
-  <meta name="keywords" content="Minecraft Bedrock, PocketMine-MP, PMMP, NetherGames, Mojang, Microsoft, BDS, debug symbols, Bedrock Dedicated Server, Dragonfly, Galaxite, Lifeboat, server Minecraft Bedrock">
+  <meta name="subject" content="Minecraft Bedrock, PocketMine-MP, NetherGames, Zeqa và server độc lập">
+  <meta name="keywords" content="Minecraft Bedrock, PocketMine-MP, PMMP, NetherGames, Zeqa, ZeqaMine-PM, Mojang, Microsoft, BDS, debug symbols, Bedrock Dedicated Server, Endstone, LeviLamina, Dragonfly, Geyser, Allay, PowerNukkitX, server Minecraft Bedrock">
   <meta property="og:title" content="Minecraft Bedrock đang giết những thứ từng nuôi nó lớn">
-  <meta property="og:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu chuyện Bedrock ngày càng khép thông tin kỹ thuật với server độc lập.">
+  <meta property="og:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa, Zeqa đi vào hệ Featured và hóa đơn bảo trì không giống nhau giữa các software Bedrock.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="vi_VN">
   <meta property="og:locale:alternate" content="en_US">
@@ -22,16 +22,17 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="nhanaz.io.vn">
   <meta property="article:published_time" content="2026-07-10">
-  <meta property="article:modified_time" content="2026-07-11">
+  <meta property="article:modified_time" content="2026-07-13">
   <meta property="article:author" content="Nguyễn Thành Nhân">
   <meta property="article:section" content="Minecraft Bedrock">
   <meta property="article:tag" content="PocketMine-MP">
   <meta property="article:tag" content="NetherGames">
+  <meta property="article:tag" content="Zeqa">
   <meta property="article:tag" content="Bedrock Dedicated Server">
   <meta property="article:tag" content="Open source">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Minecraft Bedrock đang giết những thứ từng nuôi nó lớn">
-  <meta name="twitter:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu chuyện Bedrock ngày càng khép thông tin kỹ thuật với server độc lập.">
+  <meta name="twitter:description" content="PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa, Zeqa đi vào hệ Featured và hóa đơn bảo trì không giống nhau giữa các software Bedrock.">
   <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/web-preview.png">
   <meta name="twitter:image:alt" content="nhanaz.io.vn">
   <link rel="canonical" href="https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/">
@@ -63,9 +64,9 @@
           "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/",
           "headline": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
           "alternativeHeadline": "PocketMine-MP, NetherGames và cái giá của một Bedrock ngày càng khép thông tin",
-          "description": "Một bài chỉ trích cách Minecraft Bedrock đang thu hẹp thông tin kỹ thuật, khiến PocketMine-MP, NetherGames và server độc lập dần kiệt sức.",
+          "description": "Phân tích cách Minecraft Bedrock tăng thuế bảo trì cho PocketMine-MP và server độc lập, từ NetherGames, Zeqa đến Endstone và hệ partner.",
           "datePublished": "2026-07-10",
-          "dateModified": "2026-07-11",
+          "dateModified": "2026-07-13",
           "inLanguage": "vi",
           "isAccessibleForFree": true,
           "image": [
@@ -82,6 +83,8 @@
             "Minecraft Bedrock",
             "PocketMine-MP",
             "NetherGames",
+            "Zeqa",
+            "Endstone",
             "Bedrock Dedicated Server",
             "debug symbols",
             "server độc lập",
@@ -117,6 +120,16 @@
               "url": "https://github.com/df-mc/dragonfly"
             },
             {
+              "@type": "Organization",
+              "name": "Zeqa Network",
+              "url": "https://github.com/Zeqa-Network"
+            },
+            {
+              "@type": "SoftwareSourceCode",
+              "name": "Endstone",
+              "url": "https://github.com/EndstoneMC/endstone"
+            },
+            {
               "@type": "Thing",
               "name": "Stewart Brand",
               "description": "Người gắn với câu Information wants to be free."
@@ -130,7 +143,24 @@
             "https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/",
             "https://support.nethergames.org/closure-announcement",
             "https://www.minecraft.net/en-us/servers",
-            "https://www.minecraft.net/en-us/partner"
+            "https://www.minecraft.net/en-us/partner",
+            "https://github.com/Zeqa-Network",
+            "https://github.com/Zeqa-Network/NG-PM",
+            "https://github.com/Zeqa-Network/PocketMine-MP",
+            "https://github.com/Zedstar16/OnlineTime",
+            "https://docs.waterdog.dev/overview",
+            "https://ismcserver.online/bedrock/zeqa.net",
+            "https://www.linkedin.com/posts/mohamed-weheba-%F0%9F%94%9C-ugcon-2a70b6167_competitive-pvp-does-not-have-to-be-exclusive-activity-7448464508315987968-6tnj",
+            "https://inpvp.net/community/forum/thread/FT-1164?server=zeqa&v=1",
+            "https://store.zeqa.net/",
+            "https://github.com/EndstoneMC/endstone",
+            "https://github.com/EndstoneMC/endstone/pull/394",
+            "https://github.com/LiteLDev/LeviLamina",
+            "https://github.com/LiteLDev/LeviLamina/blob/main/xmake.lua",
+            "https://github.com/GeyserMC/Geyser",
+            "https://github.com/AllayMC/Allay",
+            "https://github.com/PowerNukkitX/PowerNukkitX",
+            "https://github.com/CloudburstMC/Cloudburst"
           ],
           "author": {
             "@id": "https://nhanaz.io.vn/#person"
@@ -218,6 +248,14 @@
                 "@type": "Answer",
                 "text": "Phần cộng đồng Việt Nam cho thấy PMMP không chỉ là một repo phần mềm. Nó từng là đường vào Công nghệ thông tin của nhiều học sinh, chủ server nhỏ, người Việt hóa plugin và developer tự học."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Zeqa có dùng PocketMine-MP không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Có bằng chứng công khai cho thấy Zeqa đã vận hành và tùy biến backend bắt nguồn từ PocketMine-MP ít nhất trong giai đoạn cuối năm 2025 đến đầu năm 2026. GitHub chính thức của Zeqa có fork NG-PM từ NetherGames và một fork PMMP đổi tên thành ZeqaMine-PM. Tuy nhiên, địa chỉ công khai hiện đi qua WaterdogPE nên server ping không thể xác nhận mọi backend hiện tại."
+              }
             }
           ]
         }
@@ -256,12 +294,12 @@
           <ul>
             <li>10.07.2026</li>
             <li>Minecraft Bedrock</li>
-            <li>38 phút đọc</li>
+            <li>50 phút đọc</li>
           </ul>
         </div>
         <div class="article-title">
           <h1>Minecraft Bedrock đang giết những thứ từng nuôi nó lớn.</h1>
-          <p>PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa, còn thông tin kỹ thuật của Bedrock ngày càng nằm sau cổng partner. Đây không giống một tai nạn rời rạc. Nó giống một hệ sinh thái đang tự tay bóp nghẹt phần từng giúp mình lớn lên.</p>
+          <p>PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa, Zeqa đi từ fork PMMP đến một network Featured, còn các software Bedrock sống sót bằng những hóa đơn rất khác nhau. Đây không giống một chuỗi tai nạn rời rạc. Nó giống một hệ sinh thái đang tự tay thu hẹp phần từng giúp mình lớn lên.</p>
         </div>
       </header>
 
@@ -297,6 +335,17 @@
           <p>Đây là lời của NetherGames, không phải tài liệu nội bộ của Mojang. Nhưng nó rất quan trọng vì nó trùng khớp đáng sợ với những gì tài liệu PMMP đang mô tả ở phía kỹ thuật. Một bên là server vận hành thương mại nói mình bị cắt thông tin và không thể thắng cuộc đua cập nhật. Một bên là phần mềm server mã nguồn mở nói muốn cập nhật Bedrock mới cần dữ liệu từ BDS và một số dữ liệu chỉ còn lấy được nếu có build dành cho partner.</p>
           <p>Hai câu chuyện đó không nhất thiết đồng nghĩa NetherGames đóng cửa vì PMMP ngừng hỗ trợ. NetherGames đã có hệ thống nội bộ từ lâu, và Dries cũng là một mắt xích kỹ thuật rất riêng của họ. Nhưng chính vì vậy trường hợp NetherGames càng đáng nói hơn. Ngay cả khi thoát khỏi việc tải plugin công khai, ngay cả khi có đội ngũ riêng, server Bedrock độc lập vẫn đụng cùng một bức tường. Bedrock là một nền tảng mà thông tin quan trọng không được phân phối công bằng.</p>
 
+          <h2>Zeqa không đứng ngoài câu chuyện này</h2>
+          <p>Zeqa kín tiếng hơn NetherGames về software phía sau, nhưng không kín đến mức không còn dấu vết. <a href="https://github.com/Zeqa-Network">Tổ chức GitHub của Zeqa Network</a> tự giới thiệu đây là GitHub chính thức của network. Ngay trên trang đó có repo <a href="https://github.com/Zeqa-Network/NG-PM">NG-PM</a>, được fork trực tiếp từ <code>NetherGamesMC/PocketMine-MP</code>. Dòng mô tả nguyên văn là “Modified fork of NG's fork of PM”, nghĩa là một fork đã chỉnh sửa từ fork PocketMine của NetherGames.</p>
+          <p>Lịch sử Git làm mối liên hệ này rõ hơn tên repo. Sau điểm tách khỏi NetherGames, Zeqa có một nhóm commit riêng vào tháng 10.2025. Một commit ghi thẳng <a href="https://github.com/Zeqa-Network/NG-PM/commit/dae84628e2074a58a93a88792425cf5d0b2a52c7">“customisations for use on Zeqa”</a>, có thể dịch là “các tùy biến để dùng trên Zeqa”. Commit kế tiếp chuyển sang fork BedrockProtocol của Zeqa. Những commit khác thêm hashed block IDs và chuyển Discord logging về Zeqa core. Trong source, <code>VersionInfo</code> gọi software là <code>NG-PocketMine-MP</code>, còn <code>composer.json</code> dùng các package BedrockData và BedrockProtocol của NetherGames.</p>
+          <p>Đầu năm 2026, Zeqa tạo thêm <a href="https://github.com/Zeqa-Network/PocketMine-MP">một fork trực tiếp từ PMMP</a>. Lần này tên trong core được đổi thành <code>ZeqaMine-PM</code>. Nó không nằm yên để làm bookmark. Wraith0x10 và các contributor thêm spear, lunge, slow falling, sửa experience bottle và splash potion đến ngày 17.03.2026. Repo plugin <a href="https://github.com/Zedstar16/OnlineTime">OnlineTime của Zedstar16</a> cũng là plugin PMMP API 5 và ghi rõ nó đang được dùng trên <code>zeqa.net</code>.</p>
+          <p>Vì vậy, phần lịch sử không còn cần nói kiểu “Zeqa có vẻ dùng PocketMine-MP”. Dữ liệu công khai đủ để kết luận Zeqa đã vận hành và tự tùy biến backend bắt nguồn từ PMMP ít nhất trong giai đoạn cuối năm 2025 đến đầu năm 2026. Điều chưa thể kết luận là mọi node của Zeqa đều chạy cùng một core, hoặc backend production hiện tại vẫn y nguyên như repo công khai.</p>
+          <p>Khi mình ping <code>zeqa.net:19132</code> ngày 13.07.2026, endpoint chỉ trả dòng <code>WaterdogPE Proxy</code>. <a href="https://docs.waterdog.dev/overview">Tài liệu WaterdogPE</a> giải thích rất đúng với hiện tượng này. Proxy là cửa vào người chơi nhìn thấy, còn gameplay, world, block và entity nằm trong các downstream server phía sau. Những downstream đó có thể là PocketMine-MP, Nukkit hoặc software khác. Bởi vậy server ping hiện tại xác nhận Zeqa dùng WaterdogPE ở mặt trước, nhưng không thể lật tấm rèm để gọi tên backend.</p>
+          <p>Các fork công khai cũng đang chậm hơn phiên bản 1.26.20 mà Zeqa quảng bá ở mặt ngoài. Có vài khả năng hợp lý. Zeqa có thể có branch private mới hơn, có thể dùng một fork khác, có thể chỉ giữ PMMP cho một số gamemode, hoặc đã chuyển một phần hệ thống. Sự kín tiếng ở đây không tự động là điều xấu. Một server PvP lớn có lý do để giữ anticheat, matchmaking, economy và vận hành production ở private. Nhưng sự lệch giữa code công khai và hệ đang chạy cũng cho thấy lời dự báo của dktapps đã thành hình. Server lớn giữ fork riêng và tiếp tục sống, còn cộng đồng nhỏ không còn một upstream chung để đi theo.</p>
+          <p>Câu chuyện còn đổi hướng mạnh hơn khi InPvP mua Zeqa. Trong <a href="https://www.linkedin.com/posts/mohamed-weheba-%F0%9F%94%9C-ugcon-2a70b6167_competitive-pvp-does-not-have-to-be-exclusive-activity-7448464508315987968-6tnj">thông báo mua lại</a>, Mohamed Weheba gọi Zeqa là server Bedrock lớn nhất bên ngoài Featured list, nói các chủ cũ sẽ chuyển sang vai trò quản lý và developer, đồng thời đặt mục tiêu đầu tư lớn và đưa Zeqa vào danh sách Featured chính thức. Sau đó, <a href="https://inpvp.net/community/forum/thread/FT-1164?server=zeqa&amp;v=1">bài công bố Season 10</a> nói Mineville và Zeqa sẽ hợp thành Mineville Zeqa, còn <a href="https://store.zeqa.net/">store chính thức</a> hiện ghi Zeqa đã là một phần của Mineville Zeqa, một Featured Server.</p>
+          <p>Không có bằng chứng Mojang ép Zeqa bán mình. Mình cũng không biến một thương vụ mua lại thành âm mưu. Nhưng rất khó bỏ qua hình dáng của đường đi này. NetherGames cố bước vào Featured list rồi nói mình bị ghost và cuối cùng đóng cửa. Zeqa, một network từng đứng ngoài Featured list và chạy core bắt nguồn từ PMMP cùng fork NetherGames, được một studio có Mineville mua lại rồi đi vào chính network Featured đó. Zeqa không chết như NetherGames. Nó đi qua cánh cửa.</p>
+          <p>Đây có lẽ là mảnh tinh tế nhất của toàn cảnh. Áp lực nền tảng không chỉ tạo ra archive và thông báo đóng cửa. Nó còn tạo ra sự tập trung. Một upstream mở có thể kiệt sức như PMMP. Một server độc lập có thể đóng như NetherGames. Một server đủ lớn và đủ giá trị có thể sống bằng fork kín, developer nội bộ, nguồn vốn mới và cuối cùng được hấp thụ vào một hệ Featured. Ba kết quả khác nhau, nhưng đều nói cùng một điều. Tồn tại độc lập trên Bedrock đang ngày càng đắt.</p>
+
           <h2>Debug symbols nghe khô, nhưng đó là oxy</h2>
           <p>Để hiểu vì sao mọi chuyện nghiêm trọng, phải nói về debug symbols. Nghe hơi khô. Nhưng với phần mềm server Bedrock độc lập, đây gần như là oxy.</p>
           <p>Bedrock Dedicated Server, hay BDS, là server chính thức của Mojang. Một bản BDS bình thường chỉ là binary đã biên dịch. Nó chạy được, nhưng bên trong rất khó đọc. Debug symbols là lớp thông tin giúp ánh xạ những phần trong binary thành tên hàm, tên lớp, cấu trúc và các định danh dễ hiểu hơn. Có symbols, người làm reverse engineering biết mình đang nhìn vào đâu. Không có symbols, mọi thứ giống như đi trong một thành phố bị tháo hết biển đường.</p>
@@ -323,22 +372,34 @@
           <p>Mình không nói Geyser xấu. Ngược lại, Geyser là một dự án rất đáng nể. Nhưng sự tồn tại của nó làm lộ rõ một nghịch lý. Nếu muốn xây trải nghiệm server mạnh cho người chơi Bedrock, một con đường thực tế có thể là chạy server Java rồi cho Bedrock vào bằng lớp dịch. Điều đó nói lên rằng hệ sinh thái server Bedrock clean-room đã trở nên khó đến mức đi vòng qua Java đôi khi hợp lý hơn đi thẳng vào Bedrock.</p>
           <p>Đây là điều khá buồn. Bedrock là phiên bản nhiều người chơi trên điện thoại, console và Windows. Nó đáng lẽ phải có một hệ server độc lập mạnh, tài liệu rõ, API ổn định và dữ liệu công khai đủ để cộng đồng làm đúng. Nhưng thay vì thế, phần mềm như PMMP phải reverse engineer. Server như NetherGames phải tự xây nội bộ rồi vẫn than không thể thắng cuộc đua cập nhật. Những dự án khác phải bám vào partner hoặc giảm phạm vi phụ thuộc.</p>
 
+          <h2>Vì sao những software Bedrock khác vẫn sống?</h2>
+          <p>Câu hỏi này cần được trả lời thẳng, vì nếu Allay, PowerNukkitX, Endstone, LeviLamina, Geyser hay Dragonfly vẫn cập nhật thì có vẻ cái chết của PMMP chỉ là chuyện riêng của PMMP. Nhưng cùng là software cho Minecraft Bedrock không có nghĩa chúng đang làm cùng một việc, càng không có nghĩa chúng phải trả cùng một hóa đơn bảo trì.</p>
+          <p><a href="https://github.com/EndstoneMC/endstone">Endstone</a> là ví dụ dễ thấy nhất. Nó có full vanilla compatibility không phải vì một nhóm tình nguyện đã viết lại redstone, mob AI, world generation và toàn bộ gameplay bằng Python hoặc C++. Endstone chạy cùng BDS chính thức. Code của Mojang vẫn xử lý vanilla, còn Endstone chèn API plugin vào bên cạnh. Vì vậy nó được thừa kế những tính năng mà PMMP phải tự viết lại hoặc chấp nhận thiếu.</p>
+          <p>Nhưng hóa đơn không biến mất. Nó đổi từ “viết lại Minecraft” thành “bám vào một binary đóng luôn thay đổi”. <a href="https://github.com/EndstoneMC/endstone/pull/394">Lần port Endstone lên BDS 1.26.20</a> có 57 commit. Phần thay đổi công khai cho thấy việc dump symbol từ PDB trên Windows, quét byte pattern trên Linux, sửa virtual table, hook, signature và nhiều thay đổi ABI. Changelog nói Endstone không còn cần debug symbols ở runtime không đồng nghĩa symbols biến mất khỏi quá trình port. Repo cho thấy PDB và binary pattern vẫn là một phần của công việc trước khi bản build đến tay người dùng.</p>
+          <p><a href="https://github.com/LiteLDev/LeviLamina">LeviLamina</a>, trước đây là LiteLoaderBDS, đi cùng nhóm kiến trúc đó. Nó cũng là mod loader cho BDS, còn <a href="https://github.com/LiteLDev/LeviLamina/blob/main/xmake.lua">build config</a> đóng gói SymbolProvider và BedrockData theo phiên bản. Đây là cách biến kiến thức reverse engineering thành tooling có thể lặp lại. Nó không phải con đường miễn phí. Chỉ là thay vì tự làm world generation và mob AI, maintainer phải theo ABI, symbol, hook và cấu trúc nội bộ của BDS.</p>
+          <p><a href="https://github.com/AllayMC/Allay">Allay</a> và <a href="https://github.com/PowerNukkitX/PowerNukkitX">PowerNukkitX</a> gần PMMP hơn vì đều viết lại nhiều phần server. Dù vậy, chúng cũng không khởi hành từ chân không. Allay dùng Cloudburst Bedrock Protocol và công khai cảm ơn Endstone vì DevTools của Endstone giúp dump dữ liệu quan trọng từ BDS. PowerNukkitX kế thừa nhiều năm code từ dòng Nukkit, dùng protocol library, RakNet, world generator và nhiều library JVM khác. Có release mới, có nhiều tính năng hoặc có “vanilla-like AI” là những tín hiệu đáng mừng, nhưng không tự động bằng full vanilla parity.</p>
+          <p>Geyser giao gameplay cho Java server. Dragonfly thu hẹp phạm vi và thường được dùng như một library cho custom server. Endstone và LeviLamina giao vanilla cho BDS. Allay và PowerNukkitX viết lại nhiều hơn nhưng chia sẻ protocol, data và tooling. <a href="https://github.com/CloudburstMC/Cloudburst">Cloudburst</a> có commit đang tiếp diễn nhưng chưa có release công khai. Chỉ một chữ “sống” đang che ít nhất năm câu hỏi khác nhau. Project có theo kịp protocol không, có release dùng được không, có chạy production không, có đủ vanilla không, và có người kế nhiệm khi maintainer chính rời đi không.</p>
+          <p>Những project còn hoạt động không bác bỏ áp lực của Bedrock. Chúng cho thấy mỗi kiến trúc né, chuyển hoặc trả thuế bảo trì theo một cách. Có dự án đẩy gameplay về BDS hoặc Java. Có dự án giảm phạm vi. Có dự án tái sử dụng nhiều năm code và library chung. Có dự án được một công ty hoặc network lớn trả lương cho developer. Có dự án đơn giản là vẫn còn một vài người đặc biệt kiên trì.</p>
+          <p>PMMP dừng khi không còn ai trong đội sẵn sàng làm version update. Điều đó không chứng minh PHP bất khả thi, cũng không chứng minh mọi server Bedrock độc lập phải chết cùng ngày. Nó chứng minh một upstream chung chỉ sống khi còn người đủ chuyên môn và thời gian trả toàn bộ hóa đơn. Khi người cuối cùng đặt hóa đơn xuống, những fork kín như Zeqa có thể đi tiếp cho chính họ, nhưng con đường công khai mà hàng nghìn server nhỏ từng đi cùng đã khép lại.</p>
+
           <h2>PMMP cũng có lỗi của chính nó</h2>
           <p>Nếu chỉ đổ hết lên Mojang thì bài này sẽ dễ đọc hơn, nhưng không công bằng. PMMP cũng có những vấn đề nội tại.</p>
           <p>PHP không phải lựa chọn tự nhiên nhất cho game server hiệu năng cao. PMMP đã làm rất nhiều thứ thông minh để sống với PHP, nhưng càng về sau Dylan cũng từng đồng ý với nhận xét rằng nhiều thời gian được dùng để vượt qua giới hạn của PHP hơn là phát triển PocketMine. API major thay đổi có thể làm plugin vỡ hàng loạt. Việc không phải vanilla khiến nhiều chủ server hiểu sai kỳ vọng. Cộng đồng plugin cũ có nhiều code chất lượng thấp. Một số chủ server từng dùng plugin lậu, plugin share lại, plugin copy paste, rồi đổ lỗi cho PMMP khi server lỗi.</p>
-          <p>PMMP cũng không còn là vùng đất nhỏ, nơi ai ném ý tưởng vào cũng được merge. Một dự án đã trở thành nền cho nhiều server phải bảo thủ hơn. Điều đó làm người mới cảm thấy khó đóng góp. Review chậm. Maintainer ít. Cửa vào core hẹp. Tất cả đều là vấn đề thật.</p>
-          <p>Nhưng các vấn đề đó không phủ định áp lực từ Bedrock. Một dự án có technical debt vẫn có thể sống nếu platform ổn định, tài liệu tốt và dữ liệu công khai. Một dự án có maintainer mệt vẫn có thể chuyển giao nếu quy trình cập nhật không đòi hỏi một lớp reverse engineering cực kỳ chuyên biệt. PMMP yếu ở vài điểm, nhưng Bedrock đã biến mỗi điểm yếu thành nặng hơn.</p>
-          <p>Nói cách khác, PMMP có bệnh nền. Mojang không tạo ra toàn bộ bệnh nền đó. Nhưng môi trường kỹ thuật của Bedrock đã làm bệnh nặng hơn nhiều.</p>
+          <p>Nhưng chính thông báo chia tay của PMMP không nói “PHP đã giết chúng tôi”. Nguyên nhân trực tiếp được công bố đơn giản hơn và cũng khó chịu hơn. Đội ngũ không còn ai sẵn sàng cập nhật cho các phiên bản Minecraft mới. PHP là một hệ số làm bài toán khó hơn. Nó thu hẹp nhóm người vừa giỏi ngôn ngữ, vừa hiểu game server, protocol, binary data và hiệu năng. Nó không phải bản án tử hình tự động, như chính mười bốn năm tồn tại của PMMP đã chứng minh.</p>
+          <p>PMMP cũng không còn là vùng đất nhỏ, nơi ai ném ý tưởng vào cũng được merge. Một dự án đã trở thành nền cho nhiều server phải bảo thủ hơn. Điều đó làm người mới cảm thấy khó đóng góp. Review chậm. Maintainer ít. Cửa vào core hẹp. Kiến thức update tập trung vào rất ít người. Tất cả đều là vấn đề thật, và PMMP có trách nhiệm với phần kế nhiệm chưa đủ rộng của chính mình.</p>
+          <p>Nhưng các vấn đề đó không phủ định áp lực từ Bedrock. Một dự án có technical debt vẫn có thể sống nếu platform ổn định, tài liệu tốt và dữ liệu công khai. Một dự án có maintainer mệt vẫn có thể chuyển giao nếu quy trình cập nhật không đòi hỏi một lớp reverse engineering cực kỳ chuyên biệt. PMMP yếu ở vài điểm, còn Bedrock đã biến mỗi điểm yếu thành một khoản lãi cộng dồn vào hóa đơn.</p>
+          <p>Nói cách khác, PMMP có bệnh nền. Mojang không tạo ra toàn bộ bệnh nền đó. Nhưng môi trường kỹ thuật của Bedrock đã làm bệnh nặng hơn, đồng thời làm việc tìm người tiếp quản khó hơn rất nhiều.</p>
 
           <h2>Vì sao mình gọi đây là một cách giết</h2>
           <p>Giết một phần mềm không nhất thiết là gửi văn bản bắt nó đóng cửa. Có nhiều cách chậm hơn. Không cập nhật tài liệu đủ. Rút debug symbols khỏi public build. Để protocol thay đổi liên tục. Chỉ cung cấp dữ liệu cần thiết cho một số partner. Không đưa ra API plugin chính thức đủ ổn định để thay thế. Tạo hệ phân phối khiến server partner dễ tiếp cận người chơi hơn hẳn. Để server ngoài hệ chính thức vừa khó cập nhật, vừa khó cạnh tranh, vừa khó tuyển người giỏi.</p>
-          <p>Mỗi quyết định riêng lẻ đều có thể được giải thích bằng lý do hợp pháp. Chống hack. Bảo vệ trẻ em. Giảm gian lận. Tránh rò rỉ nội bộ. Giảm nghĩa vụ hỗ trợ. Chuẩn hóa trải nghiệm. Nhưng khi cộng lại, kết quả là một hệ sinh thái nơi software độc lập chết dần, còn phần sống sót tốt nhất thường là phần ở gần partner hoặc ở trên nền tảng khác.</p>
+          <p>Mỗi quyết định riêng lẻ đều có thể được giải thích bằng lý do hợp pháp. Chống hack. Bảo vệ trẻ em. Giảm gian lận. Tránh rò rỉ nội bộ. Giảm nghĩa vụ hỗ trợ. Chuẩn hóa trải nghiệm. Nhưng khi cộng lại, chúng tạo ra một loại thuế bảo trì. Mọi project Bedrock đều phải trả, chỉ là mỗi kiến trúc có cách né, chuyển hoặc gánh khác nhau.</p>
+          <p>Project sống tốt không nhất thiết là project được partner bí mật cứu. Có project giao vanilla cho BDS. Có project giao gameplay cho Java. Có project thu hẹp mục tiêu thành custom game. Có project chia sẻ protocol library và data dumper. Có project có công ty trả lương, network lớn giữ fork riêng hoặc maintainer vẫn còn sức. Vấn đề là dự án nhỏ và upstream cộng đồng thường có ít cách chuyển hóa đơn nhất, trong khi lại phải chia kết quả cho nhiều người nhất.</p>
           <p>Đây là điểm mình muốn chỉ trích mạnh nhất. Nếu Mojang thật sự không muốn công khai BDS có symbols vì lý do bảo mật, họ vẫn có thể công khai dữ liệu đã dump. Họ có thể phát hành schema chính thức. Họ có thể cung cấp changelog protocol đủ chi tiết. Họ có thể có một kênh developer công bằng cho server software độc lập. Họ có thể tách thông tin cần cho interoperability khỏi thông tin nhạy cảm. Họ có thể nói “không public binary debug, nhưng đây là dữ liệu để cộng đồng không phải mò trong tối”.</p>
-          <p>Việc không làm các phương án thay thế đó, trong khi partner vẫn có đường tiếp cận, khiến câu chuyện khó được xem là thuần bảo mật. Nó giống một chính sách giữ quyền lực trong tay nền tảng. Và khi nền tảng giữ quyền lực quá chặt, cộng đồng sáng tạo bên ngoài trở thành thứ trang trí. Dùng được khi cần tăng trưởng, bỏ được khi cần kiểm soát.</p>
+          <p>Việc không làm các phương án thay thế đó, trong khi partner vẫn có đường tiếp cận, khiến câu chuyện khó được xem là thuần bảo mật. Nó giống một chính sách giữ quyền lực trong tay nền tảng. Và khi nền tảng giữ quyền lực quá chặt, cộng đồng sáng tạo bên ngoài trở thành thứ trang trí. Dùng được khi cần tăng trưởng, mua lại hoặc bỏ lại khi cần kiểm soát.</p>
 
           <h2>Information wants to be free trong Minecraft Bedrock</h2>
           <p>Câu của Stewart Brand không nên bị hiểu ngây thơ. Thông tin không tự do chỉ vì nó muốn. Có công ty giữ nó. Có luật giữ nó. Có NDA giữ nó. Có lợi ích thương mại giữ nó. Có nỗi sợ bảo mật giữ nó. Nhưng câu đó nhắc rằng thông tin có xu hướng tạo giá trị khi nó được lưu thông. Với phần mềm, điều này càng rõ. Tài liệu mở tạo developer. Protocol rõ tạo interoperability. Tooling công khai tạo fork. Schema công khai tạo server. Knowledge base mở tạo thế hệ mới.</p>
-          <p>PocketMine-MP là một ví dụ sống động cho câu đó. Nó sống nhờ code mở, plugin mở, forum, Poggit, docs, ví dụ, những lần người này chỉ người kia sửa lỗi. NetherGames cũng bắt đầu từ mớ plugin công khai trên forum PocketMine trước khi lớn lên thành server tự phát triển in-house. Dragonfly cũng có repo mở, tool datagen, mapping và cộng đồng quanh nó. Hệ sinh thái này không sinh ra từ bí mật. Nó sinh ra từ việc nhiều người đủ khả năng nhìn, học, sửa, phá và dựng lại.</p>
+          <p>PocketMine-MP là một ví dụ sống động cho câu đó. Nó sống nhờ code mở, plugin mở, forum, Poggit, docs, ví dụ, những lần người này chỉ người kia sửa lỗi. NetherGames bắt đầu từ plugin công khai rồi xây fork riêng. Zeqa lại lấy chính fork NetherGames, tùy biến nó cho production, sau đó tiếp tục trên một core mang tên ZeqaMine-PM. Dragonfly có repo mở, tool datagen, mapping và cộng đồng quanh nó. Chuỗi kế thừa này không sinh ra từ bí mật. Nó sinh ra từ việc nhiều người đủ khả năng nhìn, học, sửa, phá và dựng lại.</p>
           <p>Khi thông tin bị khóa, người giỏi nhất có thể vẫn tìm đường. Nhưng người mới mất cửa vào. Server nhỏ mất khả năng tự cứu. Plugin dev mất động lực. Maintainer phải dành thời gian đoán những thứ đáng lẽ được ghi rõ. Và cuối cùng, một thế hệ học code từ Minecraft sẽ ít hơn. Đó không phải thiệt hại nhỏ. Với mình, đó là mất một con đường học tập.</p>
 
           <h2>Ở Việt Nam, đây không chỉ là chuyện của phần mềm</h2>
@@ -368,7 +429,7 @@
 
           <h2>Không ai cần ký giấy khai tử</h2>
           <p>Một hệ sinh thái có thể giết phần bên ngoài mà không cần ra lệnh giết. Chỉ cần mỗi năm đóng thêm một chút thông tin, nghiêng thêm một chút phân phối, tăng thêm một chút chi phí cập nhật, chuyển thêm một chút quyền truy cập vào partner, để maintainer tự mệt, để server nhỏ tự rơi, rồi nói rằng mọi chuyện là tự nhiên.</p>
-          <p>Nhưng người từng đứng ở mép ngoài sẽ thấy nó không tự nhiên đến vậy. Mình thấy PMMP không chết chỉ vì PHP. NetherGames không đóng chỉ vì một server hết trend. Chúng đều nằm trong một dòng chảy lớn hơn, nơi Bedrock ngày càng được quản trị như một nền tảng thương mại đóng, còn những thứ từng giúp nó nở ra trong cộng đồng bị xem như thứ ngoài lề.</p>
+          <p>Nhưng người từng đứng ở mép ngoài sẽ thấy nó không tự nhiên đến vậy. PMMP không chết chỉ vì PHP. NetherGames không đóng chỉ vì một server hết trend. Zeqa không sống sót vì áp lực đó chưa từng tồn tại, mà bằng fork riêng, developer nội bộ, một thương vụ mua lại và đường đi vào network Featured. Chúng nằm trong cùng một dòng chảy, nơi Bedrock ngày càng được quản trị như nền tảng thương mại đóng, còn những thứ từng giúp nó nở ra trong cộng đồng phải chết, tự thu hẹp hoặc tìm đường vào phía trong cánh cổng.</p>
           <p>Minecraft Bedrock sẽ vẫn sống. Marketplace vẫn bán. Partner server vẫn đông. Realms vẫn có người dùng. Những thứ chính thức sẽ không biến mất vì PMMP dừng hỗ trợ hay NetherGames đóng cửa. Nhưng một phần linh hồn bụi bặm của Bedrock đã mất đi rất nhiều.</p>
           <p>Và với mình, điều đáng chỉ trích nhất là sự mất mát đó đáng lẽ có thể tránh được. Không cần Mojang mở source toàn bộ game. Không cần phát tán binary debug nếu thật sự có rủi ro. Chỉ cần họ coi cộng đồng server độc lập là một phần đáng được hỗ trợ bằng tài liệu, dữ liệu và API tử tế, thay vì để nó sống nhờ quan hệ không chính thức và thiện chí của partner.</p>
           <p>Information wants to be free. Minecraft Bedrock từng lớn lên nhờ rất nhiều thông tin được chuyền tay, được mở ra, được reverse, được viết lại, được đưa lên forum, lên GitHub, lên YouTube, lên Poggit, lên những server nhỏ chạy trên máy yếu. Khi thông tin bị khóa lại, không chỉ phần mềm chết. Một con đường học code cũng hẹp đi.</p>
@@ -383,6 +444,11 @@
           <p><a href="https://support.nethergames.org/closure-announcement">Thông báo đóng cửa NetherGames</a> kể lại lịch sử server và cáo buộc server không Featured bị cắt quyền tiếp cận thông tin kỹ thuật.</p>
           <p><a href="https://www.minecraft.net/en-us/servers">Trang Minecraft servers</a> và <a href="https://www.minecraft.net/en-us/partner">Minecraft Partner Program</a> cho thấy hệ thống server, partner và Marketplace chính thức của Bedrock.</p>
           <p><a href="https://github.com/df-mc/dragonfly">Dragonfly</a>, <a href="https://github.com/df-mc/datagen">df-mc datagen</a> và <a href="https://github.com/df-mc/mapping">df-mc mapping</a> là các mảnh liên quan đến cách phần mềm Bedrock độc lập vẫn phải tạo dữ liệu từ BDS.</p>
+          <p><a href="https://github.com/Zeqa-Network">GitHub chính thức của Zeqa Network</a>, <a href="https://github.com/Zeqa-Network/NG-PM">fork NG-PM</a>, <a href="https://github.com/Zeqa-Network/PocketMine-MP">fork ZeqaMine-PM</a> và <a href="https://github.com/Zedstar16/OnlineTime">plugin OnlineTime</a> là các dấu vết công khai xác nhận mối liên hệ giữa Zeqa, NetherGames và PocketMine-MP.</p>
+          <p><a href="https://docs.waterdog.dev/overview">Tài liệu WaterdogPE</a> giải thích vì sao endpoint công khai chỉ lộ proxy, còn <a href="https://ismcserver.online/bedrock/zeqa.net">trạng thái live của zeqa.net</a> ghi nhận lớp proxy đang được dùng.</p>
+          <p><a href="https://www.linkedin.com/posts/mohamed-weheba-%F0%9F%94%9C-ugcon-2a70b6167_competitive-pvp-does-not-have-to-be-exclusive-activity-7448464508315987968-6tnj">Thông báo InPvP mua Zeqa</a>, <a href="https://inpvp.net/community/forum/thread/FT-1164?server=zeqa&amp;v=1">bài công bố Season 10</a> và <a href="https://store.zeqa.net/">store Zeqa</a> cho thấy network đi từ vị trí ngoài Featured list vào Mineville Zeqa.</p>
+          <p><a href="https://github.com/EndstoneMC/endstone">Endstone</a> cùng <a href="https://github.com/EndstoneMC/endstone/pull/394">PR port BDS 1.26.20</a>, <a href="https://github.com/LiteLDev/LeviLamina">LeviLamina</a> và <a href="https://github.com/LiteLDev/LeviLamina/blob/main/xmake.lua">build config của LeviLamina</a> cho thấy mod loader BDS trả hóa đơn ở lớp symbol, hook và ABI.</p>
+          <p><a href="https://github.com/AllayMC/Allay">Allay</a>, <a href="https://github.com/PowerNukkitX/PowerNukkitX">PowerNukkitX</a> và <a href="https://github.com/CloudburstMC/Cloudburst">Cloudburst</a> cho thấy các server viết lại vẫn dựa vào code kế thừa, protocol library, data dumper và maintainer theo những mức khác nhau.</p>
 
           <section class="answer-section article-answer-section" aria-labelledby="short-answers-title">
             <details class="answer-details">
@@ -408,6 +474,10 @@
                   <strong class="answer-card-title">Vì sao phần cộng đồng Việt Nam quan trọng?</strong>
                   <p>Phần cộng đồng Việt Nam cho thấy PMMP không chỉ là một repo phần mềm. Nó từng là đường vào Công nghệ thông tin của nhiều học sinh, chủ server nhỏ, người Việt hóa plugin và developer tự học.</p>
                 </article>
+                <article class="answer-card">
+                  <strong class="answer-card-title">Zeqa có dùng PocketMine-MP không?</strong>
+                  <p>Có bằng chứng công khai cho thấy Zeqa đã vận hành và tùy biến backend bắt nguồn từ PocketMine-MP ít nhất trong giai đoạn cuối năm 2025 đến đầu năm 2026. GitHub chính thức của Zeqa có fork NG-PM từ NetherGames và một fork PMMP đổi tên thành ZeqaMine-PM. Tuy nhiên, địa chỉ công khai hiện đi qua WaterdogPE nên server ping không thể xác nhận mọi backend hiện tại.</p>
+                </article>
               </div>
             </details>
           </section>
@@ -422,6 +492,6 @@
     <div><p class="footer-title">Đọc xong rồi nè.</p><a class="footer-email" href="/blog/">Bài viết khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260713-09" defer></script>
+  <script src="/assets/js/site.js?v=20260713-10" defer></script>
 </body>
 </html>
