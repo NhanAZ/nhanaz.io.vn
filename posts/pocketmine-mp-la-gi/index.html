@@ -40,7 +40,7 @@
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
   <script src="/assets/js/theme.js?v=20260711-04"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260713-01">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260713-02">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -229,20 +229,28 @@
           <h3>Minecraft trên điện thoại chưa phải Bedrock như ngày nay</h3>
           <p>Năm 2012, Minecraft Pocket Edition còn là một nhánh nhỏ và thiếu rất nhiều thứ so với Minecraft Java. Từ “Bedrock Edition” chưa tồn tại theo nghĩa thương hiệu hiện nay. Người chơi chủ yếu có single-player và multiplayer trong mạng nội bộ. Một thiết bị mở world, những thiết bị cùng Wi-Fi nhìn thấy world đó và tham gia. Khi máy chủ rời game, thế giới cũng biến mất khỏi mạng. Không có package dedicated server chính thức, không có danh sách featured server, không có Marketplace và cũng chưa có hệ Add-On hiện đại.</p>
           <p>Điểm khác biệt này quan trọng vì ngày nay người đọc dễ tưởng PocketMine-MP được tạo ra như một lựa chọn thay thế BDS. Thực tế lúc commit đầu tiên xuất hiện, BDS còn chưa tồn tại để bị thay thế. Câu hỏi ban đầu không phải “nên dùng BDS hay PocketMine”, mà là “làm sao để một client Minecraft PE kết nối được tới một server chạy độc lập”.</p>
-          <p>Shoghi Cervantes Pueyo bắt đầu trả lời câu hỏi ấy bằng cách quan sát dữ liệu mạng của client, nhận diện packet, thử tái tạo quy trình đăng nhập và dựng một thế giới đủ để client không ngắt kết nối. <a href="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">tài liệu PMMP về lý do dùng PHP</a> nhìn lại dự án như một prototype nhanh để reverse engineering protocol, chưa từng được dự tính cho production. Đó là một nghịch lý mở đầu rất đẹp. Phần mềm về sau gánh hàng nghìn server lớn ban đầu chỉ là công cụ để hiểu một giao thức chưa được tài liệu hóa đầy đủ.</p>
-          <blockquote>“It was never intended for use on production servers.”</blockquote>
+          <p>Shoghi Cervantes Pueyo bắt đầu trả lời câu hỏi ấy bằng cách quan sát dữ liệu mạng của client, nhận diện packet, thử tái tạo quy trình đăng nhập và dựng một thế giới đủ để client không ngắt kết nối. <a href="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">Tài liệu PMMP về lý do dùng PHP</a> nhìn lại dự án như một prototype nhanh để reverse engineering protocol, chưa từng được dự tính cho production. Đó là một nghịch lý mở đầu rất đẹp. Phần mềm về sau gánh hàng nghìn server lớn ban đầu chỉ là công cụ để hiểu một giao thức chưa được tài liệu hóa đầy đủ.</p>
+          <blockquote cite="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">
+            <p lang="en">“It was never intended for use on production servers.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “PocketMine-MP chưa bao giờ được thiết kế để dùng cho các server vận hành thực tế.”</p>
+            <cite><a href="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">Nguồn - Tài liệu PMMP, “Why was PHP chosen?”</a></cite>
+          </blockquote>
           <p>Câu này giải thích nhiều đặc điểm sẽ đeo bám PocketMine suốt đời. PHP được chọn vì tốc độ thử nghiệm, không phải vì một hội đồng kiến trúc đã kết luận đây là ngôn ngữ game server hoàn hảo. Những abstraction đầu tiên được viết trong lúc protocol vẫn đang được khám phá. Khi prototype trở thành infrastructure, cộng đồng phải vừa giữ server đang chạy vừa thay dần nền móng dưới chân nó.</p>
 
           <h3>2013, PocketMine Realms đã đi trước external server</h3>
           <p>Một trong những chi tiết bị quên nhiều nhất là <strong>PocketMine Realms</strong>. Ngày 19.06.2013, Shoghi mở một dịch vụ miễn phí cho phép người chơi MCPE 0.7.0 tìm và kết nối server cộng đồng thông qua giao diện Realms. Trên Android, người dùng thay đổi DNS. Trên iOS, họ cài một configuration profile. Dịch vụ đứng giữa client và danh sách server, biến một cánh cửa do game thiết kế cho Realms thành lối vào multiplayer do cộng đồng vận hành.</p>
           <p>Đây không chỉ là một server list có website. External server khi ấy chưa có nút chính thức trong game. PocketMine Realms đã can thiệp đúng lớp discovery để những server PocketMine-MP có thể xuất hiện trong trải nghiệm mà người chơi phổ thông hiểu được. Nó cho thấy đội PocketMine không chờ Mojang hoàn thiện đường đi rồi mới bước vào. Họ tự dựng đường đi trước.</p>
           <p>Bản lưu ngày 01.10.2013 trên Wayback Machine giữ lại thông báo đóng dịch vụ. Dòng quan trọng nhất không phải lời đồn forum, mà là câu do chính PocketMine công bố.</p>
-          <blockquote>“Mojang ... asked us to end our PocketMine Realms service.”</blockquote>
+          <blockquote cite="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">
+            <p lang="en">“Mojang ... asked us to end our PocketMine Realms service.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Mojang ... đã yêu cầu chúng tôi chấm dứt dịch vụ PocketMine Realms.”</p>
+            <cite><a href="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">Nguồn - Thông báo đóng PocketMine Realms năm 2013</a></cite>
+          </blockquote>
           <p><a href="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">Thông báo PocketMine Realms đã đóng</a> nói Mojang yêu cầu chấm dứt dịch vụ và đổi lại MCPE 0.7.4 sẽ có khả năng kết nối external server. Sau đó người dùng có thể bấm nút External, nhập tên, IP và cổng mặc định 19132. Dữ liệu trong database PocketMine Realms bị xóa vì không còn cần thiết.</p>
           <p>Sự kiện này cần được đọc công bằng nhưng không vô cảm. Mojang đã mở một con đường chính thức tốt hơn cho người dùng, nên kết quả trước mắt có lợi cho cả hệ sinh thái PocketMine. Đồng thời, đây cũng là tiền lệ rõ ràng rằng Mojang không đứng hoàn toàn ngoài PocketMine. Công ty đã trực tiếp yêu cầu một dịch vụ do dự án vận hành phải kết thúc khi dịch vụ đó chạm vào bề mặt Realms. Mười hai năm sau, khi cộng đồng suy đoán xung đột giữa công việc của Shoghi tại Mojang với PocketMine, ký ức ấy khiến giả thuyết không thể bị gạt đi như trí tưởng tượng vô căn cứ.</p>
 
           <h2>Vì sao PocketMine-MP từng quan trọng đến vậy?</h2>
-          <p>PocketMine-MP lấp khoảng trống bằng một package mà người dùng có thể tự vận hành. Một người có PC, VPS, máy chủ thuê hoặc thậm chí thiết bị Android đủ kiên nhẫn có thể tải PHP binary, chạy file PHAR, mở cổng UDP, nhập IP vào game rồi cài plugin. <a href="https://github.com/PocketMine/PocketMine-MP/releases/tag/Alpha_1.3.3">bản GitHub release sớm nhất còn thấy rõ, Alpha 1.3.3 ngày 04.07.2013</a>, đã hỗ trợ Minecraft PE 0.7.2. Những hướng dẫn cùng thời còn chỉ cách chạy trên Linux, Mac, Windows, Android và cả môi trường iOS đã jailbreak.</p>
+          <p>PocketMine-MP lấp khoảng trống bằng một package mà người dùng có thể tự vận hành. Một người có PC, VPS, máy chủ thuê hoặc thậm chí thiết bị Android đủ kiên nhẫn có thể tải PHP binary, chạy file PHAR, mở cổng UDP, nhập IP vào game rồi cài plugin. <a href="https://github.com/PocketMine/PocketMine-MP/releases/tag/Alpha_1.3.3">Bản GitHub release sớm nhất còn thấy rõ, Alpha 1.3.3 ngày 04.07.2013</a>, đã hỗ trợ Minecraft PE 0.7.2. Những hướng dẫn cùng thời còn chỉ cách chạy trên Linux, Mac, Windows, Android và cả môi trường iOS đã jailbreak.</p>
           <p>Quy trình ấy không hề thân thiện theo chuẩn hiện nay. Người dùng phải hiểu external IP khác local IP, router phải forward UDP 19132, firewall phải mở đúng rule và client phải khớp protocol. Trên Windows 10 về sau còn có rào cản loopback của ứng dụng UWP. Nhưng khó không có nghĩa là không thể. PocketMine biến multiplayer độc lập từ một ý tưởng chỉ nhà phát triển game làm được thành một bài thử cuối tuần mà một học sinh có thể vật lộn rồi thành công.</p>
           <p>Mojang chỉ đưa <a href="https://feedback.minecraft.net/hc/en-us/articles/360015779511-Minecraft-1-6-1-Bedrock">Bedrock Dedicated Server vào thử nghiệm alpha ở Bedrock 1.6.1 năm 2018</a>. Trong phần lớn quãng 2012–2018, PocketMine-MP không phải lựa chọn phụ đứng cạnh server chính thức đầy đủ. Với rất nhiều người, nó là con đường thực tế nhất để vận hành multiplayer có IP riêng và logic riêng.</p>
           <p>Giá trị của PMMP không nằm ở việc mô phỏng Minecraft hoàn hảo. Nó nằm ở quyền tự quyết. Chủ server có thể tạo survival games, lobby, prison, faction, skyblock, economy, rank, kit, form, scoreboard và những luật chơi không cần chờ Mojang thêm vào game. Một hạn chế của core thường trở thành việc cho plugin giải quyết. Cách làm đó tạo ra thị trường host, đội ngũ developer, dịch vụ bán plugin và network có hàng nghìn người chơi.</p>
@@ -257,11 +265,11 @@
 
           <h3>PHP giúp hạ thấp cửa vào, nhưng không xóa chi phí kỹ thuật</h3>
           <p>PHP từng là lựa chọn lạ cho game server, đồng thời cũng là một phần sức hút của PocketMine. Cú pháp dễ tiếp cận, vòng lặp sửa file rồi chạy lại nhanh, plugin được đóng thành file PHAR và có thể bắt đầu từ vài class nhỏ. Rất nhiều người lần đầu hiểu event, object, namespace, dependency hay lưu dữ liệu không phải trong lớp học, mà khi sửa một plugin để server ngừng báo lỗi.</p>
-          <p>Đổi lại, PHP không được thiết kế cho một game server đa luồng chạy lâu. <a href="https://doc.pmmp.io/en/rtfd/developers/threading-in-php-wtf.html">tài liệu threading của PMMP</a> giải thích rằng phần lớn cấu trúc dữ liệu PHP không an toàn để chia sẻ giữa thread và việc sao chép dữ liệu có thể tốn hơn phần thời gian tiết kiệm được. PMMP dùng thread cho một số công việc phù hợp như world generation, lighting, network compression và request cURL, còn gameplay và plugin vẫn phải rất cẩn thận với main thread.</p>
+          <p>Đổi lại, PHP không được thiết kế cho một game server đa luồng chạy lâu. <a href="https://doc.pmmp.io/en/rtfd/developers/threading-in-php-wtf.html">Tài liệu threading của PMMP</a> giải thích rằng phần lớn cấu trúc dữ liệu PHP không an toàn để chia sẻ giữa thread và việc sao chép dữ liệu có thể tốn hơn phần thời gian tiết kiệm được. PMMP dùng thread cho một số công việc phù hợp như world generation, lighting, network compression và request cURL, còn gameplay và plugin vẫn phải rất cẩn thận với main thread.</p>
           <p>Vì vậy PHP không tự động làm PMMP chậm, cũng không tự động làm nó dễ mở rộng vô hạn. Hiệu năng phụ thuộc vào thiết kế core, plugin, cách truy cập đĩa, network, số entity, chunk và khối lượng công việc mỗi tick. Một plugin chặn main thread bằng truy vấn hoặc vòng lặp nặng có thể làm cả server đứng, bất kể phần cứng còn dư bao nhiêu core.</p>
 
           <h3>Plugin là sản phẩm chính, vanilla chỉ là nền tối thiểu</h3>
-          <p><a href="https://doc.pmmp.io/en/rtfd/plugins.html">tài liệu chính thức</a> mô tả plugin là module ngoài dùng để thêm tính năng hoặc thay đổi hành vi mặc định. Plugin có thể lắng nghe event, hủy một hành động, sửa kết quả, tạo command, quản lý permission, thao tác inventory, gửi form, chạy task hoặc kết nối dịch vụ ngoài.</p>
+          <p><a href="https://doc.pmmp.io/en/rtfd/plugins.html">Tài liệu chính thức</a> mô tả plugin là module ngoài dùng để thêm tính năng hoặc thay đổi hành vi mặc định. Plugin có thể lắng nghe event, hủy một hành động, sửa kết quả, tạo command, quản lý permission, thao tác inventory, gửi form, chạy task hoặc kết nối dịch vụ ngoài.</p>
           <p>Đó cũng là lý do PMMP chưa bao giờ nên được đánh giá như một bản sao BDS. README chính thức nói thẳng rằng nó không phù hợp với vanilla survival, thiếu nhiều cơ chế như world generation nguyên bản, redstone, mob AI và các phần gameplay khác. PMMP mạnh khi server muốn khác Minecraft gốc. Nếu mục tiêu là một thế giới survival giống game nhất có thể, BDS thường hợp lý hơn.</p>
 
           <h2>Lịch sử PocketMine-MP từ 2012 đến 2026</h2>
@@ -292,7 +300,11 @@
           <p>Khoảng trống upstream tạo ra thời kỳ fork dày đặc. Genisys, ClearSky, ImagicalMine, RedstoneLamp và nhiều nhánh khác cố giữ hỗ trợ client mới, thêm gameplay hoặc phục vụ một network cụ thể. <a href="https://gitlab.com/itxtech/genisys">Genisys được tạo ngày 27.02.2016</a> và tự mô tả là server MCPE giàu tính năng dựa trên PocketMine-MP. Nó hấp dẫn chủ server cần mob, gameplay và compatibility ngay hơn là một cuộc tái cấu trúc core dài hạn.</p>
           <p>ClearSky và ImagicalMine cũng sống trong vùng nhu cầu đó. Một fork có thể lấy build PocketMine cũ, chấp nhận patch nhanh, backport packet, gộp pull request từ nơi khác và giữ API để plugin tiếp tục chạy. Điều này rất hợp lý với người vận hành server đang mất người chơi từng ngày. Nó lại khó chịu với maintainer muốn code có type rõ, test được và không tích lũy thêm technical debt.</p>
           <p>Tháng 01.2017, một phụ huynh chỉ muốn dựng server LAN cho con đã mô tả trải nghiệm tìm kiếm của mình trên PMMP Forum.</p>
-          <blockquote>“Pocketmine forked off into a million directions.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">
+            <p lang="en">“Pocketmine forked off into a million directions.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “PocketMine đã bị fork ra theo cả triệu hướng.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Nguồn - PMMP Forum, “Pocketmine history: What happened?”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Thread “Pocketmine history: What happened?”</a> liệt kê ClearSky, RedstoneLamp, Genisys và PMMP rồi hỏi vì sao mọi người không tập trung vào một fork. Câu hỏi đơn giản ấy ghi lại đúng điều Google không thể giải thích lúc đó. Bài hướng dẫn cũ vẫn trỏ về PocketMine, repo chính trông chết, nhiều fork đều nhận mình là đường tiếp tục, plugin lại chỉ chạy trên vài nhánh nhất định.</p>
           <p>Trong văn hóa PMMP, fork bị đánh giá là sao chép cẩu thả thường được gọi là <strong>spoon</strong>. Trò đùa “fork và spoon thuộc trong tủ bếp” che một tranh chấp nghiêm túc về chất lượng và quyền ghi công. Team PMMP không muốn nhập thẳng feature từ Genisys nếu code bị xem là hacky, khó bảo trì hoặc có nguồn gốc không rõ. Chủ server lại thấy feature đang chạy và hỏi vì sao upstream không copy. Một bên tối ưu cho hôm nay. Bên kia cố tránh làm ngày mai tệ hơn.</p>
           <p>Không nên kể thời kỳ này như bảng phả hệ sạch sẽ với một nhánh chính và vài nhánh phụ. Nhiều repo lấy code của nhau, đổi tên, mất lịch sử Git, chuyển organization hoặc tồn tại chỉ để phục vụ một server. Có nhánh công khai nhưng development thực ở private repo. Có project gọi mình là fork của fork. Có plugin dựa vào behavior chỉ một “spoon” cung cấp. Bản đồ ấy lộn xộn vì nhu cầu thật cũng lộn xộn.</p>
@@ -304,7 +316,11 @@
           <h3>Tháng 09.2016–2017, PMMP trở thành người kế nhiệm</h3>
           <p>Tháng 09.2016, một số thành viên cũ của PocketMine cùng Dylan, hay <a href="https://github.com/dktapps">dktapps</a>, lập tổ chức PMMP. Họ không chỉ fork repo. Họ tạo GitHub organization, website, forum, build service và những tài khoản có thể cấp quyền cho nhiều người. Đây là một cuộc tái lập thể chế sau khi project học bằng cách đau nhất rằng source mở không bảo đảm hạ tầng mở.</p>
           <p>Intyre, một thành viên đáng tin cậy của team PocketMine cũ, được trích lại với lời giải thích rất ngắn về quyết định rời hạ tầng legacy.</p>
-          <blockquote>“It is time to stop asking and to move on.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">
+            <p lang="en">“It is time to stop asking and to move on.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Đã đến lúc ngừng hỏi và bước tiếp.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Nguồn - Intyre trên PMMP Forum</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Trong cùng thread lịch sử năm 2017</a>, staff nói họ đã nhiều lần xin thêm quyền nhưng không nhận được. Dktapps cũng giải thích forum cũ vẫn mở không phải vì team chọn giữ nó, mà vì team mới thậm chí không có quyền đóng. “PMMP” vì vậy vừa là tên kỹ thuật vừa là lời tuyên bố quản trị. Nếu không thể lấy lại chìa khóa, họ sẽ xây một ngôi nhà khác.</p>
           <p>PMMP không phải sản phẩm cạnh tranh tình cờ mang tên giống PocketMine-MP. Nó là nhánh tiếp tục code và con người của dự án, nhưng được đặt trong tổ chức có thể vận hành. Cuối năm 2017, Shoghi công nhận PMMP là người kế nhiệm, chuyển nhiều địa chỉ pocketmine.net sang pmmp.io và cấp quyền truy cập organization cũ. Team PMMP lúc ấy đã có hơn một năm issue, pull request, forum và danh tính riêng nên chọn archive repo legacy thay vì quay lại.</p>
           <p>Quyết định không quay về còn cho thấy lịch sử phần mềm không chỉ nằm trong commit. Issue ghi lại bug và tranh luận. Pull request ghi lại ai đã làm gì. Forum, CI URL và package namespace tạo thói quen cho hàng nghìn người. Di chuyển tất cả về một organization cũ chỉ để có tên “chính thống” có thể phá nhiều hơn giữ. PMMP trở thành PocketMine không phải vì thắng quyền sở hữu thương hiệu trong một ngày, mà vì cộng đồng đã dùng nó như upstream đủ lâu để sự kế nhiệm trở thành thực tế.</p>
@@ -312,7 +328,11 @@
           <h3>2017–2018, Poggit và API 3 đưa hệ sinh thái về một trục</h3>
           <p>Khi forum và plugin repository cũ trở nên lỗi thời, PMMP phải giải quyết một vấn đề sống còn khác ngoài core. Người dùng lấy plugin ở đâu, và họ tin file PHAR ấy bằng cách nào? Đầu năm 2017, forum vẫn có người than rằng phát hành một repo GitHub không tiếp cận được lượng người như plugin repository cũ. Người khác trả lời lúc ấy chưa có cách “chính thức kiểu PocketMine” để release, còn Poggit vẫn đang alpha.</p>
           <p><a href="https://forums.pmmp.io/threads/poggit-public-consultation.307/">Bản tham vấn công khai tháng 12.2016</a> mô tả Poggit bằng một câu rất kỹ thuật nhưng có ảnh hưởng lâu dài.</p>
-          <blockquote>“Poggit consists of a continuous-integration (CI) and a plugin list.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/poggit-public-consultation.307/">
+            <p lang="en">“Poggit consists of a continuous-integration (CI) and a plugin list.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Poggit gồm một hệ thống tích hợp liên tục (CI) và một danh sách plugin.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/poggit-public-consultation.307/">Nguồn - PMMP Forum, “Poggit public consultation”</a></cite>
+          </blockquote>
           <p>Poggit-CI kết nối repo GitHub, build source thành PHAR khi có commit hoặc pull request và chạy các kiểm tra cơ bản như PHP syntax cùng cấu trúc plugin. Poggit Release không cho developer tải lên một binary bí ẩn. Artifact phải được build từ source mà hệ thống biết, sau đó đi qua các tầng review. Thiết kế ấy biến open source từ lời hứa đạo đức thành một phần của pipeline phân phối.</p>
           <p>Quy trình ban đầu khá tham vọng. Staff kiểm tra nhanh mã độc và chất lượng tối thiểu. Người dùng có tài khoản GitHub có thể tham gia review. Reviewer chính thức kiểm tra kỹ hơn và release tốt có thể được featured. Không phải mọi phần của mô hình ban đầu tồn tại nguyên vẹn, nhưng nguyên tắc cốt lõi giữ lại. Plugin công khai phải lần được về source, và bản tải nên là kết quả có thể tái tạo từ source đó.</p>
           <p>Poggit còn tạo <strong>orphanage</strong> cho plugin bị bỏ. EconomyAPI, PurePerms, PureChat, WorldProtect, ManyWorlds và nhiều tên quen thuộc có lúc được chuyển vào organization chung để cộng đồng tiếp tục sửa. Orphanage không thể làm tác giả quay lại, nhưng nó giữ quyền merge và release khỏi chết theo một tài khoản cá nhân. Đây chính là bài học quyền quản trị mà PocketMine core từng trả giá.</p>
@@ -320,7 +340,11 @@
           <h3>API 3 không phải một lần đổi số, mà là hai năm đại phẫu</h3>
           <p>Ngày 20.12.2016, dktapps đưa branch hỗ trợ MCPE 1.0 ra công khai với API 3.0.0-ALPHA1 và cảnh báo không dùng production vì có thể corrupt world. Từ ALPHA1 tới stable kéo dài khoảng mười tám tháng. Mỗi alpha có thể phá plugin của alpha trước. Những người chỉ muốn server chạy nhìn thấy một chuỗi version khó hiểu. Maintainer lại nhìn thấy cơ hội sửa những quyết định từ thời prototype trước khi chúng đóng cứng thêm một thập kỷ.</p>
           <p>Trong thread “Why is the API always changing?”, Intyre trả lời câu hỏi bằng một phép so sánh khô hài.</p>
-          <blockquote>“Why is your age always changing?”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">
+            <p lang="en">“Why is your age always changing?”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Tại sao tuổi của bạn cứ luôn thay đổi?”</p>
+            <cite><a href="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">Nguồn - Intyre trên PMMP Forum, “Why is the API always changing?”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">Cuộc thảo luận ngày 26.12.2016</a> sau đó đi vào lý do thật. API version bảo vệ server khỏi plugin gọi class và method không còn đúng. Major tăng khi có thay đổi không tương thích. Minor thêm khả năng nhưng giữ compatibility. Patch sửa bug. Các hậu tố ALPHA, BETA và RC có zero tolerance vì interface còn biến động mạnh.</p>
           <p>API 3 đưa strict typing sâu hơn vào code, bỏ hỗ trợ 32-bit, yêu cầu PHP mới, sửa entity performance, inventory transaction, skin, NBT, world provider và network. Composer dần thay Git submodule để quản lý package. Xbox Live authentication được triển khai. LevelDB world mới được hỗ trợ. Mỗi thay đổi giải quyết một vấn đề thật, nhưng kết hợp lại chúng tạo một bức tường migration.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/blob/stable/changelogs/3.0-alpha.md">Changelog alpha của 3.0</a> là một tài liệu lịch sử đáng đọc hơn nhiều bài tổng kết. Nó cho thấy một release server không chỉ theo Minecraft version. Có bug về UUID, NBT signedness, memory leak, thread safety, crafting desktop, resource pack và hàng trăm method signature. Câu “chỉ bump protocol thôi” trở nên vô lý khi nhìn khối việc thật.</p>
@@ -335,7 +359,11 @@
           <h3>2019, Titanic và cảnh báo đã nói trước phần kết</h3>
           <p>Tháng 09.2019, một beta Bedrock 1.13 bỏ debugging symbols khỏi binary Android. Với người chơi, thay đổi này gần như vô hình. Với developer server bên thứ ba, symbols là tên function, constant và artifact giúp đọc executable. Không có chúng, binary vẫn chạy nhưng bản đồ để hiểu bên trong biến mất.</p>
           <p>Trong announcement có tiêu đề <a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">“1.13, debug symbols and the Titanic”</a>, dktapps giải thích update protocol khi đó thường mất vài ngày, còn không có symbols có thể thành nhiều tuần hoặc nhiều tháng. Tool tự động viết trong ba năm có nguy cơ vô dụng. Reverse engineering bằng tay khó hơn nhiều. Anh nói thẳng đã cân nhắc rời PM development vì công sức bỏ ra lớn hơn lợi ích nhận lại.</p>
-          <blockquote>“Third-party servers are just collateral damage.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">
+            <p lang="en">“Third-party servers are just collateral damage.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Các server bên thứ ba chỉ là thiệt hại liên đới.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">Nguồn - dktapps trên PMMP Forum, “1.13, debug symbols and the Titanic”</a></cite>
+          </blockquote>
           <p>Câu này xuất hiện khi người dùng hỏi Mojang có đang cố giết server hay không. Dktapps cho rằng mục tiêu được tuyên bố là làm hacker khó sống hơn, còn server bên thứ ba bị kẹt trong làn đạn. Đây không phải lời buộc tội về một chiến dịch bí mật nhắm riêng PocketMine. Nó còn đáng ngại hơn theo một nghĩa khác. Một ecosystem có thể bị bào mòn không vì ai đó ghét nó, mà vì người ra quyết định coi thiệt hại của nó là chấp nhận được.</p>
           <p>Thread cũng bác ý tưởng chỉ copy Steadfast2. Fork Lifeboat chỉ triển khai phần network cần, có nhiều chỗ sai và không thể thay thế việc hiểu protocol. MiNET, NukkitX và những server khác cũng phụ thuộc cùng nguồn thông tin. Vấn đề không nằm ở PHP. Nó nằm ở bất kỳ ai cố tái hiện giao thức của nền tảng đóng mà không được cấp tài liệu đủ.</p>
           <p>Điều đặc biệt là cảnh báo năm 2019 không hoàn toàn thành hiện thực ngay. BDS vẫn còn symbols hữu ích trong một thời gian. Tooling chuyển dần sang BDS. PMMP tiếp tục update. Nhưng nguy cơ không biến mất, nó chỉ đổi binary để bám vào. Tới 1.21.40, symbols công khai của BDS cũng mất. Chiếc phao tạm thời mà thread Titanic nhắc tới cuối cùng cũng bị rút khỏi công chúng.</p>
@@ -350,7 +378,11 @@
           <p>PMMP 3 kết thúc hỗ trợ sau khi 4.0 ổn định. Team nói rõ duy trì hai major tốn thời gian có thể dùng cho 4.x và 5.0. Mỗi nhánh cũ kéo theo security fix, Minecraft compatibility, PHP binary và câu hỏi hỗ trợ. Open source không làm chi phí nhân đôi biến mất.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/releases/tag/5.0.0">PocketMine-MP 5.0.0 ngày 01.06.2023</a> hỗ trợ Bedrock 1.19.80, thêm nhiều block và item, đọc world Bedrock từ 1.13 trở lên và đổi API. World cùng player data được upgrade theo cách không thể quay lại PM4 nếu không backup. PHP binary lại đổi. PM5 không phải cuộc cách mạng quản trị như PM3, nhưng cho thấy core vẫn đang tiến gần dữ liệu Bedrock hiện đại thay vì đứng yên ở abstraction cũ.</p>
           <p>Tháng 03.2023, PMMP Forum chuyển sang read-only. Một thành viên cũ viết lời chào và giữ danh sách “Souls of PocketMine” trong signature. IvanCraft623 trả lời ngắn.</p>
-          <blockquote>“The party continues on the Discord server.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/goodbye-forums.11721/">
+            <p lang="en">“The party continues on the Discord server.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Cuộc vui vẫn tiếp tục trên server Discord.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/goodbye-forums.11721/">Nguồn - IvanCraft623 trên PMMP Forum, “Goodbye forums”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/goodbye-forums.11721/">Lời tạm biệt forum</a> nghe vui, nhưng sự chuyển dịch có cái giá lưu trữ. Forum giữ URL công khai, ngày tháng, danh tính tương đối ổn định và được search engine lập chỉ mục. Discord phản hồi nhanh hơn, gần gũi hơn và hợp support thời gian thực, nhưng câu trả lời dễ chìm, tài khoản có thể biến mất và người ngoài khó tìm lịch sử bằng một truy vấn web.</p>
           <p>Vì vậy bài này có thể trích lại tranh luận năm 2016 về API hay cảnh báo năm 2019 về symbols, còn nhiều quyết định sau 2023 chỉ tồn tại trong issue, commit hoặc ký ức Discord. Việc đóng forum không làm PMMP chết. Nó làm tương lai khó viết lịch sử PMMP hơn.</p>
 
@@ -359,7 +391,11 @@
           <p>Chi tiết ấy làm sụp một huyền thoại phổ biến về maintainer. Dự án không sống mười năm chỉ vì ai đó luôn tràn đầy đam mê. Nó có thể sống vì trách nhiệm, hoàn cảnh, tình bạn, thói quen và vì rời đi sẽ khiến hàng nghìn người khác gặp vấn đề. Sự bền bỉ đó đáng biết ơn, nhưng không thể được dùng như mô hình tài chính.</p>
           <p>Dylan nói Lifeboat đã thay đổi hoàn cảnh của anh từ năm 2020. Công việc có lương cho phép anh làm thứ mình giỏi trong môi trường ít áp lực hơn. Tuy vậy, tới 2024 anh muốn rời toàn bộ không gian Minecraft. Anh không dự đoán sẽ có người thay mình ở vị trí “benevolent dictator”. Nếu PMMP sống, nó phải chuyển thành nỗ lực của một nhóm.</p>
           <p>Năm maintainer được cấp quyền cho phần update game, nhưng không ai được trả lương để gánh trách nhiệm ấy. Quyền merge là điều kiện cần, không phải động lực. Tài liệu là điều kiện cần, không phải thời gian rảnh. Một người có kỹ năng vẫn có thể chọn công việc nuôi sống mình, gia đình hoặc một project còn mang lại niềm vui hơn.</p>
-          <blockquote>“All the large servers maintain their own forks, and the smaller servers die off.”</blockquote>
+          <blockquote cite="https://github.com/pmmp/PocketMine-MP/issues/6295">
+            <p lang="en">“All the large servers maintain their own forks, and the smaller servers die off.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Tất cả server lớn đều duy trì fork riêng, còn các server nhỏ hơn thì chết dần.”</p>
+            <cite><a href="https://github.com/pmmp/PocketMine-MP/issues/6295">Nguồn - dktapps, GitHub issue #6295</a></cite>
+          </blockquote>
           <p>Đây là tương lai Dylan nói mình dễ hình dung. Câu ấy không phải tiên tri siêu nhiên. Nó là phép tính incentive. Network lớn có doanh thu và nhu cầu trực tiếp nên trả được chi phí fork. Server nhỏ phụ thuộc release công khai. Khi upstream chung mất, bên có tiền giữ lợi thế còn phần commons co lại. Hai năm sau, upstream thực sự dừng và dự đoán trở thành khung hợp lý nhất để nhìn giai đoạn hậu PMMP.</p>
 
           <h3>2024–2026, chi phí cập nhật protocol tăng và upstream dừng lại</h3>
@@ -370,7 +406,11 @@
           <p>Đây là nơi quyền lực nền tảng hiện ra rõ hơn source code. Bất kỳ ai cũng có thể fork repo LGPL. Không phải bất kỳ ai cũng có binary, symbol, contact và công cụ cần để hiểu version tiếp theo. Giấy phép mở bảo vệ quyền sửa phần đã có. Nó không buộc chủ nền tảng cung cấp thông tin về thứ sắp thay đổi.</p>
           <p>PMMP vẫn phát hành đều qua nhiều version sau khi Dylan tuyên bố nghỉ. Điều đó chứng minh team còn năng lực, nhưng không chứng minh mô hình kế nhiệm đã ổn định. Công việc update tập trung vào vài người. Mỗi người rời đi làm tập hợp người vừa có kỹ năng, quyền truy cập và sẵn sàng hiến thời gian nhỏ lại.</p>
           <p>Đầu tháng 07.2026, driesboy rời Minecraft. <a href="https://pmmp.io/">Thông báo chia tay</a> không dùng ngôn ngữ mơ hồ về hiatus.</p>
-          <blockquote>“No one is left willing to do updates for new Minecraft versions.”</blockquote>
+          <blockquote cite="https://pmmp.io/">
+            <p lang="en">“No one is left willing to do updates for new Minecraft versions.”</p>
+            <p class="quote-translation"><strong>Bản dịch -</strong> “Không còn ai sẵn lòng thực hiện cập nhật cho các phiên bản Minecraft mới.”</p>
+            <cite><a href="https://pmmp.io/">Nguồn - PMMP, thông báo kết thúc dự án</a></cite>
+          </blockquote>
           <p>Team tập hợp tài liệu update cho người muốn tiếp tục bằng fork, nhưng xác nhận PMMP sẽ không cung cấp release mới. Họ cảm ơn Lifeboat, những maintainer, moderator, reviewer, Patreon supporter và cộng đồng. Lời cảm ơn cũng là bảng kê những loại lao động thường vô hình cho tới khi không còn ai làm.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/releases/tag/5.44.3">Release 5.44.3</a> cho Bedrock 1.26.30 xuất hiện ngày 06.07.2026. Repo bị archive ngày 09.07.2026 ở mốc 18.965 commit. Đây là điểm kết thúc rõ ràng của upstream do nhóm PMMP duy trì, không chỉ là một tháng ít commit hay tin đồn Discord.</p>
 

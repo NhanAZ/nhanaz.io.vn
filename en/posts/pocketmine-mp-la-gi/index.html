@@ -40,7 +40,7 @@
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
   <script src="/assets/js/theme.js?v=20260711-04"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260713-01">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260713-02">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -230,14 +230,20 @@
           <p>In 2012, Minecraft Pocket Edition was still a small branch missing much of Minecraft Java. “Bedrock Edition” did not yet exist as the modern brand. Players mainly had single-player and local network multiplayer. One device opened a world, other devices on the same Wi-Fi discovered it, and the world disappeared from the network when its host left. There was no downloadable official dedicated server, no featured-server list, no Marketplace and no mature Add-On system.</p>
           <p>This matters because it is easy to imagine PocketMine-MP as an alternative created in opposition to BDS. At the first commit, BDS did not exist to be opposed. The original question was not “BDS or PocketMine?” It was “how can a Minecraft PE client connect to a server process that runs on its own?”</p>
           <p>Shoghi Cervantes Pueyo began answering that question by observing client traffic, identifying packets, recreating the login flow and building enough of a world to stop the client disconnecting. <a href="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">PMMP's explanation of why PHP was used</a> describes the project as a quick prototype for reverse engineering a protocol that lacked complete documentation. It was not planned as production infrastructure.</p>
-          <blockquote>“It was never intended for use on production servers.”</blockquote>
+          <blockquote cite="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">
+            <p>“It was never intended for use on production servers.”</p>
+            <cite><a href="https://doc.pmmp.io/en/rtfd/faq/about/why-php.html">Source - PMMP documentation, “Why was PHP chosen?”</a></cite>
+          </blockquote>
           <p>That sentence explains several tensions that followed PocketMine throughout its life. PHP was chosen for experimentation speed, not because an architecture committee declared it the perfect game-server language. Early abstractions were written while the protocol itself was still being discovered. Once the prototype became infrastructure, the community had to keep live servers running while replacing the foundations beneath them.</p>
 
           <h3>In 2013, PocketMine Realms came before external servers</h3>
           <p>One of the most forgotten pieces of the story is <strong>PocketMine Realms</strong>. On June 19, 2013, Shoghi launched a free service that let MCPE 0.7.0 players discover and join community servers through the Realms interface. Android users changed DNS settings. iOS users installed a configuration profile. The service stood between the client and server discovery, turning a door designed for Realms into an entrance to community-run multiplayer.</p>
           <p>This was more than a server-list website. The game did not yet expose an official external-server button. PocketMine Realms modified the discovery layer so ordinary players could find PocketMine-MP servers through an interface they understood. The PocketMine team did not wait for Mojang to finish a path and then walk down it. They built the path first.</p>
           <p>A Wayback Machine capture from October 1, 2013 preserves the shutdown notice. Its central sentence is not forum folklore. It was published by PocketMine itself.</p>
-          <blockquote>“Mojang ... asked us to end our PocketMine Realms service.”</blockquote>
+          <blockquote cite="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">
+            <p>“Mojang ... asked us to end our PocketMine Realms service.”</p>
+            <cite><a href="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">Source - 2013 PocketMine Realms shutdown notice</a></cite>
+          </blockquote>
           <p><a href="https://web.archive.org/web/20131001030747/http://realms.pocketmine.net/">The archived PocketMine Realms notice</a> says Mojang asked that the service end and offered official external-server connections in MCPE 0.7.4. Players could then press External, enter a name, IP and the default port 19132. The PocketMine Realms database was deleted because it was no longer needed.</p>
           <p>The event deserves a fair reading without becoming bloodless. Mojang opened a better official path for users, and the immediate result helped the PocketMine ecosystem. It also established that Mojang was not entirely outside PocketMine's history. The company directly requested the end of a PocketMine-operated service when it touched the Realms surface. Years later, when the community suspected a conflict between Shoghi's Mojang employment and PocketMine, that precedent made the theory more than an invention formed in a vacuum.</p>
 
@@ -261,7 +267,7 @@
           <p>PHP did not make PMMP automatically slow, nor did it make the server infinitely easy to scale. Performance depended on core design, plugins, disk access, networking, entities, chunks and the amount of work done each tick. A plugin blocking the main thread with a query or heavy loop could stall the entire server even when the machine had idle CPU cores.</p>
 
           <h3>The plugin platform was the product</h3>
-          <p><a href="https://doc.pmmp.io/en/rtfd/plugins.html">the official documentation</a> defines a plugin as an external module that adds features or changes default behavior. Plugins could listen to events, cancel actions, modify outcomes, register commands, manage permissions, change inventories, send forms, schedule tasks and connect to outside services.</p>
+          <p><a href="https://doc.pmmp.io/en/rtfd/plugins.html">The official documentation</a> defines a plugin as an external module that adds features or changes default behavior. Plugins could listen to events, cancel actions, modify outcomes, register commands, manage permissions, change inventories, send forms, schedule tasks and connect to outside services.</p>
           <p>This is also why PMMP should never be graded as a BDS clone. The official README explicitly warned that it was poorly suited to vanilla survival and lacked systems such as vanilla world generation, redstone, mob AI and other gameplay. PMMP was strongest when a server wanted to depart from Minecraft. BDS was usually the more sensible choice when the goal was survival close to the original game.</p>
 
           <h2>PocketMine-MP history, 2012-2026</h2>
@@ -292,7 +298,10 @@
           <p>The vacuum produced an era of forks. Genisys, ClearSky, ImagicalMine, RedstoneLamp and many other projects tried to keep pace with new clients, add missing gameplay or serve a particular network. <a href="https://gitlab.com/itxtech/genisys">Genisys was created on February 27, 2016</a> and described itself as feature-rich MCPE server software based on PocketMine-MP. It appealed to operators who needed mobs, gameplay and compatibility now rather than a long core redesign.</p>
           <p>ClearSky and ImagicalMine lived under similar pressure. A fork could take an older build, accept quick patches, backport packets, merge work from elsewhere and preserve the API for plugins. This was rational for an operator losing players each day. It was frustrating for maintainers trying to produce typed, testable code without another layer of debt.</p>
           <p>In January 2017, a parent who only wanted a LAN server for his child described the search experience on PMMP Forums.</p>
-          <blockquote>“Pocketmine forked off into a million directions.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">
+            <p>“Pocketmine forked off into a million directions.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Source - PMMP Forums, “Pocketmine history: What happened?”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">The “Pocketmine history: What happened?” thread</a> listed ClearSky, RedstoneLamp, Genisys and PMMP, then asked why people had not rallied around one fork. It captured what search results could not explain. Old guides still pointed to PocketMine, the main project looked dead, many forks claimed continuity and plugins supported only selected branches.</p>
           <p>In PMMP culture, a carelessly copied fork was often called a <strong>spoon</strong>. The joke that forks and spoons belonged in a kitchen cupboard concealed a serious dispute about quality and attribution. PMMP did not want to import Genisys features directly when the code was viewed as hacky, difficult to maintain or ethically sourced poorly. Operators saw working features and asked why upstream would not copy them. One side optimized for today. The other tried to avoid making tomorrow worse.</p>
           <p>This era cannot be represented as a clean family tree. Projects borrowed from one another, changed names, lost Git history, moved organizations or existed only for one network. Public repositories sometimes lagged private development. Some projects were forks of forks. Some plugins depended on behavior available in only one spoon. The map was messy because the underlying needs were messy.</p>
@@ -304,7 +313,10 @@
           <h3>September 2016-2017, PMMP becomes the successor</h3>
           <p>In September 2016, several members of the old PocketMine team and a new developer, Dylan or <a href="https://github.com/dktapps">dktapps</a>, formed the PMMP organization. They did more than fork a repository. They created a GitHub organization, website, forums, build services and accounts whose access could be shared. It was an institutional reconstruction after the project learned that open source did not automatically mean open infrastructure.</p>
           <p>Intyre, a trusted member of the old PocketMine team, was quoted explaining the decision to leave the legacy infrastructure in one sentence.</p>
-          <blockquote>“It is time to stop asking and to move on.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">
+            <p>“It is time to stop asking and to move on.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">Source - Intyre on PMMP Forums</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/pocketmine-history-what-happened.617/">In the same 2017 history thread</a>, staff said they had repeatedly requested more access without receiving it. Dktapps explained that the old forums remained online not because the new team chose to preserve them, but because they did not even have permission to shut them down. PMMP was therefore both a technical name and a governance declaration. If the keys could not be recovered, the community would build another house.</p>
           <p>PMMP was not an unrelated product that happened to share a name. It continued the code and people of PocketMine-MP in infrastructure the team could operate. In late 2017 Shoghi endorsed PMMP as PocketMine's successor, redirected several pocketmine.net addresses to pmmp.io and granted access to the old organization. PMMP already had more than a year of issues, pull requests, forum history and identity, so the team archived the legacy repositories rather than moving back.</p>
           <p>That choice shows that software history is larger than commits. Issues preserve bugs and arguments. Pull requests preserve attribution. Forum links, CI URLs and package namespaces become habits for thousands of users. Moving back to the “official” organization could destroy more history than it restored. PMMP became PocketMine's upstream because the community had already treated it as one long enough for succession to become fact.</p>
@@ -312,7 +324,10 @@
           <h3>2017-2018, Poggit and API 3 pull the ecosystem back toward one centre</h3>
           <p>Once the old forums and plugin repository became unreliable, PMMP had another survival problem beyond the server core. Where would users find plugins, and why should they trust a PHAR offered for download? In early 2017, developers still complained that publishing a GitHub repository did not reach the audience of the old PocketMine plugin repository. Other forum members answered that there was not yet an “official PocketMine-style” release path and that Poggit was still in alpha.</p>
           <p><a href="https://forums.pmmp.io/threads/poggit-public-consultation.307/">A public consultation from December 2016</a> described Poggit in one technical sentence that would have long social consequences.</p>
-          <blockquote>“Poggit consists of a continuous-integration (CI) and a plugin list.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/poggit-public-consultation.307/">
+            <p>“Poggit consists of a continuous-integration (CI) and a plugin list.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/poggit-public-consultation.307/">Source - PMMP Forums, “Poggit public consultation”</a></cite>
+          </blockquote>
           <p>Poggit-CI connected to a GitHub repository, built its source into a PHAR after commits or pull requests and ran checks such as PHP syntax validation and plugin-structure inspection. Poggit Release did not let a developer upload an unexplained binary. An artifact had to be produced from source known to the service, then pass through review layers. Open source stopped being only an ethical claim and became part of the distribution pipeline.</p>
           <p>The early proposal was ambitious. Staff would perform a quick malware and minimum-quality check. Users with GitHub accounts could participate in reviews. Official reviewers could inspect a release more deeply, and strong releases could be featured. Not every part of that original model survived unchanged, but its central principle did. A public plugin should remain traceable to source, and its download should be reproducible from that source.</p>
           <p>Poggit also created an <strong>orphanage</strong> for abandoned plugins. EconomyAPI, PurePerms, PureChat, WorldProtect, ManyWorlds and many other familiar names were at various times moved into a shared organization so that the community could keep repairing them. The orphanage could not bring an author back, but it stopped merge and release authority from dying with one personal account. It was the same governance lesson for which the PocketMine core had already paid dearly.</p>
@@ -320,7 +335,10 @@
           <h3>API 3 was not a version bump, but eighteen months of surgery</h3>
           <p>On December 20, 2016, dktapps made the MCPE 1.0 branch public as API 3.0.0-ALPHA1 and warned operators not to use it in production because it could corrupt worlds. The journey from ALPHA1 to stable took about eighteen months. Each alpha could break plugins written for the previous alpha. Operators who simply wanted a working server saw a bewildering row of version labels. Maintainers saw a narrow opportunity to repair prototype-era decisions before those decisions hardened for another decade.</p>
           <p>In the thread “Why is the API always changing?”, Intyre answered the title with characteristically dry humour.</p>
-          <blockquote>“Why is your age always changing?”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">
+            <p>“Why is your age always changing?”</p>
+            <cite><a href="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">Source - Intyre on PMMP Forums, “Why is the API always changing?”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/why-is-the-api-always-changing.473/">The December 26, 2016 discussion</a> then reached the serious reason. API versions protected servers from plugins calling classes and methods that no longer meant the same thing. A major version increased for incompatible changes. A minor version added capability while preserving compatibility. A patch fixed bugs. The ALPHA, BETA and RC suffixes tolerated no compatibility expectations because their interfaces were still under active construction.</p>
           <p>API 3 brought strict typing deeper into the code, dropped 32-bit support, required a newer PHP, and changed entity performance, inventory transactions, skins, NBT, world providers and networking. Composer gradually replaced Git submodules for package management. Xbox Live authentication arrived. Newer LevelDB worlds became readable. Every change answered a real problem, but together they formed a migration wall.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/blob/stable/changelogs/3.0-alpha.md">The 3.0 alpha changelog</a> is a better historical document than many retrospective summaries. A server release involved far more than tracking a Minecraft version. It records UUID problems, NBT signedness, memory leaks, thread safety, desktop crafting, resource packs and hundreds of method signatures. After reading the actual workload, “just bump the protocol” stops sounding like advice.</p>
@@ -335,7 +353,10 @@
           <h3>2019, the Titanic warning describes the ending years in advance</h3>
           <p>In September 2019, a Bedrock 1.13 beta removed debugging symbols from the Android binary. To a player, the change was almost invisible. To an independent server developer, symbols supplied function names, constants and other landmarks for reading an executable. The binary still ran without them, but the map for understanding its interior disappeared.</p>
           <p>In an announcement titled <a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">“1.13, debug symbols and the Titanic”</a>, dktapps explained that a protocol update then usually took days, while the same work without symbols might take weeks or months. Tools built over three years could become useless. Manual reverse engineering was far harder. He said plainly that he had considered leaving PocketMine development because the cost had begun to outweigh what he received from it.</p>
-          <blockquote>“Third-party servers are just collateral damage.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">
+            <p>“Third-party servers are just collateral damage.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/1-13-debug-symbols-and-the-titanic.8571/">Source - dktapps on PMMP Forums, “1.13, debug symbols and the Titanic”</a></cite>
+          </blockquote>
           <p>That line appeared when users asked whether Mojang was trying to kill third-party servers. Dktapps believed the stated target was hacking and that independent servers had been caught in the blast. This was not an allegation of a secret campaign aimed only at PocketMine. In one sense, it was more troubling. An ecosystem can be eroded without anybody hating it, merely because the people making platform decisions consider its damage acceptable.</p>
           <p>The thread also rejected the idea that PMMP could simply copy Steadfast2. Lifeboat's fork implemented what its network required, contained incorrect or incomplete pieces and was not a substitute for understanding the protocol. MiNET, NukkitX and other independent servers depended on similar information. The problem was not PHP. It affected anyone trying to reproduce a closed platform's protocol without sufficient documentation.</p>
           <p>The 2019 warning did not become terminal immediately. Useful symbols remained available through BDS for a while, tooling shifted toward that binary and PMMP kept updating. The dependency had moved rather than vanished. When public symbol-bearing BDS builds disappeared after 1.21.40, the temporary lifeboat described in the Titanic thread was finally withdrawn from the general public.</p>
@@ -350,7 +371,10 @@
           <p>PMMP 3 support ended after 4.0 became stable. The team explained that maintaining two major lines consumed time that could instead improve 4.x and prepare 5.0. Every old branch required security fixes, Minecraft compatibility, PHP binaries and support answers. An open-source license does not make duplicated labour disappear.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/releases/tag/5.0.0">PocketMine-MP 5.0.0 arrived on June 1, 2023</a> for Bedrock 1.19.80, added many blocks and items, read Bedrock worlds from 1.13 onward and changed the API. World and player data upgraded in a way that could not return to PM4 without a backup. The PHP runtime changed again. PM5 was not the governance revolution that PM3 had been, but it showed a core still moving toward modern Bedrock data instead of freezing around old abstractions.</p>
           <p>In March 2023, PMMP Forums became read-only. A long-time member said goodbye and kept a list titled “Souls of PocketMine” in his signature. IvanCraft623 answered briefly.</p>
-          <blockquote>“The party continues on the Discord server.”</blockquote>
+          <blockquote cite="https://forums.pmmp.io/threads/goodbye-forums.11721/">
+            <p>“The party continues on the Discord server.”</p>
+            <cite><a href="https://forums.pmmp.io/threads/goodbye-forums.11721/">Source - IvanCraft623 on PMMP Forums, “Goodbye forums”</a></cite>
+          </blockquote>
           <p><a href="https://forums.pmmp.io/threads/goodbye-forums.11721/">The forum farewell</a> sounds cheerful, but the migration carried an archival cost. A forum supplied public URLs, dates, relatively stable identities and search-engine indexing. Discord offered faster conversation and better real-time support, yet answers could sink into scrollback, accounts could disappear and outsiders could no longer reconstruct history through an ordinary web search.</p>
           <p>This article can quote a 2016 argument about APIs and a 2019 warning about symbols. Many decisions after 2023 survive only through issues, commits or somebody's memory of Discord. Closing the forum did not kill PMMP. It made PMMP's later history harder to write.</p>
 
@@ -359,7 +383,10 @@
           <p>That detail breaks a common myth about maintainers. A project does not survive for a decade only because somebody remains endlessly passionate. It can survive through responsibility, circumstance, friendship, routine and the knowledge that leaving would create problems for thousands of other people. That persistence deserves gratitude, but it cannot be treated as a financing model.</p>
           <p>Dylan said Lifeboat had transformed his circumstances from 2020 onward. Paid work let him use his strongest skills in a lower-pressure environment. By 2024, however, he wanted to leave the entire Minecraft space. He did not expect anyone to replace him as a “benevolent dictator.” If PMMP survived, it would have to become a team effort.</p>
           <p>Five maintainers received access for game-update work, but none was paid to carry that responsibility. Merge access is necessary, but it is not motivation. Documentation is necessary, but it is not free time. A skilled person can still choose work that supports a family, or a project that brings more joy.</p>
-          <blockquote>“All the large servers maintain their own forks, and the smaller servers die off.”</blockquote>
+          <blockquote cite="https://github.com/pmmp/PocketMine-MP/issues/6295">
+            <p>“All the large servers maintain their own forks, and the smaller servers die off.”</p>
+            <cite><a href="https://github.com/pmmp/PocketMine-MP/issues/6295">Source - dktapps, GitHub issue #6295</a></cite>
+          </blockquote>
           <p>Dylan described that as the future he could most easily imagine. It was not supernatural prophecy. It was an incentive calculation. Large networks had revenue and direct need, so they could pay the cost of a fork. Smaller servers depended on public releases. Once the shared upstream disappeared, organizations with money retained an advantage while the commons contracted. Two years later, the upstream did end, and his prediction became the clearest frame for the post-PMMP period.</p>
 
           <h3>2024-2026, protocol costs rise and the upstream ends</h3>
@@ -370,7 +397,10 @@
           <p>This is where platform power matters more than the source license. Anyone can fork an LGPL repository. Not everyone has the binary, symbols, contacts and tools required to understand the next Bedrock version. An open license protects the right to modify what already exists. It does not compel the platform owner to disclose what is about to change.</p>
           <p>PMMP continued to publish updates for many versions after Dylan announced his retirement. That proved the remaining team had ability. It did not prove succession was stable. Update work still rested with a handful of people, and every departure reduced the group possessing the skill, access and willingness to donate time at once.</p>
           <p>In early July 2026, @driesboy left Minecraft. <a href="https://pmmp.io/">The farewell notice</a> did not use vague language about a hiatus.</p>
-          <blockquote>“No one is left willing to do updates for new Minecraft versions.”</blockquote>
+          <blockquote cite="https://pmmp.io/">
+            <p>“No one is left willing to do updates for new Minecraft versions.”</p>
+            <cite><a href="https://pmmp.io/">Source - PMMP project closure notice</a></cite>
+          </blockquote>
           <p>The team assembled update documentation for anyone willing to continue through a fork, but confirmed that PMMP itself would not publish more releases. It thanked Lifeboat, maintainers, moderators, reviewers, Patreon supporters and the wider community. The acknowledgements also became an inventory of labour that often remained invisible until nobody was left to perform it.</p>
           <p><a href="https://github.com/pmmp/PocketMine-MP/releases/tag/5.44.3">Release 5.44.3</a> for Bedrock 1.26.30 arrived on July 6, 2026. The repository was archived on July 9 at 18,965 commits. This was an explicit ending for the PMMP-maintained upstream, not a quiet month or a Discord rumour.</p>
 
