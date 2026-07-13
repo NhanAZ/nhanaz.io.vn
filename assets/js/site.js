@@ -98,8 +98,8 @@ const SITE_SEARCH_INDEX_VI = [
     type: "Bài viết",
     url: "/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "Lịch sử đầy đủ của PocketMine-MP từ Minecraft PE, Shoghi, thời kỳ fork, Poggit và các API lớn đến khi nhóm PMMP dừng hỗ trợ năm 2026.",
-    keywords: "PocketMine-MP PMMP PocketMine là gì PocketMine-MP đã chết PMMP dừng hỗ trợ Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 3 API 4 API 5 fork lịch sử",
+    excerpt: "Hồ sơ gần mười bốn năm của PocketMine-MP, từ Realms, Shoghi, thời kỳ fork và đại tu API đến áp lực Bedrock, vai trò của Mojang và ngày PMMP dừng hỗ trợ.",
+    keywords: "PocketMine-MP PMMP PocketMine Realms PocketMine là gì lịch sử PocketMine-MP PocketMine-MP đã chết PMMP dừng hỗ trợ Mojang Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 2 API 3 API 4 API 5 Genisys ClearSky ImagicalMine Steadfast Lifeboat debugging symbols fork lịch sử",
   },
   {
     title: "Dự án",
@@ -356,8 +356,8 @@ const SITE_SEARCH_INDEX_EN = [
     type: "Writing",
     url: "/en/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "The complete PocketMine-MP history, from early Minecraft PE, Shoghi, the fork era, Poggit and major APIs to the PMMP team's end of support in 2026.",
-    keywords: "PocketMine-MP PMMP what is PocketMine PocketMine-MP dead PMMP end of support Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 3 API 4 API 5 fork history official website",
+    excerpt: "Nearly fourteen years of PocketMine-MP, from Realms, Shoghi, forks and API rebuilds to Bedrock pressure, Mojang's role and the end of PMMP support.",
+    keywords: "PocketMine-MP PMMP PocketMine Realms what is PocketMine PocketMine-MP history PocketMine-MP dead PMMP end of support Mojang Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 2 API 3 API 4 API 5 Genisys ClearSky ImagicalMine Steadfast Lifeboat debugging symbols fork history official website",
   },
   {
     title: "Projects",
