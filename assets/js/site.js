@@ -94,12 +94,12 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "NhanAZ Zalo PC backup Zalo dịch ngược reverse engineering bảo mật security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "PocketMine-MP là gì?",
+    title: "PocketMine-MP là gì? Lịch sử PMMP từ 2012 đến 2026",
     type: "Bài viết",
     url: "/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "PocketMine-MP là gì, lịch sử PMMP, kỹ thuật server Bedrock, plugin PHP, Poggit, dktapps và hiện trạng dự án.",
-    keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Việt Nam Công nghệ thông tin",
+    excerpt: "Lịch sử đầy đủ của PocketMine-MP từ Minecraft PE, Shoghi, thời kỳ fork, Poggit và các API lớn đến khi nhóm PMMP dừng hỗ trợ năm 2026.",
+    keywords: "PocketMine-MP PMMP PocketMine là gì PocketMine-MP đã chết PMMP dừng hỗ trợ Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 3 API 4 API 5 fork lịch sử",
   },
   {
     title: "Dự án",
@@ -352,12 +352,12 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
   },
   {
-    title: "What is PocketMine-MP?",
+    title: "What Is PocketMine-MP? Complete PMMP History, 2012-2026",
     type: "Writing",
     url: "/en/posts/pocketmine-mp-la-gi/",
     date: "2026-06-30",
-    excerpt: "What PocketMine-MP is, with PMMP history, Bedrock server internals, PHP plugins, Poggit, dktapps and the project’s current state.",
-    keywords: "PocketMine-MP PMMP PocketMine Shoghi Cervantes shoghicp dktapps Dylan Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit DevTools ExamplePlugin virion NhanAZ NhanAZ-Plugins PMMPVN PocketMine-MP Vietnam Information Technology",
+    excerpt: "The complete PocketMine-MP history, from early Minecraft PE, Shoghi, the fork era, Poggit and major APIs to the PMMP team's end of support in 2026.",
+    keywords: "PocketMine-MP PMMP what is PocketMine PocketMine-MP dead PMMP end of support Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 3 API 4 API 5 fork history official website",
   },
   {
     title: "Projects",
