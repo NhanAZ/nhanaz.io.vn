@@ -1094,17 +1094,27 @@ const initArticleToc = () => {
   const title = document.createElement("p");
   const list = document.createElement("ol");
   const links = new Map();
+  const headingSections = new Map();
+  const sections = [];
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const headingScrollGap = 34;
+  const activeHeadingLead = 28;
+  let activeTocId = null;
+  let currentSection = null;
+  let revealFrame = 0;
+  let scrollFrame = 0;
 
   toc.className = "article-toc";
   toc.setAttribute("aria-label", isEnglish ? "Article table of contents" : "Mục lục bài viết");
   title.className = "article-toc-title";
   title.textContent = isEnglish ? "In this post" : "Trong bài này";
+  list.className = "article-toc-list";
 
   headings.forEach((heading, index) => {
     const id = getUniqueId(heading, index);
     const item = document.createElement("li");
     const link = document.createElement("a");
+    const isSectionHeading = heading.tagName === "H2";
 
     heading.id = id;
     heading.tabIndex = -1;
@@ -1123,19 +1133,123 @@ const initArticleToc = () => {
       }
 
       history.pushState(null, "", `${location.pathname}${location.search}#${id}`);
-      links.forEach((tocLink) => tocLink.classList.remove("is-active"));
-      link.classList.add("is-active");
+      setActiveLink(id);
     });
 
     item.append(link);
-    list.append(item);
+
+    if (isSectionHeading) {
+      const childList = document.createElement("ol");
+
+      item.classList.add("article-toc-section");
+      currentSection = {
+        childList,
+        hasChildren: false,
+        item,
+        link,
+      };
+      sections.push(currentSection);
+      headingSections.set(id, currentSection);
+      list.append(item);
+      return;
+    }
+
+    if (!currentSection) {
+      headingSections.set(id, null);
+      list.append(item);
+      return;
+    }
+
+    if (!currentSection.hasChildren) {
+      currentSection.hasChildren = true;
+      currentSection.childList.className = "article-toc-children";
+      currentSection.childList.hidden = true;
+      currentSection.link.setAttribute("aria-expanded", "false");
+      currentSection.item.append(currentSection.childList);
+    }
+
+    headingSections.set(id, currentSection);
+    currentSection.childList.append(item);
   });
 
   toc.append(title, list);
   rail.append(toc);
 
-  const setActiveLink = (id) => {
-    links.forEach((link) => link.classList.toggle("is-active", link.dataset.tocTarget === id));
+  const setOpenSection = (activeSection) => {
+    sections.forEach((section) => {
+      if (!section.hasChildren) {
+        return;
+      }
+
+      const isOpen = section === activeSection;
+
+      section.item.classList.toggle("is-open", isOpen);
+      section.link.setAttribute("aria-expanded", String(isOpen));
+      section.childList.hidden = !isOpen;
+    });
+  };
+
+  const revealActiveLink = (link) => {
+    window.cancelAnimationFrame(revealFrame);
+    revealFrame = window.requestAnimationFrame(() => {
+      if (!link || rail.scrollHeight <= rail.clientHeight + 1) {
+        return;
+      }
+
+      const railRect = rail.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      const header = document.querySelector(".site-header");
+      const headerStyle = header ? window.getComputedStyle(header) : null;
+      const headerIsSticky = headerStyle?.position === "sticky" || headerStyle?.position === "fixed";
+      const headerBottom = headerIsSticky ? header.getBoundingClientRect().bottom : 0;
+      const visibleTop = Math.max(
+        railRect.top + 18,
+        headerBottom + (headerIsSticky ? headingScrollGap + activeHeadingLead : 0),
+      );
+      const visibleBottom = Math.min(railRect.bottom, window.innerHeight) - 18;
+      const delta = linkRect.top - visibleTop;
+
+      if (visibleBottom <= visibleTop) {
+        return;
+      }
+
+      if (Math.abs(delta) < 1) {
+        return;
+      }
+
+      rail.scrollTo({
+        top: rail.scrollTop + delta,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  };
+
+  const setActiveLink = (id, { reveal = true } = {}) => {
+    if (id === activeTocId) {
+      return;
+    }
+
+    activeTocId = id;
+    const activeLink = links.get(id) || null;
+    const activeSection = activeLink ? headingSections.get(id) : null;
+
+    links.forEach((link, targetId) => {
+      const isActive = targetId === id;
+
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    setOpenSection(activeSection);
+
+    if (reveal) {
+      revealActiveLink(activeLink);
+    }
   };
 
   const getScrollOffset = () => {
@@ -1151,15 +1265,17 @@ const initArticleToc = () => {
       return 24;
     }
 
-    return Math.ceil(header.getBoundingClientRect().bottom + 34);
+    return Math.ceil(header.getBoundingClientRect().bottom + headingScrollGap);
   };
 
   const scrollToHeading = (target, { updateHash = true, focus = false } = {}) => {
-    const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset();
-
     if (updateHash) {
       history.pushState(null, "", `${location.pathname}${location.search}#${target.id}`);
     }
+
+    setActiveLink(target.id);
+
+    const top = target.getBoundingClientRect().top + window.scrollY - getScrollOffset();
 
     window.scrollTo({
       top: Math.max(0, top),
@@ -1169,8 +1285,6 @@ const initArticleToc = () => {
     if (focus) {
       target.focus({ preventScroll: true });
     }
-
-    setActiveLink(target.id);
   };
 
   links.forEach((link) => {
@@ -1186,8 +1300,6 @@ const initArticleToc = () => {
     });
   });
 
-  setActiveLink(headings[0].id);
-
   const scrollToCurrentHash = () => {
     const id = decodeURIComponent(location.hash.slice(1));
     const target = id ? document.getElementById(id) : null;
@@ -1201,23 +1313,46 @@ const initArticleToc = () => {
     });
   };
 
-  scrollToCurrentHash();
+  const syncActiveHeading = () => {
+    const readingLine = getScrollOffset() + activeHeadingLead;
+    let activeHeading = null;
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveLink(entry.target.id);
-        }
-      });
-    }, {
-      rootMargin: "-18% 0px -68% 0px",
-      threshold: 0,
+    headings.forEach((heading) => {
+      if (heading.getBoundingClientRect().top <= readingLine) {
+        activeHeading = heading;
+      }
     });
 
-    headings.forEach((heading) => observer.observe(heading));
+    if (
+      !activeHeading
+      && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2
+    ) {
+      activeHeading = headings[headings.length - 1];
+    }
+
+    setActiveLink(activeHeading?.id || "");
+  };
+
+  const queueActiveHeadingSync = () => {
+    if (scrollFrame) {
+      return;
+    }
+
+    scrollFrame = window.requestAnimationFrame(() => {
+      scrollFrame = 0;
+      syncActiveHeading();
+    });
+  };
+
+  syncActiveHeading();
+  scrollToCurrentHash();
+
+  if (document.readyState !== "complete") {
+    window.addEventListener("load", scrollToCurrentHash, { once: true });
   }
 
+  window.addEventListener("scroll", queueActiveHeadingSync, { passive: true });
+  window.addEventListener("resize", queueActiveHeadingSync);
   window.addEventListener("hashchange", scrollToCurrentHash);
 };
 
