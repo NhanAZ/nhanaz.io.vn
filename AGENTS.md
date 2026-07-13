@@ -81,6 +81,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 ## JavaScript hiện có
 
 - `assets/js/site.js` chứa tìm kiếm toàn site, đổi ngôn ngữ, filter thành tích, loader Canva và các enhancer nhẹ.
+- Nút đổi ngôn ngữ lưu và khôi phục vị trí đọc giữa hai trang Việt - Anh bằng block nội dung, đề mục tương ứng và tiến độ toàn bài làm fallback. Khi sửa `.language-switch`, `.prose` hoặc thứ tự heading của một cặp bài, phải kiểm tra chuyển đổi ở giữa bài theo cả hai chiều, không để người đọc bị trả về đầu trang.
 - Tìm kiếm toàn site lấy dữ liệu từ `SITE_SEARCH_INDEX_VI` và `SITE_SEARCH_INDEX_EN`.
 - Filter thành tích dựa vào dữ liệu trong DOM của `.record-item`. Khi sửa markup phần này phải kiểm tra lại việc ẩn hiện thật sự.
 - Code block trong bài viết được enhance bằng JavaScript để có nút sao chép và màu cú pháp nhẹ. Không cần bọc tay từng block nếu không có nhu cầu riêng.
@@ -114,7 +115,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 ## Quy trình kiểm tra trước khi bàn giao
 
 - Chạy `node --check assets/js/site.js` sau khi sửa JavaScript.
-- Khi đổi cặp trang Việt - Anh hoặc sửa script kiểm tra, chạy `node scripts/build-english.mjs` và `node --check scripts/build-english.mjs`.
+- Khi đổi cặp trang Việt - Anh hoặc sửa script kiểm tra, chạy `node scripts/build-english.mjs` và `node --check scripts/build-english.mjs`. Script này còn kiểm tra chuỗi block cấp cao trong `.prose` để việc khôi phục vị trí đọc không ghép nhầm hai đoạn khác nhau.
 - Chạy `rg -n "tui|NhanAZ.io.vn"` khi thay đổi nội dung tiếng Việt hoặc domain.
 - Khi sửa cách gọi tên chủ website, rà lại để không còn tên ngắn một âm tiết đứng riêng trong nội dung, search index, `llms.txt`, `llms-full.txt` và `entity.json`.
 - Khi sửa JSON-LD hoặc `entity.json`, parse JSON trước khi bàn giao.

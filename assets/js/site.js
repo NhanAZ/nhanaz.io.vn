@@ -538,6 +538,219 @@ const getArticleCommentsTheme = () => {
     : theme;
 };
 
+const LANGUAGE_READING_POSITION_KEY = "nhanaz-language-reading-position";
+const LANGUAGE_READING_POSITION_TTL = 2 * 60 * 1000;
+
+const clampReadingProgress = (value) => Number.isFinite(value)
+  ? Math.min(1, Math.max(0, value))
+  : 0;
+
+const getDocumentTop = (element) => element.getBoundingClientRect().top + window.scrollY;
+
+const getReadingReferenceY = () => {
+  const headerBottom = document.querySelector(".site-header")?.getBoundingClientRect().bottom || 0;
+  const preferred = window.innerHeight * 0.34;
+  return Math.min(window.innerHeight - 24, Math.max(headerBottom + 32, preferred));
+};
+
+const getProseItems = (prose) => Array.from(prose.children)
+  .filter((element) => element.getBoundingClientRect().height > 0);
+
+const captureLanguageReadingPosition = (targetPath) => {
+  const targetUrl = new URL(targetPath, window.location.origin);
+  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const referenceY = getReadingReferenceY();
+  const anchorY = window.scrollY + referenceY;
+  const state = {
+    version: 1,
+    createdAt: Date.now(),
+    sourcePath: `${window.location.pathname}${window.location.search}`,
+    targetPath: `${targetUrl.pathname}${targetUrl.search}`,
+    referenceRatio: clampReadingProgress(referenceY / window.innerHeight),
+    pageProgress: maxScroll ? clampReadingProgress(window.scrollY / maxScroll) : 0,
+  };
+  const prose = document.querySelector(".article-layout .prose");
+
+  if (!prose) {
+    return state;
+  }
+
+  const proseTop = getDocumentTop(prose);
+  const proseBottom = proseTop + prose.getBoundingClientRect().height;
+
+  if (anchorY < proseTop || anchorY > proseBottom) {
+    return state;
+  }
+
+  const items = getProseItems(prose);
+  const headings = items.filter((element) => element.matches("h2, h3"));
+  let itemIndex = -1;
+  let itemDistance = Number.POSITIVE_INFINITY;
+
+  items.forEach((item, index) => {
+    const top = getDocumentTop(item);
+    const bottom = top + item.getBoundingClientRect().height;
+    const distance = anchorY < top ? top - anchorY : (anchorY > bottom ? anchorY - bottom : 0);
+
+    if (distance < itemDistance) {
+      itemDistance = distance;
+      itemIndex = index;
+    }
+  });
+
+  const item = items[itemIndex];
+  const itemTop = item ? getDocumentTop(item) : proseTop;
+  const itemHeight = item?.getBoundingClientRect().height || 1;
+  let sectionIndex = -1;
+
+  headings.forEach((heading, index) => {
+    if (getDocumentTop(heading) <= anchorY) {
+      sectionIndex = index;
+    }
+  });
+
+  const sectionTop = sectionIndex >= 0 ? getDocumentTop(headings[sectionIndex]) : proseTop;
+  const sectionBottom = headings[sectionIndex + 1] ? getDocumentTop(headings[sectionIndex + 1]) : proseBottom;
+
+  return {
+    ...state,
+    itemCount: items.length,
+    itemIndex,
+    itemTag: item?.tagName || "",
+    itemProgress: clampReadingProgress((anchorY - itemTop) / itemHeight),
+    sectionCount: headings.length,
+    sectionIndex,
+    sectionProgress: clampReadingProgress((anchorY - sectionTop) / Math.max(1, sectionBottom - sectionTop)),
+    proseProgress: clampReadingProgress((anchorY - proseTop) / Math.max(1, proseBottom - proseTop)),
+  };
+};
+
+const storeLanguageReadingPosition = (targetPath) => {
+  try {
+    const state = captureLanguageReadingPosition(targetPath);
+    window.sessionStorage.setItem(LANGUAGE_READING_POSITION_KEY, JSON.stringify(state));
+  } catch {
+    // Language switching still works when browser storage is unavailable.
+  }
+};
+
+const readLanguageReadingPosition = () => {
+  try {
+    const serialized = window.sessionStorage.getItem(LANGUAGE_READING_POSITION_KEY);
+    window.sessionStorage.removeItem(LANGUAGE_READING_POSITION_KEY);
+    return serialized ? JSON.parse(serialized) : null;
+  } catch {
+    return null;
+  }
+};
+
+const restoreLanguageReadingPosition = () => {
+  const state = readLanguageReadingPosition();
+  const currentPath = `${window.location.pathname}${window.location.search}`;
+
+  if (
+    !state
+    || state.version !== 1
+    || state.targetPath !== currentPath
+    || !Number.isFinite(state.createdAt)
+    || Date.now() - state.createdAt > LANGUAGE_READING_POSITION_TTL
+  ) {
+    return;
+  }
+
+  const prose = document.querySelector(".article-layout .prose");
+  const items = prose ? getProseItems(prose) : [];
+  const headings = items.filter((element) => element.matches("h2, h3"));
+
+  const resolveTargetAnchorY = () => {
+    // Prefer the matching content block, then its section, then overall reading progress.
+    if (
+      state.itemCount === items.length
+      && Number.isInteger(state.itemIndex)
+      && items[state.itemIndex]
+      && items[state.itemIndex].tagName === state.itemTag
+    ) {
+      const item = items[state.itemIndex];
+      return getDocumentTop(item)
+        + item.getBoundingClientRect().height * clampReadingProgress(state.itemProgress);
+    }
+
+    if (
+      prose
+      && state.sectionCount === headings.length
+      && Number.isInteger(state.sectionIndex)
+      && state.sectionIndex >= -1
+      && state.sectionIndex < headings.length
+    ) {
+      const proseTop = getDocumentTop(prose);
+      const proseBottom = proseTop + prose.getBoundingClientRect().height;
+      const sectionTop = state.sectionIndex >= 0 ? getDocumentTop(headings[state.sectionIndex]) : proseTop;
+      const sectionBottom = headings[state.sectionIndex + 1]
+        ? getDocumentTop(headings[state.sectionIndex + 1])
+        : proseBottom;
+      return sectionTop
+        + (sectionBottom - sectionTop) * clampReadingProgress(state.sectionProgress);
+    }
+
+    if (prose && Number.isFinite(state.proseProgress)) {
+      const proseTop = getDocumentTop(prose);
+      return proseTop
+        + prose.getBoundingClientRect().height * clampReadingProgress(state.proseProgress);
+    }
+
+    return null;
+  };
+
+  const restore = () => {
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const referenceY = clampReadingProgress(state.referenceRatio) * window.innerHeight;
+    const targetAnchorY = resolveTargetAnchorY();
+    const targetTop = targetAnchorY === null
+      ? maxScroll * clampReadingProgress(state.pageProgress)
+      : targetAnchorY - referenceY;
+    const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, Math.min(maxScroll, Math.max(0, targetTop)));
+    document.documentElement.style.scrollBehavior = previousScrollBehavior;
+
+    if (
+      state.sectionCount === headings.length
+      && Number.isInteger(state.sectionIndex)
+      && headings[state.sectionIndex]?.id
+    ) {
+      history.replaceState(
+        null,
+        "",
+        `${window.location.pathname}${window.location.search}#${headings[state.sectionIndex].id}`,
+      );
+    }
+  };
+
+  let readingResumed = false;
+  const markReadingResumed = () => {
+    readingResumed = true;
+  };
+
+  window.addEventListener("wheel", markReadingResumed, { passive: true, once: true });
+  window.addEventListener("touchstart", markReadingResumed, { passive: true, once: true });
+  window.addEventListener("pointerdown", markReadingResumed, { passive: true, once: true });
+  window.addEventListener("keydown", markReadingResumed, { once: true });
+
+  window.requestAnimationFrame(() => {
+    restore();
+    window.requestAnimationFrame(restore);
+  });
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => {
+      if (!readingResumed) {
+        window.requestAnimationFrame(restore);
+      }
+    });
+  }
+};
+
 const initLanguageSwitch = () => {
   const navigation = document.querySelector(".site-nav");
   if (!navigation || navigation.querySelector(".language-switch")) {
@@ -560,6 +773,7 @@ const initLanguageSwitch = () => {
   link.lang = targetLanguage;
   link.textContent = isEnglish ? "VI" : "EN";
   link.setAttribute("aria-label", isEnglish ? "Read this page in Vietnamese" : "Đọc trang này bằng tiếng Anh");
+  link.addEventListener("click", () => storeLanguageReadingPosition(targetPath));
   navigation.append(link);
 };
 
@@ -1278,5 +1492,6 @@ initAchievementFilters();
 initCanvaEmbeds();
 initCodeBlocks();
 initArticleToc();
+restoreLanguageReadingPosition();
 initArticleComments();
 initMotion();

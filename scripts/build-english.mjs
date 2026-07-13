@@ -50,6 +50,76 @@ const readAttributes = (tag) => Object.fromEntries(
 
 const getLinkTags = (html) => Array.from(html.matchAll(/<link\s+[^>]*>/g), ([tag]) => readAttributes(tag));
 
+const voidElements = new Set([
+  "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr",
+]);
+
+const getProseChildTags = (html) => {
+  const proseTag = Array.from(html.matchAll(/<div\b[^>]*class="([^"]*)"[^>]*>/g))
+    .find(([, classes]) => classes.split(/\s+/).includes("prose"));
+
+  if (!proseTag) {
+    return null;
+  }
+
+  const tokenPattern = /<!--[\s\S]*?-->|<\/?([a-zA-Z][\w:-]*)\b[^>]*>/g;
+  const childTags = [];
+  let depth = 1;
+  let token;
+
+  tokenPattern.lastIndex = proseTag.index + proseTag[0].length;
+
+  while ((token = tokenPattern.exec(html))) {
+    if (!token[1]) {
+      continue;
+    }
+
+    const tagName = token[1].toLowerCase();
+    const isClosing = token[0].startsWith("</");
+
+    if (isClosing) {
+      depth -= 1;
+      if (depth === 0) {
+        break;
+      }
+      continue;
+    }
+
+    if (depth === 1) {
+      childTags.push(tagName);
+    }
+
+    if (!voidElements.has(tagName) && !token[0].endsWith("/>")) {
+      depth += 1;
+    }
+  }
+
+  return childTags;
+};
+
+const validateReadingStructure = ({ pair, viHtml, enHtml }) => {
+  const viTags = getProseChildTags(viHtml);
+  const enTags = getProseChildTags(enHtml);
+
+  if (!viTags && !enTags) {
+    return;
+  }
+
+  if (!viTags || !enTags) {
+    throw new Error(`${pair.vi} and ${pair.en} must either both use .prose or both omit it`);
+  }
+
+  const mismatchIndex = viTags.findIndex((tag, index) => tag !== enTags[index]);
+
+  if (viTags.length !== enTags.length || mismatchIndex !== -1) {
+    const index = mismatchIndex === -1 ? Math.min(viTags.length, enTags.length) : mismatchIndex;
+    throw new Error(
+      `${pair.vi} and ${pair.en} differ at .prose item ${index + 1} `
+      + `(vi: ${viTags[index] || "missing"}, en: ${enTags[index] || "missing"})`,
+    );
+  }
+};
+
 const validatePage = ({ route, language, alternates }) => {
   const relativePath = routeToFile(route);
   const filePath = path.join(root, relativePath);
@@ -79,6 +149,8 @@ const validatePage = ({ route, language, alternates }) => {
       throw new Error(`${relativePath} must have hreflang ${hreflang} -> ${expectedHref}`);
     }
   }
+
+  return html;
 };
 
 for (const pair of pagePairs) {
@@ -88,8 +160,9 @@ for (const pair of pagePairs) {
     "x-default": `${baseUrl}${pair.vi}`,
   };
 
-  validatePage({ route: pair.vi, language: "vi", alternates });
-  validatePage({ route: pair.en, language: "en", alternates });
+  const viHtml = validatePage({ route: pair.vi, language: "vi", alternates });
+  const enHtml = validatePage({ route: pair.en, language: "en", alternates });
+  validateReadingStructure({ pair, viHtml, enHtml });
 }
 
-console.log(`Validated ${pagePairs.length} Vietnamese-English page pairs without rewriting files.`);
+console.log(`Validated ${pagePairs.length} Vietnamese-English page pairs and their reading structure.`);
