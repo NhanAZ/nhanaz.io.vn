@@ -47,7 +47,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Góc GitHub ở `github/index.html`, dùng để mô tả các tổ chức GitHub liên quan đến NhanAZ.
 - Dấu mốc và thành tích ở `achievements/index.html`.
 - Giới thiệu ở `about/index.html`.
-- Bản tiếng Anh nằm trong thư mục `en/` và nên được cập nhật song song khi nội dung chính có bản dịch.
+- Bản tiếng Anh nằm trong thư mục `en/` và được biên tập thủ công song song với bản Việt. `scripts/build-english.mjs` chỉ kiểm tra cặp trang, canonical và hreflang, không dịch hoặc ghi đè file HTML.
 - Khi thêm trang mới, cập nhật sitemap, `llms.txt`, search index trong `assets/js/site.js`, các link liên quan trên index nếu cần.
 - Nguồn máy đọc gồm `llms.txt`, `llms-full.txt` và `entity.json`. Khi đổi danh tính, trang chính, AEO hoặc GEO thì kiểm tra ba file này cùng nhau.
 
@@ -114,7 +114,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 ## Quy trình kiểm tra trước khi bàn giao
 
 - Chạy `node --check assets/js/site.js` sau khi sửa JavaScript.
-- Nếu sửa script build tiếng Anh, chạy `node --check scripts/build-english.mjs`.
+- Khi đổi cặp trang Việt - Anh hoặc sửa script kiểm tra, chạy `node scripts/build-english.mjs` và `node --check scripts/build-english.mjs`.
 - Chạy `rg -n "tui|NhanAZ.io.vn"` khi thay đổi nội dung tiếng Việt hoặc domain.
 - Khi sửa cách gọi tên chủ website, rà lại để không còn tên ngắn một âm tiết đứng riêng trong nội dung, search index, `llms.txt`, `llms-full.txt` và `entity.json`.
 - Khi sửa JSON-LD hoặc `entity.json`, parse JSON trước khi bàn giao.

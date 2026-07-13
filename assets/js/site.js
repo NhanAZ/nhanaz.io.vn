@@ -1052,6 +1052,11 @@ const initArticleComments = () => {
 
     frame.dataset.commentsWatched = "true";
     frame.addEventListener("load", markCommentsLoaded, { once: true });
+    window.setTimeout(() => {
+      if (frame.isConnected) {
+        markCommentsLoaded();
+      }
+    }, 1600);
   });
 
   const handleGiscusMessage = (event) => {
@@ -1137,8 +1142,12 @@ const initArticleComments = () => {
 
 const writeClipboard = async (value) => {
   if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(value);
-    return;
+    try {
+      await navigator.clipboard.writeText(value);
+      return;
+    } catch {
+      // Some browsers expose the API but still deny writes. Fall back below.
+    }
   }
 
   const field = document.createElement("textarea");
@@ -1147,9 +1156,18 @@ const writeClipboard = async (value) => {
   field.style.position = "fixed";
   field.style.top = "-999px";
   document.body.append(field);
-  field.select();
-  document.execCommand("copy");
-  field.remove();
+
+  let copied = false;
+  try {
+    field.select();
+    copied = document.execCommand("copy");
+  } finally {
+    field.remove();
+  }
+
+  if (!copied) {
+    throw new Error("Clipboard write failed");
+  }
 };
 
 const initCodeBlocks = () => {

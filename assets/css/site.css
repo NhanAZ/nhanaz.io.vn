@@ -2543,7 +2543,8 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
   text-align: center;
 }
 
-.not-found strong {
+.not-found h1 {
+  margin: 0;
   font-size: clamp(84px, 12vw, 130px);
   font-weight: 500;
   letter-spacing: -0.08em;
