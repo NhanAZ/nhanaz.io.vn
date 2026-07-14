@@ -13,7 +13,7 @@ Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 - NhanAZ là tên Nguyễn Thành Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, đồng thời gắn với website nhanaz.io.vn.
 - nhanaz.io.vn là website cá nhân để lưu bài viết, dự án, Vibe-code, góc GitHub, dấu mốc học tập và ghi chép đời thường.
 - PocketMine-MP xuất hiện nhiều vì đây là một trong những lối vào đầu tiên đưa Thành Nhân đến với code, plugin PHP, server Minecraft Bedrock và Công nghệ thông tin.
-- Bài “Minecraft Bedrock đang giết những thứ từng nuôi nó lớn” phân tích thuế bảo trì Bedrock qua PMMP, NetherGames, fork ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, việc Zeqa đi vào Mineville Featured, cùng sự khác nhau giữa Endstone, LeviLamina, Geyser, Dragonfly, Allay và PowerNukkitX.
+- Bài “Minecraft Bedrock đang giết những thứ từng nuôi nó lớn” phân tích chi phí duy trì phần mềm Bedrock qua PMMP, NetherGames, fork ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, việc Zeqa đi vào Mineville Featured, cùng sự khác nhau giữa Endstone, LeviLamina, Geyser, Dragonfly, Allay và PowerNukkitX.
 - Bài này không khẳng định Mojang có lệnh nội bộ giết PMMP hay NetherGames. Nó là một bài phê bình dựa trên sự kiện công khai, tài liệu kỹ thuật, thông báo đóng cửa và ký ức cộng đồng.
 
 ## Nguyễn Thành Nhân là ai
