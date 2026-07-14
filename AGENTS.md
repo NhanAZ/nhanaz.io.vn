@@ -73,6 +73,11 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - AEO nên dựa vào câu trả lời ngắn, nội dung thật trên trang, JSON-LD khớp với phần người đọc thấy và `llms.txt`. Không nhồi từ khóa hoặc viết giọng bot.
 - Các câu trả lời ngắn trên trang chủ nằm trong `<details>` gần cuối trang để không chen ngang phần kể chuyện. Có thể thu gọn mặc định, nhưng nội dung khi mở phải khớp với `FAQPage` JSON-LD và bản tiếng Anh.
 - GEO nên làm cho trang dễ được trích dẫn bằng nguồn rõ, entity map, `llms-full.txt`, link canonical và nội dung có ngữ cảnh. Tránh mọi mẹo thao túng câu trả lời AI.
+- Sitemap chỉ chứa URL chuẩn, công khai, trả về `200` và được phép index. Không đưa URL có query, hash, redirect, trang 404, `robots.txt` hoặc các URL phục vụ nội bộ vào `sitemap.xml`.
+- Khi nội dung thực của một bài hoặc trang có `dateModified` thay đổi, cập nhật `lastmod` của đúng URL trong `sitemap.xml` cùng ngày. Không đổi `lastmod` chỉ vì cache-bust, format hoặc thay đổi không ảnh hưởng nội dung.
+- SearchAction với URL mẫu `?q={search_term_string}` có thể tạo một dòng “trang thay thế có thẻ chính tắc thích hợp” trong Google Search Console. Đây là hành vi bình thường nếu query URL canonical về trang gốc, không xóa SearchAction chỉ để làm đẹp báo cáo.
+- Báo cáo lập chỉ mục tổng hợp trong Google Search Console có độ trễ. Khi cần kết luận trạng thái một URL, dùng URL Inspection làm nguồn hiện trạng trước khi sửa nội dung hoặc gửi yêu cầu index.
+- Trong Google Search Console chỉ gửi `https://nhanaz.io.vn/sitemap.xml` dưới dạng sitemap. `robots.txt` chỉ khai báo đường dẫn tới sitemap, còn trang chủ và `robots.txt` không phải sitemap để gửi. Chỉ xóa submission hoặc gửi yêu cầu index khi người dùng đã cho phép thao tác đó.
 - Link preview mặc định của site nằm ở `assets/images/web-preview.png`, kích thước 1200x630, dùng cho `og:image` và `twitter:image`.
 - Structured data nên dùng bộ ảnh preview nhiều tỉ lệ cho Google, gồm `assets/images/web-preview-16x9.png` 1200x675, `assets/images/web-preview-4x3.png` 1200x900 và `assets/images/web-preview-1x1.png` 1200x1200 trong mảng JSON-LD `image` khi trang dùng ảnh preview mặc định.
 - Nếu sau này có preview riêng cho một bài viết, đặt ảnh trong `assets/images/`, ưu tiên có đủ bản 1200x630 cho social preview và các bản 16:9, 4:3, 1:1 cho JSON-LD, rồi cập nhật đồng bộ `og:image`, `twitter:image`, `og:image:width`, `og:image:height`, `og:image:alt` và JSON-LD `image` của đúng trang đó. Không thay ảnh chân dung `portrait.png` trong `Person` schema nếu trang đang mô tả Nguyễn Thành Nhân.
@@ -119,6 +124,8 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Chạy `rg -n "tui|NhanAZ.io.vn"` khi thay đổi nội dung tiếng Việt hoặc domain.
 - Khi sửa cách gọi tên chủ website, rà lại để không còn tên ngắn một âm tiết đứng riêng trong nội dung, search index, `llms.txt`, `llms-full.txt` và `entity.json`.
 - Khi sửa JSON-LD hoặc `entity.json`, parse JSON trước khi bàn giao.
+- Khi sửa HTML public, metadata, JSON-LD, `robots.txt` hoặc `sitemap.xml`, chạy `node scripts/check-seo.mjs`. Script kiểm tra URL sitemap, indexability, canonical, hreflang, robots, coverage trang public và sự khớp nhau giữa JSON-LD `dateModified` với sitemap `lastmod`.
+- Sau khi người dùng yêu cầu push một thay đổi liên quan SEO, AEO, GEO hoặc sitemap, chờ deployment rồi chạy `node scripts/check-seo.mjs --live`. Nếu có quyền truy cập Search Console, rà lại danh sách sitemap chỉ còn sitemap chuẩn trạng thái thành công, sau đó dùng URL Inspection cho từng URL đang nghi ngờ thay vì suy luận từ số tổng hợp.
 - Chạy `git diff --check` để bắt lỗi whitespace.
 - Khi sửa màu, component dùng nền, header, navigation, form, loader, code hoặc embed, kiểm tra cả light mode và dark mode ở desktop lẫn mobile. Bài viết văn bản thông thường không cần thêm CSS riêng cho dark mode.
 - Mở local bằng static server nếu thay đổi layout, filter, search, code block, TOC bài viết hoặc embed.
