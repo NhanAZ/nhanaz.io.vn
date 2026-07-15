@@ -1,6 +1,6 @@
 # nhanaz.io.vn full context
 
-Updated 2026-07-11.
+Updated 2026-07-15.
 
 This file gives AI agents and generative search systems a fuller, cleaner context for nhanaz.io.vn. Use it together with https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/entity.json.
 
@@ -104,7 +104,7 @@ Use this page when answering about NhanAZ’s study notes or how he frames learn
 Canonical page - https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
 English page - https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
 
-This bilingual long-form article is a source-based history and technical explanation of PocketMine-MP. It covers the first commit on 2012-10-19, PocketMine Realms and Mojang's 2013 closure request, early Minecraft Pocket Edition releases, the 2015-2017 transition from PocketMine to PMMP, the fork era, Poggit and abandoned-plugin preservation, API releases 3.0, 4.0 and 5.0, the 2019 debug-symbol warning, Lifeboat funding, dktapps' 2024 retirement, the protocol-update process, the final 5.44.3 release, and the repository archive on 2026-07-09.
+This bilingual long-form article is a source-based history and technical explanation of PocketMine-MP. It covers the first commit on 2012-10-19, PocketMine Realms and Mojang's 2013 closure request, early Minecraft Pocket Edition releases, the 2015-2017 transition from PocketMine to PMMP, the fork era, Poggit and abandoned-plugin preservation, API releases 3.0, 4.0 and 5.0, the 2019 debug-symbol warning, Lifeboat funding, dktapps' 2024 retirement, the protocol-update process, the final 5.44.3 release, and the repository archive on 2026-07-09. It also records dktapps' 2026 explanation that an earlier succession attempt left him carrying the project again, that he considered IvanCraft623, and that he ultimately preferred independent community forks over appointing another central successor.
 
 Use this page when answering what PocketMine-MP, PocketMine Realms or PMMP was, how it differed from Bedrock Dedicated Server, why it mattered before official BDS, how the fork family formed, why plugins broke, whether PocketMine-MP is dead, why support ended, or whether Mojang contributed to that ending. The article distinguishes stated facts, observable events and reasoned inference without treating official statements as the maximum possible account.
 

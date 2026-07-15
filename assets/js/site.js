@@ -609,8 +609,27 @@ const captureLanguageReadingPosition = (targetPath) => {
     }
   });
 
-  const sectionTop = sectionIndex >= 0 ? getDocumentTop(headings[sectionIndex]) : proseTop;
-  const sectionBottom = headings[sectionIndex + 1] ? getDocumentTop(headings[sectionIndex + 1]) : proseBottom;
+  const encodedHashId = window.location.hash.replace(/^#/, "");
+  const hashId = typeof decodeURIComponent === "function"
+    ? decodeURIComponent(encodedHashId)
+    : encodedHashId;
+  const hashSectionIndex = hashId
+    ? headings.findIndex((heading) => heading.id === hashId)
+    : -1;
+  const hashSectionTop = hashSectionIndex >= 0 ? getDocumentTop(headings[hashSectionIndex]) : 0;
+  const hashSectionBottom = hashSectionIndex >= 0 && headings[hashSectionIndex + 1]
+    ? getDocumentTop(headings[hashSectionIndex + 1])
+    : proseBottom;
+  const hashLead = Math.max(160, window.innerHeight * 0.6);
+  const hashIsCurrent = hashSectionIndex >= 0
+    && anchorY + hashLead >= hashSectionTop
+    && anchorY < hashSectionBottom;
+  const resolvedSectionIndex = hashIsCurrent ? hashSectionIndex : sectionIndex;
+
+  const sectionTop = resolvedSectionIndex >= 0 ? getDocumentTop(headings[resolvedSectionIndex]) : proseTop;
+  const sectionBottom = headings[resolvedSectionIndex + 1]
+    ? getDocumentTop(headings[resolvedSectionIndex + 1])
+    : proseBottom;
 
   return {
     ...state,
@@ -619,7 +638,7 @@ const captureLanguageReadingPosition = (targetPath) => {
     itemTag: item?.tagName || "",
     itemProgress: clampReadingProgress((anchorY - itemTop) / itemHeight),
     sectionCount: headings.length,
-    sectionIndex,
+    sectionIndex: resolvedSectionIndex,
     sectionProgress: clampReadingProgress((anchorY - sectionTop) / Math.max(1, sectionBottom - sectionTop)),
     proseProgress: clampReadingProgress((anchorY - proseTop) / Math.max(1, proseBottom - proseTop)),
   };
@@ -628,6 +647,28 @@ const captureLanguageReadingPosition = (targetPath) => {
 const storeLanguageReadingPosition = (targetPath) => {
   try {
     const state = captureLanguageReadingPosition(targetPath);
+    const prose = document.querySelector(".article-layout .prose");
+    const items = prose ? getProseItems(prose) : [];
+    const headings = items.filter((element) => element.matches("h2, h3"));
+    const referenceY = getReadingReferenceY();
+    const anchorY = window.scrollY + referenceY;
+    const hashId = window.location.hash.replace(/^#/, "");
+    const hashIndex = headings.findIndex((heading) => heading.id === hashId);
+    const hashTop = hashIndex >= 0 ? getDocumentTop(headings[hashIndex]) : 0;
+    const hashBottom = hashIndex >= 0 && headings[hashIndex + 1]
+      ? getDocumentTop(headings[hashIndex + 1])
+      : (prose ? getDocumentTop(prose) + prose.getBoundingClientRect().height : 0);
+
+    const hashLead = Math.max(160, window.innerHeight * 0.6);
+
+    if (hashIndex >= 0 && anchorY + hashLead >= hashTop && anchorY < hashBottom) {
+      state.sectionCount = headings.length;
+      state.sectionIndex = hashIndex;
+      state.itemCount = -1;
+      state.itemIndex = -1;
+      state.itemTag = "";
+    }
+
     window.sessionStorage.setItem(LANGUAGE_READING_POSITION_KEY, JSON.stringify(state));
   } catch {
     // Language switching still works when browser storage is unavailable.
@@ -1301,7 +1342,10 @@ const initArticleToc = () => {
   });
 
   const scrollToCurrentHash = () => {
-    const id = decodeURIComponent(location.hash.slice(1));
+    const encodedId = location.hash.slice(1);
+    const id = typeof decodeURIComponent === "function"
+      ? decodeURIComponent(encodedId)
+      : encodedId;
     const target = id ? document.getElementById(id) : null;
 
     if (!target || !headings.includes(target)) {
