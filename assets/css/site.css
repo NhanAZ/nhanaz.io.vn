@@ -1999,6 +1999,16 @@ a.project-row:hover {
   border-top: 1px solid var(--line);
 }
 
+.article-view-count {
+  min-height: calc(1em + 18px);
+  font-variant-numeric: tabular-nums;
+}
+
+.article-view-count.is-loading,
+.article-view-count.has-error {
+  color: var(--muted);
+}
+
 .article-title {
   display: flex;
   flex-direction: column;
@@ -3151,6 +3161,10 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
     margin-top: 28px;
+  }
+
+  .article-meta ul.has-view-count {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .article-meta li {

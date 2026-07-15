@@ -530,6 +530,12 @@ const ARTICLE_COMMENTS_CONFIG = {
     dark: "https://nhanaz.io.vn/assets/css/giscus-dark.css?v=20260711-01",
   },
 };
+const ARTICLE_VIEWS_CONFIG = {
+  endpoint: "https://api.counterapi.dev/v1",
+  namespace: "nhanaz-io-vn",
+  revisitWindow: 8 * 60 * 60 * 1000,
+  productionHosts: new Set(["nhanaz.io.vn", "www.nhanaz.io.vn"]),
+};
 
 const getArticleCommentsTheme = () => {
   const theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
@@ -1533,6 +1539,143 @@ const initArticleComments = () => {
   embed.append(giscusTarget);
 };
 
+const initArticleViews = () => {
+  const metaList = document.querySelector("main > article > .article-header .article-meta ul");
+
+  if (!metaList || metaList.querySelector("[data-article-views]")) {
+    return;
+  }
+
+  const vietnameseAlternate = document.querySelector('link[rel="alternate"][hreflang="vi"]');
+  const canonical = document.querySelector('link[rel="canonical"]');
+  let articlePath;
+
+  try {
+    articlePath = new URL(
+      vietnameseAlternate?.href || canonical?.href || window.location.href,
+      window.location.origin,
+    ).pathname;
+  } catch {
+    return;
+  }
+
+  const articleMatch = articlePath.match(/^\/posts\/([^/]+)\/?$/);
+
+  if (!articleMatch) {
+    return;
+  }
+
+  const counterName = `article-${articleMatch[1].toLowerCase().replace(/[^a-z0-9-]+/g, "-")}`;
+  const storageKey = `nhanaz-article-view-${counterName}`;
+  const item = document.createElement("li");
+  const numberFormat = new Intl.NumberFormat(isEnglish ? "en-US" : "vi-VN");
+
+  const renderCount = (count) => {
+    const label = isEnglish
+      ? (count === 1 ? "view" : "views")
+      : "lượt xem";
+
+    item.textContent = `${numberFormat.format(count)} ${label}`;
+    item.classList.remove("is-loading", "has-error");
+    item.setAttribute(
+      "aria-label",
+      isEnglish ? `This article has ${count} views` : `Bài viết này có ${count} lượt xem`,
+    );
+    item.removeAttribute("role");
+    item.removeAttribute("aria-live");
+  };
+
+  const renderError = () => {
+    item.textContent = isEnglish ? "Views unavailable" : "Chưa đếm được";
+    item.classList.remove("is-loading");
+    item.classList.add("has-error");
+    item.setAttribute(
+      "aria-label",
+      isEnglish ? "View count is currently unavailable" : "Bộ đếm lượt xem hiện chưa khả dụng",
+    );
+  };
+
+  const readLastVisit = () => {
+    try {
+      return Number(window.localStorage.getItem(storageKey)) || 0;
+    } catch {
+      return 0;
+    }
+  };
+
+  const writeLastVisit = (timestamp) => {
+    try {
+      window.localStorage.setItem(storageKey, String(timestamp));
+    } catch {
+      // Counting still works when storage is unavailable.
+    }
+  };
+
+  const loadCount = async () => {
+    const now = Date.now();
+    const lastVisit = readLastVisit();
+    const isRecentVisit = lastVisit > 0 && now - lastVisit < ARTICLE_VIEWS_CONFIG.revisitWindow;
+    const shouldIncrement = ARTICLE_VIEWS_CONFIG.productionHosts.has(window.location.hostname)
+      && !isRecentVisit
+      && !navigator.webdriver;
+    const counterUrl = [
+      ARTICLE_VIEWS_CONFIG.endpoint,
+      encodeURIComponent(ARTICLE_VIEWS_CONFIG.namespace),
+      encodeURIComponent(counterName),
+    ].join("/");
+    const requestUrl = shouldIncrement ? `${counterUrl}/up` : `${counterUrl}/`;
+
+    try {
+      const response = await fetch(requestUrl, {
+        cache: "no-store",
+        mode: "cors",
+      });
+      const payload = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 400 && payload?.message === "record not found") {
+          renderCount(0);
+          return;
+        }
+
+        throw new Error(`View counter returned ${response.status}`);
+      }
+
+      const count = Number(payload.count);
+
+      if (!Number.isFinite(count) || count < 0) {
+        throw new Error("View counter returned an invalid count");
+      }
+
+      if (shouldIncrement) {
+        writeLastVisit(now);
+      }
+
+      renderCount(count);
+    } catch {
+      renderError();
+    }
+  };
+
+  item.className = "article-view-count is-loading";
+  item.dataset.articleViews = "";
+  item.textContent = isEnglish ? "Counting views..." : "Đang đếm lượt xem...";
+  item.setAttribute("role", "status");
+  item.setAttribute("aria-live", "polite");
+  metaList.classList.add("has-view-count");
+  metaList.append(item);
+
+  if (document.visibilityState === "hidden") {
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") {
+        loadCount();
+      }
+    }, { once: true });
+  } else {
+    loadCount();
+  }
+};
+
 const writeClipboard = async (value) => {
   if (navigator.clipboard && window.isSecureContext) {
     try {
@@ -1672,5 +1815,6 @@ initCanvaEmbeds();
 initCodeBlocks();
 initArticleToc();
 restoreLanguageReadingPosition();
+initArticleViews();
 initArticleComments();
 initMotion();
