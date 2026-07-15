@@ -798,6 +798,63 @@ const restoreLanguageReadingPosition = () => {
   }
 };
 
+const initArticleReadingProgress = () => {
+  const prose = document.querySelector("main > article > .article-layout .prose");
+
+  if (!prose || document.querySelector("[data-article-reading-progress]")) {
+    return;
+  }
+
+  const progress = document.createElement("div");
+  const fill = document.createElement("span");
+  let frame = 0;
+
+  progress.className = "article-reading-progress";
+  progress.dataset.articleReadingProgress = "";
+  progress.setAttribute("role", "progressbar");
+  progress.setAttribute("aria-label", isEnglish ? "Article reading progress" : "Tiến độ đọc bài viết");
+  progress.setAttribute("aria-valuemin", "0");
+  progress.setAttribute("aria-valuemax", "100");
+  progress.setAttribute("aria-valuenow", "0");
+  fill.setAttribute("aria-hidden", "true");
+  progress.append(fill);
+  document.body.append(progress);
+
+  const sync = () => {
+    frame = 0;
+
+    const proseTop = getDocumentTop(prose);
+    const proseBottom = proseTop + prose.getBoundingClientRect().height;
+    const referenceY = getReadingReferenceY();
+    const start = proseTop - referenceY;
+    const end = proseBottom - referenceY;
+    const value = end > start
+      ? clampReadingProgress((window.scrollY - start) / (end - start))
+      : 1;
+    const percent = Math.round(value * 100);
+
+    fill.style.transform = `scaleX(${value})`;
+    progress.setAttribute("aria-valuenow", String(percent));
+  };
+
+  const queueSync = () => {
+    if (frame) {
+      return;
+    }
+
+    frame = window.requestAnimationFrame(sync);
+  };
+
+  sync();
+  window.addEventListener("scroll", queueSync, { passive: true });
+  window.addEventListener("resize", queueSync);
+  window.addEventListener("load", queueSync, { once: true });
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(queueSync).catch(() => {});
+  }
+};
+
 const initLanguageSwitch = () => {
   const navigation = document.querySelector(".site-nav");
   if (!navigation || navigation.querySelector(".language-switch")) {
@@ -1815,6 +1872,7 @@ initCanvaEmbeds();
 initCodeBlocks();
 initArticleToc();
 restoreLanguageReadingPosition();
+initArticleReadingProgress();
 initArticleViews();
 initArticleComments();
 initMotion();
