@@ -1496,6 +1496,26 @@ a.project-row:hover {
   white-space: nowrap;
 }
 
+.entry--pinned {
+  background: var(--soft);
+}
+
+.entry--pinned .entry-type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.entry-pin {
+  padding: 3px 5px;
+  border: 1px solid currentColor;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
 .project-facts .text-link {
   font-size: inherit;
   font-weight: 600;
