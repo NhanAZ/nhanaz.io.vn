@@ -1463,6 +1463,30 @@ const initArticleToc = () => {
   window.addEventListener("hashchange", scrollToCurrentHash);
 };
 
+const initEntryPriorities = () => {
+  document.querySelectorAll("[data-entry-priority-list]").forEach((list) => {
+    const entries = Array.from(list.querySelectorAll(":scope > .entry"));
+
+    const sortedEntries = entries
+      .map((entry, index) => {
+        const priority = Number.parseInt(entry.dataset.priority || "0", 10);
+        const publishedAt = Date.parse(entry.querySelector("time")?.dateTime || "");
+
+        return {
+          entry,
+          index,
+          priority: Number.isFinite(priority) ? priority : 0,
+          publishedAt: Number.isFinite(publishedAt) ? publishedAt : 0,
+        };
+      })
+      .sort((a, b) =>
+        b.priority - a.priority || b.publishedAt - a.publishedAt || a.index - b.index,
+      );
+
+    sortedEntries.forEach(({ entry }) => list.append(entry));
+  });
+};
+
 const initArticleComments = () => {
   const articleLayout = document.querySelector("main > article > .article-layout");
 
@@ -1868,6 +1892,7 @@ const initMotion = () => {
 initLanguageSwitch();
 initSiteSearch();
 initAchievementFilters();
+initEntryPriorities();
 initCanvaEmbeds();
 initCodeBlocks();
 initArticleToc();
