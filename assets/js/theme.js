@@ -3,13 +3,11 @@
 
   const root = document.documentElement;
   const storageKey = "nhanaz-color-theme";
-  const languageStorageKey = "nhanaz-language";
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
   const themeColors = {
     light: "#ffffff",
     dark: "#11110f",
   };
-  const supportedLanguages = new Set(["vi", "en"]);
 
   const readStoredTheme = () => {
     try {
@@ -28,62 +26,7 @@
     }
   };
 
-  const readStoredLanguage = () => {
-    try {
-      const value = window.localStorage.getItem(languageStorageKey);
-      return supportedLanguages.has(value) ? value : null;
-    } catch {
-      return null;
-    }
-  };
-
-  const writeStoredLanguage = (language) => {
-    if (!supportedLanguages.has(language)) {
-      return;
-    }
-
-    try {
-      window.localStorage.setItem(languageStorageKey, language);
-    } catch {
-      // The current navigation still works when storage is unavailable.
-    }
-  };
-
-  const getPageLanguage = () => root.lang.toLowerCase().startsWith("en") ? "en" : "vi";
-
-  const getPreferredLanguage = () => {
-    const languages = Array.isArray(navigator.languages) && navigator.languages.length
-      ? navigator.languages
-      : [navigator.language || navigator.userLanguage || ""];
-
-    return languages
-      .map((language) => language.toLowerCase().split("-")[0])
-      .find((language) => supportedLanguages.has(language)) || "en";
-  };
-
-  const getAlternateLanguageUrl = (language) => {
-    const alternate = document.querySelector(`link[rel="alternate"][hreflang="${language}"]`);
-    return alternate ? new URL(alternate.getAttribute("href"), window.location.origin) : null;
-  };
-
   const getSystemTheme = () => systemTheme.matches ? "dark" : "light";
-
-  const applyPreferredLanguage = () => {
-    const preferredLanguage = readStoredLanguage() || getPreferredLanguage();
-    const currentLanguage = getPageLanguage();
-
-    if (preferredLanguage === currentLanguage) {
-      return;
-    }
-
-    const alternateUrl = getAlternateLanguageUrl(preferredLanguage);
-
-    if (!alternateUrl || alternateUrl.pathname === window.location.pathname) {
-      return;
-    }
-
-    window.location.replace(`${alternateUrl.pathname}${alternateUrl.search}${alternateUrl.hash}`);
-  };
 
   const updateThemeColor = (theme) => {
     const meta = document.querySelector('meta[name="theme-color"]');
@@ -109,7 +52,6 @@
     }
   };
 
-  applyPreferredLanguage();
   applyTheme(readStoredTheme() || getSystemTheme());
 
   const handleSystemThemeChange = () => {
@@ -158,10 +100,6 @@
     syncButton();
     const languageSwitch = navigation.querySelector(".language-switch");
     if (languageSwitch) {
-      languageSwitch.addEventListener("click", () => {
-        const targetLanguage = languageSwitch.lang?.toLowerCase().startsWith("en") ? "en" : "vi";
-        writeStoredLanguage(targetLanguage);
-      });
       languageSwitch.after(button);
     } else {
       navigation.append(button);

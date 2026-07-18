@@ -242,6 +242,14 @@ const validateRobots = (robots, label) => {
   }
 };
 
+const validateLanguageDelivery = () => {
+  const themeScript = fs.readFileSync(path.join(root, "assets/js/theme.js"), "utf8");
+
+  if (/\b(?:window\.)?location\.(?:assign|replace)\s*\(/.test(themeScript)) {
+    fail("assets/js/theme.js must not redirect visitors to an alternate language URL");
+  }
+};
+
 const readLocalPage = (relativePath) => {
   const filePath = path.join(root, relativePath);
   if (!fs.existsSync(filePath)) {
@@ -284,6 +292,7 @@ const robots = fs.readFileSync(path.join(root, "robots.txt"), "utf8");
 const entries = parseSitemap(sitemap, "sitemap.xml");
 
 validateRobots(robots, "robots.txt");
+validateLanguageDelivery();
 await validateSitemapEntries(entries, (relativePath) => readLocalPage(relativePath), "local");
 validateLocalCoverage(entries);
 
