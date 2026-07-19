@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Refresh the deployed snapshot daily at 00:00 in Vietnam without creating a commit.
+  schedule:
+    - cron: "0 17 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -35,8 +39,10 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 22
+      - name: Refresh article view snapshot
+        run: node scripts/update-article-views.mjs
       - name: Validate JavaScript
-        run: node --check assets/js/site.js && node --check scripts/build-english.mjs
+        run: node --check assets/js/site.js && node --check scripts/build-english.mjs && node --check scripts/update-article-views.mjs
       - name: Validate Vietnamese-English pages
         run: node scripts/build-english.mjs
       - name: Setup Pages

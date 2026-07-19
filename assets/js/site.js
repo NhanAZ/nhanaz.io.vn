@@ -532,6 +532,7 @@ const ARTICLE_COMMENTS_CONFIG = {
 };
 const ARTICLE_VIEWS_CONFIG = {
   endpoint: "https://api.counterapi.dev/v1",
+  snapshot: "/assets/data/article-stats.json",
   namespace: "nhanaz-io-vn",
   revisitWindow: 8 * 60 * 60 * 1000,
   productionHosts: new Set(["nhanaz.io.vn", "www.nhanaz.io.vn"]),
@@ -1651,17 +1652,28 @@ const initArticleViews = () => {
   const item = document.createElement("li");
   const numberFormat = new Intl.NumberFormat(isEnglish ? "en-US" : "vi-VN");
 
-  const renderCount = (count) => {
+  const renderCount = (count, { isSnapshot = false } = {}) => {
     const label = isEnglish
-      ? (count === 1 ? "view" : "views")
+      ? (count === 1 && !isSnapshot ? "view" : "views")
       : "lượt xem";
 
-    item.textContent = `${numberFormat.format(count)} ${label}`;
+    item.textContent = `${numberFormat.format(count)}${isSnapshot ? "+" : ""} ${label}`;
     item.classList.remove("is-loading", "has-error");
     item.setAttribute(
       "aria-label",
-      isEnglish ? `This article has ${count} views` : `Bài viết này có ${count} lượt xem`,
+      isSnapshot
+        ? (isEnglish
+          ? `This article had at least ${count} views in the latest daily snapshot`
+          : `Bài viết này có ít nhất ${count} lượt xem trong bản đếm gần nhất`)
+        : (isEnglish ? `This article has ${count} views` : `Bài viết này có ${count} lượt xem`),
     );
+    if (isSnapshot) {
+      item.title = isEnglish
+        ? "Latest daily snapshot. Live counting may be blocked by the browser."
+        : "Bản đếm gần nhất trong ngày. Trình duyệt có thể đang chặn bộ đếm trực tiếp.";
+    } else {
+      item.removeAttribute("title");
+    }
     item.removeAttribute("role");
     item.removeAttribute("aria-live");
   };
@@ -1690,6 +1702,25 @@ const initArticleViews = () => {
     } catch {
       // Counting still works when storage is unavailable.
     }
+  };
+
+  const loadSnapshotCount = async () => {
+    const response = await fetch(ARTICLE_VIEWS_CONFIG.snapshot, {
+      cache: "no-cache",
+    });
+
+    if (!response.ok) {
+      throw new Error(`View snapshot returned ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const count = Number(payload?.counts?.[counterName]);
+
+    if (!Number.isSafeInteger(count) || count < 0) {
+      throw new Error("View snapshot does not contain this article");
+    }
+
+    renderCount(count, { isSnapshot: true });
   };
 
   const loadCount = async () => {
@@ -1734,7 +1765,11 @@ const initArticleViews = () => {
 
       renderCount(count);
     } catch {
-      renderError();
+      try {
+        await loadSnapshotCount();
+      } catch {
+        renderError();
+      }
     }
   };
 
