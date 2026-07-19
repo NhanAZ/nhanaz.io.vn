@@ -104,9 +104,9 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
 - Critical essay on Minecraft Bedrock closing off technical information, with dktapps' first-hand Discord account of Lifeboat, NDAs, debug symbols, the move to Java, PocketMine-MP ending support, NetherGames closing, and Stewart Brand's "Information wants to be free.": https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/
-- Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/dich-nguoc-zalo-pc-backup/
-- Complete PocketMine-MP history from PocketMine Realms, Shoghi, the fork era, PMMP, Poggit and major APIs to Bedrock pressure, the 2026 repository archive, a failed succession attempt and dktapps' decision to let the community fork rather than wait for an appointed heir: https://nhanaz.io.vn/en/posts/pocketmine-mp-la-gi/
-- Personal article on NhanAZ’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/hanh-trinh-minecraft-tu-2015/
+- Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/reverse-engineering-zalo-pc-backup/
+- Complete PocketMine-MP history from PocketMine Realms, Shoghi, the fork era, PMMP, Poggit and major APIs to Bedrock pressure, the 2026 repository archive, a failed succession attempt and dktapps' decision to let the community fork rather than wait for an appointed heir: https://nhanaz.io.vn/en/posts/what-is-pocketmine-mp/
+- Personal article on NhanAZ’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/minecraft-since-2015/
 - Personal article collecting questions NhanAZ keeps carrying through one lifetime, from ethics, life, and meaning to time, quantum physics, black holes, and the universe: https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/
 - Learning note on writing a stronger Party-awareness course reflection paper through clear prompts, careful theory, concrete personal reflection, and readable presentation - https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/
 - Milestones and achievements: https://nhanaz.io.vn/en/achievements/

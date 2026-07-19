@@ -48,6 +48,8 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Dấu mốc và thành tích ở `achievements/index.html`.
 - Giới thiệu ở `about/index.html`.
 - Bản tiếng Anh nằm trong thư mục `en/` và được biên tập thủ công song song với bản Việt. `scripts/build-english.mjs` chỉ kiểm tra cặp trang, canonical và hreflang, không dịch hoặc ghi đè file HTML.
+- Slug của bài tiếng Anh trong `en/posts/` phải được viết bằng tiếng Anh rõ nghĩa, không dùng lại slug tiếng Việt chỉ để hai thư mục trông giống nhau.
+- Khi đổi slug đã public, giữ URL cũ bằng một trang chuyển hướng `noindex`, đặt canonical về URL mới, bảo toàn query và hash bằng JavaScript, đồng thời bỏ URL cũ khỏi sitemap và cập nhật toàn bộ link nội bộ, hreflang, search index cùng nguồn máy đọc.
 - Khi thêm trang mới, cập nhật sitemap, `llms.txt`, search index trong `assets/js/site.js`, các link liên quan trên index nếu cần.
 - Nguồn máy đọc gồm `llms.txt`, `llms-full.txt` và `entity.json`. Khi đổi danh tính, trang chính, AEO hoặc GEO thì kiểm tra ba file này cùng nhau.
 

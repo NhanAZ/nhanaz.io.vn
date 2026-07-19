@@ -49,6 +49,31 @@ const getSingle = (values, description) => {
   return values[0];
 };
 
+const getRedirectTarget = (html, label) => {
+  const refreshValues = getMetaTags(html)
+    .filter((tag) => tag["http-equiv"]?.toLowerCase() === "refresh")
+    .map((tag) => tag.content);
+
+  if (refreshValues.length === 0) {
+    return null;
+  }
+
+  const refresh = getSingle(refreshValues, `${label} refresh redirect`);
+  const match = refresh.match(/^\s*0\s*;\s*url=(.+?)\s*$/i);
+
+  if (!match) {
+    fail(`${label} must use an immediate refresh redirect`);
+  }
+
+  const target = new URL(match[1], baseUrl);
+
+  if (target.origin !== baseUrl || target.search || target.hash) {
+    fail(`${label} redirect target must be a clean ${baseUrl} URL`);
+  }
+
+  return target.href;
+};
+
 const routeToFile = (url) => {
   const parsed = new URL(url);
 
@@ -214,10 +239,42 @@ const validateLocalCoverage = (entries) => {
     const metadata = getPageMetadata(html, relativePath);
     const expectedUrl = fileToUrl(relativePath);
     const is404 = relativePath === "404.html" || relativePath === "en/404.html";
+    const redirectTarget = getRedirectTarget(html, relativePath);
+    const isRedirect = Boolean(redirectTarget);
     const isNoindex = metadata.robots.toLowerCase().includes("noindex");
 
-    if (is404 !== isNoindex) {
-      fail(`${relativePath} must ${is404 ? "use" : "not use"} noindex`);
+    if ((is404 || isRedirect) !== isNoindex) {
+      fail(`${relativePath} must ${is404 || isRedirect ? "use" : "not use"} noindex`);
+    }
+
+    if (isRedirect) {
+      const targetPath = routeToFile(redirectTarget);
+
+      if (
+        !html.includes("window.location.search")
+        || !html.includes("window.location.hash")
+        || !html.includes("window.location.replace")
+      ) {
+        fail(`${relativePath} redirect must preserve query and hash with location.replace`);
+      }
+
+      if (metadata.canonical !== redirectTarget) {
+        fail(`${relativePath} redirect canonical must be ${redirectTarget}`);
+      }
+
+      if (!fs.existsSync(path.join(root, targetPath))) {
+        fail(`${relativePath} redirect target does not exist: ${redirectTarget}`);
+      }
+
+      if (!sitemapUrls.has(redirectTarget)) {
+        fail(`${relativePath} redirect target is missing from sitemap.xml: ${redirectTarget}`);
+      }
+
+      if (sitemapUrls.has(expectedUrl)) {
+        fail(`${relativePath} redirect URL must not appear in sitemap.xml`);
+      }
+
+      continue;
     }
 
     if (metadata.canonical !== expectedUrl) {

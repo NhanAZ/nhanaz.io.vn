@@ -330,7 +330,7 @@ const SITE_SEARCH_INDEX_EN = [
   {
     title: "Minecraft since 2015, before I knew what an IP was",
     type: "Writing",
-    url: "/en/posts/hanh-trinh-minecraft-tu-2015/",
+    url: "/en/posts/minecraft-since-2015/",
     date: "2026-07-01",
     excerpt: "From YouTube, Minecraft PE and MCPE Master to server lists, staff roles, command blocks, PocketMine-MP and Information Technology.",
     keywords: "Minecraft 2015 Minecraft PE MCPE Master Multiplayer Master Omlet Arcade FunCraft SurvivalCraft MineFRK FCA LOR PocketMine-MP PMMP server list command block Information Technology",
@@ -338,7 +338,7 @@ const SITE_SEARCH_INDEX_EN = [
   {
     title: "Hello internet, I rebuilt this little home",
     type: "Writing",
-    url: "/en/posts/chao-internet/",
+    url: "/en/posts/hello-internet/",
     date: "2026-06-29",
     excerpt: "The opening post for nhanaz.io.vn, my home on the internet.",
     keywords: "internet personal blog digital home",
@@ -346,7 +346,7 @@ const SITE_SEARCH_INDEX_EN = [
   {
     title: "Who does Zalo PC backup encryption protect?",
     type: "Technical writing",
-    url: "/en/posts/dich-nguoc-zalo-pc-backup/",
+    url: "/en/posts/reverse-engineering-zalo-pc-backup/",
     date: "2026-06-30",
     excerpt: "A technical look at .zl.zip, uin in Zalo process memory, AES-256-CBC, TAR, and the practical limits of backup encryption.",
     keywords: "NhanAZ Zalo PC Zalo backup reverse engineering application security AES-256-CBC ReadProcessMemory TAR digital forensics uin integrity",
@@ -354,7 +354,7 @@ const SITE_SEARCH_INDEX_EN = [
   {
     title: "What Is PocketMine-MP? Complete PMMP History, 2012-2026",
     type: "Writing",
-    url: "/en/posts/pocketmine-mp-la-gi/",
+    url: "/en/posts/what-is-pocketmine-mp/",
     date: "2026-06-30",
     excerpt: "Nearly fourteen years of PocketMine-MP, from Realms, Shoghi, forks and API rebuilds to Bedrock pressure, Mojang's role and the end of PMMP support.",
     keywords: "PocketMine-MP PMMP PocketMine Realms what is PocketMine PocketMine-MP history PocketMine-MP dead PMMP end of support Mojang Shoghi Cervantes shoghicp dktapps Dylan driesboy Minecraft Bedrock Minecraft Pocket Edition server plugin PHP Poggit API 2 API 3 API 4 API 5 Genisys ClearSky ImagicalMine Steadfast Lifeboat debugging symbols fork history official website",
