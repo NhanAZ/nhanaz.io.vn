@@ -1493,7 +1493,10 @@ a.project-row:hover {
 }
 
 .entry-type {
-  white-space: nowrap;
+  min-width: 0;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .entry--pinned {
@@ -2840,6 +2843,7 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
   }
 
   .entry-type,
+  .entry--pinned .entry-type,
   .read-time {
     display: none;
   }
