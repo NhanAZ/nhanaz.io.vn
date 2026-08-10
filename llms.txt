@@ -89,7 +89,7 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 - PocketMine-MP appears often because it was one of NhanAZ’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.
 - The article “Minecraft Bedrock is killing the things that helped it grow” analyzes Bedrock's maintenance tax through PMMP, NetherGames, ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, Zeqa's move into Featured Mineville, and the different architectures of Endstone, LeviLamina, Geyser, Dragonfly, Allay, and PowerNukkitX.
 - The article does not claim Mojang directly ordered PMMP or NetherGames to die. It is an opinionated critique based on public events, technical documentation, closure announcements, and community memory.
-- “A $1.50 ChatGPT Plus account does not come from nowhere” investigates cheap ChatGPT and Codex access, separating direct evidence from inference about account factories, trials, payment routes, pools, relays, and 9Router.
+- “A $1.50 ChatGPT Plus account does not come from nowhere” is NhanAZ’s personal investigation into cheap ChatGPT and Codex access, account factories, trials, payment routes, pools, relays, and 9Router.
 - The article does not claim every cheap account is hacked, carded, or routed through 9Router. It argues that several low-cost sources can coexist and that a router amplifies supply rather than creating accounts.
 
 ## Who is Nguyễn Thành Nhân

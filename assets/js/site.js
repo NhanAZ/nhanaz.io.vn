@@ -55,10 +55,10 @@ const SITE_SEARCH_INDEX_VI = [
   },
   {
     title: "ChatGPT Plus 40.000 đồng không tự nhiên mà có",
-    type: "Điều tra công nghệ",
+    type: "ChatGPT - Codex",
     url: "/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/",
     date: "2026-08-10",
-    excerpt: "Điều tra chuỗi nguồn hàng, tỷ lệ account chết, quota pool và vai trò thật sự của 9Router trong thị trường ChatGPT, Codex giá rẻ.",
+    excerpt: "Từ một account Plus 39.999 đồng được bảo hành ba giờ, mình lần theo nguồn hàng, account pool, 9Router và cái giá bị giấu sau một món hời.",
     keywords: "ChatGPT Plus giá rẻ tài khoản ChatGPT 40000 đồng Codex giá rẻ 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller bảo mật",
   },
   {
@@ -321,10 +321,10 @@ const SITE_SEARCH_INDEX_EN = [
   },
   {
     title: "A $1.50 ChatGPT Plus account does not come from nowhere",
-    type: "Technology investigation",
+    type: "ChatGPT - Codex",
     url: "/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/",
     date: "2026-08-10",
-    excerpt: "An investigation into batch supply, account attrition, quota pools and the real role of 9Router in the cheap ChatGPT and Codex market.",
+    excerpt: "I started with a $1.50 Plus account and a three-hour warranty, then followed its supply, account pools, 9Router, and the hidden cost of the bargain.",
     keywords: "cheap ChatGPT Plus cheap ChatGPT account cheap Codex 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller security",
   },
   {
