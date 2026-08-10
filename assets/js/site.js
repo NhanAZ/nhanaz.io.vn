@@ -54,12 +54,12 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free server độc lập",
   },
   {
-    title: "ChatGPT Plus 40.000 đồng không tự nhiên mà có",
+    title: "ChatGPT Plus 40.000 đồng chỉ bảo hành ba giờ, vì sao vẫn đông khách?",
     type: "ChatGPT - Codex",
     url: "/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/",
     date: "2026-08-10",
-    excerpt: "Từ một account Plus 39.999 đồng được bảo hành ba giờ, mình lần theo nguồn hàng, account pool, 9Router và cái giá bị giấu sau một món hời.",
-    keywords: "ChatGPT Plus giá rẻ tài khoản ChatGPT 40000 đồng Codex giá rẻ 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller bảo mật",
+    excerpt: "Vì sao account Plus 39.999 đồng chỉ bảo hành ba giờ vẫn bán được? Người bán chuyển rủi ro, người mua hợp thức hóa món hời và account pool giữ cái chợ tiếp tục chạy.",
+    keywords: "ChatGPT Plus giá rẻ tài khoản ChatGPT 40000 đồng bảo hành ba giờ vì sao vẫn mua Codex giá rẻ 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller đạo đức bảo mật",
   },
   {
     title: "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng",
@@ -320,12 +320,12 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free independent servers",
   },
   {
-    title: "A $1.50 ChatGPT Plus account does not come from nowhere",
+    title: "Why does a $1.50 ChatGPT Plus account with a three-hour warranty still sell?",
     type: "ChatGPT - Codex",
     url: "/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/",
     date: "2026-08-10",
-    excerpt: "I started with a $1.50 Plus account and a three-hour warranty, then followed its supply, account pools, 9Router, and the hidden cost of the bargain.",
-    keywords: "cheap ChatGPT Plus cheap ChatGPT account cheap Codex 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller security",
+    excerpt: "Why does a $1.50 Plus account with a three-hour warranty still sell? Sellers transfer risk, buyers rationalize the bargain, and account pools keep the market running.",
+    keywords: "cheap ChatGPT Plus three-hour warranty why buyers buy cheap ChatGPT account cheap Codex 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller ethics security",
   },
   {
     title: "A few notes for a better Party-awareness course reflection paper",
