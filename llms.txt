@@ -15,6 +15,8 @@ Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 - PocketMine-MP xuất hiện nhiều vì đây là một trong những lối vào đầu tiên đưa Thành Nhân đến với code, plugin PHP, server Minecraft Bedrock và Công nghệ thông tin.
 - Bài “Minecraft Bedrock đang giết những thứ từng nuôi nó lớn” phân tích chi phí duy trì phần mềm Bedrock qua PMMP, NetherGames, fork ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, việc Zeqa đi vào Mineville Featured, cùng sự khác nhau giữa Endstone, LeviLamina, Geyser, Dragonfly, Allay và PowerNukkitX.
 - Bài này không khẳng định Mojang có lệnh nội bộ giết PMMP hay NetherGames. Nó là một bài phê bình dựa trên sự kiện công khai, tài liệu kỹ thuật, thông báo đóng cửa và ký ức cộng đồng.
+- Bài “ChatGPT Plus 40.000 đồng không tự nhiên mà có” điều tra thị trường tài khoản và quota Codex giá rẻ, phân biệt bằng chứng trực tiếp với suy luận về account factory, trial, payment route, pool, relay và vai trò của 9Router.
+- Bài này không khẳng định mọi account giá rẻ đều bị hack, dùng thẻ đánh cắp hay chạy qua 9Router. Nó cho rằng nhiều nguồn giá vốn thấp có thể cùng tồn tại và router là lớp khuếch đại, không phải xưởng tạo account.
 
 ## Nguyễn Thành Nhân là ai
 
@@ -33,6 +35,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Vibe-code: https://nhanaz.io.vn/vibe-code/
 - GitHub và các tổ chức: https://nhanaz.io.vn/github/
 - Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
+- Bài điều tra chợ tài khoản ChatGPT, Codex giá rẻ, account pool và 9Router: https://nhanaz.io.vn/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/
 - Bài chỉ trích việc Minecraft Bedrock thu hẹp thông tin kỹ thuật, có lời chứng Discord của dktapps về Lifeboat, NDA, debug symbols, việc chuyển sang Java, PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu “Information wants to be free.” của Stewart Brand: https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
 - Hồ sơ gần mười bốn năm của PocketMine-MP từ PocketMine Realms, Shoghi, thời kỳ fork, PMMP, Poggit và các major API đến áp lực Bedrock, ngày repo archive năm 2026, lần kế nhiệm thất bại và lý do dktapps muốn cộng đồng tự fork thay vì chờ một người được chỉ định: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
@@ -58,6 +61,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Bài phê bình Minecraft Bedrock đang làm server độc lập khó sống hơn, với PocketMine-MP, PMMP, PocketMine MP, PocketMine, NetherGames, Zeqa, Aeris, WaterdogPE, Altay, Endstone, BDS, BDSX, BedrockData, debug symbols, Dragonfly, Geyser, PrismarineJS, Cloudburst, Allay, PowerNukkitX, Galaxite và hệ partner
 - Hành trình Minecraft từ 2015 của NhanAZ, gồm YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA và LOR
 - Dịch ngược backup Zalo PC, AES-256-CBC, bộ nhớ tiến trình Windows, TAR, NDJSON và bảo mật ứng dụng
+- Chợ tài khoản ChatGPT và Codex giá rẻ, account factory, trial, payment route, account pool, AI relay, 9Router, quota arbitrage và rủi ro credential
 - Thành tích học tập và hoạt động Đoàn Thanh niên, Hội Sinh viên
 - Triết học đạo đức, tự do ý chí, thuyết tương đối, vật lý lượng tử, hố đen, không thời gian và câu hỏi về sự sống ngoài Trái Đất
 - Ghi chú học tập, bài thu hoạch lớp bồi dưỡng nhận thức về Đảng, đạo đức cách mạng và liên hệ bản thân
@@ -85,6 +89,8 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 - PocketMine-MP appears often because it was one of NhanAZ’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.
 - The article “Minecraft Bedrock is killing the things that helped it grow” analyzes Bedrock's maintenance tax through PMMP, NetherGames, ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, Zeqa's move into Featured Mineville, and the different architectures of Endstone, LeviLamina, Geyser, Dragonfly, Allay, and PowerNukkitX.
 - The article does not claim Mojang directly ordered PMMP or NetherGames to die. It is an opinionated critique based on public events, technical documentation, closure announcements, and community memory.
+- “A $1.50 ChatGPT Plus account does not come from nowhere” investigates cheap ChatGPT and Codex access, separating direct evidence from inference about account factories, trials, payment routes, pools, relays, and 9Router.
+- The article does not claim every cheap account is hacked, carded, or routed through 9Router. It argues that several low-cost sources can coexist and that a router amplifies supply rather than creating accounts.
 
 ## Who is Nguyễn Thành Nhân
 
@@ -103,6 +109,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - Vibe-code: https://nhanaz.io.vn/en/vibe-code/
 - GitHub organizations: https://nhanaz.io.vn/en/github/
 - Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
+- Investigation into cheap ChatGPT and Codex accounts, quota pools, and 9Router: https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/
 - Critical essay on Minecraft Bedrock closing off technical information, with dktapps' first-hand Discord account of Lifeboat, NDAs, debug symbols, the move to Java, PocketMine-MP ending support, NetherGames closing, and Stewart Brand's "Information wants to be free.": https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/reverse-engineering-zalo-pc-backup/
 - Complete PocketMine-MP history from PocketMine Realms, Shoghi, the fork era, PMMP, Poggit and major APIs to Bedrock pressure, the 2026 repository archive, a failed succession attempt and dktapps' decision to let the community fork rather than wait for an appointed heir: https://nhanaz.io.vn/en/posts/what-is-pocketmine-mp/
@@ -128,6 +135,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - Critical essay on Minecraft Bedrock making independent servers harder to maintain, with PocketMine-MP, NetherGames, Zeqa, Aeris, WaterdogPE, Altay, Endstone, BDS, BDSX, BedrockData, debug symbols, Dragonfly, Geyser, PrismarineJS, Cloudburst, Allay, PowerNukkitX, Galaxite, and the partner ecosystem
 - NhanAZ’s Minecraft journey since 2015, including YouTube, MCPE Master, Multiplayer Master, Omlet Arcade, FunCraft, SurvivalCraft, MineFRK, FCA, and LOR
 - Reverse engineering Zalo PC backups, AES-256-CBC, Windows process memory, TAR, NDJSON, and application security
+- Cheap ChatGPT and Codex account markets, account factories, trials, payment routes, account pools, AI relays, 9Router, quota arbitrage, and credential risk
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 - Moral philosophy, free will, relativity, quantum physics, black holes, spacetime, and questions about extraterrestrial life
 - Study notes, Party-awareness course reflection papers, revolutionary ethics, and personal reflection

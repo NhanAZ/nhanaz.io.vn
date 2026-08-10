@@ -54,6 +54,14 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free server độc lập",
   },
   {
+    title: "ChatGPT Plus 40.000 đồng không tự nhiên mà có",
+    type: "Điều tra công nghệ",
+    url: "/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/",
+    date: "2026-08-10",
+    excerpt: "Điều tra chuỗi nguồn hàng, tỷ lệ account chết, quota pool và vai trò thật sự của 9Router trong thị trường ChatGPT, Codex giá rẻ.",
+    keywords: "ChatGPT Plus giá rẻ tài khoản ChatGPT 40000 đồng Codex giá rẻ 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller bảo mật",
+  },
+  {
     title: "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng",
     type: "Bài viết",
     url: "/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/",
@@ -310,6 +318,14 @@ const SITE_SEARCH_INDEX_EN = [
     date: "2026-07-10",
     excerpt: "An analysis of Bedrock's maintenance tax through PocketMine-MP, NetherGames, Zeqa, Endstone, and the different survival paths available to independent servers.",
     keywords: "Minecraft Bedrock PocketMine-MP PMMP NetherGames Zeqa ZeqaMine-PM WaterdogPE InPvP Mineville Mojang Microsoft BDS Bedrock Dedicated Server debug symbols Endstone LeviLamina Dragonfly Geyser Allay PowerNukkitX Cloudburst Galaxite Lifeboat Information wants to be free independent servers",
+  },
+  {
+    title: "A $1.50 ChatGPT Plus account does not come from nowhere",
+    type: "Technology investigation",
+    url: "/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/",
+    date: "2026-08-10",
+    excerpt: "An investigation into batch supply, account attrition, quota pools and the real role of 9Router in the cheap ChatGPT and Codex market.",
+    keywords: "cheap ChatGPT Plus cheap ChatGPT account cheap Codex 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller security",
   },
   {
     title: "A few notes for a better Party-awareness course reflection paper",

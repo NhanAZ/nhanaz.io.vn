@@ -44,6 +44,9 @@
         "Web design",
         "Application security",
         "Reverse engineering",
+        "ChatGPT and Codex account markets",
+        "AI account pools and relays",
+        "9Router",
         "Moral philosophy",
         "Special relativity",
         "General relativity",
@@ -86,6 +89,11 @@
           "@type": "BlogPosting",
           "name": "Mấy câu hỏi hơi quá khổ cho một đời người",
           "url": "https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/"
+        },
+        {
+          "@type": "BlogPosting",
+          "name": "ChatGPT Plus 40.000 đồng không tự nhiên mà có",
+          "url": "https://nhanaz.io.vn/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/"
         }
       ]
     },
@@ -164,6 +172,12 @@
           "position": 8,
           "name": "Minecraft Bedrock critique",
           "url": "https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Cheap ChatGPT and Codex account investigation",
+          "url": "https://nhanaz.io.vn/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/"
         }
       ]
     }
