@@ -39,7 +39,7 @@
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
   <script src="/assets/js/theme.js?v=20260718-01"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260715-05">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260823-04">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,6 +85,7 @@
     <form class="site-search-box" role="search" data-site-search-form>
       <label for="site-search-input">Search</label>
       <input id="site-search-input" type="search" autocomplete="off" placeholder="Search writing, projects, vibe-code..." data-site-search>
+      <button class="site-search-submit" type="submit" aria-label="Open first result" data-site-search-submit disabled>→</button>
     </form>
     <div class="site-search-results" data-site-search-results hidden></div>
   </section>
@@ -102,7 +103,7 @@
         <p>My home on the internet. A blog, a personal profile, and a place where projects do not disappear into folders named <code>final_final_2</code>.</p>
         <p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span></p>
       </div>
-      <aside>
+      <aside aria-label="nhanaz.io.vn project details">
         <dl class="project-facts">
           <div><dt>Role</dt><dd>Design &amp; development</dd></div>
           <div><dt>Status</dt><dd>Live</dd></div>
@@ -116,7 +117,7 @@
       <div>
         <h2>Connect Brandbook</h2>
         <p>I studied Information Technology, but my graduation project took a turn into Graphic Design. This is the Connect brandbook, graded 9.5 out of 10. Back then, my academic adviser asked, ‘Did you choose the wrong major?’ I still remember it - partly because it was funny, and partly because I do keep wandering into visual work and storytelling.</p>
-        <div class="canva-embed" aria-label="Connect Brandbook on Canva" data-canva-embed>
+        <div class="canva-embed" role="group" aria-label="Connect Brandbook on Canva" data-canva-embed>
           <div class="canva-loader" aria-hidden="true">
             <span></span>
             <p>Loading the brandbook...</p>
@@ -125,7 +126,7 @@
         </div>
         <p><a class="text-link" href="https://www.canva.com/design/DAHN_KXbTiU/Z5RkMj4SgGnLfRMr1NNfXQ/view" target="_blank" rel="noopener">Open Connect Brandbook on Canva ↗</a></p>
       </div>
-      <aside>
+      <aside aria-label="Connect Brandbook project details">
         <dl class="project-facts">
           <div><dt>Type</dt><dd>Graduation project</dd></div>
           <div><dt>Field</dt><dd>Graphic Design</dd></div>
@@ -138,7 +139,7 @@
     <article class="project-detail">
       <p class="project-number">003 . Coming soon</p>
       <div><h2>Personal experiments</h2><p>Small tools, slightly odd ideas, and experiments with new technology will live here - even when the result is not perfect.</p></div>
-      <aside><dl class="project-facts"><div><dt>Status</dt><dd>In progress</dd></div><div><dt>Type</dt><dd>Personal</dd></div></dl></aside>
+      <aside aria-label="Personal experiments project details"><dl class="project-facts"><div><dt>Status</dt><dd>In progress</dd></div><div><dt>Type</dt><dd>Personal</dd></div></dl></aside>
     </article>
   </main>
 
@@ -146,6 +147,6 @@
     <div><p class="footer-title">Make it first, talk later.</p><a class="footer-email" href="https://github.com/NhanAZ">View GitHub ↗</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260810-01" defer></script>
+  <script src="/assets/js/site.js?v=20260823-07" defer></script>
 </body>
 </html>

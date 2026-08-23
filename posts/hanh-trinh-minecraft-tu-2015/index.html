@@ -43,7 +43,7 @@
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
   <script src="/assets/js/theme.js?v=20260718-01"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260715-05">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260823-04">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -53,7 +53,7 @@
       "headline": "Minecraft từ 2015, trước khi mình biết IP là gì",
       "description": "Hành trình Minecraft từ năm 2015 của NhanAZ, từ YouTube, bản lậu, MCPE Master, server list, staff, command block đến PocketMine-MP và con đường học CNTT.",
       "datePublished": "2026-07-01",
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-23",
       "inLanguage": "vi",
       "image": [
         "https://nhanaz.io.vn/assets/images/web-preview-16x9.png",
@@ -94,6 +94,7 @@
     <form class="site-search-box" role="search" data-site-search-form>
       <label for="site-search-input">Tìm kiếm</label>
       <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, dự án, vibe-code..." data-site-search>
+      <button class="site-search-submit" type="submit" aria-label="Mở kết quả đầu tiên" data-site-search-submit disabled>→</button>
     </form>
     <div class="site-search-results" data-site-search-results hidden></div>
   </section>
@@ -127,7 +128,7 @@
           <p>Một số world và server nhỏ thời đó vận hành bằng command block. Có prison, câu cá, vài minigame tự chế và những hệ thống nghe bây giờ khá thô, nhưng hồi đó vui thật. Mình học command block, học lệnh, thử làm mấy server nhỏ trên các app đó. Không phải vì đã biết mình đang học kỹ thuật. Chỉ vì muốn làm một chỗ chơi theo ý mình.</p>
 
           <h2>Những cái tên cũ trên server list</h2>
-          <p>Sau này mình mới biết tới server kết nối bằng IP và port, rồi mò các trang list server Minecraft PE. Từ đó mới tìm được FunCraft, SurvivalCraft, MineFRK, FCA, LOR và vài cái tên khác gắn với thời Minecraft 1.1. Chắc cũng không có nhiều người còn nhớ và biết đến mấy server đó, nhưng với mình chúng là cả một đoạn tuổi nhỏ.</p>
+          <p>Sau này mình mới biết tới server kết nối bằng IP và port, rồi mò các trang list server Minecraft PE. Từ đó mới tìm được FunCraft, SurvivalCraft, MineFRK, FCA, LOR và vài cái tên khác gắn với thời Minecraft 1.1. Chắc giờ cũng không còn nhiều người nhớ hoặc biết đến mấy server đó, nhưng với mình chúng là cả một đoạn tuổi nhỏ.</p>
           <p>Ở vài server nho nhỏ, mình từng đi từ Builder, Helper, Police, Admin tới OP. Nghe chức vụ thì có vẻ ghê, nhưng thực tế là những việc rất nhỏ. Xây vài thứ, canh chat, nhắc người chơi, xử lý chuyện lặt vặt, đôi khi chỉ là online cho server đỡ vắng.</p>
           <p>Chính mấy vai trò nhỏ đó làm mình bắt đầu thấy server không chỉ là một cái map. Nó có luật, có rank, có quyền hạn, có lệnh, có plugin, có người chơi vui vẻ và cũng có người phá. Mình chưa hiểu phần kỹ thuật phía sau, nhưng bắt đầu biết phía sau màn hình còn nhiều thứ hơn mình tưởng.</p>
 
@@ -142,7 +143,7 @@
           <p>Cũng từ đó mình học vài thói quen rất thật. Trước khi sửa thì backup. Muốn update thì test trước. Console đỏ không tự biến mất nếu mình giả vờ không thấy. Và câu “chắc không sao đâu” thường là câu mở đầu cho một buổi tối hơi dài.</p>
 
           <h2>Rồi mọi thứ bắt đầu khó hơn</h2>
-          <p>Sau này Minecraft Bedrock đổi nhiều. Bản 1.2 đem theo Xbox Live, thiết bị yếu bắt đầu đuối hơn, protocol đổi liên tục, server và plugin phải chạy theo. Người chơi update game trước, server chưa kịp hỗ trợ sau. Một số plugin lõi cho kinh tế, quyền hạn, chế độ chơi bị lỗi lâu hơn mình muốn.</p>
+          <p>Sau này Minecraft Bedrock đổi nhiều. Bản 1.2 đem theo Xbox Live, thiết bị yếu bắt đầu đuối hơn, protocol đổi liên tục, server và plugin phải chạy theo. Người chơi update game trước khi server kịp hỗ trợ bản mới. Một số plugin lõi cho kinh tế, quyền hạn, chế độ chơi bị lỗi lâu hơn mình muốn.</p>
           <p>Mặt tối cũng lộ rõ hơn. Server nhỏ gặp DDoS là gần như đứng hình. Nhiều server mọc lên theo mùa hè hoặc Tết, bán rank, bán đồ, rồi đóng cửa nhanh. Skyblock bị copy quá nhiều, pack plugin tải về đôi khi còn sót tên server cũ. Người chơi dần cảm thấy ở đâu cũng giống nhau.</p>
           <p>Về kỹ thuật, cú chuyển từ PM3 sang PM4 là một dấu gãy lớn. API đổi, plugin cũ hỏng, chủ server không biết code thì rất khó đi tiếp. Từ chỗ kiên trì mò config là còn hy vọng, mọi thứ chuyển sang câu chuyện phải hiểu code mới sửa được. Với cộng đồng học sinh cấp 2, cấp 3 ngày đó, đây không phải rào cản nhỏ.</p>
 
@@ -161,6 +162,6 @@
     <div><p class="footer-title">Đọc xong rồi nè.</p><a class="footer-email" href="/blog/">Bài viết khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260810-01" defer></script>
+  <script src="/assets/js/site.js?v=20260823-07" defer></script>
 </body>
 </html>

@@ -38,15 +38,48 @@
   <link rel="alternate" type="text/plain" title="LLMs context" href="/llms.txt">
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
+  <script>
+    (() => {
+      const isEnglishPath = location.pathname === "/en" || location.pathname.startsWith("/en/");
+      if (!isEnglishPath) return;
+
+      document.documentElement.lang = "en";
+
+      const setMeta = (selector, content) => {
+        document.querySelector(selector)?.setAttribute("content", content);
+      };
+
+      setMeta('meta[http-equiv="content-language"]', "en");
+      setMeta('meta[name="description"]', "The 404 page for nhanaz.io.vn when a path no longer exists or never existed.");
+      setMeta('meta[property="og:description"]', "This page does not exist on nhanaz.io.vn. Maybe it used to be here, then wandered off somewhere.");
+      setMeta('meta[property="og:locale"]', "en_US");
+      setMeta('meta[property="og:locale:alternate"]', "vi_VN");
+      setMeta('meta[property="og:url"]', "https://nhanaz.io.vn/en/404.html");
+      setMeta('meta[name="twitter:description"]', "This page does not exist on nhanaz.io.vn. Maybe it used to be here, then wandered off somewhere.");
+      document.querySelector('link[rel="canonical"]')?.setAttribute("href", "https://nhanaz.io.vn/en/404.html");
+      document.querySelector('link[rel="author"]')?.setAttribute("href", "/en/about/");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const copy = document.querySelector("[data-not-found-copy]");
+        const home = document.querySelector("[data-not-found-home]");
+
+        if (copy) copy.textContent = "This page does not exist. Or it used to, then wandered off somewhere.";
+        if (home) {
+          home.href = "/en/";
+          home.textContent = "Back home →";
+        }
+      }, { once: true });
+    })();
+  </script>
   <script src="/assets/js/theme.js?v=20260718-01"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260715-05">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260823-04">
   <title>404 - NhanAZ</title>
 </head>
 <body>
   <main id="main" class="shell not-found">
     <h1>404</h1>
-    <p>Trang này không tồn tại. Hoặc từng tồn tại rồi đi đâu mất.</p>
-    <a href="/">Về trang chủ →</a>
+    <p data-not-found-copy>Trang này không tồn tại. Hoặc từng tồn tại rồi đi đâu mất.</p>
+    <a href="/" data-not-found-home>Về trang chủ →</a>
   </main>
 </body>
 </html>

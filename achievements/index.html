@@ -39,7 +39,7 @@
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
   <script src="/assets/js/theme.js?v=20260718-01"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20260715-05">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20260823-04">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,6 +78,7 @@
     <form class="site-search-box" role="search" data-site-search-form>
       <label for="site-search-input">Tìm kiếm</label>
       <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, dự án, vibe-code..." data-site-search>
+      <button class="site-search-submit" type="submit" aria-label="Mở kết quả đầu tiên" data-site-search-submit disabled>→</button>
     </form>
     <div class="site-search-results" data-site-search-results hidden></div>
   </section>
@@ -180,8 +181,8 @@
         <p class="section-index">Danh sách thành tích</p>
         <h2 id="records-title">Danh sách đầy đủ</h2>
       </div>
-      <div class="records-tools" aria-label="Tìm và lọc thành tích">
-        <label class="records-search" for="achievement-search">
+      <div class="records-tools" role="group" aria-label="Tìm và lọc thành tích">
+        <label class="records-search">
           <span>Tìm kiếm</span>
           <input id="achievement-search" type="search" autocomplete="off" placeholder="Nhập tên hoạt động, danh hiệu, đơn vị..." data-achievement-search>
         </label>
@@ -506,6 +507,6 @@
     <div><p class="footer-title">Còn nhiều thứ để làm.</p><a class="footer-email" href="/projects/">Xem dự án →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260810-01" defer></script>
+  <script src="/assets/js/site.js?v=20260823-07" defer></script>
 </body>
 </html>

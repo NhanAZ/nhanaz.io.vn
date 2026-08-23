@@ -307,12 +307,94 @@ const validateLanguageDelivery = () => {
   }
 };
 
+const validateAssetVersions = () => {
+  const versionsByAsset = new Map([
+    ["assets/css/site.css", new Set()],
+    ["assets/js/site.js", new Set()],
+    ["assets/js/theme.js", new Set()],
+  ]);
+
+  for (const relativePath of walkHtmlFiles(root)) {
+    const html = fs.readFileSync(path.join(root, relativePath), "utf8");
+
+    for (const asset of versionsByAsset.keys()) {
+      const referencePattern = new RegExp(`(?:href|src)="/${asset.replaceAll(".", "\\.")}(?:\\?v=([^"&]+))?"`, "g");
+      const matches = Array.from(html.matchAll(referencePattern));
+
+      for (const match of matches) {
+        if (!match[1]) {
+          fail(`${relativePath} must cache-bust /${asset} with a version query`);
+        }
+        versionsByAsset.get(asset).add(match[1]);
+      }
+    }
+
+    const themeIndex = html.indexOf('/assets/js/theme.js?v=');
+    const cssIndex = html.indexOf('/assets/css/site.css?v=');
+
+    if (themeIndex !== -1 && cssIndex !== -1 && themeIndex > cssIndex) {
+      fail(`${relativePath} must load theme.js before site.css`);
+    }
+  }
+
+  for (const [asset, versions] of versionsByAsset) {
+    if (versions.size !== 1) {
+      fail(`/${asset} must use one cache version across all HTML files, found: ${[...versions].join(", ")}`);
+    }
+  }
+};
+
 const readLocalPage = (relativePath) => {
   const filePath = path.join(root, relativePath);
   if (!fs.existsSync(filePath)) {
     fail(`Missing sitemap page: ${relativePath}`);
   }
   return fs.readFileSync(filePath, "utf8");
+};
+
+const validateBlogReadingTimes = async (readPage, sourceLabel) => {
+  for (const archiveUrl of [`${baseUrl}/blog/`, `${baseUrl}/en/blog/`]) {
+    const archivePath = routeToFile(archiveUrl);
+    const archiveHtml = await readPage(archivePath, archiveUrl);
+    const entryMatches = archiveHtml.matchAll(/(<a\s+[^>]*>)([\s\S]*?)<\/a>/gi);
+
+    for (const [, openingTag, body] of entryMatches) {
+      const attributes = getAttributes(openingTag);
+      const classes = attributes.class?.split(/\s+/) || [];
+
+      if (!classes.includes("entry")) {
+        continue;
+      }
+
+      const articleUrl = new URL(attributes.href, baseUrl).href;
+      const readTimeMatch = body.match(/<span\s+class="read-time">\s*(\d+)\s+(?:phút|min)\s*<\/span>/i);
+
+      if (!readTimeMatch) {
+        fail(`${sourceLabel} blog entry is missing a valid reading time: ${articleUrl}`);
+      }
+
+      const articlePath = routeToFile(articleUrl);
+      const articleHtml = await readPage(articlePath, articleUrl);
+      const articleTimeMatches = Array.from(
+        articleHtml.matchAll(/<li>\s*(\d+)\s+(?:phút đọc|min read)\s*<\/li>/gi),
+        ([, minutes]) => Number(minutes),
+      );
+
+      if (articleTimeMatches.length !== 1) {
+        fail(`${sourceLabel} article must declare one reading time: ${articleUrl}`);
+      }
+
+      const listedMinutes = Number(readTimeMatch[1]);
+      const articleMinutes = articleTimeMatches[0];
+
+      if (listedMinutes !== articleMinutes) {
+        fail(
+          `${sourceLabel} reading time mismatch for ${articleUrl}: `
+          + `blog lists ${listedMinutes} minutes, article declares ${articleMinutes} minutes`,
+        );
+      }
+    }
+  }
 };
 
 const fetchText = async (url) => {
@@ -337,6 +419,10 @@ const validateLiveSite = async (localEntries) => {
   }
 
   validateRobots(liveRobots, "live robots.txt");
+  await validateBlogReadingTimes(
+    (_relativePath, url) => fetchText(url),
+    "live",
+  );
   await validateSitemapEntries(
     liveEntries,
     (_relativePath, url) => fetchText(url),
@@ -350,6 +436,8 @@ const entries = parseSitemap(sitemap, "sitemap.xml");
 
 validateRobots(robots, "robots.txt");
 validateLanguageDelivery();
+validateAssetVersions();
+await validateBlogReadingTimes((relativePath) => readLocalPage(relativePath), "local");
 await validateSitemapEntries(entries, (relativePath) => readLocalPage(relativePath), "local");
 validateLocalCoverage(entries);
 

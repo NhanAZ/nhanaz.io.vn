@@ -43,9 +43,11 @@ jobs:
       - name: Refresh article view snapshot
         run: node scripts/update-article-views.mjs
       - name: Validate JavaScript
-        run: node --check assets/js/site.js && node --check scripts/build-english.mjs && node --check scripts/update-article-views.mjs
+        run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs && node --check scripts/update-article-views.mjs
       - name: Validate Vietnamese-English pages
         run: node scripts/build-english.mjs
+      - name: Validate SEO metadata
+        run: node scripts/check-seo.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v6
       - name: Upload artifact

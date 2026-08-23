@@ -39,6 +39,13 @@ const SITE_SEARCH_INDEX_VI = [
     keywords: "nhanaz.io.vn là gì web cá nhân blog project vibe-code GitHub thành tích",
   },
   {
+    title: "Sao PocketMine-MP xuất hiện hoài vậy?",
+    type: "Một mẩu nhỏ",
+    url: "/#answers-title",
+    excerpt: "Vì gần như mọi chuyện với code của mình bắt đầu từ đó. Từ sửa plugin, học PHP đến chọn Công nghệ thông tin, PocketMine-MP cứ âm thầm nối các đoạn đường lại với nhau. Không nhắc mới lạ.",
+    keywords: "PocketMine-MP code PHP Công nghệ thông tin plugin Minecraft Bedrock",
+  },
+  {
     title: "Bài viết",
     type: "Kho lưu trữ",
     url: "/blog/",
@@ -249,7 +256,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "PocketMine-MP Việt Nam",
     type: "Cộng đồng",
     url: "/about/",
-    excerpt: "Group PocketMine-MP Việt Nam do Thành Nhân lập từ năm 2019, hiện hơn 350 thành viên và vẫn duy trì.",
+    excerpt: "Group PocketMine-MP Việt Nam do Thành Nhân lập từ năm 2019 và vẫn duy trì.",
     keywords: "PocketMine-MP Việt Nam Minecraft Bedrock server plugin",
   },
   {
@@ -303,6 +310,13 @@ const SITE_SEARCH_INDEX_EN = [
     url: "/en/#answers-title",
     excerpt: "A place for writing, projects, Vibe-code stories, milestones, and things I do not want to lose between bookmarks, hard drives, and repositories.",
     keywords: "nhanaz.io.vn personal website blog projects vibe-code GitHub achievements",
+  },
+  {
+    title: "Why does PocketMine-MP keep showing up?",
+    type: "A small aside",
+    url: "/en/#answers-title",
+    excerpt: "Because almost everything involving code started there for me. From editing plugins and learning PHP to choosing Information Technology, PocketMine-MP quietly connects the pieces of that road. It would be stranger not to mention it.",
+    keywords: "PocketMine-MP code PHP Information Technology plugins Minecraft Bedrock",
   },
   {
     title: "Writing",
@@ -515,7 +529,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "PocketMine-MP Vietnam",
     type: "Community",
     url: "/en/about/",
-    excerpt: "A PocketMine-MP Vietnam group founded by Thành Nhân in 2019, now with over 350 members and still active.",
+    excerpt: "A PocketMine-MP Vietnam group founded by Thành Nhân in 2019 and still active.",
     keywords: "PocketMine-MP Vietnam Minecraft Bedrock server plugin",
   },
   {
@@ -563,6 +577,24 @@ const getArticleCommentsTheme = () => {
 
 const LANGUAGE_READING_POSITION_KEY = "nhanaz-language-reading-position";
 const LANGUAGE_READING_POSITION_TTL = 2 * 60 * 1000;
+
+const getCurrentHashId = () => {
+  const encodedId = window.location.hash.slice(1);
+
+  try {
+    return decodeURIComponent(encodedId);
+  } catch {
+    return encodedId;
+  }
+};
+
+const pushHashIfChanged = (id) => {
+  if (!id || getCurrentHashId() === id) {
+    return;
+  }
+
+  history.pushState(null, "", `${location.pathname}${location.search}#${id}`);
+};
 
 const clampReadingProgress = (value) => Number.isFinite(value)
   ? Math.min(1, Math.max(0, value))
@@ -632,10 +664,7 @@ const captureLanguageReadingPosition = (targetPath) => {
     }
   });
 
-  const encodedHashId = window.location.hash.replace(/^#/, "");
-  const hashId = typeof decodeURIComponent === "function"
-    ? decodeURIComponent(encodedHashId)
-    : encodedHashId;
+  const hashId = getCurrentHashId();
   const hashSectionIndex = hashId
     ? headings.findIndex((heading) => heading.id === hashId)
     : -1;
@@ -882,19 +911,39 @@ const initLanguageSwitch = () => {
   const targetLanguage = isEnglish ? "vi" : "en";
   const alternate = document.querySelector(`link[rel="alternate"][hreflang="${targetLanguage}"]`);
   const alternateUrl = alternate ? new URL(alternate.getAttribute("href"), window.location.origin) : null;
-  const targetPath = alternateUrl
+  const baseTargetPath = alternateUrl
     ? `${alternateUrl.pathname}${alternateUrl.search}${alternateUrl.hash}`
     : (isEnglish
     ? currentPath.replace(/^\/en(?=\/|$)/, "") || "/"
     : `/en${currentPath === "/" ? "/" : currentPath}`);
+  const searchInput = document.querySelector("[data-site-search]");
+  const initialSearchQuery = new URLSearchParams(window.location.search).get("q")?.trim() || "";
   const link = document.createElement("a");
+
+  const updateTargetPath = (searchQuery) => {
+    const targetUrl = new URL(baseTargetPath, window.location.origin);
+
+    targetUrl.searchParams.delete("q");
+    if (searchQuery) {
+      targetUrl.searchParams.set("q", searchQuery);
+    }
+
+    const targetPath = `${targetUrl.pathname}${targetUrl.search}${targetUrl.hash}`;
+    link.href = targetPath;
+    return targetPath;
+  };
+
   link.className = "language-switch";
-  link.href = targetPath;
   link.hreflang = targetLanguage;
   link.lang = targetLanguage;
   link.textContent = isEnglish ? "VI" : "EN";
   link.setAttribute("aria-label", isEnglish ? "Read this page in Vietnamese" : "Đọc trang này bằng tiếng Anh");
-  link.addEventListener("click", () => storeLanguageReadingPosition(targetPath));
+  link.addEventListener("click", () => {
+    const activeSearchQuery = searchInput ? searchInput.value.trim() : initialSearchQuery;
+    storeLanguageReadingPosition(updateTargetPath(activeSearchQuery));
+  });
+  searchInput?.addEventListener("input", () => updateTargetPath(searchInput.value.trim()));
+  updateTargetPath(initialSearchQuery);
   navigation.append(link);
 };
 
@@ -921,13 +970,20 @@ const initSiteSearch = () => {
   const form = document.querySelector("[data-site-search-form]");
   const input = document.querySelector("[data-site-search]");
   const results = document.querySelector("[data-site-search-results]");
+  const submitButton = form?.querySelector("[data-site-search-submit]");
 
-  if (!form || !input || !results) {
+  if (!form || !input || !results || !submitButton) {
     return;
   }
 
-  const indexedItems = SITE_SEARCH_INDEX.map((item) => ({
+  const indexedItems = SITE_SEARCH_INDEX.map((item, index) => ({
     ...item,
+    searchDate: normalizeText(item.date),
+    searchExcerpt: normalizeText(item.excerpt),
+    searchIndex: index,
+    searchKeywords: normalizeText(item.keywords),
+    searchTitle: normalizeText(item.title),
+    searchType: normalizeText(item.type),
     search: normalizeText([item.title, item.type, item.excerpt, item.keywords, item.date].join(" ")),
   }));
 
@@ -942,21 +998,63 @@ const initSiteSearch = () => {
     return element;
   };
 
+  if (!results.id) {
+    results.id = "site-search-results";
+  }
+
+  const liveStatus = createText("p", "site-search-status", "");
+  liveStatus.setAttribute("role", "status");
+  liveStatus.setAttribute("aria-live", "polite");
+  liveStatus.setAttribute("aria-atomic", "true");
+  input.setAttribute("aria-controls", results.id);
+  form.append(liveStatus);
+
   const renderResults = () => {
-    const tokens = normalizeText(input.value).split(/\s+/).filter(Boolean);
+    const normalizedQuery = normalizeText(input.value);
+    const tokens = normalizedQuery.split(/\s+/).filter(Boolean);
     results.replaceChildren();
 
     if (!tokens.length) {
       currentMatches = [];
       results.hidden = true;
+      submitButton.disabled = true;
+      liveStatus.textContent = "";
       return;
     }
 
     currentMatches = indexedItems
       .filter((item) => tokens.every((token) => item.search.includes(token)))
-      .slice(0, 8);
+      .map((item) => {
+        let score = 0;
+
+        if (item.searchTitle === normalizedQuery) {
+          score += 1000;
+        } else if (item.searchTitle.startsWith(normalizedQuery)) {
+          score += 500;
+        } else if (item.searchTitle.includes(normalizedQuery)) {
+          score += 250;
+        }
+
+        tokens.forEach((token) => {
+          if (item.searchTitle.includes(token)) score += 100;
+          if (item.searchType.includes(token)) score += 30;
+          if (item.searchKeywords.includes(token)) score += 10;
+          if (item.searchExcerpt.includes(token)) score += 5;
+          if (item.searchDate.includes(token)) score += 1;
+        });
+
+        if (item.url.includes("/posts/") && tokens.every((token) => item.searchTitle.includes(token))) {
+          score += 300;
+        }
+
+        return { item, score };
+      })
+      .sort((left, right) => right.score - left.score || left.item.searchIndex - right.item.searchIndex)
+      .slice(0, 8)
+      .map(({ item }) => item);
 
     results.hidden = false;
+    submitButton.disabled = currentMatches.length === 0;
 
     if (!currentMatches.length) {
       const emptyMessage = isEnglish
@@ -964,8 +1062,13 @@ const initSiteSearch = () => {
         : "Chưa thấy kết quả phù hợp. Thử gõ ngắn hơn hoặc bỏ dấu.";
       const empty = createText("p", "site-search-empty", emptyMessage);
       results.append(empty);
+      liveStatus.textContent = emptyMessage;
       return;
     }
+
+    liveStatus.textContent = isEnglish
+      ? `${currentMatches.length} search ${currentMatches.length === 1 ? "result" : "results"}.`
+      : `${currentMatches.length} kết quả tìm kiếm.`;
 
     currentMatches.forEach((item) => {
       const link = document.createElement("a");
@@ -1011,6 +1114,12 @@ const initAchievementFilters = () => {
 
   if (!list || !searchInput || !categorySelect || !yearSelect || !sortSelect) {
     return;
+  }
+
+  if (countElement) {
+    countElement.setAttribute("role", "status");
+    countElement.setAttribute("aria-live", "polite");
+    countElement.setAttribute("aria-atomic", "true");
   }
 
   const records = Array.from(list.querySelectorAll(".record-item")).map((item, index) => {
@@ -1109,9 +1218,11 @@ const initAchievementFilters = () => {
 
   applyFilters();
 
-  if (location.hash.startsWith("#achievement-")) {
+  const hashId = getCurrentHashId();
+
+  if (hashId.startsWith("achievement-")) {
     requestAnimationFrame(() => {
-      document.querySelector(location.hash)?.scrollIntoView({ block: "start" });
+      document.getElementById(hashId)?.scrollIntoView({ block: "start" });
     });
   }
 };
@@ -1218,6 +1329,7 @@ const initArticleToc = () => {
   const headingSections = new Map();
   const sections = [];
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const compactToc = window.matchMedia("(max-width: 700px)");
   const headingScrollGap = 34;
   const activeHeadingLead = 28;
   let activeTocId = null;
@@ -1235,16 +1347,26 @@ const initArticleToc = () => {
     const id = getUniqueId(heading, index);
     const item = document.createElement("li");
     const link = document.createElement("a");
+    const headingText = heading.textContent.trim();
+    const permalink = document.createElement("a");
     const isSectionHeading = heading.tagName === "H2";
 
     heading.id = id;
-    heading.tabIndex = -1;
     heading.classList.add("is-anchor-heading");
-    heading.title = isEnglish ? "Click to copy this section URL" : "Bấm để lấy liên kết tới mục này";
+    heading.setAttribute("aria-label", headingText);
+    heading.title = isEnglish ? "Open this section link" : "Mở liên kết tới mục này";
+    permalink.className = "article-heading-permalink";
+    permalink.href = `#${id}`;
+    permalink.textContent = "#";
+    permalink.setAttribute(
+      "aria-label",
+      isEnglish ? `Link to ${headingText}` : `Liên kết tới ${headingText}`,
+    );
+    heading.append(permalink);
 
     item.className = `article-toc-item article-toc-item-${heading.tagName.toLowerCase()}`;
     link.href = `#${id}`;
-    link.textContent = heading.textContent.trim();
+    link.textContent = headingText;
     link.dataset.tocTarget = id;
     links.set(id, link);
 
@@ -1253,7 +1375,7 @@ const initArticleToc = () => {
         return;
       }
 
-      history.pushState(null, "", `${location.pathname}${location.search}#${id}`);
+      pushHashIfChanged(id);
       setActiveLink(id);
     });
 
@@ -1297,16 +1419,23 @@ const initArticleToc = () => {
   rail.append(toc);
 
   const setOpenSection = (activeSection) => {
+    const showAllSections = compactToc.matches;
+
     sections.forEach((section) => {
       if (!section.hasChildren) {
         return;
       }
 
-      const isOpen = section === activeSection;
+      const isOpen = showAllSections || section === activeSection;
 
       section.item.classList.toggle("is-open", isOpen);
-      section.link.setAttribute("aria-expanded", String(isOpen));
       section.childList.hidden = !isOpen;
+
+      if (showAllSections) {
+        section.link.removeAttribute("aria-expanded");
+      } else {
+        section.link.setAttribute("aria-expanded", String(isOpen));
+      }
     });
   };
 
@@ -1391,7 +1520,7 @@ const initArticleToc = () => {
 
   const scrollToHeading = (target, { updateHash = true, focus = false } = {}) => {
     if (updateHash) {
-      history.pushState(null, "", `${location.pathname}${location.search}#${target.id}`);
+      pushHashIfChanged(target.id);
     }
 
     setActiveLink(target.id);
@@ -1422,10 +1551,7 @@ const initArticleToc = () => {
   });
 
   const scrollToCurrentHash = () => {
-    const encodedId = location.hash.slice(1);
-    const id = typeof decodeURIComponent === "function"
-      ? decodeURIComponent(encodedId)
-      : encodedId;
+    const id = getCurrentHashId();
     const target = id ? document.getElementById(id) : null;
 
     if (!target || !headings.includes(target)) {
@@ -1478,6 +1604,16 @@ const initArticleToc = () => {
   window.addEventListener("scroll", queueActiveHeadingSync, { passive: true });
   window.addEventListener("resize", queueActiveHeadingSync);
   window.addEventListener("hashchange", scrollToCurrentHash);
+
+  const syncOpenSections = () => {
+    setOpenSection(activeTocId ? headingSections.get(activeTocId) : null);
+  };
+
+  if (typeof compactToc.addEventListener === "function") {
+    compactToc.addEventListener("change", syncOpenSections);
+  } else if (typeof compactToc.addListener === "function") {
+    compactToc.addListener(syncOpenSections);
+  }
 };
 
 const initEntryPriorities = () => {
