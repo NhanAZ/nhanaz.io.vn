@@ -1,65 +1,88 @@
-# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 
-  # Refresh the deployed snapshot daily at 00:00 in Vietnam without creating a commit.
-  schedule:
-    - cron: "0 17 * * *"
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages-${{ github.event.pull_request.number || 'production' }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  # Keep reruns from creating multiple deployable artifacts with the same name.
   PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
 jobs:
   build:
-    name: Build and upload Pages artifact
+    name: Validate and prepare Pages artifact
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Setup Node
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
-      - name: Refresh article view snapshot
-        run: node scripts/update-article-views.mjs
       - name: Validate JavaScript
-        run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs && node --check scripts/update-article-views.mjs
+        run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs
       - name: Validate Vietnamese-English pages
         run: node scripts/build-english.mjs
       - name: Validate SEO metadata
         run: node scripts/check-seo.mjs
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Prepare public site artifact
+        if: github.event_name != 'pull_request'
+        run: |
+          mkdir _site
+          public_paths=(
+            .nojekyll
+            404.html
+            CNAME
+            about
+            achievements
+            assets
+            blog
+            en
+            entity.json
+            favicon.ico
+            github
+            index.html
+            llms-full.txt
+            llms.txt
+            posts
+            projects
+            robots.txt
+            sitemap.xml
+            vibe-code
+          )
+          cp -R "${public_paths[@]}" _site/
+          test -f _site/index.html
+          test ! -e _site/AGENTS.md
+          test ! -e _site/scripts
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           name: ${{ env.PAGES_ARTIFACT_NAME }}
-          # Upload entire repository
-          path: '.'
+          path: "_site"
 
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    if: github.event_name != 'pull_request'
     permissions:
       pages: write
       id-token: write
@@ -67,9 +90,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
         with:
           artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}

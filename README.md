@@ -1,6 +1,6 @@
 # nhanaz.io.vn
 
-Personal blog, project archive, and living portfolio. Built with plain HTML, CSS, and a tiny bit of JavaScript; deployed as-is to GitHub Pages.
+Personal blog, project archive, and living portfolio. Built with plain HTML, CSS, and a tiny bit of JavaScript, then validated and deployed to GitHub Pages with GitHub Actions.
 
 ## Preview locally
 
@@ -12,12 +12,13 @@ python -m http.server 4173
 
 Then open `http://localhost:4173`.
 
-## Add a post
+## Add a bilingual post
 
-1. Copy `posts/chao-internet/index.html` into `posts/<slug>/index.html`.
-2. Update its title, description, canonical URL, date, category, and article body.
-3. Add the post row to `blog/index.html` and the latest section in `index.html`.
-4. Add the final URL to `sitemap.xml`.
+1. Create the Vietnamese page in `posts/<slug>/index.html` and its manually edited English pair in `en/posts/<english-slug>/index.html`.
+2. Update the title, description, canonical URL, dates, category, article body, and reciprocal `hreflang` links on both pages.
+3. Add the post to the relevant home and blog indexes, then update both search indexes in `assets/js/site.js`.
+4. Update `sitemap.xml`, `llms.txt`, `llms-full.txt`, and `entity.json` when the new content changes those sources.
+5. Run the validation commands below before deployment.
 
 ## Update personal information
 
@@ -31,4 +32,22 @@ Then open `http://localhost:4173`.
 
 Push to `main`. The workflow in `.github/workflows/static.yml` publishes the repository to GitHub Pages. The custom domain is preserved in `CNAME`.
 
-The previous site is archived on the `archive/legacy-2026-06-29` branch.
+Before pushing, run:
+
+```powershell
+node --check assets/js/site.js
+node --check assets/js/theme.js
+node --check scripts/build-english.mjs
+node --check scripts/check-seo.mjs
+node scripts/build-english.mjs
+node scripts/check-seo.mjs
+git diff --check
+```
+
+Older versions of the site are preserved on the `archive/legacy-notebook` and `archive/legacy-sunflower` branches.
+
+Security issues should be reported privately as described in [SECURITY.md](SECURITY.md).
+
+## License
+
+The site code is available under the [MIT License](LICENSE). The bundled Space Grotesk font files remain under the [SIL Open Font License 1.1](assets/fonts/OFL.txt). Personal writing and images are not relicensed by the MIT file unless a page says otherwise.
