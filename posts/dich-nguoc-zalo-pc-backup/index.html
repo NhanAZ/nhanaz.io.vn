@@ -21,6 +21,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="nhanaz.io.vn">
   <meta property="article:published_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-08-24">
   <meta property="article:author" content="Nguyễn Thành Nhân">
   <meta property="article:section" content="Dịch ngược và bảo mật">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,7 +54,7 @@
       "headline": "Zalo PC mã hóa bản backup để bảo vệ ai?",
       "description": "Một lần mổ xẻ định dạng backup Zalo PC, từ AES-256-CBC và dữ liệu khóa trong RAM đến câu hỏi lớp mã hóa này thật sự đang bảo vệ ai.",
       "datePublished": "2026-06-30",
-      "dateModified": "2026-06-30",
+      "dateModified": "2026-08-24",
       "inLanguage": "vi",
       "proficiencyLevel": "Expert",
       "dependencies": "Windows, Zalo PC, AES-CBC và định dạng TAR",
@@ -127,8 +128,8 @@
           <p>Mọi quan sát trong bài đều được thực hiện với dữ liệu của chính mình và phiên Zalo mình có quyền sử dụng. Đây là bài phân tích một thiết kế kỹ thuật, không phải hướng dẫn truy cập tài khoản hay dữ liệu của người khác.</p>
 
           <h2>Một bản xuất dữ liệu nhưng chưa thật sự được trao cho người dùng</h2>
-          <p>Meta làm việc này theo cách dễ hiểu hơn. Tài liệu chính thức của Facebook cho phép người dùng chọn HTML hoặc JSON. Gói HTML được tải về dưới dạng ZIP, giải nén rồi mở file <code>index</code>. JSON dành cho xử lý bằng máy hoặc chuyển sang dịch vụ khác. Mật khẩu và bước xác minh bổ sung được đặt trước lúc tải xuống, tức quyền truy cập được kiểm tra trước khi dữ liệu rời dịch vụ.</p>
-          <p>Điểm mình muốn so sánh không phải Meta tốt còn Zalo xấu. Hai hệ thống có threat model và lịch sử khác nhau. Nhưng với một tính năng mang tên xuất dữ liệu, định dạng HTML, JSON hoặc một ZIP bình thường nói rõ rằng dữ liệu sau khi xác minh là của người dùng. Một ciphertext riêng của ứng dụng lại phát ra thông điệp hơi lạ. Bạn được phép mang dữ liệu về, chỉ là chưa chắc được đọc nó bằng công cụ mình chọn.</p>
+          <p>Meta làm việc này theo cách dễ hiểu hơn. Tài liệu chính thức của Facebook cho phép người dùng chọn HTML hoặc JSON. Gói HTML được tải về dưới dạng ZIP, giải nén rồi mở file <code>index</code>. JSON dành cho xử lý bằng máy hoặc chuyển sang dịch vụ khác. Việc nhập mật khẩu và xác minh bổ sung diễn ra trước lúc tải xuống, tức quyền truy cập được kiểm tra trước khi dữ liệu rời dịch vụ.</p>
+          <p>Điểm mình muốn so sánh không phải Meta tốt còn Zalo xấu. Hai hệ thống có threat model và lịch sử khác nhau. Nhưng với một tính năng mang tên xuất dữ liệu, định dạng HTML, JSON hoặc một ZIP bình thường nói rõ rằng dữ liệu sau khi xác minh là của người dùng. Một ciphertext chỉ ứng dụng của họ đọc được thì khác. Người dùng được mang dữ liệu về nhưng chưa chắc đọc được bằng công cụ mình chọn.</p>
 
           <h2>Cái đuôi ZIP chỉ là tấm bảng treo ngoài cửa</h2>
           <p>Quan sát cấu trúc file cho thấy <code>.zl.zip</code> không có header ZIP quen thuộc. Sau khi giải mã đúng, plaintext xuất hiện dưới dạng TAR. Luồng dữ liệu có thể tóm lại như sau.</p>
@@ -138,7 +139,7 @@
               <img src="/assets/images/zalo-backup-flow-vi.svg" alt="Sơ đồ TAR plaintext được mã hóa thành .zl.zip ciphertext, rồi được giải mã bằng key và IV dựng từ uin để trở lại TAR plaintext." width="1120" height="540">
             </a>
             <figcaption>
-              <span>Luồng nhìn gọn của một file <code>.zl.zip</code> sau khi bóc lớp tên gọi bên ngoài.</span>
+              <span>Sơ đồ rút gọn của một file <code>.zl.zip</code> sau khi bóc lớp tên gọi bên ngoài.</span>
               <a class="diagram-download" href="/assets/images/zalo-backup-flow-vi.svg" download>Tải ảnh sơ đồ</a>
             </figcaption>
           </figure>
@@ -150,7 +151,7 @@ iv  = UTF8("zie" + uin[0:13])
 
 plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
 
-          <p><code>SHA-256</code> tạo ra 32 byte, vừa kích thước khóa AES-256. Chuỗi <code>zie</code> ghép với 13 ký tự đầu của <code>uin</code> tạo thành IV 16 byte. Công thức không phải bí mật bền vững vì ứng dụng cần chứa hoặc thực hiện nó. Thứ hệ thống đang trông cậy vào là <code>uin</code>.</p>
+          <p><code>SHA-256</code> tạo ra 32 byte, vừa kích thước khóa AES-256. Chuỗi <code>zie</code> ghép với 13 ký tự đầu của <code>uin</code> tạo thành IV 16 byte. Công thức không thể giữ bí mật lâu vì ứng dụng cần chứa hoặc thực hiện nó. Thứ hệ thống đang trông cậy vào là <code>uin</code>.</p>
           <p>Đây cũng là chỗ lớp mã hóa bắt đầu có nét hài khô. <code>uin</code> không phải mật khẩu do người dùng đặt, không đi qua KDF có salt như PBKDF2, scrypt hay Argon2, và ứng dụng đang đăng nhập vẫn cần biết nó. Một khóa dẫn xuất từ định danh có thể làm file bớt đọc được khi nằm riêng lẻ trên đĩa, nhưng không nên được nhầm với một bí mật có entropy cao.</p>
 
           <h2>Không cần đánh bại AES khi dữ liệu dẫn đến khóa vẫn ở trong RAM</h2>
@@ -169,7 +170,7 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
             accept(uin)</code></pre>
 
           <blockquote>Không ai bẻ khóa AES ở đây. Chiếc chìa khóa được tìm ở nơi ứng dụng buộc phải sử dụng nó, còn TAR xác nhận đã nhặt đúng chìa.</blockquote>
-          <p>Điều này không chứng minh mã hóa vô dụng trong mọi tình huống. Nếu ai đó chỉ lấy được file backup nhưng không có máy, phiên đăng nhập hoặc dữ liệu liên quan, ciphertext vẫn tạo thêm một rào cản. Nhưng nếu kẻ tấn công đã chạy được mã dưới cùng tài khoản Windows và đọc được bộ nhớ tiến trình, câu chuyện đã sang một cấp độ khác. Lúc đó lớp mã hóa backup không cứu được endpoint đã bị kiểm soát.</p>
+          <p>Điều này không chứng minh mã hóa vô dụng trong mọi tình huống. Nếu ai đó chỉ lấy được file backup nhưng không có máy, phiên đăng nhập hoặc dữ liệu liên quan, ciphertext vẫn tạo thêm một rào cản. Nhưng nếu kẻ tấn công đã chạy được mã dưới cùng tài khoản Windows và đọc được bộ nhớ tiến trình, họ đã vượt qua lớp bảo vệ này từ trước. Lúc đó mã hóa backup không cứu được endpoint đã bị kiểm soát.</p>
 
           <h2>Nếu mục tiêu là chống hacker thì ranh giới đang được đặt hơi muộn</h2>
           <p>Giả thuyết dễ nghĩ nhất là Zalo mã hóa để bảo vệ bản backup nếu file bị đánh cắp. Trong threat model rất hẹp đó, lớp mã hóa có tác dụng. Người chỉ cầm một file sẽ không mở nó như ZIP thông thường.</p>
@@ -184,7 +185,7 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
             <li>CBC có tính malleable. Ciphertext có thể bị chỉnh để tác động có chủ đích lên plaintext, dù cấu trúc TAR làm việc khai thác khó hơn.</li>
             <li>Checksum TAR phát hiện lỗi cấu trúc và thay đổi ngẫu nhiên. Nó không phải MAC, không xác nhận nguồn tạo file và không chống giả mạo có chủ đích.</li>
           </ul>
-          <p>Nếu nhu cầu thật sự là kiểm tra file có nguyên vẹn trước khi import, cách diễn đạt kỹ thuật rõ hơn sẽ là manifest có chữ ký, MAC trên toàn bộ archive, hash cho từng thành phần, phiên bản schema và quy tắc xác minh chặt chẽ. Mã hóa có thể đi cùng những lớp đó, nhưng không thể đóng thế cho chúng.</p>
+          <p>Nếu cần kiểm tra file có nguyên vẹn trước khi import, hợp lý hơn là dùng manifest có chữ ký, MAC trên toàn bộ archive, hash cho từng thành phần, phiên bản schema và quy tắc xác minh chặt chẽ. Mã hóa có thể đi cùng những lớp đó, nhưng không thể đóng thế cho chúng.</p>
 
           <h2>Nếu mục tiêu là ngăn người dùng sửa rồi import ngược thì vẫn chưa thuyết phục</h2>
           <p>Một định dạng khó đọc có thể làm giảm số người tự sửa dữ liệu. Nó không tạo ra ranh giới tin cậy. Khi ứng dụng phía người dùng chứa đủ logic để đọc file, logic ấy có thể được quan sát và dựng lại. Sau đó dữ liệu có thể được giải mã, thay đổi, đóng gói và mã hóa lại.</p>
@@ -203,7 +204,7 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
 
           <h2>Sau lớp mã hóa vẫn còn một archive cần được đối xử như dữ liệu không tin cậy</h2>
           <p>Giải mã thành công không đồng nghĩa có thể giải nén vô điều kiện. TAR có đường dẫn, symbolic link, hard link và nhiều kiểu entry khác nhau. Chỉ kiểm tra tên không bắt đầu bằng <code>/</code>, không có ổ đĩa Windows và không chứa <code>..</code> vẫn chưa đủ nếu link có thể trỏ ra ngoài thư mục đích.</p>
-          <p>Một quy trình an toàn cần hiểu type của entry, kiểm tra link target, resolve đường dẫn rồi xác nhận containment trước khi ghi. Nếu thực hiện một lượt kiểm tra và một lượt giải nén riêng biệt, file nguồn cũng cần được giữ ổn định hoặc đối chiếu hash để tránh khoảng TOCTOU. Sau cùng vẫn phải có quota cho số file, tổng dung lượng, độ sâu thư mục và thời gian xử lý để tránh archive bomb hoặc resource exhaustion.</p>
+          <p>Một quy trình an toàn cần hiểu type của entry, kiểm tra link target, resolve đường dẫn rồi xác nhận containment trước khi ghi. Nếu thực hiện một lượt kiểm tra và một lượt giải nén riêng biệt, file nguồn cũng cần được giữ ổn định hoặc đối chiếu hash để tránh lỗ hổng TOCTOU. Sau cùng vẫn phải có quota cho số file, tổng dung lượng, độ sâu thư mục và thời gian xử lý để tránh archive bomb hoặc resource exhaustion.</p>
           <p>Đây là phần thường bị che khuất bởi chữ “AES-256”. Tên thuật toán nghe rất an toàn, nhưng archive sau giải mã vẫn là input do người dùng chọn và parser vẫn là nơi dữ liệu chạm vào hệ thống file. Mật mã không sửa hộ lỗi path traversal, symlink hay giới hạn tài nguyên.</p>
 
           <h2>Threat model gọn hơn những lời quảng cáo về mã hóa</h2>
@@ -222,7 +223,7 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
           </div>
 
           <h2>Điều còn lại sau lần mổ xẻ này</h2>
-          <p>Phần dịch ngược thực ra không cần phép màu. Đuôi file nói ZIP nhưng header không khớp. Plaintext hợp lệ có cấu trúc TAR. Key và IV đi từ <code>uin</code>. Dữ liệu dẫn đến <code>uin</code> xuất hiện trong renderer đang đăng nhập. Header TAR trở thành phép thử để xác nhận. Mỗi bước là một suy luận nhỏ, ghép lại thành câu trả lời hoàn chỉnh.</p>
+          <p>Phần dịch ngược thực ra không cần phép màu. Đuôi file nói ZIP nhưng header không khớp. Plaintext hợp lệ có cấu trúc TAR. Key và IV đi từ <code>uin</code>. Dữ liệu dẫn đến <code>uin</code> xuất hiện trong renderer đang đăng nhập. Header TAR trở thành phép thử để xác nhận. Không có bước nào thần bí, chỉ là lần lượt kiểm tra từng dấu vết.</p>
           <p>Điều khó hiểu hơn vẫn là quyết định ban đầu. Người dùng đã xác minh tài khoản và chủ động bấm xuất dữ liệu, nhưng file nhận về lại cần ứng dụng giữ vai trò người gác cổng thêm một lần nữa. Nếu mục tiêu là bảo vệ bản sao nằm riêng lẻ, thiết kế có chút tác dụng. Nếu mục tiêu là chống một kẻ đã kiểm soát máy, chống giả mạo hay chống import ngược, nó đang dùng sai công cụ hoặc thiếu những lớp quan trọng hơn.</p>
           <p>Có lẽ đây là kiểu bảo mật khiến mọi người đều bận rộn. Ứng dụng bận mã hóa, người dùng bận tìm cách đọc dữ liệu của mình, còn chiếc máy đã bị xâm nhập thì vẫn bình thản đứng ngoài cuộc tranh luận.</p>
 
@@ -245,6 +246,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">Còn nhiều thứ nằm dưới một cái đuôi file.</p><a class="footer-email" href="/blog/">Bài viết khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260823-07" defer></script>
+  <script src="/assets/js/site.js?v=20260824-01" defer></script>
 </body>
 </html>

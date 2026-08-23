@@ -84,7 +84,7 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 
 ## Short answers
 
-- Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology graduate and maker who writes about code, open source, PocketMine-MP, Minecraft Bedrock, and personal projects.
+- Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology graduate who writes about code, open source, PocketMine-MP, Minecraft Bedrock, and personal projects.
 - NhanAZ is the name Nguyễn Thành Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities, and it is tied to the website nhanaz.io.vn.
 - nhanaz.io.vn is a personal website that gathers writing, projects, Vibe-code stories, GitHub organizations, milestones, and everyday notes.
 - PocketMine-MP appears often because it was one of NhanAZ’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.

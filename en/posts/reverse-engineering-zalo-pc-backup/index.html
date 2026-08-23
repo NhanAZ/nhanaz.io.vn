@@ -21,6 +21,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="nhanaz.io.vn">
   <meta property="article:published_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-08-24">
   <meta property="article:author" content="Nguyễn Thành Nhân">
   <meta property="article:section" content="Reverse engineering and security">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,7 +54,7 @@
       "headline": "Who does Zalo PC backup encryption protect?",
       "description": "A technical look at the Zalo PC backup format, from AES-256-CBC and key material in RAM to the question of who this encryption really protects.",
       "datePublished": "2026-06-30",
-      "dateModified": "2026-06-30",
+      "dateModified": "2026-08-24",
       "inLanguage": "en",
       "proficiencyLevel": "Expert",
       "dependencies": "Windows, Zalo PC, AES-CBC, and the TAR format",
@@ -222,7 +223,7 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
           </div>
 
           <h2>What remained after this investigation</h2>
-          <p>The reverse engineering itself did not require magic. The extension says ZIP, but the header disagrees. Valid plaintext has TAR structure. The key and IV follow from <code>uin</code>. Data leading to <code>uin</code> appears in the signed-in renderer. The TAR header becomes the confirmation test. Each step is a small inference that joins the next one.</p>
+          <p>The reverse engineering itself did not require magic. The extension says ZIP, but the header disagrees. Valid plaintext has TAR structure. The key and IV follow from <code>uin</code>. Data leading to <code>uin</code> appears in the signed-in renderer. The TAR header becomes the confirmation test. Each small inference leads to the next.</p>
           <p>The original design decision remains harder to explain. The user has authenticated and deliberately requested an export, yet the result asks the application to act as gatekeeper once again. If the goal is protecting a detached copy, the layer offers some value. If the goal is resisting a compromised machine, forgery, or edited reimports, it is using the wrong control or missing more important ones.</p>
           <p>Perhaps this is the kind of security that keeps everyone busy. The application encrypts, the user searches for a way to read their own data, and the already-compromised machine waits politely outside the debate.</p>
 
@@ -245,6 +246,6 @@ plaintext = AES_256_CBC_DECRYPT(ciphertext, key, iv)</code></pre>
     <div><p class="footer-title">There is always more beneath a file extension.</p><a class="footer-email" href="/en/blog/">More writing →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260823-07" defer></script>
+  <script src="/assets/js/site.js?v=20260824-01" defer></script>
 </body>
 </html>

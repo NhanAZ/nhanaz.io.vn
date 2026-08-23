@@ -65,7 +65,7 @@ const SITE_SEARCH_INDEX_VI = [
     type: "ChatGPT - Codex",
     url: "/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/",
     date: "2026-08-10",
-    excerpt: "Vì sao account Plus 39.999 đồng chỉ bảo hành ba giờ vẫn bán được? Người bán chuyển rủi ro, người mua hợp thức hóa món hời và account pool giữ cái chợ tiếp tục chạy.",
+    excerpt: "Vì sao account Plus 39.999 đồng chỉ bảo hành ba giờ vẫn bán được? Người bán chuyển rủi ro, người mua hợp thức hóa món hời và account pool giúp cái chợ tiếp tục chạy.",
     keywords: "ChatGPT Plus giá rẻ tài khoản ChatGPT 40000 đồng bảo hành ba giờ vì sao vẫn mua Codex giá rẻ 9Router account pool quota pool AI relay Telegram account factory trial promotion UPI reseller đạo đức bảo mật",
   },
   {
@@ -284,7 +284,7 @@ const SITE_SEARCH_INDEX_EN = [
     keywords: "NhanAZ NhânAZ Ghast_Noob GhastxNoob thanhnhanaz nhanhuongloi nhan0ngu nhanaz.io.vn itsnhanaz@gmail.com Discord Ba Ria Vung Tau Ho Chi Minh City born 02.08.2005 philosophy physics universe",
   },
   {
-    title: "Questions with no bottom",
+    title: "Questions I keep coming back to",
     type: "Interest",
     url: "/en/about/#about-curiosity-title",
     excerpt: "Questions Thành Nhân likes to follow all the way down, from ethics and free will to relativity, quantum physics, black holes, spacetime, and extraterrestrial life.",
@@ -315,7 +315,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Why does PocketMine-MP keep showing up?",
     type: "A small aside",
     url: "/en/#answers-title",
-    excerpt: "Because almost everything involving code started there for me. From editing plugins and learning PHP to choosing Information Technology, PocketMine-MP quietly connects the pieces of that road. It would be stranger not to mention it.",
+    excerpt: "Because almost everything involving code started there for me. From editing plugins and learning PHP to choosing Information Technology, PocketMine-MP quietly ties the different parts of that path together. It would be stranger not to mention it.",
     keywords: "PocketMine-MP code PHP Information Technology plugins Minecraft Bedrock",
   },
   {
@@ -428,7 +428,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "NhanAZ-Data",
     type: "GitHub org",
     url: "/en/github/#nhanaz-data",
-    excerpt: "A shelf for datasets, collection work, statistics, and measurable curiosity.",
+    excerpt: "A shelf for datasets, collection scripts, statistics, and questions the numbers might answer.",
     keywords: "NhanAZ-Data dataset data engineering statistics big data research prediction Vietlott Vietnamese dictionary THPT",
   },
   {
@@ -1816,13 +1816,13 @@ const initArticleViews = () => {
       isSnapshot
         ? (isEnglish
           ? `This article had at least ${count} views in the latest daily snapshot`
-          : `Bài viết này có ít nhất ${count} lượt xem trong bản đếm gần nhất`)
+          : `Bài viết này có ít nhất ${count} lượt xem theo số liệu gần nhất trong ngày`)
         : (isEnglish ? `This article has ${count} views` : `Bài viết này có ${count} lượt xem`),
     );
     if (isSnapshot) {
       item.title = isEnglish
         ? "Latest daily snapshot. Live counting may be blocked by the browser."
-        : "Bản đếm gần nhất trong ngày. Trình duyệt có thể đang chặn bộ đếm trực tiếp.";
+        : "Số liệu gần nhất trong ngày. Trình duyệt có thể đang chặn bộ đếm trực tiếp.";
     } else {
       item.removeAttribute("title");
     }

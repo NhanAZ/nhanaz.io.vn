@@ -37,7 +37,7 @@
   <path class="line" d="M536 197 H596"/>
   <rect class="box" x="596" y="152" width="220" height="90"/>
   <text class="label" x="622" y="190">.zl.zip ciphertext</text>
-  <text class="sub" x="622" y="215">ZIP ending, not ZIP inside</text>
+  <text class="sub" x="622" y="215">ZIP extension, but not ZIP data</text>
 
   <path class="line" d="M816 197 H876"/>
   <rect class="note" x="876" y="152" width="188" height="90"/>

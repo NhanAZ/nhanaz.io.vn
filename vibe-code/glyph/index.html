@@ -21,7 +21,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="nhanaz.io.vn">
   <meta property="article:published_time" content="2026-06-30">
-  <meta property="article:modified_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-08-24">
   <meta property="article:author" content="Nguyễn Thành Nhân">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="glyph, một tool sinh ra vì sợ một trang wiki biến mất">
@@ -53,7 +53,7 @@
       "headline": "glyph, một tool sinh ra vì sợ một trang wiki biến mất",
       "description": "Câu chuyện về glyph, project vibe-code của NhanAZ cho Minecraft Bedrock custom emoji, từ nhu cầu cá nhân đến khi được Bedrock Wiki giới thiệu.",
       "datePublished": "2026-06-30",
-      "dateModified": "2026-06-30",
+      "dateModified": "2026-08-24",
       "inLanguage": "vi",
       "image": [
         "https://nhanaz.io.vn/assets/images/web-preview-16x9.png",
@@ -124,7 +124,7 @@
       <div class="article-layout">
         <aside class="article-rail"><a class="text-link" href="/vibe-code/">← Vibe-code</a></aside>
         <div class="prose">
-          <p><a class="text-link" href="https://github.com/NhanAZ/glyph">glyph</a> là một trong những project vibe-code thành công nhất của mình, ít nhất là trong phần cộng đồng Minecraft Bedrock mà mình chạm tới. Nó không bắt đầu như một sản phẩm lớn. Nó bắt đầu từ một nhu cầu cá nhân rất cụ thể.</p>
+          <p><a class="text-link" href="https://github.com/NhanAZ/glyph">glyph</a> là một trong những project vibe-code thành công nhất của mình, ít nhất trong phạm vi cộng đồng Minecraft Bedrock mà mình có dịp tham gia. Nó không bắt đầu như một sản phẩm lớn. Nó bắt đầu từ một nhu cầu cá nhân rất cụ thể.</p>
           <p>Hồi đó mình hay xem bài Custom Emojis của Bedrock Wiki. Bài đó hướng dẫn cách dùng glyph atlas để làm emoji riêng trong Minecraft Bedrock. Mình sợ một ngày wiki hoặc công cụ chuyển đổi trong đó không còn hoạt động nữa, nên làm một bản riêng để tự dùng cho chắc. Nghĩ đơn giản vậy thôi, rồi vibe ra một tool.</p>
 
           <h2>Vấn đề của custom emoji trong Bedrock</h2>
@@ -132,7 +132,7 @@
           <p>Nghe thì không quá khó, nhưng lúc làm thật rất dễ lạc. Nhầm prefix, nhầm hàng, nhầm cột hoặc nhầm ký tự là vào game không hiện đúng thứ mình muốn. Với người làm server, pack hoặc addon, một công cụ nhỏ để nhìn atlas, đổi qua lại giữa mã hex và ký tự, rồi copy nhanh là đủ tiết kiệm khá nhiều thời gian.</p>
 
           <h2>glyph làm gì</h2>
-          <p>Repo mô tả glyph là một bộ công cụ tĩnh, chạy ở phía trình duyệt để tạo và chỉnh glyph atlas 16x16 cho Minecraft. Nó không có backend, nên mọi thứ diễn ra ngay trong browser của người dùng.</p>
+          <p>Repo mô tả glyph là một bộ công cụ tĩnh để tạo và chỉnh glyph atlas 16x16 cho Minecraft. Toàn bộ xử lý diễn ra trong trình duyệt, không có backend.</p>
           <ul>
             <li>Tạo lưới 256 ký tự từ prefix hex như <code>E0</code>.</li>
             <li>Mở template, atlas trống hoặc atlas ví dụ.</li>
@@ -141,19 +141,19 @@
             <li>Xuất atlas, hàng ký tự, reference text, font JSON và metadata JSON.</li>
             <li>Thay glyph bằng texture Minecraft có sẵn trong tool.</li>
           </ul>
-          <p>Điểm mình thích ở project này là nó không cố làm quá nhiều thứ ngoài nhu cầu. Nó đứng đúng chỗ của nó, là một tool nhỏ cho một vấn đề nhỏ, nhưng vấn đề đó lại xuất hiện khá thường xuyên với người làm custom emoji.</p>
+          <p>Điểm mình thích ở project này là nó chỉ giải quyết đúng một việc. Đây là một tool nhỏ cho một vấn đề nhỏ, nhưng người làm custom emoji lại gặp vấn đề đó khá thường xuyên.</p>
 
           <h2>Từ tool cá nhân đến Bedrock Wiki</h2>
           <p>Khúc vui nhất là sau này mấy dev của Bedrock Wiki biết tới glyph và đưa nó vào bài Custom Emojis. Trong phần hướng dẫn lấy ký tự để dùng emoji trong game, wiki gợi ý thêm Glyph Web Tool của @NhanAZ bên cạnh một website tra unicode khác.</p>
-          <p>Vậy là tool vốn được làm vì sợ wiki biến mất lại quay ngược về wiki, trở thành một trong những link được đề xuất cho người đọc. Từ đó glyph không còn chỉ là đồ mình tự giữ cho mình nữa. Người làm Minecraft Bedrock ở cộng đồng quốc tế có thể gặp nó rất tự nhiên khi đang đọc tài liệu.</p>
+          <p>Vậy là tool vốn được làm vì sợ wiki biến mất lại quay ngược về wiki, trở thành một trong những link được đề xuất cho người đọc. Từ đó glyph không còn chỉ là đồ mình tự giữ cho mình nữa. Người làm Minecraft Bedrock ở cộng đồng quốc tế có thể bắt gặp nó ngay trong lúc đọc tài liệu.</p>
 
           <h2>Một đường vòng qua PocketMine-MP</h2>
-          <p>Ngoài Bedrock Wiki, glyph còn được cộng đồng PocketMine-MP trên Discord đưa vào danh sách link hữu ích. Cái này không giống một lần ra mắt hoành tráng. Nó giống kiểu một tool đủ hữu dụng nên được nhặt lên, đặt vào đúng chỗ, rồi người cần thì tự tìm thấy.</p>
+          <p>Ngoài Bedrock Wiki, glyph còn được cộng đồng PocketMine-MP trên Discord đưa vào danh sách link hữu ích. Không có màn ra mắt hoành tráng nào cả. Tool đủ hữu dụng để được thêm vào danh sách, rồi ai cần thì tự tìm thấy.</p>
           <p>Mình thích kiểu được biết đến như vậy hơn. Không cần quảng cáo ồn ào. Một công cụ nhỏ nằm trong danh sách hữu ích của đúng cộng đồng cần nó là đã đủ vui rồi.</p>
 
           <h2>Vì sao nó là vibe-code đúng nghĩa</h2>
           <p>glyph là một project rất đúng tinh thần vibe-code của mình. Có nhu cầu thật, scope đủ nhỏ để bắt đầu ngay, làm nhanh để tự dùng trước, rồi sửa dần theo cách mình muốn cho tới khi nó đủ ổn cho người khác dùng cùng.</p>
-          <p>Khi có nhiều người biết tới hơn, tool cũng phải chạy theo nhu cầu thật. Những phần như export, metadata, font JSON, texture picker hoặc script lấy texture từ Mojang bedrock-samples đều là cách để tool bớt là một bản thử nghiệm và giống một thứ có thể giữ lâu hơn.</p>
+          <p>Khi có nhiều người biết tới hơn, tool cũng phải chạy theo nhu cầu thật. Những phần như export, metadata, font JSON, texture picker hoặc script lấy texture từ Mojang bedrock-samples giúp nó không còn chỉ là bản thử nghiệm và có thể dùng lâu dài.</p>
 
           <h2>Link để xem</h2>
           <ul>
@@ -172,6 +172,6 @@
     <div><p class="footer-title">Còn nhiều project để kể.</p><a class="footer-email" href="/vibe-code/">Vibe-code khác →</a></div>
     <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20260823-07" defer></script>
+  <script src="/assets/js/site.js?v=20260824-01" defer></script>
 </body>
 </html>
