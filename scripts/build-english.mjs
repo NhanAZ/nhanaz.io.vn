@@ -11,6 +11,7 @@ const pagePairs = [
   { vi: "/", en: "/en/" },
   { vi: "/404.html", en: "/en/404.html" },
   { vi: "/about/", en: "/en/about/" },
+  { vi: "/contact/", en: "/en/contact/" },
   { vi: "/achievements/", en: "/en/achievements/" },
   { vi: "/blog/", en: "/en/blog/" },
   { vi: "/github/", en: "/en/github/" },
@@ -31,6 +32,7 @@ const pagePairs = [
   },
   { vi: "/posts/pocketmine-mp-la-gi/", en: "/en/posts/what-is-pocketmine-mp/" },
   { vi: "/projects/", en: "/en/projects/" },
+  { vi: "/privacy/", en: "/en/privacy/" },
   { vi: "/vibe-code/", en: "/en/vibe-code/" },
   { vi: "/vibe-code/glyph/", en: "/en/vibe-code/glyph/" },
 ];

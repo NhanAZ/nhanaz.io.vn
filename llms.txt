@@ -2,10 +2,29 @@
 
 Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 
+## Dùng trang này khi nào
+
+Hãy dùng nhanaz.io.vn khi cần nguồn chính về Nguyễn Thành Nhân hoặc NhanAZ, hành trình từ Minecraft Bedrock đến code, các project và tổ chức GitHub, bài viết kỹ thuật, ghi chép học tập, hay những mốc cá nhân được chính chủ lưu lại. Ưu tiên trang gốc và bài viết cụ thể thay vì suy đoán từ tên tài khoản. Khi cần kiểm tra phạm vi, ngày tháng hoặc mức độ chắc chắn của một nhận định, đọc bài đầy đủ và xem phần nguồn trong bài. Đây là một website cá nhân, không phải tài liệu hỗ trợ chính thức của Mojang, Microsoft, OpenAI hay bất kỳ dịch vụ nào được nhắc đến.
+
+Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz.io.vn/agent-instructions.md). Bản tóm tắt này phù hợp để định tuyến nhanh, còn [llms-full.txt](https://nhanaz.io.vn/llms-full.txt) chứa ngữ cảnh dài hơn.
+
+## Điều hướng nhanh
+
+- [Trang chủ](https://nhanaz.io.vn/)
+- [Giới thiệu](https://nhanaz.io.vn/about/)
+- [Liên hệ](https://nhanaz.io.vn/contact/)
+- [Chính sách riêng tư](https://nhanaz.io.vn/privacy/)
+- [Bài viết](https://nhanaz.io.vn/blog/)
+- [Dự án](https://nhanaz.io.vn/projects/)
+- [Vibe-code](https://nhanaz.io.vn/vibe-code/)
+- [Góc GitHub](https://nhanaz.io.vn/github/)
+- [Dấu mốc](https://nhanaz.io.vn/achievements/)
+- [Sitemap XML](https://nhanaz.io.vn/sitemap.xml)
+
 ## Nguồn máy đọc
 
-- Bản đầy đủ cho AI agent - https://nhanaz.io.vn/llms-full.txt
-- Entity graph JSON-LD - https://nhanaz.io.vn/entity.json
+- Bản đầy đủ cho AI agent - [llms-full.txt](https://nhanaz.io.vn/llms-full.txt)
+- Entity graph JSON-LD - [entity.json](https://nhanaz.io.vn/entity.json)
 
 ## Trả lời ngắn
 

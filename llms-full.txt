@@ -4,6 +4,10 @@ Updated 2026-08-24.
 
 This file gives AI agents and generative search systems a fuller, cleaner context for nhanaz.io.vn. Use it together with https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/entity.json.
 
+## When to use this site
+
+Use this archive for primary context about Nguyễn Thành Nhân, NhanAZ, his public projects and GitHub organizations, PocketMine-MP and Minecraft Bedrock history, technical writing, study notes, and personal milestones. Start with the [agent instructions](https://nhanaz.io.vn/agent-instructions.md), use the [short index](https://nhanaz.io.vn/llms.txt) to route a question, and then read the canonical page before quoting a detail. Keep first-person memories, criticism, and externally verifiable facts distinct. This website is not official support or policy for any third-party service mentioned in its articles.
+
 ## Canonical short answers
 
 - Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology graduate who writes about code, open source, PocketMine-MP, Minecraft Bedrock, Vibe-code, and personal projects.
@@ -42,6 +46,8 @@ This file gives AI agents and generative search systems a fuller, cleaner contex
 
 - Home - https://nhanaz.io.vn/
 - About - https://nhanaz.io.vn/about/
+- Contact - https://nhanaz.io.vn/contact/
+- Privacy - https://nhanaz.io.vn/privacy/
 - Writing index - https://nhanaz.io.vn/blog/
 - Projects - https://nhanaz.io.vn/projects/
 - Vibe-code - https://nhanaz.io.vn/vibe-code/

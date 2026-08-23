@@ -52,9 +52,11 @@ jobs:
             404.html
             CNAME
             about
+            agent-instructions.md
             achievements
             assets
             blog
+            contact
             en
             entity.json
             favicon.ico
@@ -64,6 +66,7 @@ jobs:
             llms.txt
             posts
             projects
+            privacy
             robots.txt
             sitemap.xml
             vibe-code

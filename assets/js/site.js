@@ -4,6 +4,20 @@ document.querySelectorAll("[data-year]").forEach((element) => {
 
 const SITE_SEARCH_INDEX_VI = [
   {
+    title: "Liên hệ",
+    type: "Thông tin website",
+    url: "/contact/",
+    excerpt: "Các kênh liên hệ công khai của Nguyễn Thành Nhân, cùng hướng dẫn chọn kênh phù hợp và cách gửi thông tin đủ ngữ cảnh.",
+    keywords: "liên hệ Nguyễn Thành Nhân NhanAZ email GitHub Zalo Telegram Discord phản hồi",
+  },
+  {
+    title: "Chính sách riêng tư",
+    type: "Thông tin website",
+    url: "/privacy/",
+    excerpt: "Website tĩnh này dùng dữ liệu trình duyệt và dịch vụ bên ngoài ở mức nào, dữ liệu nào không được site tự thu thập.",
+    keywords: "chính sách riêng tư privacy GitHub Pages Cloudflare Giscus localStorage cookie dữ liệu",
+  },
+  {
     title: "Nguyễn Thành Nhân",
     type: "Giới thiệu",
     url: "/about/",
@@ -276,6 +290,20 @@ const SITE_SEARCH_INDEX_VI = [
 ];
 
 const SITE_SEARCH_INDEX_EN = [
+  {
+    title: "Contact",
+    type: "Site information",
+    url: "/en/contact/",
+    excerpt: "Public contact routes for Nguyễn Thành Nhân, with a short guide to choosing a channel and sending enough context.",
+    keywords: "contact Nguyễn Thành Nhân NhanAZ email GitHub Zalo Telegram Discord response",
+  },
+  {
+    title: "Privacy",
+    type: "Site information",
+    url: "/en/privacy/",
+    excerpt: "What this static site and its external services do with browser data, and what the site does not collect itself.",
+    keywords: "privacy policy GitHub Pages Cloudflare Giscus localStorage cookie data",
+  },
   {
     title: "Nguyễn Thành Nhân",
     type: "About",
