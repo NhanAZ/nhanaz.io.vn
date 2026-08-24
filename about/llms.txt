@@ -1,0 +1,11 @@
+# About resources for nhanaz.io.vn
+
+This scoped file covers identity and contact context for the personal archive. It is read-only and should be used with the canonical pages below.
+
+- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/about/)
+- [Contact](https://nhanaz.io.vn/contact/)
+- [Privacy notice](https://nhanaz.io.vn/privacy/)
+- [Site identity graph](https://nhanaz.io.vn/entity.json)
+- [Agent guidance](https://nhanaz.io.vn/agent.md)
+
+The public identity described here is Nguyễn Thành Nhân, also known as NhanAZ. Read the canonical page before quoting a personal detail, and do not infer private information beyond what the site intentionally publishes.

@@ -29,6 +29,8 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 
 - Bản đầy đủ cho AI agent - [llms-full.txt](https://nhanaz.io.vn/llms-full.txt)
 - Entity graph JSON-LD - [entity.json](https://nhanaz.io.vn/entity.json)
+- Tài liệu developer theo khu vực - [developers/llms.txt](https://nhanaz.io.vn/developers/llms.txt)
+- Ngữ cảnh danh tính theo khu vực - [about/llms.txt](https://nhanaz.io.vn/about/llms.txt)
 
 ## Trả lời ngắn
 
