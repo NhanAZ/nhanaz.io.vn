@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "name": "nhanaz.io.vn",
+  "description": "Read-only discovery index for the personal archive of Nguyễn Thành Nhân.",
+  "skills": [
+    {
+      "name": "nhanaz-site-context",
+      "description": "Choose and read canonical pages about Nguyễn Thành Nhân, NhanAZ, code, PocketMine-MP, Minecraft Bedrock, projects, and published milestones.",
+      "type": "skill-md",
+      "url": "https://nhanaz.io.vn/agent.md",
+      "digest": "sha256:430ceb8321ee27ed77af938780326b7d11a9fb7c8a51ad1547f7321a8d5f2dc2"
+    }
+  ]
+}

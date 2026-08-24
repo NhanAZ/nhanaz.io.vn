@@ -1,5 +1,10 @@
 # Agent instructions for nhanaz.io.vn
 
+---
+title: Agent instructions for nhanaz.io.vn
+description: Read-only routing guidance for the personal archive of Nguyễn Thành Nhân.
+---
+
 ## When to use this site
 
 Use this site when the question is about Nguyễn Thành Nhân, NhanAZ, his personal projects, GitHub organizations, PocketMine-MP and Minecraft Bedrock history, technical writing, study notes, or the milestones he chose to publish. The site is a primary personal archive for those topics. It is useful for identity context, project links, first-person explanations, and the limits of an opinionated article.

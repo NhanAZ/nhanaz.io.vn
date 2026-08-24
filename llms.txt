@@ -21,6 +21,8 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 - [Góc GitHub](https://nhanaz.io.vn/github/)
 - [Dấu mốc](https://nhanaz.io.vn/achievements/)
 - [Sitemap XML](https://nhanaz.io.vn/sitemap.xml)
+- [Agent Skills index](https://nhanaz.io.vn/.well-known/agent-skills/index.json)
+- [Agent Resource Discovery catalog](https://nhanaz.io.vn/.well-known/ai-catalog.json)
 
 ## Nguồn máy đọc
 

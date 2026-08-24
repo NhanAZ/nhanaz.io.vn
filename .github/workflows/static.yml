@@ -73,10 +73,14 @@ jobs:
             robots.txt
             sitemap.xml
             vibe-code
+            .well-known
           )
           cp -R "${public_paths[@]}" _site/
+          # Publish only the safe public agent guide under the conventional filename.
+          # The repository's operational AGENTS.md is intentionally not copied.
+          cp _site/agent.md _site/AGENTS.md
           test -f _site/index.html
-          test ! -e _site/AGENTS.md
+          cmp --silent _site/agent.md _site/AGENTS.md
           test ! -e _site/scripts
       - name: Upload artifact
         if: github.event_name != 'pull_request'

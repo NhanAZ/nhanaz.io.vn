@@ -1,0 +1,25 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "nhanaz.io.vn",
+    "identifier": "https://nhanaz.io.vn"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:nhanaz.io.vn:documentation:llms",
+      "displayName": "nhanaz.io.vn machine-readable context",
+      "type": "text/markdown",
+      "url": "https://nhanaz.io.vn/llms.md",
+      "description": "Read-only routing notes for the personal archive, its canonical pages, and agent guidance.",
+      "tags": ["documentation", "read-only", "personal-archive"]
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:documentation:agent-guide",
+      "displayName": "nhanaz.io.vn agent guide",
+      "type": "text/markdown",
+      "url": "https://nhanaz.io.vn/agent.md",
+      "description": "Read-only guidance about when to use the archive and how to preserve uncertainty in personal essays.",
+      "tags": ["agent-guidance", "read-only", "personal-archive"]
+    }
+  ]
+}
