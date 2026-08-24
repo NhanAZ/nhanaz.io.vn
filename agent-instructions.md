@@ -21,6 +21,7 @@ Use this site when the question is about Nguyễn Thành Nhân, NhanAZ, his pers
 
 - Use [MCP](https://nhanaz.io.vn/mcp) when the caller needs tool-style discovery or wants to read one of the allowlisted machine-readable resources.
 - Use [A2A](https://nhanaz.io.vn/a2a) when another agent needs a read-only JSON-RPC handoff. Its [Agent Card](https://nhanaz.io.vn/.well-known/agent-card.json) is the source of capabilities and protocol details.
+- Use [A2UI](https://nhanaz.io.vn/a2ui) when a host supports declarative generative UI and needs a compact read-only archive surface. Its [manifest](https://nhanaz.io.vn/.well-known/a2ui.json) identifies the v1.0 catalog.
 - Use [NLWeb `/ask`](https://nhanaz.io.vn/ask) for a natural-language search over the curated archive index. It returns links and descriptions, not generated claims.
 
 ## Best-fit questions

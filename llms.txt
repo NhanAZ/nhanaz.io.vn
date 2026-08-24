@@ -40,6 +40,7 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 - API catalog theo RFC 9727 - [/.well-known/api-catalog](https://nhanaz.io.vn/.well-known/api-catalog)
 - MCP read-only - [mcp](https://nhanaz.io.vn/mcp) và [MCP server card](https://nhanaz.io.vn/.well-known/mcp/server-card.json)
 - A2A read-only - [a2a](https://nhanaz.io.vn/a2a) và [Agent Card](https://nhanaz.io.vn/.well-known/agent-card.json)
+- A2UI read-only - [a2ui](https://nhanaz.io.vn/a2ui) và [A2UI manifest](https://nhanaz.io.vn/.well-known/a2ui.json)
 - NLWeb read-only search - [ask](https://nhanaz.io.vn/ask)
 - Schema map - [schema-map.xml](https://nhanaz.io.vn/schema-map.xml)
 - Chính sách version API - [api-versioning.md](https://nhanaz.io.vn/api-versioning.md)

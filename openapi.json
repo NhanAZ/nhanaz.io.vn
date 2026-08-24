@@ -393,6 +393,28 @@
         "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2AResponse" } } } } }
       }
     },
+    "/a2ui": {
+      "get": {
+        "operationId": "getA2uiArchiveSurface",
+        "summary": "Read a declarative A2UI archive surface",
+        "responses": {
+          "200": {
+            "description": "A2UI v1.0 surface message",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2uiMessage" } } }
+          }
+        }
+      },
+      "post": {
+        "operationId": "postA2uiArchiveSurface",
+        "summary": "Request the read-only A2UI archive surface",
+        "responses": {
+          "200": {
+            "description": "A2UI v1.0 surface message",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2uiMessage" } } }
+          }
+        }
+      }
+    },
     "/.well-known/agent-card.json": {
       "get": {
         "operationId": "getA2AAgentCard",
@@ -479,6 +501,15 @@
         "required": ["jsonrpc"],
         "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } },
         "additionalProperties": true
+      },
+      "A2uiMessage": {
+        "type": "object",
+        "required": ["version", "createSurface"],
+        "properties": {
+          "version": { "type": "string", "const": "v1.0" },
+          "createSurface": { "type": "object", "required": ["surfaceId", "catalogId", "components"], "properties": { "surfaceId": { "type": "string" }, "catalogId": { "type": "string", "format": "uri" }, "components": { "type": "array", "items": { "type": "object" } } }, "additionalProperties": true }
+        },
+        "additionalProperties": false
       }
     }
   }

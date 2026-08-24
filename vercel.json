@@ -37,6 +37,14 @@
       "destination": "/api/a2a"
     },
     {
+      "source": "/a2ui",
+      "destination": "/api/a2ui"
+    },
+    {
+      "source": "/a2ui/",
+      "destination": "/api/a2ui"
+    },
+    {
       "source": "/v1",
       "destination": "/api/v1/index"
     },

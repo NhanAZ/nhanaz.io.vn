@@ -81,6 +81,18 @@
         "identity": "https://nhanaz.io.vn",
         "identityType": "https"
       }
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:a2ui:archive",
+      "displayName": "nhanaz.io.vn A2UI archive surface",
+      "type": "application/json",
+      "url": "https://nhanaz.io.vn/a2ui",
+      "description": "Read-only A2UI v1.0 declarative surface for a compact view of the public archive.",
+      "tags": ["a2ui", "generative-ui", "read-only", "archive"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
     }
   ]
 }

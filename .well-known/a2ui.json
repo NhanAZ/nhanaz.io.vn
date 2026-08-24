@@ -1,0 +1,10 @@
+{
+  "name": "nhanaz.io.vn A2UI archive surface",
+  "protocol": "A2UI",
+  "version": "v1.0",
+  "endpoint": "https://nhanaz.io.vn/a2ui",
+  "catalogId": "https://a2ui.org/specification/v1_0/catalogs/basic/catalog.json",
+  "authentication": "none",
+  "readOnly": true,
+  "description": "A declarative, read-only surface for rendering a compact view of the public archive."
+}
