@@ -293,7 +293,7 @@
           }
         ],
         "responses": {
-          "200": { "$ref": "#/paths/~1api~1views/get/responses/200" },
+          "200": { "description": "Page-view count", "content": { "application/json": { "schema": { "type": "object", "required": ["path", "views"], "properties": { "path": { "type": "string" }, "views": { "type": "integer", "minimum": 0 }, "readOnly": { "type": "boolean" } }, "additionalProperties": false } } } },
           "400": { "$ref": "#/paths/~1api~1views/get/responses/400" },
           "405": { "$ref": "#/paths/~1api~1views/get/responses/405" },
           "503": { "$ref": "#/paths/~1api~1views/get/responses/503" }
