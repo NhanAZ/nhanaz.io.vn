@@ -152,6 +152,24 @@
       ]
     },
     {
+      "source": "/mcp/server-card",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/mcp/product/server-card",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
       "source": "/.well-known/agent-card.json",
       "headers": [
         {
