@@ -235,7 +235,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "type": "object", "$ref": "#/components/schemas/Error"
                 }
               }
             }
@@ -250,7 +250,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "type": "object", "$ref": "#/components/schemas/Error"
                 }
               }
             }
@@ -260,7 +260,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Error"
+                  "type": "object", "$ref": "#/components/schemas/Error"
                 }
               }
             }
@@ -275,7 +275,7 @@
             },
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/Error" }
+                "schema": { "type": "object", "$ref": "#/components/schemas/Error" }
               }
             }
           }
@@ -307,8 +307,8 @@
         "description": "Fetches 1-8 public machine-readable resources in one read-only request. It never follows arbitrary hosts and does not change content.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/BatchRequest" } } } },
         "responses": {
-          "200": { "description": "Batch resource result", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/BatchResponse" } } } },
-          "400": { "description": "Invalid or non-allowlisted batch", "content": { "application/problem+json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+          "200": { "description": "Batch resource result", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/BatchResponse" } } } },
+          "400": { "description": "Invalid or non-allowlisted batch", "content": { "application/problem+json": { "schema": { "type": "object", "$ref": "#/components/schemas/Error" } } } }
         }
       }
     },
@@ -351,11 +351,11 @@
           "200": {
             "description": "NLWeb search response or event stream",
             "content": {
-              "application/json": { "schema": { "$ref": "#/components/schemas/AskResponse" } },
+              "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/AskResponse" } },
               "text/event-stream": { "schema": { "type": "string" } }
             }
           },
-          "400": { "description": "Invalid query", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+          "400": { "description": "Invalid query", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/Error" } } } }
         }
       },
       "post": {
@@ -367,8 +367,8 @@
           "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AskRequest" } } }
         },
         "responses": {
-          "200": { "description": "NLWeb response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AskResponse" } }, "text/event-stream": { "schema": { "type": "string" } } } },
-          "400": { "description": "Invalid query", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+          "200": { "description": "NLWeb response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/AskResponse" } }, "text/event-stream": { "schema": { "type": "string" } } } },
+          "400": { "description": "Invalid query", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/Error" } } } }
         }
       }
     },
@@ -377,7 +377,7 @@
         "operationId": "getMcpServerInfo",
         "summary": "Read MCP server transport information",
         "description": "Returns public capabilities for the stateless, read-only Streamable HTTP MCP surface.",
-        "responses": { "200": { "description": "MCP server information", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpServerInfo" } } } } }
+        "responses": { "200": { "description": "MCP server information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpServerInfo" } } } } }
       },
       "post": {
         "operationId": "callMcp",
@@ -385,8 +385,8 @@
         "description": "Accepts JSON-RPC MCP requests such as initialize, tools/list, resources/list, resources/read, and tools/call. No credentials are required.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": {
-          "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpResponse" } } } },
-          "400": { "description": "Malformed JSON-RPC request", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
+          "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } },
+          "400": { "description": "Malformed JSON-RPC request", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/Error" } } } }
         }
       }
     },
@@ -396,21 +396,22 @@
         "summary": "Call the documentation MCP surface",
         "description": "Compatibility endpoint for the same public read-only MCP transport, scoped to documentation resources.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
-        "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpResponse" } } } } }
+        "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
       }
     },
     "/mcp/product": {
       "get": {
         "operationId": "getProductMcpInfo",
         "summary": "Read product MCP transport information",
-        "responses": { "200": { "description": "Product MCP server information", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpServerInfo" } } } } }
+        "description": "Returns public capabilities for the stateless, read-only product MCP surface that reports aggregate page-view totals.",
+        "responses": { "200": { "description": "Product MCP server information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpServerInfo" } } } } }
       },
       "post": {
         "operationId": "callProductMcp",
         "summary": "Call the read-only page counter MCP server",
         "description": "Accepts MCP JSON-RPC requests for reading aggregate page-view totals without incrementing them.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
-        "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpResponse" } } } } }
+        "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
       }
     },
     "/a2a": {
@@ -418,34 +419,36 @@
         "operationId": "getA2AInfo",
         "summary": "Read A2A endpoint information",
         "description": "Returns the public Agent Card URL for the read-only A2A interface.",
-        "responses": { "200": { "description": "A2A endpoint information", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2AResponse" } } } } }
+        "responses": { "200": { "description": "A2A endpoint information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2AResponse" } } } } }
       },
       "post": {
         "operationId": "sendA2AMessage",
         "summary": "Send a read-only A2A message",
         "description": "Accepts a JSON-RPC message/send request and returns links from the curated archive index.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2ARequest" } } } },
-        "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2AResponse" } } } } }
+        "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2AResponse" } } } } }
       }
     },
     "/a2ui": {
       "get": {
         "operationId": "getA2uiArchiveSurface",
         "summary": "Read a declarative A2UI archive surface",
+        "description": "Returns a small read-only A2UI v1.0 surface describing the public archive viewer.",
         "responses": {
           "200": {
             "description": "A2UI v1.0 surface message",
-            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2uiMessage" } } }
+            "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2uiMessage" } } }
           }
         }
       },
       "post": {
         "operationId": "postA2uiArchiveSurface",
         "summary": "Request the read-only A2UI archive surface",
+        "description": "Returns the same read-only A2UI v1.0 archive surface without changing site data.",
         "responses": {
           "200": {
             "description": "A2UI v1.0 surface message",
-            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2uiMessage" } } }
+            "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2uiMessage" } } }
           }
         }
       }

@@ -18,6 +18,10 @@ const manifest = {
 
 export default async function handler(request, response) {
   if (request.method === "GET") {
+    // A client may use the well-known URL itself as the Streamable HTTP
+    // endpoint after discovery. Keep JSON manifest negotiation for ordinary
+    // requests, but expose the MCP endpoint event for SSE-capable clients.
+    if (request.headers?.accept?.includes("text/event-stream")) return handleMcp(request, response);
     response.setHeader("Content-Type", "application/json; charset=utf-8");
     response.setHeader("Cache-Control", "public, max-age=300");
     response.status(200).json(manifest);
