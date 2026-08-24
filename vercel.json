@@ -194,7 +194,43 @@
       ]
     },
     {
+      "source": "/mcp/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/mcp/.well-known/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
       "source": "/mcp/product/server-card",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/mcp/product/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/mcp/product/.well-known/server-card.json",
       "headers": [
         {
           "key": "Content-Type",
