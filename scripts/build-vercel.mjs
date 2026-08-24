@@ -10,6 +10,7 @@ const publicPaths = [
   "404.html",
   "agent.md",
   "agent-mode.md",
+  "api-versioning.md",
   "auth.md",
   "CNAME",
   "about",

@@ -21,6 +21,7 @@ There is no user account, authentication protocol, MCP server, webhook, content-
 - [OpenAPI](https://nhanaz.io.vn/openapi.json)
 - [Authentication note](https://nhanaz.io.vn/auth.md)
 - [Pricing note](https://nhanaz.io.vn/pricing.md)
+- [API versioning policy](https://nhanaz.io.vn/api-versioning.md)
 - [API catalog](https://nhanaz.io.vn/.well-known/api-catalog)
 - [ARD catalog](https://nhanaz.io.vn/.well-known/ai-catalog.json)
 - [Agent Skills index](https://nhanaz.io.vn/.well-known/agent-skills/index.json)

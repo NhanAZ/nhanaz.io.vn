@@ -39,6 +39,7 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 - Dữ liệu giá máy đọc - [pricing.json](https://nhanaz.io.vn/pricing.json)
 - API catalog theo RFC 9727 - [/.well-known/api-catalog](https://nhanaz.io.vn/.well-known/api-catalog)
 - Schema map - [schema-map.xml](https://nhanaz.io.vn/schema-map.xml)
+- Chính sách version API - [api-versioning.md](https://nhanaz.io.vn/api-versioning.md)
 
 ## Trả lời ngắn
 

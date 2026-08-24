@@ -3,6 +3,16 @@
   "buildCommand": "node scripts/build-vercel.mjs",
   "outputDirectory": "_site",
   "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/pricing",
+      "destination": "/pricing.md"
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/pricing.md"
+    }
+  ],
   "headers": [
     {
       "source": "/",
