@@ -140,6 +140,32 @@
       ]
     },
     {
+      "source": "/developers",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</developers.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"alternate\"; type=\"text/plain\", </openapi.json>; rel=\"service-desc\"; type=\"application/vnd.oai.openapi+json\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, User-Agent"
+        }
+      ]
+    },
+    {
+      "source": "/developers/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</developers.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"alternate\"; type=\"text/plain\", </openapi.json>; rel=\"service-desc\"; type=\"application/vnd.oai.openapi+json\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept, User-Agent"
+        }
+      ]
+    },
+    {
       "source": "/.well-known/api-catalog",
       "headers": [
         {
