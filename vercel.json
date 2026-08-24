@@ -5,7 +5,7 @@
   "cleanUrls": false,
   "rewrites": [
     {
-      "source": "/",
+      "source": "/:path*",
       "has": [
         {
           "type": "query",
