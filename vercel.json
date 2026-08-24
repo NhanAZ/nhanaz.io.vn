@@ -2,18 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node scripts/build-vercel.mjs",
   "outputDirectory": "_site",
-  "cleanUrls": false,
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "query",
-          "key": "mode",
-          "value": "agent"
-        }
-      ],
-      "destination": "/agent-mode.md"
-    }
-  ]
+  "cleanUrls": false
 }
