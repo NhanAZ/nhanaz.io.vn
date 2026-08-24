@@ -3,8 +3,10 @@
   "description": "Read-only tools and resources for finding and reading the personal archive of Nguyễn Thành Nhân - NhanAZ.",
   "version": "1.0.0",
   "serverUrl": "https://nhanaz.io.vn/mcp",
+  "url": "https://nhanaz.io.vn/mcp",
   "transport": "streamable-http",
   "protocolVersion": "2025-11-25",
+  "uiResources": ["ui://nhanaz/archive.html"],
   "authentication": {
     "required": false,
     "description": "The public archive and its MCP surface do not require an account or credential."

@@ -8,6 +8,8 @@ const manifest = {
   endpoint: "https://nhanaz.io.vn/mcp",
   documentation: "https://nhanaz.io.vn/developers/",
   transport: "streamable-http",
+  protocolVersion: "2025-11-25",
+  capabilities: { tools: {}, resources: {} },
   authentication: "none",
 };
 
