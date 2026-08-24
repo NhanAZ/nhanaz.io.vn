@@ -39,6 +39,10 @@ function send(request, response, payload, status = 200) {
   response.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
   const sessionId = request.headers?.["mcp-session-id"];
   if (sessionId) response.setHeader("Mcp-Session-Id", sessionId);
+  const protocolVersion = payload?.result?.protocolVersion
+    || request.headers?.["mcp-protocol-version"]
+    || request.headers?.["MCP-Protocol-Version"];
+  if (protocolVersion) response.setHeader("MCP-Protocol-Version", protocolVersion);
   if (request.headers?.accept?.includes("text/event-stream")) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");

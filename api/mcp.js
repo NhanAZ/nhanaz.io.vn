@@ -107,6 +107,10 @@ const result = (id, value) => ({ jsonrpc: "2.0", id, result: value });
 function sendMcpResponse(request, response, payload, status = 200) {
   const sessionId = request.headers?.["mcp-session-id"] || request.headers?.["Mcp-Session-Id"];
   if (sessionId) response.setHeader("Mcp-Session-Id", sessionId);
+  const protocolVersion = payload?.result?.protocolVersion
+    || request.headers?.["mcp-protocol-version"]
+    || request.headers?.["MCP-Protocol-Version"];
+  if (protocolVersion) response.setHeader("MCP-Protocol-Version", protocolVersion);
   if (request.headers?.accept?.includes("text/event-stream")) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
