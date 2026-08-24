@@ -1,0 +1,17 @@
+{
+  "environment": "sandbox",
+  "readOnly": true,
+  "sideEffects": false,
+  "endpoint": "https://nhanaz.io.vn/sandbox.json",
+  "sampleRequest": {
+    "path": "/demo/"
+  },
+  "sampleResponse": {
+    "sandbox": true,
+    "readOnly": true,
+    "sideEffects": false,
+    "path": "/demo/",
+    "views": 0
+  },
+  "note": "This deterministic fixture never connects to counter storage and never changes production data."
+}

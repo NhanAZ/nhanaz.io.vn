@@ -14,11 +14,11 @@
     },
     {
       "source": "/sandbox",
-      "destination": "/api/sandbox"
+      "destination": "/sandbox.json"
     },
     {
       "source": "/sandbox/",
-      "destination": "/api/sandbox"
+      "destination": "/sandbox.json"
     },
     {
       "source": "/ask",
