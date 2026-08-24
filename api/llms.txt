@@ -1,0 +1,5 @@
+# Read-only resource description for nhanaz.io.vn
+
+There is no application API or write endpoint. The [OpenAPI document](https://nhanaz.io.vn/openapi.json) describes the static GET resources that agents can retrieve, including Markdown context, the public entity graph, the sitemap, and discovery manifests.
+
+Do not send credentials or private data to these URLs. Use the canonical page before quoting a claim, and use the [GitHub repository](https://github.com/NhanAZ/nhanaz.io.vn) for source history.

@@ -32,6 +32,8 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 - Tài liệu developer theo khu vực - [developers/llms.txt](https://nhanaz.io.vn/developers/llms.txt)
 - Ngữ cảnh danh tính theo khu vực - [about/llms.txt](https://nhanaz.io.vn/about/llms.txt)
 - Tài liệu public theo khu vực - [docs/llms.txt](https://nhanaz.io.vn/docs/llms.txt)
+- Mô tả tài nguyên GET tĩnh - [openapi.json](https://nhanaz.io.vn/openapi.json)
+- Ghi chú phạm vi API - [api/llms.txt](https://nhanaz.io.vn/api/llms.txt)
 
 ## Trả lời ngắn
 

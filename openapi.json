@@ -1,0 +1,171 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "nhanaz.io.vn read-only resources",
+    "version": "2026-08-24",
+    "description": "A small OpenAPI description of the public static resources on nhanaz.io.vn. These routes are read-only document retrieval, not an application API, and none accepts credentials or changes data."
+  },
+  "servers": [
+    {
+      "url": "https://nhanaz.io.vn"
+    }
+  ],
+  "paths": {
+    "/index.md": {
+      "get": {
+        "operationId": "getHomeMarkdown",
+        "summary": "Read the home page in Markdown",
+        "description": "Returns the short Markdown entry point for the personal archive.",
+        "responses": {
+          "200": {
+            "description": "Markdown document",
+            "content": {
+              "text/markdown": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms.txt": {
+      "get": {
+        "operationId": "getLlmsIndex",
+        "summary": "Read the short machine-readable index",
+        "description": "Returns routing notes and canonical links for agents.",
+        "responses": {
+          "200": {
+            "description": "Plain-text machine-readable index",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/llms-full.txt": {
+      "get": {
+        "operationId": "getLlmsFullContext",
+        "summary": "Read the full machine-readable context",
+        "description": "Returns the longer source-bounded context for the archive.",
+        "responses": {
+          "200": {
+            "description": "Plain-text context document",
+            "content": {
+              "text/plain": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/agent.md": {
+      "get": {
+        "operationId": "getAgentGuidance",
+        "summary": "Read agent routing guidance",
+        "description": "Returns guidance about when this personal archive is an appropriate source.",
+        "responses": {
+          "200": {
+            "description": "Markdown guidance document",
+            "content": {
+              "text/markdown": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/developers.md": {
+      "get": {
+        "operationId": "getDeveloperResources",
+        "summary": "Read developer and agent resource notes",
+        "description": "Returns the limits and machine-readable entry points for this static site.",
+        "responses": {
+          "200": {
+            "description": "Markdown developer resource document",
+            "content": {
+              "text/markdown": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/entity.json": {
+      "get": {
+        "operationId": "getEntityGraph",
+        "summary": "Read the public identity graph",
+        "description": "Returns the site's public JSON-LD entity graph.",
+        "responses": {
+          "200": {
+            "description": "JSON-LD entity graph",
+            "content": {
+              "application/ld+json": {
+                "schema": { "type": "object" }
+              },
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sitemap.xml": {
+      "get": {
+        "operationId": "getSitemap",
+        "summary": "Read canonical public URLs",
+        "description": "Returns the XML sitemap for indexable public pages.",
+        "responses": {
+          "200": {
+            "description": "XML sitemap",
+            "content": {
+              "application/xml": {
+                "schema": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/ai-catalog.json": {
+      "get": {
+        "operationId": "getAgentResourceCatalog",
+        "summary": "Read the ARD catalog",
+        "description": "Returns the domain-anchored catalog of read-only Markdown resources.",
+        "responses": {
+          "200": {
+            "description": "Agentic Resource Discovery catalog",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/.well-known/agent-skills/index.json": {
+      "get": {
+        "operationId": "getAgentSkillsIndex",
+        "summary": "Read the Agent Skills discovery index",
+        "description": "Returns the read-only skill index for the archive.",
+        "responses": {
+          "200": {
+            "description": "Agent Skills discovery document",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
