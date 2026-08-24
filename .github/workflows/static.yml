@@ -50,6 +50,7 @@ jobs:
           public_paths=(
             .nojekyll
             404.html
+            agent.md
             CNAME
             about
             agent-instructions.md
@@ -62,7 +63,9 @@ jobs:
             favicon.ico
             github
             index.html
+            index.md
             llms-full.txt
+            llms.md
             llms.txt
             posts
             projects

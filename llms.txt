@@ -10,7 +10,8 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 
 ## Điều hướng nhanh
 
-- [Trang chủ](https://nhanaz.io.vn/)
+- [Trang chủ HTML](https://nhanaz.io.vn/)
+- [Trang chủ Markdown](https://nhanaz.io.vn/index.md)
 - [Giới thiệu](https://nhanaz.io.vn/about/)
 - [Liên hệ](https://nhanaz.io.vn/contact/)
 - [Chính sách riêng tư](https://nhanaz.io.vn/privacy/)
