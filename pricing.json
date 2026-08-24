@@ -2,6 +2,9 @@
   "name": "nhanaz.io.vn",
   "type": "personal-archive",
   "currency": "VND",
+  "freeTier": true,
+  "selfServe": true,
+  "sandboxUrl": "https://nhanaz.io.vn/sandbox",
   "offers": [
     {
       "name": "Public archive access",

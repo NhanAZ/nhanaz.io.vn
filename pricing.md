@@ -6,6 +6,8 @@ nhanaz.io.vn is a personal archive, not a paid SaaS product.
 
 The public archive and its read-only endpoints are available on a free tier with no account or subscription.
 
+It is self-serve by design. A deterministic [sandbox](https://nhanaz.io.vn/sandbox) is available for testing without touching production data.
+
 - Public pages, Markdown resources, JSON-LD, the OpenAPI document, and the page-view counter are free to read.
 - No account, subscription, checkout, paid API tier, or commercial support plan is offered.
 - `GET /api/views?path=/public/path` is a small public counter endpoint. It accepts no credentials and has no paid tier.
