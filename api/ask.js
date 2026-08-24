@@ -3,7 +3,7 @@ import { searchArchive } from "../lib/agent-data.js";
 const VERSION = "0.55";
 
 function sendJson(response, status, payload) {
-  response.setHeader("Content-Type", "application/json; charset=utf-8");
+  response.setHeader("Content-Type", status >= 400 ? "application/problem+json; charset=utf-8" : "application/json; charset=utf-8");
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("X-Robots-Tag", "noindex, nofollow");
   response.status(status).json(payload);
