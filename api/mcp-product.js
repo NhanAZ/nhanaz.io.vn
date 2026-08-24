@@ -37,8 +37,8 @@ function send(request, response, payload, status = 200) {
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, Idempotency-Key, MCP-Protocol-Version, Mcp-Session-Id");
   response.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
-  response.setHeader("Mcp-Session-Id", "nhanaz-counter-public");
-  response.setHeader("MCP-Protocol-Version", payload?.result?.protocolVersion || "2025-11-25");
+  const sessionId = request.headers?.["mcp-session-id"];
+  if (sessionId) response.setHeader("Mcp-Session-Id", sessionId);
   if (request.headers?.accept?.includes("text/event-stream")) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
@@ -72,7 +72,7 @@ export default async function handler(request, response) {
   if (body.method.startsWith("notifications/") || !Object.hasOwn(body, "id")) { response.status(202).end(); return; }
   try {
     if (body.method === "initialize") {
-      send(request, response, result(id, { protocolVersion: "2025-11-25", capabilities: { tools: { listChanged: false } }, serverInfo: SERVER, instructions: "This is a public read-only product surface for aggregate page-view totals." }));
+      send(request, response, result(id, { protocolVersion: "2025-11-25", capabilities: { tools: { listChanged: true } }, serverInfo: SERVER, instructions: "This is a public read-only product surface for aggregate page-view totals. Use its tools to read counter metadata or a normalized path without incrementing it." }));
       return;
     }
     if (body.method === "ping") { send(request, response, result(id, {})); return; }
