@@ -1,0 +1,7 @@
+{
+  "resource": "https://nhanaz.io.vn",
+  "resource_name": "nhanaz.io.vn public archive",
+  "resource_documentation": "https://nhanaz.io.vn/developers/",
+  "resource_policy_uri": "https://nhanaz.io.vn/auth.md",
+  "bearer_methods_supported": []
+}

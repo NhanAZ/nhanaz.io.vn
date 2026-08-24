@@ -4,11 +4,12 @@ The public archive does not require authentication.
 
 ## Discover
 
-There is no protected resource and no OAuth authorization server. The public
-OpenAPI document is the source of truth. The RFC 9728
-`oauth-protected-resource` and RFC 8414 `oauth-authorization-server` metadata
-documents are intentionally not advertised because every published operation
-is public and read-only.
+The origin publishes RFC 9728
+[`oauth-protected-resource`](https://nhanaz.io.vn/.well-known/oauth-protected-resource)
+metadata with an empty `bearer_methods_supported` array. This explicitly tells
+clients that the public resource accepts no bearer-token method. There is no
+OAuth authorization server, so RFC 8414 `oauth-authorization-server` metadata
+is not advertised.
 
 ## Pick a method
 
