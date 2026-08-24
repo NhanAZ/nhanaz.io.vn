@@ -320,7 +320,7 @@
         "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/BatchRequest" } } } },
         "responses": {
-          "200": { "description": "Batch resource result", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/BatchResponse" } } } },
+          "200": { "description": "Batch resource result", "content": { "application/json": { "schema": { "type": "object", "required": ["readOnly", "count", "results"], "properties": { "readOnly": { "const": true }, "count": { "type": "integer", "minimum": 1, "maximum": 8 }, "results": { "type": "array", "items": { "type": "object", "required": ["url", "status", "contentType"], "properties": { "url": { "type": "string", "format": "uri" }, "status": { "type": "integer" }, "contentType": { "type": "string" }, "content": { "type": ["string", "null"] } }, "additionalProperties": false } } }, "additionalProperties": false } } } },
           "400": { "description": "Invalid or non-allowlisted batch", "content": { "application/problem+json": { "schema": { "type": "object", "$ref": "#/components/schemas/ProblemDetails" } } } }
         }
       }
@@ -364,7 +364,7 @@
           "200": {
             "description": "NLWeb search response or event stream",
             "content": {
-              "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/AskResponse" } },
+              "application/json": { "schema": { "type": "object", "required": ["_meta", "query_id", "results"], "properties": { "_meta": { "type": "object" }, "query_id": { "type": "string" }, "mode": { "type": "string" }, "summary": { "type": "string" }, "results": { "type": "array", "items": { "type": "object" } }, "pagination": { "type": "object" } }, "additionalProperties": false } },
               "text/event-stream": { "schema": { "type": "string" } }
             }
           },
@@ -381,7 +381,7 @@
           "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AskRequest" } } }
         },
         "responses": {
-          "200": { "description": "NLWeb response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/AskResponse" } }, "text/event-stream": { "schema": { "type": "string" } } } },
+          "200": { "description": "NLWeb response", "content": { "application/json": { "schema": { "type": "object", "required": ["_meta", "query_id", "results"], "properties": { "_meta": { "type": "object" }, "query_id": { "type": "string" }, "mode": { "type": "string" }, "summary": { "type": "string" }, "results": { "type": "array", "items": { "type": "object" } }, "pagination": { "type": "object" } }, "additionalProperties": false } }, "text/event-stream": { "schema": { "type": "string" } } } },
           "400": { "description": "Invalid query", "content": { "application/problem+json": { "schema": { "type": "object", "$ref": "#/components/schemas/ProblemDetails" } } } }
         }
       }
@@ -391,7 +391,7 @@
         "operationId": "getMcpServerInfo",
         "summary": "Read MCP server transport information",
         "description": "Returns public capabilities for the stateless, read-only Streamable HTTP MCP surface.",
-        "responses": { "200": { "description": "MCP server information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpServerInfo" } } } } }
+        "responses": { "200": { "description": "MCP server information", "content": { "application/json": { "schema": { "type": "object", "required": ["protocolVersion", "serverInfo", "capabilities"], "properties": { "protocolVersion": { "type": "string" }, "serverInfo": { "type": "object" }, "capabilities": { "type": "object" }, "endpoint": { "type": "string", "format": "uri" } }, "additionalProperties": true } } } } }
       },
       "post": {
         "operationId": "callMcp",
@@ -400,7 +400,7 @@
         "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": {
-          "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } },
+          "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "required": ["jsonrpc"], "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } }, "additionalProperties": true } } } },
           "400": { "description": "Malformed JSON-RPC request", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/ProblemDetails" } } } }
         }
       }
@@ -412,7 +412,7 @@
         "description": "Compatibility endpoint for the same public read-only MCP transport, scoped to documentation resources.",
         "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
-        "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
+        "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "required": ["jsonrpc"], "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } }, "additionalProperties": true } } } } }
       }
     },
     "/mcp/product": {
@@ -420,7 +420,7 @@
         "operationId": "getProductMcpInfo",
         "summary": "Read product MCP transport information",
         "description": "Returns public capabilities for the stateless, read-only product MCP surface that reports aggregate page-view totals.",
-        "responses": { "200": { "description": "Product MCP server information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpServerInfo" } } } } }
+        "responses": { "200": { "description": "Product MCP server information", "content": { "application/json": { "schema": { "type": "object", "required": ["protocolVersion", "serverInfo", "capabilities"], "properties": { "protocolVersion": { "type": "string" }, "serverInfo": { "type": "object" }, "capabilities": { "type": "object" }, "endpoint": { "type": "string", "format": "uri" } }, "additionalProperties": true } } } } }
       },
       "post": {
         "operationId": "callProductMcp",
@@ -428,7 +428,7 @@
         "description": "Accepts MCP JSON-RPC requests for reading aggregate page-view totals without incrementing them.",
         "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
-        "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
+        "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "required": ["jsonrpc"], "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } }, "additionalProperties": true } } } } }
       }
     },
     "/a2a": {
@@ -436,7 +436,7 @@
         "operationId": "getA2AInfo",
         "summary": "Read A2A endpoint information",
         "description": "Returns the public Agent Card URL for the read-only A2A interface.",
-        "responses": { "200": { "description": "A2A endpoint information", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2AResponse" } } } } }
+        "responses": { "200": { "description": "A2A endpoint information", "content": { "application/json": { "schema": { "type": "object", "required": ["jsonrpc"], "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } }, "additionalProperties": true } } } } }
       },
       "post": {
         "operationId": "sendA2AMessage",
@@ -444,7 +444,7 @@
         "description": "Accepts a JSON-RPC message/send request and returns links from the curated archive index.",
         "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2ARequest" } } } },
-        "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2AResponse" } } } } }
+        "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "required": ["jsonrpc"], "properties": { "jsonrpc": { "const": "2.0" }, "id": {}, "result": {}, "error": { "type": "object" } }, "additionalProperties": true } } } } }
       }
     },
     "/a2ui": {
@@ -455,7 +455,7 @@
         "responses": {
           "200": {
             "description": "A2UI v1.0 surface message",
-            "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2uiMessage" } } }
+            "content": { "application/json": { "schema": { "type": "object", "required": ["version", "createSurface"], "properties": { "version": { "type": "string", "const": "v1.0" }, "createSurface": { "type": "object", "required": ["surfaceId", "catalogId", "components"], "properties": { "surfaceId": { "type": "string" }, "catalogId": { "type": "string", "format": "uri" }, "components": { "type": "array", "items": { "type": "object" } } }, "additionalProperties": true } }, "additionalProperties": false } } }
           }
         }
       },
@@ -467,7 +467,7 @@
         "responses": {
           "200": {
             "description": "A2UI v1.0 surface message",
-            "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2uiMessage" } } }
+            "content": { "application/json": { "schema": { "type": "object", "required": ["version", "createSurface"], "properties": { "version": { "type": "string", "const": "v1.0" }, "createSurface": { "type": "object", "required": ["surfaceId", "catalogId", "components"], "properties": { "surfaceId": { "type": "string" }, "catalogId": { "type": "string", "format": "uri" }, "components": { "type": "array", "items": { "type": "object" } } }, "additionalProperties": true } }, "additionalProperties": false } } }
           }
         }
       }
