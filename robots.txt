@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Search assistants may read the public archive. Training-only crawlers are not granted access.
+# AI search, retrieval and training crawlers may read the public archive.
 User-agent: GPTBot
 Allow: /
 User-agent: ClaudeBot
@@ -14,7 +14,7 @@ User-agent: CCBot
 Disallow: /
 User-agent: Bytespider
 Disallow: /
-Content-Signal: search=yes, ai-train=no
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 Sitemap: https://nhanaz.io.vn/sitemap.xml
 Agentmap: https://nhanaz.io.vn/.well-known/ai-catalog.json
