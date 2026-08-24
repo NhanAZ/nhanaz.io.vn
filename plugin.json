@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nhanaz-site-context",
+  "version": "1.0.0",
+  "description": "Read-only Agent Skill for routing questions to NhanAZ's canonical personal archive resources.",
+  "author": {
+    "name": "Nguyễn Thành Nhân",
+    "url": "https://nhanaz.io.vn/about/"
+  },
+  "homepage": "https://nhanaz.io.vn/agent-mode.md",
+  "repository": "https://github.com/NhanAZ/nhanaz.io.vn",
+  "license": "MIT",
+  "keywords": ["nhanaz", "personal-archive", "read-only", "agent-context"]
+}
