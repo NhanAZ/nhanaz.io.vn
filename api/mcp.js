@@ -64,8 +64,8 @@ const errorResult = (id, code, message, data) => ({ jsonrpc: "2.0", id: id ?? nu
 const result = (id, value) => ({ jsonrpc: "2.0", id, result: value });
 
 function sendMcpResponse(request, response, payload, status = 200) {
-  response.setHeader("Mcp-Session-Id", "nhanaz-public");
-  response.setHeader("MCP-Protocol-Version", payload?.result?.protocolVersion || "2025-11-25");
+  const sessionId = request.headers?.["mcp-session-id"] || request.headers?.["Mcp-Session-Id"];
+  if (sessionId) response.setHeader("Mcp-Session-Id", sessionId);
   if (request.headers?.accept?.includes("text/event-stream")) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
@@ -137,8 +137,6 @@ export async function handleMcp(request, response) {
   }
   if (request.method === "OPTIONS") { response.status(204).end(); return; }
   if (request.method === "GET") {
-    response.setHeader("Mcp-Session-Id", "nhanaz-public");
-    response.setHeader("MCP-Protocol-Version", "2025-11-25");
     if (request.headers?.accept?.includes("text/event-stream")) {
       response.setHeader("Content-Type", "text/event-stream");
       response.setHeader("Cache-Control", "no-cache, no-transform");
