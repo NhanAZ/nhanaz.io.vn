@@ -1,0 +1,11 @@
+{
+  "name": "nhanaz-io-vn",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.0"
+  }
+}

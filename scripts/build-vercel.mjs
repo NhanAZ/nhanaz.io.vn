@@ -13,7 +13,6 @@ const publicPaths = [
   "about",
   "achievements",
   "agent-instructions.md",
-  "api",
   "assets",
   "blog",
   "contact",
@@ -49,6 +48,12 @@ for (const relativePath of publicPaths) {
   }
   fs.cpSync(source, path.join(output, relativePath), { recursive: true });
 }
+
+// Keep the public API scope explicit. Serverless functions in /api stay at
+// the repository root for Vercel and must not be copied into the static site.
+const publicApiDirectory = path.join(output, "api");
+fs.mkdirSync(publicApiDirectory, { recursive: true });
+fs.cpSync(path.join(root, "api", "llms.txt"), path.join(publicApiDirectory, "llms.txt"));
 
 fs.cpSync(path.join(output, "agent.md"), path.join(output, "AGENTS.md"));
 

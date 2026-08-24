@@ -55,7 +55,6 @@ jobs:
             about
             agent-instructions.md
             achievements
-            api
             assets
             blog
             contact
@@ -81,6 +80,8 @@ jobs:
             .well-known
           )
           cp -R "${public_paths[@]}" _site/
+          mkdir -p _site/api
+          cp api/llms.txt _site/api/llms.txt
           # Publish only the safe public agent guide under the conventional filename.
           # The repository's operational AGENTS.md is intentionally not copied.
           cp _site/agent.md _site/AGENTS.md

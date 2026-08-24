@@ -7,11 +7,11 @@ Personal blog, project archive, and living portfolio. Built with plain HTML, CSS
 - Live site: https://nhanaz.io.vn/
 - Agent guidance: https://nhanaz.io.vn/agent.md
 - Short and full context: https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/llms-full.txt
-- Read-only resource schema: https://nhanaz.io.vn/openapi.json
+- Resource schema and counter endpoint: https://nhanaz.io.vn/openapi.json
 - Developer notes: https://nhanaz.io.vn/developers/
 - Agent discovery: https://nhanaz.io.vn/.well-known/ai-catalog.json and https://nhanaz.io.vn/.well-known/agent-skills/index.json
 
-The site has no application API, account, authentication flow, or write endpoint. The OpenAPI document describes static GET resources only.
+The site has no account, authentication flow, or endpoint for changing content. The OpenAPI document describes static GET resources plus the small public page-view counter at `/api/views`.
 
 ## Preview locally
 

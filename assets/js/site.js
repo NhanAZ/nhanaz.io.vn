@@ -7,7 +7,7 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Tài liệu cho developer",
     type: "Thông tin website",
     url: "/developers/",
-    excerpt: "Các nguồn machine-readable và quy ước public của website, cùng nói rõ site hiện không có API hay endpoint ghi dữ liệu.",
+      excerpt: "Các nguồn machine-readable, quy ước public và endpoint đếm lượt đọc của website, cùng nói rõ site không có tài khoản hay endpoint sửa nội dung.",
     keywords: "developer resources tài liệu API agent skills ARD llms sitemap GitHub static website",
   },
   {
@@ -602,7 +602,7 @@ const initAgentModeView = () => {
       title: "Agent view - nhanaz.io.vn",
       heading: "Read-only agent view",
       intro: "This view routes agents to the canonical machine-readable sources for the personal archive.",
-      limits: "The site has no application API, account, authentication flow, or write endpoint. The OpenAPI document describes static GET resources only.",
+      limits: "The site has no account, authentication flow, or endpoint for changing content. The OpenAPI document covers static resources and a small public page-view counter.",
       links: [
         ["Short context", "/llms.txt"],
         ["Full context", "/llms-full.txt"],
@@ -619,7 +619,7 @@ const initAgentModeView = () => {
       title: "Góc agent - nhanaz.io.vn",
       heading: "Góc đọc cho agent",
       intro: "Trang này định tuyến agent tới các nguồn máy đọc chuẩn của website cá nhân.",
-      limits: "Website không có application API, tài khoản, luồng xác thực hay endpoint ghi dữ liệu. OpenAPI chỉ mô tả các tài nguyên GET tĩnh.",
+      limits: "Website không có tài khoản, luồng xác thực hay endpoint sửa nội dung. OpenAPI mô tả tài nguyên tĩnh và một endpoint công khai đếm lượt đọc.",
       links: [
         ["Ngữ cảnh ngắn", "/llms.txt"],
         ["Ngữ cảnh đầy đủ", "/llms-full.txt"],
@@ -1934,6 +1934,51 @@ const initCodeBlocks = () => {
   });
 };
 
+const initViewCounter = () => {
+  const metaList = document.querySelector(".article-meta ul");
+
+  if (!metaList || typeof window.fetch !== "function") {
+    return;
+  }
+
+  const item = document.createElement("li");
+  const label = document.createElement("span");
+  const value = document.createElement("strong");
+  const pagePath = window.location.pathname || "/";
+
+  item.dataset.viewCounter = "true";
+  label.textContent = isEnglish ? "Views" : "Lượt đọc";
+  value.textContent = "…";
+  value.setAttribute("aria-live", "polite");
+  item.append(label, " ", value);
+  metaList.append(item);
+  metaList.classList.add("has-view-count");
+
+  window.fetch(`/api/views?path=${encodeURIComponent(pagePath)}`, {
+    headers: { Accept: "application/json" },
+    credentials: "same-origin",
+    cache: "no-store",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`View counter returned ${response.status}`);
+      }
+
+      return response.json();
+    })
+    .then((payload) => {
+      if (!Number.isInteger(payload?.views) || payload.views < 0) {
+        throw new Error("View counter returned an invalid value");
+      }
+
+      value.textContent = payload.views.toLocaleString(isEnglish ? "en-US" : "vi-VN");
+    })
+    .catch(() => {
+      item.remove();
+      metaList.classList.remove("has-view-count");
+    });
+};
+
 const initMotion = () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -2003,6 +2048,7 @@ if (!initAgentModeView()) {
   initEntryPriorities();
   initCanvaEmbeds();
   initCodeBlocks();
+  initViewCounter();
   initArticleToc();
   restoreLanguageReadingPosition();
   initArticleReadingProgress();

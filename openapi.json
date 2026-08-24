@@ -3,7 +3,7 @@
   "info": {
     "title": "nhanaz.io.vn read-only resources",
     "version": "2026-08-24",
-    "description": "A small OpenAPI description of the public static resources on nhanaz.io.vn. These routes are read-only document retrieval, not an application API, and none accepts credentials or changes data."
+    "description": "A small OpenAPI description of the public resources on nhanaz.io.vn. Document routes are read-only retrieval. The only application-style route is a small public page-view counter, which does not accept credentials or change site content."
   },
   "servers": [
     {
@@ -165,6 +165,91 @@
             }
           }
         }
+      }
+    },
+    "/api/views": {
+      "get": {
+        "operationId": "getAndIncrementPageViews",
+        "summary": "Increment and read a public page-view count",
+        "description": "Increments the view count for one normalized public path and returns the new total. This endpoint does not accept credentials and cannot change site content.",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "query",
+            "required": true,
+            "description": "The public path to count, such as /posts/chao-internet/.",
+            "schema": {
+              "type": "string",
+              "pattern": "^/",
+              "maxLength": 200
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Updated public view count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["path", "views"],
+                  "properties": {
+                    "path": { "type": "string" },
+                    "views": { "type": "integer", "minimum": 1 }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid or missing path",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Only GET is supported",
+            "headers": {
+              "Allow": {
+                "schema": { "type": "string", "example": "GET" }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Counter storage is not configured or unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": ["error"],
+        "properties": {
+          "error": { "type": "string" }
+        },
+        "additionalProperties": false
       }
     }
   }

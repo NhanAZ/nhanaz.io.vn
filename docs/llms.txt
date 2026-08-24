@@ -1,6 +1,6 @@
 # Documentation resources for nhanaz.io.vn
 
-This scoped entry point collects the public documentation routes for the static archive. It is read-only and does not describe an API or an action service.
+This scoped entry point collects the public documentation routes for the static archive. The documentation is read-only and does not describe an action service. The small page-view counter is documented separately in the OpenAPI document.
 
 - [Agent instructions](https://nhanaz.io.vn/agent-instructions.md)
 - [Short machine-readable index](https://nhanaz.io.vn/llms.txt)
