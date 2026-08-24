@@ -51,6 +51,7 @@ jobs:
             .nojekyll
             404.html
             agent.md
+            agent-mode.md
             CNAME
             about
             agent-instructions.md

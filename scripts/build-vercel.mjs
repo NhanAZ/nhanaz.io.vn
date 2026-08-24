@@ -9,6 +9,7 @@ const publicPaths = [
   ".nojekyll",
   "404.html",
   "agent.md",
+  "agent-mode.md",
   "CNAME",
   "about",
   "achievements",
