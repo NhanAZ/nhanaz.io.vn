@@ -21,9 +21,11 @@ const UI_HTML = `<!DOCTYPE html>
 const tools = [
   {
     name: "find_archive_pages",
+    title: "Find archive pages",
     description: "Find relevant canonical pages in the NhanAZ archive for a natural-language query. Results are links to public pages; the archive is read-only.",
     inputSchema: {
       type: "object",
+      $schema: "https://json-schema.org/draft/2020-12/schema",
       properties: { query: { type: "string", minLength: 1, description: "What the caller wants to find." }, limit: { type: "integer", minimum: 1, maximum: 12, default: 8 } },
       required: ["query"],
       additionalProperties: false,
@@ -32,9 +34,11 @@ const tools = [
   },
   {
     name: "read_archive_resource",
+    title: "Read archive resource",
     description: "Read one allowlisted machine-readable document from nhanaz.io.vn. The tool never fetches arbitrary hosts.",
     inputSchema: {
       type: "object",
+      $schema: "https://json-schema.org/draft/2020-12/schema",
       properties: { uri: { type: "string", format: "uri", description: "Absolute nhanaz.io.vn URL from resources/list or the public docs." } },
       required: ["uri"],
       additionalProperties: false,
@@ -43,14 +47,16 @@ const tools = [
   },
   {
     name: "open_archive_view",
+    title: "Open archive viewer",
     description: "Open the read-only archive viewer in a host that supports MCP Apps.",
     inputSchema: {
       type: "object",
+      $schema: "https://json-schema.org/draft/2020-12/schema",
       properties: { focus: { type: "string", enum: ["overview", "resources"], default: "overview", description: "Optional initial section to emphasize in the read-only view." } },
       additionalProperties: false,
     },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-    _meta: { ui: { resourceUri: UI_URI } },
+    _meta: { ui: { resourceUri: UI_URI }, "ui/resourceUri": UI_URI },
   },
 ];
 
@@ -61,7 +67,7 @@ function sendMcpResponse(request, response, payload, status = 200) {
   response.setHeader("Mcp-Session-Id", "nhanaz-public");
   response.setHeader("MCP-Protocol-Version", payload?.result?.protocolVersion || "2025-11-25");
   if (request.headers?.accept?.includes("text/event-stream")) {
-    response.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+    response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
     response.status(status).send(`event: message\ndata: ${JSON.stringify(payload)}\n\n`);
     return;
@@ -131,7 +137,7 @@ export async function handleMcp(request, response) {
     response.setHeader("Mcp-Session-Id", "nhanaz-public");
     response.setHeader("MCP-Protocol-Version", "2025-11-25");
     if (request.headers?.accept?.includes("text/event-stream")) {
-      response.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+      response.setHeader("Content-Type", "text/event-stream");
       response.setHeader("Cache-Control", "no-cache, no-transform");
       response.status(200).send(`event: endpoint\ndata: https://nhanaz.io.vn/mcp\n\n`);
       return;
@@ -157,13 +163,13 @@ export async function handleMcp(request, response) {
     let payload;
     switch (body.method) {
       case "initialize":
-        payload = { protocolVersion: ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"].includes(body.params?.protocolVersion) ? body.params.protocolVersion : "2025-11-25", capabilities: { tools: { listChanged: false }, resources: { subscribe: false, listChanged: false } }, serverInfo: SERVER, instructions: "This is a public read-only archive. Use tools/list and resources/list, then read canonical resources before citing." };
+        payload = { protocolVersion: ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"].includes(body.params?.protocolVersion) ? body.params.protocolVersion : "2025-11-25", capabilities: { tools: { listChanged: true }, resources: { subscribe: false, listChanged: true } }, serverInfo: SERVER, instructions: "This is a public read-only archive. Use tools/list and resources/list, then read canonical resources before citing." };
         break;
       case "ping": payload = {}; break;
       case "tools/list":
       case "list_tools": payload = { tools, ttlMs: 300000, cacheScope: "public" }; break;
       case "resources/list":
-      case "list_resources": payload = { resources: [...DOCUMENT_RESOURCES, { uri: UI_URI, name: "NhanAZ archive viewer", mimeType: "text/html;profile=mcp-app", description: "Read-only MCP Apps view." }], ttlMs: 300000, cacheScope: "public" }; break;
+      case "list_resources": payload = { resources: [...DOCUMENT_RESOURCES, { uri: UI_URI, name: "NhanAZ archive viewer", mimeType: "text/html;profile=mcp-app", description: "Read-only MCP Apps view.", _meta: { ui: { resourceUri: UI_URI }, "ui/resourceUri": UI_URI } }], ttlMs: 300000, cacheScope: "public" }; break;
       case "resources/read":
       case "read_resource": {
         const resource = await readResource(body.params?.uri);
