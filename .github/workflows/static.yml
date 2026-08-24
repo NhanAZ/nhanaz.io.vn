@@ -58,6 +58,7 @@ jobs:
             assets
             blog
             contact
+            docs
             developers
             developers.md
             en
