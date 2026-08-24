@@ -13,6 +13,14 @@
       "destination": "/pricing.md"
     },
     {
+      "source": "/sandbox",
+      "destination": "/api/sandbox"
+    },
+    {
+      "source": "/sandbox/",
+      "destination": "/api/sandbox"
+    },
+    {
       "source": "/ask",
       "destination": "/api/ask"
     },
