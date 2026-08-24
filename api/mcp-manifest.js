@@ -17,6 +17,9 @@ const manifest = {
   transport: "streamable-http",
   protocolVersion: "2025-11-25",
   capabilities: { tools: {}, resources: {} },
+  uiResources: ["ui://nhanaz/archive.html"],
+  tools: ["find_archive_pages", "read_archive_resource", "open_archive_view"],
+  resources: ["https://nhanaz.io.vn/llms.txt", "https://nhanaz.io.vn/llms-full.txt", "ui://nhanaz/archive.html"],
   authentication: "none",
   relatedServers: [{ role: "product", url: "https://nhanaz.io.vn/mcp/product", readOnly: true }],
 };

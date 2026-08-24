@@ -9,6 +9,10 @@
     "source": "github",
     "url": "https://github.com/NhanAZ/nhanaz.io.vn"
   },
+  "uiResources": ["ui://nhanaz/archive.html"],
+  "relatedServers": [
+    { "role": "product", "url": "https://nhanaz.io.vn/mcp/product", "serverCard": "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json", "readOnly": true }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
