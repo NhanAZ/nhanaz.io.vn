@@ -3,7 +3,13 @@
   "info": {
     "title": "nhanaz.io.vn read-only resources",
     "version": "2026-08-24",
-    "description": "A small OpenAPI description of the public resources on nhanaz.io.vn. Document routes are read-only retrieval. The only application-style route is a small public page-view counter, which does not accept credentials or change site content. The versioned API surface is under /api/v1; /api/views remains a compatibility alias."
+    "description": "A small OpenAPI description of the public resources on nhanaz.io.vn. Document routes are read-only retrieval. The only application-style route is a small public page-view counter, which does not accept credentials or change site content. The versioned API surface is under /api/v1; /api/views remains a compatibility alias. No deprecation or sunset is scheduled for the compatibility alias.",
+    "x-api-versioning": {
+      "strategy": "URL path",
+      "current": "/api/v1",
+      "compatibilityAlias": "/api/views",
+      "deprecationPolicy": "No deprecation or sunset is scheduled. If that changes, the canonical developer page and this document will be updated first."
+    }
   },
   "servers": [
     {

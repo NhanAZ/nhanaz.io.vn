@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemaMap xmlns="https://nhanaz.io.vn/schema-map">
-  <feed url="https://nhanaz.io.vn/entity.json" type="application/ld+json" />
-  <feed url="https://nhanaz.io.vn/openapi.json" type="application/json" />
-  <feed url="https://nhanaz.io.vn/.well-known/api-catalog" type="application/linkset+json" />
-</schemaMap>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:sf="http://schema.org/schemas/schemafeed/0.1">
+  <url>
+    <loc>https://nhanaz.io.vn/entity.json</loc>
+    <lastmod>2026-08-24</lastmod>
+    <sf:contentType>structuredData/schema.org</sf:contentType>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/openapi.json</loc>
+    <lastmod>2026-08-24</lastmod>
+    <sf:contentType>structuredData/schema.org</sf:contentType>
+  </url>
+</urlset>

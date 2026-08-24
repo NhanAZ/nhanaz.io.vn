@@ -1,0 +1,17 @@
+{
+  "name": "nhanaz.io.vn",
+  "type": "personal-archive",
+  "currency": "VND",
+  "offers": [
+    {
+      "name": "Public archive access",
+      "price": 0,
+      "priceCurrency": "VND",
+      "billingPeriod": "none",
+      "description": "Public pages, machine-readable documents, and the aggregate page-view counter are free to read."
+    }
+  ],
+  "paidProducts": [],
+  "accountRequired": false,
+  "checkout": false
+}

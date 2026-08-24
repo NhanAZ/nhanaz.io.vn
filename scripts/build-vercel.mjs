@@ -32,6 +32,7 @@ const publicPaths = [
   "llms.txt",
   "openapi.json",
   "pricing.md",
+  "pricing.json",
   "posts",
   "privacy",
   "projects",
