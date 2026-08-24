@@ -54,11 +54,11 @@
     },
     {
       "source": "/.well-known/mcp",
-      "destination": "/.well-known/mcp/index.json"
+      "destination": "/api/mcp-manifest"
     },
     {
       "source": "/.well-known/mcp/",
-      "destination": "/.well-known/mcp/index.json"
+      "destination": "/api/mcp-manifest"
     }
   ],
   "headers": [
