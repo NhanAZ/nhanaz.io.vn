@@ -11,7 +11,9 @@
   "protocolVersion": "2025-11-25",
   "authentication": { "required": false, "description": "The public counter is credential-free and read-only." },
   "tools": [
-    { "name": "read_page_counter", "description": "Read an aggregate page-view total without incrementing it.", "readOnlyHint": true }
+    { "name": "read_page_counter", "description": "Read an aggregate page-view total without incrementing it.", "readOnlyHint": true },
+    { "name": "describe_page_counter", "description": "Read the counter's normalization, retry, and read-only rules.", "readOnlyHint": true },
+    { "name": "read_counter_endpoint_info", "description": "Read canonical links and capability metadata for the counter.", "readOnlyHint": true }
   ],
   "repository": {
     "source": "github",

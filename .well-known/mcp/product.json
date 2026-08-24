@@ -9,6 +9,7 @@
   "websiteUrl": "https://nhanaz.io.vn/",
   "serverCard": "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json",
   "remotes": [{ "type": "streamable-http", "url": "https://nhanaz.io.vn/mcp/product" }],
+  "tools": ["read_page_counter", "describe_page_counter", "read_counter_endpoint_info"],
   "transport": "streamable-http",
   "protocolVersion": "2025-11-25",
   "authentication": "none",

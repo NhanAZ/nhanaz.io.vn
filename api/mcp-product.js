@@ -2,20 +2,32 @@ import { Redis } from "@upstash/redis";
 
 const COUNTER_URL = process.env.VIEW_COUNTER_KV_REST_API_URL;
 const COUNTER_TOKEN = process.env.VIEW_COUNTER_KV_REST_API_TOKEN;
-const SERVER = { name: "nhanaz.io.vn public counter MCP", version: "1.0.0" };
-const tools = [{
-  name: "read_page_counter",
-  title: "Read page-view counter",
-  description: "Read the aggregate page-view total for one normalized public path without incrementing it. This product surface is public and read-only.",
-  inputSchema: {
-    type: "object",
-    $schema: "https://json-schema.org/draft/2020-12/schema",
-    properties: { path: { type: "string", pattern: "^/", maxLength: 200, description: "Normalized public path, for example /." } },
-    required: ["path"],
-    additionalProperties: false,
+const SERVER = { name: "nhanaz.io.vn product MCP", version: "1.0.0" };
+const schema = (properties, required = []) => ({ type: "object", $schema: "https://json-schema.org/draft/2020-12/schema", properties, required, additionalProperties: false });
+const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+const tools = [
+  {
+    name: "read_page_counter",
+    title: "Read page-view counter",
+    description: "Read the aggregate page-view total for one normalized public path without incrementing it. This product surface is public and read-only.",
+    inputSchema: schema({ path: { type: "string", pattern: "^/", maxLength: 200, description: "Normalized public path, for example /." } }, ["path"]),
+    annotations,
   },
-  annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-}];
+  {
+    name: "describe_page_counter",
+    title: "Describe page-view counter",
+    description: "Read the public page-view counter's normalization, retry, and read-only rules. This does not access or change a counter.",
+    inputSchema: schema({}),
+    annotations,
+  },
+  {
+    name: "read_counter_endpoint_info",
+    title: "Read counter endpoint info",
+    description: "Read canonical links and capability metadata for the public page-view counter and its product MCP surface.",
+    inputSchema: schema({}),
+    annotations,
+  },
+];
 
 const result = (id, value) => ({ jsonrpc: "2.0", id, result: value });
 const error = (id, code, message) => ({ jsonrpc: "2.0", id: id ?? null, error: { code, message } });
@@ -66,7 +78,15 @@ export default async function handler(request, response) {
     if (body.method === "ping") { send(request, response, result(id, {})); return; }
     if (body.method === "tools/list" || body.method === "list_tools") { send(request, response, result(id, { tools })); return; }
     if (body.method !== "tools/call" && body.method !== "call_tool") { send(request, response, error(id, -32601, `Unsupported MCP method: ${body.method}`)); return; }
-    if (body.params?.name !== "read_page_counter") { send(request, response, error(id, -32601, "Unknown product MCP tool")); return; }
+    if (!["read_page_counter", "describe_page_counter", "read_counter_endpoint_info"].includes(body.params?.name)) { send(request, response, error(id, -32601, "Unknown product MCP tool")); return; }
+    if (body.params.name === "describe_page_counter") {
+      send(request, response, result(id, { content: [{ type: "text", text: "The counter accepts normalized public paths beginning with /. GET /api/v1/views increments once, readOnly=1 reads without incrementing, and Idempotency-Key makes retries safe for 24 hours." }], structuredContent: { readOnly: true, pathPattern: "^/", readOnlyQuery: "readOnly=1", idempotencyTtlSeconds: 86400 } }));
+      return;
+    }
+    if (body.params.name === "read_counter_endpoint_info") {
+      send(request, response, result(id, { content: [{ type: "text", text: "Canonical counter API: https://nhanaz.io.vn/api/v1/views. Compatibility alias: https://nhanaz.io.vn/api/views. Product MCP: https://nhanaz.io.vn/mcp/product." }], structuredContent: { readOnly: true, api: "https://nhanaz.io.vn/api/v1/views", compatibilityAlias: "https://nhanaz.io.vn/api/views", mcp: "https://nhanaz.io.vn/mcp/product" } }));
+      return;
+    }
     const path = normalizePath(body.params?.arguments?.path);
     if (!path) { send(request, response, error(id, -32602, "path must be a normalized public path")); return; }
     if (!COUNTER_URL || !COUNTER_TOKEN) { send(request, response, error(id, -32000, "Counter storage is unavailable"), 503); return; }

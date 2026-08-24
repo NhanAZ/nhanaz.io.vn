@@ -16,6 +16,9 @@
     { "name": "open_archive_view", "description": "Open the read-only archive viewer UI in an MCP Apps-capable host.", "readOnlyHint": true }
   ],
   "uiResources": ["ui://nhanaz/archive.html"],
+  "relatedServers": [
+    { "role": "product", "url": "https://nhanaz.io.vn/mcp/product", "serverCard": "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json", "readOnly": true }
+  ],
   "repository": {
     "source": "github",
     "url": "https://github.com/NhanAZ/nhanaz.io.vn"
