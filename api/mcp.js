@@ -44,7 +44,11 @@ const tools = [
   {
     name: "open_archive_view",
     description: "Open the read-only archive viewer in a host that supports MCP Apps.",
-    inputSchema: { type: "object", properties: {}, additionalProperties: false },
+    inputSchema: {
+      type: "object",
+      properties: { focus: { type: "string", enum: ["overview", "resources"], default: "overview", description: "Optional initial section to emphasize in the read-only view." } },
+      additionalProperties: false,
+    },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
     _meta: { ui: { resourceUri: UI_URI } },
   },
@@ -69,7 +73,8 @@ function sendMcpResponse(request, response, payload, status = 200) {
 function setCommonHeaders(response) {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, MCP-Protocol-Version, Mcp-Method, Mcp-Name");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, MCP-Protocol-Version, Mcp-Method, Mcp-Name, Mcp-Session-Id");
+  response.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("X-Robots-Tag", "noindex, nofollow");
 }
@@ -83,9 +88,10 @@ function parseBody(request) {
 }
 
 function originAllowed(request) {
-  const origin = request.headers?.origin;
-  if (!origin) return true;
-  return new Set(["https://nhanaz.io.vn", "https://www.nhanaz.io.vn", "https://chatgpt.com", "https://claude.ai"]).has(origin);
+  // This is a public, unauthenticated read-only surface. Keep CORS open so
+  // discovery services and browser-based agent hosts can perform the MCP
+  // handshake without a private allowlist.
+  return true;
 }
 
 async function readResource(uri) {
@@ -108,7 +114,8 @@ async function callTool(name, args = {}) {
     return { content: [{ type: "text", text: resource.text }], _meta: { uri: resource.uri, mimeType: resource.mimeType, readOnly: true } };
   }
   if (name === "open_archive_view") {
-    return { content: [{ type: "resource", resource: { uri: UI_URI, mimeType: "text/html;profile=mcp-app", text: UI_HTML } }], _meta: { ui: { resourceUri: UI_URI }, readOnly: true } };
+    const focus = args.focus === "resources" ? "resources" : "overview";
+    return { content: [{ type: "resource", resource: { uri: UI_URI, mimeType: "text/html;profile=mcp-app", text: UI_HTML } }], _meta: { ui: { resourceUri: UI_URI, focus }, readOnly: true } };
   }
   throw Object.assign(new Error(`Unknown tool: ${name}`), { code: -32601 });
 }
@@ -121,6 +128,14 @@ export async function handleMcp(request, response) {
   }
   if (request.method === "OPTIONS") { response.status(204).end(); return; }
   if (request.method === "GET") {
+    response.setHeader("Mcp-Session-Id", "nhanaz-public");
+    response.setHeader("MCP-Protocol-Version", "2025-11-25");
+    if (request.headers?.accept?.includes("text/event-stream")) {
+      response.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+      response.setHeader("Cache-Control", "no-cache, no-transform");
+      response.status(200).send(`event: endpoint\ndata: https://nhanaz.io.vn/mcp\n\n`);
+      return;
+    }
     response.setHeader("Content-Type", "application/json; charset=utf-8");
     response.status(200).json({ protocolVersion: "2025-11-25", serverInfo: SERVER, capabilities: { tools: {}, resources: {} }, endpoint: "https://nhanaz.io.vn/mcp" });
     return;
