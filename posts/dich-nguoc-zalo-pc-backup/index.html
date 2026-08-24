@@ -43,7 +43,22 @@
   <link rel="alternate" type="text/plain" title="LLMs context" href="/llms.txt">
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
   <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
-  <script src="/assets/js/theme.js?v=20260718-01"></script>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let theme = null;
+      try {
+        const stored = window.localStorage.getItem("nhanaz-color-theme");
+        if (stored === "light" || stored === "dark") theme = stored;
+      } catch {}
+      if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#11110f" : "#ffffff");
+    })();
+  </script>
+  <link rel="preload" href="/assets/fonts/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="/assets/js/theme.js?v=20260718-01"></script>
   <link rel="stylesheet" href="/assets/css/site.css?v=20260824-02">
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
