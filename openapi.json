@@ -1,5 +1,6 @@
 {
   "openapi": "3.1.0",
+  "security": [],
   "info": {
     "title": "nhanaz.io.vn read-only resources",
     "version": "2026-08-24",
@@ -9,7 +10,8 @@
       "current": "/api/v1",
       "compatibilityAlias": "/api/views",
       "deprecationPolicy": "No deprecation or sunset is scheduled. If that changes, the canonical developer page and this document will be updated first."
-    }
+    },
+    "x-authentication": "none"
   },
   "servers": [
     {
