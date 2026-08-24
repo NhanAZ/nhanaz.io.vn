@@ -2,6 +2,46 @@
 
 The public archive does not require authentication.
 
+## Discover
+
+There is no protected resource and no OAuth authorization server. The public
+OpenAPI document is the source of truth. The RFC 9728
+`oauth-protected-resource` and RFC 8414 `oauth-authorization-server` metadata
+documents are intentionally not advertised because every published operation
+is public and read-only.
+
+## Pick a method
+
+Use ordinary HTTPS requests. No `agent_auth` flow, bearer token, API key, or
+identity assertion is needed.
+
+## Register
+
+Not applicable. There is no `register_uri`, client registration endpoint, or
+credential issuer.
+
+## Claim
+
+Not applicable. The site does not issue an identity assertion, ID-JAG, or
+other credential.
+
+## Use the credential
+
+There is no credential to send. Do not add an `Authorization` header or send
+private data to this public archive.
+
+## Errors
+
+Requests that use an unsupported credential are handled as ordinary public
+HTTP requests. The API documents machine-readable errors with RFC 9457-style
+fields. It does not return `WWW-Authenticate` because it does not challenge
+callers.
+
+## Revocation
+
+Not applicable. No account, token, webhook, or private session exists to
+revoke.
+
 - There is no user account, API key, login endpoint, or private API.
 - Static resources are public GET requests.
 - `GET /api/views?path=/public/path` is public and only increments an aggregate page-view counter. It cannot edit site content.

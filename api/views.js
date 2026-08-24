@@ -56,6 +56,8 @@ const rateLimit = async (redis, request) => {
   const current = Number(count) || 1;
   const reset = (bucket + 1) * RATE_WINDOW_SECONDS;
   const headers = {
+    "RateLimit-Policy": `${RATE_LIMIT};w=${RATE_WINDOW_SECONDS}`,
+    RateLimit: `limit=${RATE_LIMIT}, remaining=${Math.max(0, RATE_LIMIT - current)}, reset=${Math.max(0, reset - Math.ceil(Date.now() / 1000))}`,
     "RateLimit-Limit": `${RATE_LIMIT};w=${RATE_WINDOW_SECONDS}`,
     "RateLimit-Remaining": String(Math.max(0, RATE_LIMIT - current)),
     "RateLimit-Reset": String(reset),
@@ -67,6 +69,8 @@ export default async function handler(request, response) {
   const commonHeaders = {
     "Cache-Control": "no-store, max-age=0",
     "X-Robots-Tag": "noindex, nofollow",
+    "RateLimit-Policy": `${RATE_LIMIT};w=${RATE_WINDOW_SECONDS}`,
+    RateLimit: `limit=${RATE_LIMIT}, remaining=${RATE_LIMIT}, reset=${RATE_WINDOW_SECONDS}`,
     "RateLimit-Limit": `${RATE_LIMIT};w=${RATE_WINDOW_SECONDS}`,
     "RateLimit-Remaining": String(RATE_LIMIT),
     "RateLimit-Reset": String(Math.ceil(Date.now() / 1000) + RATE_WINDOW_SECONDS),

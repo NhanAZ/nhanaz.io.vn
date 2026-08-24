@@ -37,6 +37,14 @@
       "destination": "/api/mcp-product"
     },
     {
+      "source": "/mcp/server-card",
+      "destination": "/.well-known/mcp/server-card.json"
+    },
+    {
+      "source": "/mcp/product/server-card",
+      "destination": "/.well-known/mcp/product/server-card.json"
+    },
+    {
       "source": "/mcp-product",
       "destination": "/api/mcp-product"
     },
@@ -130,7 +138,16 @@
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/json; charset=utf-8"
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/product/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
         }
       ]
     },

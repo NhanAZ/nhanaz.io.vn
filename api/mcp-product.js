@@ -50,7 +50,7 @@ export default async function handler(request, response) {
   if (request.method === "OPTIONS") { response.status(204).end(); return; }
   if (request.method === "GET") {
     response.setHeader("Content-Type", "application/json; charset=utf-8");
-    response.status(200).json({ ...SERVER, protocolVersion: "2025-11-25", endpoint: "https://nhanaz.io.vn/mcp/product", authentication: "none", readOnly: true });
+    response.status(200).json({ ...SERVER, protocolVersion: "2025-11-25", endpoint: "https://nhanaz.io.vn/mcp/product", serverCard: "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json", authentication: "none", readOnly: true });
     return;
   }
   if (request.method !== "POST") { send(request, response, error(null, -32600, "Only GET, POST, and OPTIONS are supported"), 405); return; }

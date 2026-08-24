@@ -1,5 +1,5 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.nhanaz/nhanaz.io.vn",
   "title": "NhanAZ archive",
   "description": "Public read-only tools and resources for finding and reading the personal archive of Nguyễn Thành Nhân - NhanAZ.",
@@ -12,8 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://nhanaz.io.vn/mcp",
-      "supportedProtocolVersions": ["2025-11-25", "2025-06-18", "2025-03-26"]
+      "url": "https://nhanaz.io.vn/mcp"
     }
   ]
 }

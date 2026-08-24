@@ -216,6 +216,16 @@
         "responses": {
           "200": {
             "description": "Updated public view count",
+            "headers": {
+              "RateLimit-Policy": { "schema": { "type": "string", "example": "60;w=60" } },
+              "RateLimit": { "schema": { "type": "string", "example": "limit=60, remaining=59, reset=42" } },
+              "RateLimit-Limit": { "schema": { "type": "string", "example": "60;w=60" } },
+              "RateLimit-Remaining": { "schema": { "type": "integer", "minimum": 0 } },
+              "RateLimit-Reset": { "schema": { "type": "integer", "minimum": 0 } },
+              "Deprecation": { "description": "Not emitted while this compatibility alias remains active.", "schema": { "type": "string" } },
+              "Sunset": { "description": "If a removal is scheduled, this HTTP date will be published at least 90 days ahead.", "schema": { "type": "string" } },
+              "Link": { "description": "When deprecation is scheduled, links to the migration policy and replacement route.", "schema": { "type": "string" } }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -233,7 +243,7 @@
           "400": {
             "description": "Invalid or missing path",
             "content": {
-              "application/json": {
+              "application/problem+json": {
                 "schema": {
                   "type": "object", "$ref": "#/components/schemas/Error"
                 }
@@ -248,7 +258,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/problem+json": {
                 "schema": {
                   "type": "object", "$ref": "#/components/schemas/Error"
                 }
@@ -258,7 +268,7 @@
           "503": {
             "description": "Counter storage is not configured or unavailable",
             "content": {
-              "application/json": {
+              "application/problem+json": {
                 "schema": {
                   "type": "object", "$ref": "#/components/schemas/Error"
                 }
@@ -268,13 +278,15 @@
           "429": {
             "description": "Rate limit exceeded",
             "headers": {
+              "RateLimit-Policy": { "schema": { "type": "string", "example": "60;w=60" } },
+              "RateLimit": { "schema": { "type": "string", "example": "limit=60, remaining=0, reset=60" } },
               "RateLimit-Limit": { "schema": { "type": "string", "example": "60;w=60" } },
               "RateLimit-Remaining": { "schema": { "type": "integer", "minimum": 0 } },
               "RateLimit-Reset": { "schema": { "type": "integer", "description": "Unix seconds until the current window resets." } },
               "Retry-After": { "schema": { "type": "integer", "minimum": 1 } }
             },
             "content": {
-              "application/json": {
+              "application/problem+json": {
                 "schema": { "type": "object", "$ref": "#/components/schemas/Error" }
               }
             }
@@ -480,6 +492,21 @@
       }
     },
     "schemas": {
+      "ProblemDetails": {
+        "type": "object",
+        "required": ["type", "title", "status", "detail"],
+        "properties": {
+          "type": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "status": { "type": "integer", "minimum": 400, "maximum": 599 },
+          "detail": { "type": "string" },
+          "code": { "type": "string" },
+          "resolution": { "type": "string" },
+          "documentation": { "type": "string", "format": "uri" },
+          "instance": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": true
+      },
       "Error": {
         "type": "object",
         "required": ["error"],

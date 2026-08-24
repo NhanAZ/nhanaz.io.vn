@@ -38,6 +38,7 @@ const publicPaths = [
   "privacy",
   "projects",
   "robots.txt",
+  "server.json",
   "sitemap.xml",
   "schema-map.xml",
   "vibe-code",

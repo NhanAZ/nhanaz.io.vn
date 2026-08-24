@@ -2,6 +2,7 @@ import { DOCUMENT_RESOURCES, publicUrl, searchArchive } from "../lib/agent-data.
 
 const SERVER = { name: "nhanaz.io.vn read-only MCP", version: "1.0.0" };
 const UI_URI = "ui://nhanaz/archive.html";
+const CARD_URI = "mcp://nhanaz/server-card.json";
 const ARCHIVE_RESULT_SCHEMA = {
   type: "object",
   $schema: "https://json-schema.org/draft/2020-12/schema",
@@ -145,6 +146,7 @@ function originAllowed(request) {
 
 async function readResource(uri) {
   if (uri === UI_URI) return { uri, mimeType: "text/html;profile=mcp-app", text: UI_HTML };
+  if (uri === CARD_URI) return { uri, mimeType: "application/mcp-server-card+json", text: JSON.stringify({ name: "io.github.nhanaz/nhanaz.io.vn", title: "NhanAZ archive", version: SERVER.version, websiteUrl: "https://nhanaz.io.vn/", remotes: [{ type: "streamable-http", url: "https://nhanaz.io.vn/mcp" }] }, null, 2) };
   const safe = publicUrl(uri);
   if (!safe) return null;
   const response = await fetch(safe, { headers: { Accept: "text/markdown, application/json, text/plain, application/xml" } });
@@ -214,7 +216,7 @@ export async function handleMcp(request, response) {
       case "tools/list":
       case "list_tools": payload = { tools, ttlMs: 300000, cacheScope: "public" }; break;
       case "resources/list":
-      case "list_resources": payload = { resources: [...DOCUMENT_RESOURCES, { uri: UI_URI, name: "NhanAZ archive viewer", mimeType: "text/html;profile=mcp-app", description: "Read-only MCP Apps view.", _meta: { ui: { resourceUri: UI_URI }, "ui/resourceUri": UI_URI } }], ttlMs: 300000, cacheScope: "public" }; break;
+      case "list_resources": payload = { resources: [...DOCUMENT_RESOURCES, { uri: UI_URI, name: "nhanaz-archive-viewer", title: "NhanAZ archive viewer", mimeType: "text/html;profile=mcp-app", description: "Read-only MCP Apps view for the public archive.", _meta: { ui: { resourceUri: UI_URI }, "ui/resourceUri": UI_URI } }, { uri: CARD_URI, name: "nhanaz-server-card", title: "NhanAZ MCP server card", mimeType: "application/mcp-server-card+json", description: "Remote connection metadata for the NhanAZ MCP server." }], ttlMs: 300000, cacheScope: "public" }; break;
       case "resources/read":
       case "read_resource": {
         const resource = await readResource(body.params?.uri);

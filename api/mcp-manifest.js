@@ -1,13 +1,18 @@
 import handleMcp from "./mcp.js";
 
 const manifest = {
+  $schema: "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   name: "nhanaz.io.vn read-only MCP",
+  title: "NhanAZ archive",
   description: "Public read-only MCP surface for discovering and reading the NhanAZ personal archive.",
   version: "1.0.0",
   serverUrl: "https://nhanaz.io.vn/mcp",
   endpoint: "https://nhanaz.io.vn/mcp",
   url: "https://nhanaz.io.vn/mcp",
   mcpEndpoint: "https://nhanaz.io.vn/mcp",
+  websiteUrl: "https://nhanaz.io.vn/",
+  serverCard: "https://nhanaz.io.vn/.well-known/mcp/server-card.json",
+  remotes: [{ type: "streamable-http", url: "https://nhanaz.io.vn/mcp" }],
   documentation: "https://nhanaz.io.vn/developers/",
   transport: "streamable-http",
   protocolVersion: "2025-11-25",
