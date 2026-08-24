@@ -53,6 +53,19 @@ const tools = [
 const errorResult = (id, code, message, data) => ({ jsonrpc: "2.0", id: id ?? null, error: { code, message, ...(data ? { data } : {}) } });
 const result = (id, value) => ({ jsonrpc: "2.0", id, result: value });
 
+function sendMcpResponse(request, response, payload, status = 200) {
+  response.setHeader("Mcp-Session-Id", "nhanaz-public");
+  response.setHeader("MCP-Protocol-Version", payload?.result?.protocolVersion || "2025-11-25");
+  if (request.headers?.accept?.includes("text/event-stream")) {
+    response.setHeader("Content-Type", "text/event-stream; charset=utf-8");
+    response.setHeader("Cache-Control", "no-cache, no-transform");
+    response.status(status).send(`event: message\ndata: ${JSON.stringify(payload)}\n\n`);
+    return;
+  }
+  response.setHeader("Content-Type", "application/json; charset=utf-8");
+  response.status(status).json(payload);
+}
+
 function setCommonHeaders(response) {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
@@ -149,11 +162,9 @@ export async function handleMcp(request, response) {
       case "list_prompts": payload = { prompts: [] }; break;
       default: throw Object.assign(new Error(`Unsupported MCP method: ${body.method}`), { code: -32601 });
     }
-    response.setHeader("Content-Type", "application/json; charset=utf-8");
-    response.status(200).json(result(id, payload));
+    sendMcpResponse(request, response, result(id, payload));
   } catch (error) {
-    response.setHeader("Content-Type", "application/json; charset=utf-8");
-    response.status(200).json(errorResult(id, error.code || -32603, error.message || "MCP request failed"));
+    sendMcpResponse(request, response, errorResult(id, error.code || -32603, error.message || "MCP request failed"));
   }
 }
 

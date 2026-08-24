@@ -177,7 +177,13 @@
       "get": {
         "operationId": "getAndIncrementPageViews",
         "summary": "Increment and read a public page-view count",
-        "description": "Increments the view count for one normalized public path and returns the new total. This endpoint does not accept credentials and cannot change site content.",
+        "description": "Increments the view count for one normalized public path and returns the new total. This endpoint does not accept credentials and cannot change site content. Versioning policy: /api/views is a compatibility alias, not deprecated today. If that status changes, the response will publish standard Deprecation and Sunset headers and the documented timeline will be updated before removal.",
+        "x-deprecation-policy": {
+          "status": "active-compatibility-alias",
+          "deprecationSignal": "Deprecation header",
+          "sunsetSignal": "Sunset header",
+          "notice": "No deprecation or sunset is currently scheduled."
+        },
         "parameters": [
           {
             "name": "path",
@@ -189,6 +195,13 @@
               "pattern": "^/",
               "maxLength": 200
             }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": false,
+            "description": "Optional retry key. Because this is a GET counter operation, a repeated key for the same path returns the original result instead of incrementing again. Keys are retained for 24 hours.",
+            "schema": { "type": "string", "minLength": 1, "maxLength": 200 }
           }
         ],
         "responses": {
@@ -242,6 +255,20 @@
                 }
               }
             }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "headers": {
+              "RateLimit-Limit": { "schema": { "type": "string", "example": "60;w=60" } },
+              "RateLimit-Remaining": { "schema": { "type": "integer", "minimum": 0 } },
+              "RateLimit-Reset": { "schema": { "type": "integer", "description": "Unix seconds until the current window resets." } },
+              "Retry-After": { "schema": { "type": "integer", "minimum": 1 } }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Error" }
+              }
+            }
           }
         }
       }
@@ -283,6 +310,20 @@
             "required": false,
             "description": "Use false for a JSON response. The default for an event-stream request is true.",
             "schema": { "type": "boolean", "default": false }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results in this page.",
+            "schema": { "type": "integer", "minimum": 1, "maximum": 12, "default": 8 }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "description": "Opaque pagination cursor returned as `pagination.nextCursor`.",
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
@@ -379,6 +420,8 @@
           "mode": { "type": "string", "enum": ["list", "summarize", "generate"], "default": "list" },
           "streaming": { "type": "boolean", "default": false },
           "query_id": { "type": "string" }
+          ,"limit": { "type": "integer", "minimum": 1, "maximum": 12, "default": 8 },
+          "cursor": { "type": "string" }
         },
         "additionalProperties": false
       },
@@ -390,7 +433,8 @@
           "query_id": { "type": "string" },
           "mode": { "type": "string" },
           "summary": { "type": "string" },
-          "results": { "type": "array", "items": { "$ref": "#/components/schemas/ArchiveSearchResult" } }
+          "results": { "type": "array", "items": { "$ref": "#/components/schemas/ArchiveSearchResult" } },
+          "pagination": { "$ref": "#/components/schemas/Pagination" }
         },
         "additionalProperties": false
       },
@@ -398,6 +442,12 @@
         "type": "object",
         "required": ["url", "name", "site", "score", "description"],
         "properties": { "url": { "type": "string", "format": "uri" }, "name": { "type": "string" }, "site": { "type": "string", "format": "uri" }, "score": { "type": "number" }, "description": { "type": "string" }, "schema_object": { "type": "object" } },
+        "additionalProperties": false
+      },
+      "Pagination": {
+        "type": "object",
+        "required": ["limit", "hasMore"],
+        "properties": { "limit": { "type": "integer", "minimum": 1 }, "nextCursor": { "type": ["string", "null"] }, "hasMore": { "type": "boolean" } },
         "additionalProperties": false
       },
       "McpRequest": {

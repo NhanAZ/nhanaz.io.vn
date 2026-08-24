@@ -37,6 +37,22 @@
       "destination": "/api/a2a"
     },
     {
+      "source": "/v1",
+      "destination": "/api/v1/index"
+    },
+    {
+      "source": "/v1/",
+      "destination": "/api/v1/index"
+    },
+    {
+      "source": "/v2",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/v2/",
+      "destination": "/api/index"
+    },
+    {
       "source": "/.well-known/mcp",
       "destination": "/.well-known/mcp/index.json"
     },

@@ -33,13 +33,17 @@ function streamingFrom(request, body) {
 }
 
 function responseFor(query, body, streaming) {
-  const results = searchArchive(query, 8);
+  const requestedLimit = Math.min(12, Math.max(1, Number(body?.limit) || 8));
+  const offset = Math.max(0, Number.parseInt(body?.cursor || "0", 10) || 0);
+  const allResults = searchArchive(query, 12);
+  const results = allResults.slice(offset, offset + requestedLimit);
+  const nextCursor = offset + requestedLimit < allResults.length ? String(offset + requestedLimit) : null;
   const mode = body?.mode || "list";
   const meta = { response_type: "answer", response_format: "conversational_search", version: VERSION, streaming, read_only: true };
   const summary = results.length
     ? `Tìm thấy ${results.length} nguồn công khai phù hợp trong kho nhanaz.io.vn.`
     : "Chưa tìm thấy trang phù hợp trong chỉ mục công khai. Hãy thử tên bài, chủ đề hoặc tên project cụ thể.";
-  return { _meta: meta, query_id: body?.query_id || `nhanaz-${Date.now().toString(36)}`, mode, summary, results };
+  return { _meta: meta, query_id: body?.query_id || `nhanaz-${Date.now().toString(36)}`, mode, summary, results, pagination: { limit: requestedLimit, nextCursor, hasMore: nextCursor !== null } };
 }
 
 export default async function handler(request, response) {
@@ -54,7 +58,7 @@ export default async function handler(request, response) {
     response.status(204).end();
     return;
   }
-  const body = request.method === "POST" ? parseBody(request) : {};
+  const body = request.method === "POST" ? parseBody(request) : Object.fromEntries(new URL(request.url, "https://nhanaz.io.vn").searchParams.entries());
   const query = queryFrom(request, body).trim();
   if (!query || query.length > 500) {
     sendJson(response, 400, { _meta: { response_type: "failure", version: VERSION, streaming: false }, error: { code: "invalid_query", message: "query is required and must be at most 500 characters." } });
