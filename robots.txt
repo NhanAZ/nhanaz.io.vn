@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nhanaz.io.vn/sitemap.xml
+Agentmap: https://nhanaz.io.vn/.well-known/ai-catalog.json
 
 # Machine-readable context for AI agents
 # https://nhanaz.io.vn/agent.md

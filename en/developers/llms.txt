@@ -1,0 +1,13 @@
+# Developer resources for nhanaz.io.vn
+
+This scoped file is for agents and small tools that need the machine-readable entry points for this static personal archive.
+
+- [Developer resource page](https://nhanaz.io.vn/en/developers/)
+- [Full machine-readable context](https://nhanaz.io.vn/llms-full.txt)
+- [Site identity graph](https://nhanaz.io.vn/entity.json)
+- [Canonical URL list](https://nhanaz.io.vn/sitemap.xml)
+- [Agent guidance](https://nhanaz.io.vn/agent.md)
+- [ARD catalog](https://nhanaz.io.vn/.well-known/ai-catalog.json)
+- [Agent Skills index](https://nhanaz.io.vn/.well-known/agent-skills/index.json)
+
+The site is read-only. It has no public API, user account, authentication flow, webhook, or endpoint for changing data. Read the canonical page before quoting a claim, and use the GitHub repository for source history and repository rules.
