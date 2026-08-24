@@ -2,6 +2,31 @@ import { DOCUMENT_RESOURCES, publicUrl, searchArchive } from "../lib/agent-data.
 
 const SERVER = { name: "nhanaz.io.vn read-only MCP", version: "1.0.0" };
 const UI_URI = "ui://nhanaz/archive.html";
+const ARCHIVE_RESULT_SCHEMA = {
+  type: "object",
+  $schema: "https://json-schema.org/draft/2020-12/schema",
+  properties: {
+    name: { type: "string" },
+    url: { type: "string", format: "uri" },
+    site: { type: "string", format: "uri" },
+    score: { type: "number", minimum: 0, maximum: 1 },
+    description: { type: "string" },
+    schema_object: { type: "object" },
+  },
+  required: ["name", "url"],
+  additionalProperties: true,
+};
+const RESOURCE_SCHEMA = {
+  type: "object",
+  $schema: "https://json-schema.org/draft/2020-12/schema",
+  properties: {
+    uri: { type: "string", format: "uri" },
+    mimeType: { type: "string" },
+    text: { type: "string" },
+  },
+  required: ["uri", "text"],
+  additionalProperties: false,
+};
 const UI_HTML = `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -30,6 +55,13 @@ const tools = [
       required: ["query"],
       additionalProperties: false,
     },
+    outputSchema: {
+      type: "object",
+      $schema: "https://json-schema.org/draft/2020-12/schema",
+      properties: { results: { type: "array", items: ARCHIVE_RESULT_SCHEMA } },
+      required: ["results"],
+      additionalProperties: false,
+    },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
   {
@@ -43,6 +75,7 @@ const tools = [
       required: ["uri"],
       additionalProperties: false,
     },
+    outputSchema: RESOURCE_SCHEMA,
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
   },
   {
@@ -53,6 +86,13 @@ const tools = [
       type: "object",
       $schema: "https://json-schema.org/draft/2020-12/schema",
       properties: { focus: { type: "string", enum: ["overview", "resources"], default: "overview", description: "Optional initial section to emphasize in the read-only view." } },
+      additionalProperties: false,
+    },
+    outputSchema: {
+      type: "object",
+      $schema: "https://json-schema.org/draft/2020-12/schema",
+      properties: { resourceUri: { type: "string", format: "uri-reference" }, focus: { type: "string", enum: ["overview", "resources"] } },
+      required: ["resourceUri", "focus"],
       additionalProperties: false,
     },
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
@@ -120,11 +160,11 @@ async function callTool(name, args = {}) {
   if (name === "read_archive_resource") {
     const resource = await readResource(args.uri);
     if (!resource) throw Object.assign(new Error("URI is not an allowlisted public resource"), { code: -32602 });
-    return { content: [{ type: "text", text: resource.text }], _meta: { uri: resource.uri, mimeType: resource.mimeType, readOnly: true } };
+    return { content: [{ type: "text", text: resource.text }], structuredContent: resource, _meta: { uri: resource.uri, mimeType: resource.mimeType, readOnly: true } };
   }
   if (name === "open_archive_view") {
     const focus = args.focus === "resources" ? "resources" : "overview";
-    return { content: [{ type: "resource", resource: { uri: UI_URI, mimeType: "text/html;profile=mcp-app", text: UI_HTML } }], _meta: { ui: { resourceUri: UI_URI, focus }, readOnly: true } };
+    return { content: [{ type: "resource", resource: { uri: UI_URI, mimeType: "text/html;profile=mcp-app", text: UI_HTML } }], structuredContent: { resourceUri: UI_URI, focus }, _meta: { ui: { resourceUri: UI_URI, focus }, readOnly: true } };
   }
   throw Object.assign(new Error(`Unknown tool: ${name}`), { code: -32601 });
 }
