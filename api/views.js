@@ -14,6 +14,16 @@ const sendJson = (response, status, payload, headers = {}) => {
   response.json(payload);
 };
 
+const problem = (code, message, status, extra = {}) => ({
+  error: { code, message },
+  type: `https://nhanaz.io.vn/problems/${code}`,
+  title: message,
+  status,
+  detail: message,
+  documentation: "https://nhanaz.io.vn/openapi.json",
+  ...extra,
+});
+
 const normalizePath = (value) => {
   if (typeof value !== "string" || value.length === 0 || value.length > MAX_PATH_LENGTH) {
     return null;
@@ -60,18 +70,18 @@ export default async function handler(request, response) {
   };
 
   if (request.method !== "GET") {
-    sendJson(response, 405, { error: "Only GET is supported" }, { ...commonHeaders, Allow: "GET" });
+    sendJson(response, 405, problem("method_not_allowed", "Only GET is supported", 405), { ...commonHeaders, Allow: "GET", "Content-Type": "application/problem+json; charset=utf-8" });
     return;
   }
 
   const pagePath = normalizePath(request.query?.path);
   if (!pagePath) {
-    sendJson(response, 400, { error: "A valid public path is required" }, commonHeaders);
+    sendJson(response, 400, problem("invalid_path", "A valid public path is required", 400), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
     return;
   }
 
   if (!COUNTER_URL || !COUNTER_TOKEN) {
-    sendJson(response, 503, { error: "Counter storage is unavailable" }, commonHeaders);
+    sendJson(response, 503, problem("storage_unavailable", "Counter storage is unavailable", 503), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
     return;
   }
 
@@ -81,7 +91,7 @@ export default async function handler(request, response) {
     rate = await rateLimit(redis, request);
     Object.assign(commonHeaders, rate.headers);
     if (rate.current > RATE_LIMIT) {
-      sendJson(response, 429, { error: "Rate limit exceeded", retryAfterSeconds: RATE_WINDOW_SECONDS }, { ...commonHeaders, "Retry-After": String(RATE_WINDOW_SECONDS) });
+      sendJson(response, 429, problem("rate_limited", "Rate limit exceeded", 429, { retryAfterSeconds: RATE_WINDOW_SECONDS }), { ...commonHeaders, "Retry-After": String(RATE_WINDOW_SECONDS), "Content-Type": "application/problem+json; charset=utf-8" });
       return;
     }
   } catch {
@@ -92,7 +102,7 @@ export default async function handler(request, response) {
 
   const idempotencyKey = headerValue(request.headers, "idempotency-key");
   if (idempotencyKey !== undefined && (typeof idempotencyKey !== "string" || idempotencyKey.length === 0 || idempotencyKey.length > 200)) {
-    sendJson(response, 400, { error: "Idempotency-Key must be 1-200 characters when supplied" }, commonHeaders);
+    sendJson(response, 400, problem("invalid_idempotency_key", "Idempotency-Key must be 1-200 characters when supplied", 400), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
     return;
   }
 
@@ -109,12 +119,12 @@ export default async function handler(request, response) {
       }
     }
     if (previous === "pending") {
-      sendJson(response, 409, { error: "The idempotency key is already being processed" }, commonHeaders);
+      sendJson(response, 409, problem("idempotency_in_progress", "The idempotency key is already being processed", 409), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
       return;
     }
     const reserved = await redis.set(idempotencyRedisKey, "pending", { nx: true, ex: IDEMPOTENCY_TTL_SECONDS });
     if (reserved === null) {
-      sendJson(response, 409, { error: "The idempotency key is already being processed" }, commonHeaders);
+      sendJson(response, 409, problem("idempotency_in_progress", "The idempotency key is already being processed", 409), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
       return;
     }
   }
@@ -126,6 +136,6 @@ export default async function handler(request, response) {
     sendJson(response, 200, payload, commonHeaders);
   } catch (error) {
     if (idempotencyRedisKey) await redis.del(idempotencyRedisKey);
-    sendJson(response, 503, { error: "Counter storage is unavailable" }, commonHeaders);
+    sendJson(response, 503, problem("storage_unavailable", "Counter storage is unavailable", 503), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
   }
 }
