@@ -2,6 +2,17 @@
 
 Personal blog, project archive, and living portfolio. Built with plain HTML, CSS, and a tiny bit of JavaScript, then validated and deployed to GitHub Pages with GitHub Actions.
 
+## Public machine-readable resources
+
+- Live site: https://nhanaz.io.vn/
+- Agent guidance: https://nhanaz.io.vn/agent.md
+- Short and full context: https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/llms-full.txt
+- Read-only resource schema: https://nhanaz.io.vn/openapi.json
+- Developer notes: https://nhanaz.io.vn/developers/
+- Agent discovery: https://nhanaz.io.vn/.well-known/ai-catalog.json and https://nhanaz.io.vn/.well-known/agent-skills/index.json
+
+The site has no application API, account, authentication flow, or write endpoint. The OpenAPI document describes static GET resources only.
+
 ## Preview locally
 
 From the repository root, run any static file server, for example:
