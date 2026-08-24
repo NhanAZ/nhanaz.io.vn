@@ -16,6 +16,7 @@ function send(response, status, payload) {
 }
 
 export default async function handler(request, response) {
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   if (request.method !== "POST") {
     send(response, 405, { type: "https://nhanaz.io.vn/problems/method_not_allowed", title: "Only POST is supported", status: 405, code: "method_not_allowed", detail: "Submit a JSON object with a paths array.", resolution: "Use POST /api/batch with up to 8 allowlisted public resource paths." });
     return;

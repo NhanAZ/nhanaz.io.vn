@@ -122,7 +122,7 @@ function sendMcpResponse(request, response, payload, status = 200) {
 function setCommonHeaders(response) {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, MCP-Protocol-Version, Mcp-Method, Mcp-Name, Mcp-Session-Id");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, Idempotency-Key, MCP-Protocol-Version, Mcp-Method, Mcp-Name, Mcp-Session-Id");
   response.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("X-Robots-Tag", "noindex, nofollow");
@@ -171,6 +171,7 @@ async function callTool(name, args = {}) {
 
 export async function handleMcp(request, response) {
   setCommonHeaders(response);
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   if (!originAllowed(request)) {
     response.status(403).json(errorResult(null, -32000, "Origin is not allowed"));
     return;

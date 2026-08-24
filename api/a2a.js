@@ -9,9 +9,10 @@ function textFromMessage(message) {
 }
 
 export default async function handler(request, response) {
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, A2A-Version");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, A2A-Version, Idempotency-Key");
   response.setHeader("Cache-Control", "no-store");
   if (request.method === "OPTIONS") { response.status(204).end(); return; }
   if (request.method === "GET") { response.setHeader("Content-Type", "application/a2a+json; charset=utf-8"); response.status(200).json({ card: cardUrl, readOnly: true }); return; }

@@ -23,7 +23,7 @@ const error = (id, code, message) => ({ jsonrpc: "2.0", id: id ?? null, error: {
 function send(request, response, payload, status = 200) {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, MCP-Protocol-Version, Mcp-Session-Id");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, Idempotency-Key, MCP-Protocol-Version, Mcp-Session-Id");
   response.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
   response.setHeader("Mcp-Session-Id", "nhanaz-counter-public");
   response.setHeader("MCP-Protocol-Version", payload?.result?.protocolVersion || "2025-11-25");
@@ -46,6 +46,7 @@ function normalizePath(value) {
 }
 
 export default async function handler(request, response) {
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   if (request.method === "OPTIONS") { response.status(204).end(); return; }
   if (request.method === "GET") {
     response.setHeader("Content-Type", "application/json; charset=utf-8");

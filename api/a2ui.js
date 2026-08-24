@@ -17,7 +17,7 @@ const surfaceMessage = {
 function send(response, status, payload, streaming = false) {
   response.setHeader("Access-Control-Allow-Origin", "*");
   response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, Idempotency-Key");
   response.setHeader("X-Robots-Tag", "noindex, nofollow");
   if (streaming) {
     response.setHeader("Content-Type", "text/event-stream; charset=utf-8");
@@ -31,6 +31,7 @@ function send(response, status, payload, streaming = false) {
 }
 
 export default function handler(request, response) {
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   if (request.method === "OPTIONS") {
     send(response, 204, null);
     return;

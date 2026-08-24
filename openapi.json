@@ -305,6 +305,7 @@
         "operationId": "batchReadPublicResources",
         "summary": "Read several allowlisted public resources",
         "description": "Fetches 1-8 public machine-readable resources in one read-only request. It never follows arbitrary hosts and does not change content.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/BatchRequest" } } } },
         "responses": {
           "200": { "description": "Batch resource result", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/BatchResponse" } } } },
@@ -362,6 +363,7 @@
         "operationId": "askArchivePost",
         "summary": "Search the public archive with NLWeb",
         "description": "NLWeb-compatible POST form. The response is read-only and uses the `_meta.response_type` and `_meta.version` fields.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": {
           "required": true,
           "content": { "application/json": { "schema": { "$ref": "#/components/schemas/AskRequest" } } }
@@ -383,6 +385,7 @@
         "operationId": "callMcp",
         "summary": "Call the read-only MCP server",
         "description": "Accepts JSON-RPC MCP requests such as initialize, tools/list, resources/list, resources/read, and tools/call. No credentials are required.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": {
           "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } },
@@ -395,6 +398,7 @@
         "operationId": "callMcpDocs",
         "summary": "Call the documentation MCP surface",
         "description": "Compatibility endpoint for the same public read-only MCP transport, scoped to documentation resources.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
       }
@@ -410,6 +414,7 @@
         "operationId": "callProductMcp",
         "summary": "Call the read-only page counter MCP server",
         "description": "Accepts MCP JSON-RPC requests for reading aggregate page-view totals without incrementing them.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/McpResponse" } } } } }
       }
@@ -425,6 +430,7 @@
         "operationId": "sendA2AMessage",
         "summary": "Send a read-only A2A message",
         "description": "Accepts a JSON-RPC message/send request and returns links from the curated archive index.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/A2ARequest" } } } },
         "responses": { "200": { "description": "A2A JSON-RPC response", "content": { "application/json": { "schema": { "type": "object", "$ref": "#/components/schemas/A2AResponse" } } } } }
       }
@@ -445,6 +451,7 @@
         "operationId": "postA2uiArchiveSurface",
         "summary": "Request the read-only A2UI archive surface",
         "description": "Returns the same read-only A2UI v1.0 archive surface without changing site data.",
+        "parameters": [{ "$ref": "#/components/parameters/IdempotencyKey" }],
         "responses": {
           "200": {
             "description": "A2UI v1.0 surface message",
@@ -463,6 +470,15 @@
     }
   },
   "components": {
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": false,
+        "description": "Optional client retry token. These POST operations are read-only, so repeating a request with the same key is safe and has no duplicate side effect.",
+        "schema": { "type": "string", "minLength": 1, "maxLength": 200 }
+      }
+    },
     "schemas": {
       "Error": {
         "type": "object",

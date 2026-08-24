@@ -47,6 +47,7 @@ function responseFor(query, body, streaming) {
 }
 
 export default async function handler(request, response) {
+  if (request.headers?.["idempotency-key"]) response.setHeader("Idempotency-Key", request.headers["idempotency-key"]);
   if (!["GET", "POST", "OPTIONS"].includes(request.method)) {
     sendJson(response, 405, { _meta: { response_type: "failure", version: VERSION }, error: { code: "method_not_allowed", message: "Use GET or POST." } });
     return;
