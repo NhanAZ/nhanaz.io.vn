@@ -6,7 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const baseUrl = "https://nhanaz.io.vn";
 const sitemapUrl = `${baseUrl}/sitemap.xml`;
 const liveMode = process.argv.includes("--live");
-const ignoredDirectories = new Set([".git", ".agents", ".codex", "node_modules", "outputs"]);
+const ignoredDirectories = new Set([".git", ".agents", ".codex", "_site", "node_modules", "outputs"]);
 
 const fail = (message) => {
   throw new Error(message);

@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Validate static content
 
 on:
   push:
@@ -11,20 +11,16 @@ permissions:
   contents: read
 
 concurrency:
-  group: "pages-${{ github.event.pull_request.number || 'production' }}"
+  group: "static-${{ github.event.pull_request.number || 'production' }}"
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
-
-env:
-  PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
 jobs:
   build:
-    name: Validate and prepare Pages artifact
+    name: Validate static content
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: read
-      pages: read
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -40,84 +36,3 @@ jobs:
         run: node scripts/build-english.mjs
       - name: Validate SEO metadata
         run: node scripts/check-seo.mjs
-      - name: Setup Pages
-        if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-      - name: Prepare public site artifact
-        if: github.event_name != 'pull_request'
-        run: |
-          mkdir _site
-          public_paths=(
-            .nojekyll
-            404.html
-            agent.md
-            agent-mode.md
-            api-versioning.md
-            auth.md
-            CNAME
-            about
-            agent-instructions.md
-            achievements
-            assets
-            blog
-            contact
-            docs
-            developers
-            developers.md
-            en
-            entity.json
-            favicon.ico
-            github
-            index.html
-            index.md
-            llms-full.txt
-            llms.md
-            llms.txt
-            openapi.json
-            pricing.md
-            pricing.json
-            posts
-            projects
-            privacy
-            robots.txt
-            sitemap.xml
-            schema-map.xml
-            vibe-code
-            .well-known
-          )
-          cp -R "${public_paths[@]}" _site/
-          mkdir -p _site/api
-          cp api/llms.txt _site/api/llms.txt
-          cp api/llms.txt.md _site/api/llms.txt.md
-          # Publish only the safe public agent guide under the conventional filename.
-          # The repository's operational AGENTS.md is intentionally not copied.
-          cp _site/agent.md _site/AGENTS.md
-          test -f _site/index.html
-          cmp --silent _site/agent.md _site/AGENTS.md
-          test ! -e _site/scripts
-      - name: Upload artifact
-        if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with:
-          name: ${{ env.PAGES_ARTIFACT_NAME }}
-          path: "_site"
-          include-hidden-files: true
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    if: github.event_name != 'pull_request'
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
-        with:
-          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}

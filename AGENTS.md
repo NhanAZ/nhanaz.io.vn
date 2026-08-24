@@ -52,6 +52,7 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Khi đổi slug đã public, giữ URL cũ bằng một trang chuyển hướng `noindex`, đặt canonical về URL mới, bảo toàn query và hash bằng JavaScript, đồng thời bỏ URL cũ khỏi sitemap và cập nhật toàn bộ link nội bộ, hreflang, search index cùng nguồn máy đọc.
 - Khi thêm trang mới, cập nhật sitemap, `llms.txt`, search index trong `assets/js/site.js`, các link liên quan trên index nếu cần.
 - Nguồn máy đọc gồm `llms.txt`, `llms-full.txt` và `entity.json`. Khi đổi danh tính, trang chính, AEO hoặc GEO thì kiểm tra ba file này cùng nhau.
+- Khi thêm hoặc thay đổi bộ đếm, analytics, Speed Insights, API có lưu dữ liệu, storage, nền tảng hosting hoặc dịch vụ bên ngoài, cập nhật đồng thời `privacy/index.html` và `en/privacy/index.html` trong cùng thay đổi. Chính sách phải nói rõ loại dữ liệu, mục đích, nơi lưu hoặc bên xử lý và thời gian lưu nếu biết. Cập nhật metadata, `dateModified` và `sitemap.xml` khi nội dung chính sách thay đổi.
 
 ## Mục lục bài viết và liên kết đề mục
 
