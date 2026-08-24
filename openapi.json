@@ -197,6 +197,13 @@
             }
           },
           {
+            "name": "readOnly",
+            "in": "query",
+            "required": false,
+            "description": "When true, read the existing total without incrementing it. This is the mode used by the product MCP surface.",
+            "schema": { "type": "boolean", "default": false }
+          },
+          {
             "name": "Idempotency-Key",
             "in": "header",
             "required": false,
@@ -376,6 +383,20 @@
         "description": "Compatibility endpoint for the same public read-only MCP transport, scoped to documentation resources.",
         "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
         "responses": { "200": { "description": "MCP JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpResponse" } } } } }
+      }
+    },
+    "/mcp/product": {
+      "get": {
+        "operationId": "getProductMcpInfo",
+        "summary": "Read product MCP transport information",
+        "responses": { "200": { "description": "Product MCP server information", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpServerInfo" } } } } }
+      },
+      "post": {
+        "operationId": "callProductMcp",
+        "summary": "Call the read-only page counter MCP server",
+        "description": "Accepts MCP JSON-RPC requests for reading aggregate page-view totals without incrementing them.",
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpRequest" } } } },
+        "responses": { "200": { "description": "Product MCP JSON-RPC response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/McpResponse" } } } } }
       }
     },
     "/a2a": {

@@ -29,6 +29,18 @@
       "destination": "/api/mcp-docs"
     },
     {
+      "source": "/mcp/product",
+      "destination": "/api/mcp-product"
+    },
+    {
+      "source": "/mcp/product/",
+      "destination": "/api/mcp-product"
+    },
+    {
+      "source": "/.well-known/mcp/product",
+      "destination": "/api/mcp-product"
+    },
+    {
       "source": "/a2a",
       "destination": "/api/a2a"
     },

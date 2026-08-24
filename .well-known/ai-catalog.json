@@ -59,6 +59,18 @@
       }
     },
     {
+      "identifier": "urn:air:nhanaz.io.vn:mcp:product-counter",
+      "displayName": "nhanaz.io.vn public counter MCP",
+      "type": "application/json",
+      "url": "https://nhanaz.io.vn/mcp/product",
+      "description": "Read-only product MCP surface for aggregate page-view totals. It does not increment or mutate the counter.",
+      "tags": ["mcp", "read-only", "counter", "product"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
+    },
+    {
       "identifier": "urn:air:nhanaz.io.vn:a2a:archive",
       "displayName": "NhanAZ Archive Guide A2A",
       "type": "application/a2a+json",

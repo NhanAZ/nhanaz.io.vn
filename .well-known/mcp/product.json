@@ -1,0 +1,11 @@
+{
+  "name": "nhanaz.io.vn public counter MCP",
+  "description": "Read-only MCP product surface for aggregate page-view totals.",
+  "version": "1.0.0",
+  "serverUrl": "https://nhanaz.io.vn/mcp/product",
+  "url": "https://nhanaz.io.vn/mcp/product",
+  "transport": "streamable-http",
+  "protocolVersion": "2025-11-25",
+  "authentication": "none",
+  "readOnly": true
+}

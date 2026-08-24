@@ -103,6 +103,17 @@ export default async function handler(request, response) {
     // by the storage endpoint's own safeguards.
   }
 
+  const readOnly = ["1", "true", "yes"].includes(String(request.query?.readOnly || request.query?.readonly || "").toLowerCase());
+  if (readOnly) {
+    try {
+      const views = await redis.get(`pageviews:v1:${pagePath}`);
+      sendJson(response, 200, { path: pagePath, views: Number(views) || 0, readOnly: true }, commonHeaders);
+    } catch {
+      sendJson(response, 503, problem("storage_unavailable", "Counter storage is unavailable", 503), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
+    }
+    return;
+  }
+
   const idempotencyKey = headerValue(request.headers, "idempotency-key");
   if (idempotencyKey !== undefined && (typeof idempotencyKey !== "string" || idempotencyKey.length === 0 || idempotencyKey.length > 200)) {
     sendJson(response, 400, problem("invalid_idempotency_key", "Idempotency-Key must be 1-200 characters when supplied", 400), { ...commonHeaders, "Content-Type": "application/problem+json; charset=utf-8" });
