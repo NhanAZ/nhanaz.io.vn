@@ -50,8 +50,10 @@ node --check assets/js/site.js
 node --check assets/js/theme.js
 node --check scripts/build-english.mjs
 node --check scripts/check-seo.mjs
+node --check scripts/build-vercel.mjs
 node scripts/build-english.mjs
 node scripts/check-seo.mjs
+node scripts/build-vercel.mjs
 git diff --check
 ```
 
