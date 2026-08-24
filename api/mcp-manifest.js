@@ -6,6 +6,8 @@ const manifest = {
   version: "1.0.0",
   serverUrl: "https://nhanaz.io.vn/mcp",
   endpoint: "https://nhanaz.io.vn/mcp",
+  url: "https://nhanaz.io.vn/mcp",
+  mcpEndpoint: "https://nhanaz.io.vn/mcp",
   documentation: "https://nhanaz.io.vn/developers/",
   transport: "streamable-http",
   protocolVersion: "2025-11-25",

@@ -20,6 +20,9 @@ const problem = (code, message, status, extra = {}) => ({
   title: message,
   status,
   detail: message,
+  code,
+  instance: "https://nhanaz.io.vn/api/views",
+  resolution: "Read the public OpenAPI document for the request shape and recovery guidance.",
   documentation: "https://nhanaz.io.vn/openapi.json",
   ...extra,
 });

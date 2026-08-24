@@ -6,6 +6,9 @@ export default function handler(request, response) {
     title: "No API resource exists at this path",
     status: 404,
     detail: "No API resource exists at this path",
+    code: "api_route_not_found",
+    instance: request.url,
+    resolution: "Open the documented OpenAPI routes before retrying.",
     documentation: "https://nhanaz.io.vn/openapi.json",
   });
 }

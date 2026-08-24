@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "serverUrl": "https://nhanaz.io.vn/mcp",
   "url": "https://nhanaz.io.vn/mcp",
+  "mcpEndpoint": "https://nhanaz.io.vn/mcp",
   "transport": "streamable-http",
   "protocolVersion": "2025-11-25",
   "uiResources": ["ui://nhanaz/archive.html"],

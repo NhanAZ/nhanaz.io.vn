@@ -435,6 +435,9 @@
           "title": { "type": "string" },
           "status": { "type": "integer", "minimum": 400, "maximum": 599 },
           "detail": { "type": "string" },
+          "code": { "type": "string" },
+          "instance": { "type": "string", "format": "uri" },
+          "resolution": { "type": "string" },
           "documentation": { "type": "string", "format": "uri" },
           "retryAfterSeconds": { "type": "integer", "minimum": 1 }
         },
