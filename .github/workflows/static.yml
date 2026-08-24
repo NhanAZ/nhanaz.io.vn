@@ -29,7 +29,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 22
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
       - name: Validate JavaScript
         run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs
       - name: Validate Vietnamese-English pages
