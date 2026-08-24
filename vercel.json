@@ -49,7 +49,23 @@
       "destination": "/.well-known/mcp/server-card.json"
     },
     {
+      "source": "/mcp/server-card.json",
+      "destination": "/.well-known/mcp/server-card.json"
+    },
+    {
+      "source": "/mcp/.well-known/server-card.json",
+      "destination": "/.well-known/mcp/server-card.json"
+    },
+    {
       "source": "/mcp/product/server-card",
+      "destination": "/.well-known/mcp/product/server-card.json"
+    },
+    {
+      "source": "/mcp/product/server-card.json",
+      "destination": "/.well-known/mcp/product/server-card.json"
+    },
+    {
+      "source": "/mcp/product/.well-known/server-card.json",
       "destination": "/.well-known/mcp/product/server-card.json"
     },
     {
