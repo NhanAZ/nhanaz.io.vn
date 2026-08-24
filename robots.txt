@@ -17,8 +17,12 @@ Disallow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 Sitemap: https://nhanaz.io.vn/sitemap.xml
-Agentmap: https://nhanaz.io.vn/.well-known/ai-catalog.json
-schemamap: https://nhanaz.io.vn/schema-map.xml
+
+# robots.txt has no standard Agentmap or Schemamap directives. The discovery
+# resources remain public and are linked as comments so strict parsers do not
+# treat them as invalid rules.
+# https://nhanaz.io.vn/.well-known/ai-catalog.json
+# https://nhanaz.io.vn/schema-map.xml
 
 # Machine-readable context for AI agents
 # https://nhanaz.io.vn/agent.md
