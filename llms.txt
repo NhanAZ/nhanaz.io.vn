@@ -15,6 +15,7 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 - [Giới thiệu](https://nhanaz.io.vn/about/)
 - [Liên hệ](https://nhanaz.io.vn/contact/)
 - [Chính sách riêng tư](https://nhanaz.io.vn/privacy/)
+- [Tài liệu cho developer](https://nhanaz.io.vn/developers/)
 - [Bài viết](https://nhanaz.io.vn/blog/)
 - [Dự án](https://nhanaz.io.vn/projects/)
 - [Vibe-code](https://nhanaz.io.vn/vibe-code/)

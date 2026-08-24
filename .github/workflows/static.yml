@@ -58,6 +58,7 @@ jobs:
             assets
             blog
             contact
+            developers
             en
             entity.json
             favicon.ico

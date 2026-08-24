@@ -12,6 +12,7 @@ const pagePairs = [
   { vi: "/404.html", en: "/en/404.html" },
   { vi: "/about/", en: "/en/about/" },
   { vi: "/contact/", en: "/en/contact/" },
+  { vi: "/developers/", en: "/en/developers/" },
   { vi: "/achievements/", en: "/en/achievements/" },
   { vi: "/blog/", en: "/en/blog/" },
   { vi: "/github/", en: "/en/github/" },

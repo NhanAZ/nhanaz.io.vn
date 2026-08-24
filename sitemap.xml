@@ -121,6 +121,18 @@
     <lastmod>2026-08-24</lastmod>
   </url>
   <url>
+    <loc>https://nhanaz.io.vn/developers/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/developers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/developers/" />
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/developers/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/developers/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/developers/" />
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
     <loc>https://nhanaz.io.vn/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/privacy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/privacy/" />

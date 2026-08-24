@@ -4,6 +4,13 @@ document.querySelectorAll("[data-year]").forEach((element) => {
 
 const SITE_SEARCH_INDEX_VI = [
   {
+    title: "Tài liệu cho developer",
+    type: "Thông tin website",
+    url: "/developers/",
+    excerpt: "Các nguồn machine-readable và quy ước public của website, cùng nói rõ site hiện không có API hay endpoint ghi dữ liệu.",
+    keywords: "developer resources tài liệu API agent skills ARD llms sitemap GitHub static website",
+  },
+  {
     title: "Liên hệ",
     type: "Thông tin website",
     url: "/contact/",
@@ -290,6 +297,13 @@ const SITE_SEARCH_INDEX_VI = [
 ];
 
 const SITE_SEARCH_INDEX_EN = [
+  {
+    title: "Developer resources",
+    type: "Site information",
+    url: "/en/developers/",
+    excerpt: "Machine-readable sources and public conventions for this site, including a clear note that it has no write API or authenticated endpoint.",
+    keywords: "developer resources API agent skills ARD llms sitemap GitHub static website",
+  },
   {
     title: "Contact",
     type: "Site information",

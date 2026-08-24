@@ -1,9 +1,9 @@
-# Agent instructions for nhanaz.io.vn
-
 ---
 title: Agent instructions for nhanaz.io.vn
 description: Read-only routing guidance for the personal archive of Nguyễn Thành Nhân.
 ---
+
+# Agent instructions for nhanaz.io.vn
 
 ## When to use this site
 
