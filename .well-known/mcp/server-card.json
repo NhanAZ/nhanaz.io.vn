@@ -5,6 +5,17 @@
   "description": "Public read-only tools and resources for finding and reading the personal archive of Nguyễn Thành Nhân - NhanAZ.",
   "version": "1.0.0",
   "websiteUrl": "https://nhanaz.io.vn/",
+  "serverUrl": "https://nhanaz.io.vn/mcp",
+  "mcpEndpoint": "https://nhanaz.io.vn/mcp",
+  "transport": "streamable-http",
+  "protocolVersion": "2025-11-25",
+  "authentication": { "required": false, "description": "The public archive is credential-free and read-only." },
+  "tools": [
+    { "name": "find_archive_pages", "description": "Find relevant canonical pages in the NhanAZ archive for a natural-language query.", "readOnlyHint": true },
+    { "name": "read_archive_resource", "description": "Read one allowlisted machine-readable document from nhanaz.io.vn.", "readOnlyHint": true },
+    { "name": "open_archive_view", "description": "Open the read-only archive viewer UI in an MCP Apps-capable host.", "readOnlyHint": true }
+  ],
+  "uiResources": ["ui://nhanaz/archive.html"],
   "repository": {
     "source": "github",
     "url": "https://github.com/NhanAZ/nhanaz.io.vn"

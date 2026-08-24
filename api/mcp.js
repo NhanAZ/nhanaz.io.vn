@@ -205,7 +205,7 @@ export async function handleMcp(request, response) {
     return;
   }
   const id = body.id;
-  if (body.method.startsWith("notifications/")) { response.status(202).end(); return; }
+  if (body.method.startsWith("notifications/") || !Object.hasOwn(body, "id")) { response.status(202).end(); return; }
   try {
     let payload;
     switch (body.method) {

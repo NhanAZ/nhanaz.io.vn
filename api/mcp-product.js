@@ -57,7 +57,7 @@ export default async function handler(request, response) {
   const body = typeof request.body === "string" ? JSON.parse(request.body || "{}") : request.body;
   if (!body || typeof body.method !== "string") { send(request, response, error(null, -32600, "A JSON-RPC method is required"), 400); return; }
   const id = body.id;
-  if (body.method.startsWith("notifications/")) { response.status(202).end(); return; }
+  if (body.method.startsWith("notifications/") || !Object.hasOwn(body, "id")) { response.status(202).end(); return; }
   try {
     if (body.method === "initialize") {
       send(request, response, result(id, { protocolVersion: "2025-11-25", capabilities: { tools: { listChanged: false } }, serverInfo: SERVER, instructions: "This is a public read-only product surface for aggregate page-view totals." }));
