@@ -43,7 +43,9 @@ function send(request, response, payload, status = 200) {
     || request.headers?.["mcp-protocol-version"]
     || request.headers?.["MCP-Protocol-Version"];
   if (protocolVersion) response.setHeader("MCP-Protocol-Version", protocolVersion);
-  if (request.headers?.accept?.includes("text/event-stream")) {
+  const accept = request.headers?.accept || "";
+  const wantsEventStream = accept.includes("text/event-stream") && !accept.includes("application/json");
+  if (wantsEventStream) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
     response.setHeader("X-Accel-Buffering", "no");
