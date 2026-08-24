@@ -2,6 +2,6 @@
 
 The site has no account or endpoint for changing content. The [OpenAPI document](https://nhanaz.io.vn/openapi.json) describes the static GET resources that agents can retrieve, including Markdown context, the public entity graph, the sitemap, discovery manifests, and the small page-view counter at `/api/views`.
 
-`GET /api/views?path=/some/public/path` increments and returns the public view count for that normalized path. It does not accept credentials or write site content.
+`GET /api/v1/views?path=/some/public/path` increments and returns the public view count for that normalized path. `/api/views` remains a compatibility alias. Neither route accepts credentials or writes site content.
 
 Do not send credentials or private data to these URLs. Use the canonical page before quoting a claim, and use the [GitHub repository](https://github.com/NhanAZ/nhanaz.io.vn) for source history.

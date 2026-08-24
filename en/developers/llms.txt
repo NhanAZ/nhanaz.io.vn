@@ -9,5 +9,9 @@ This scoped file is for agents and small tools that need the machine-readable en
 - [Agent guidance](https://nhanaz.io.vn/agent.md)
 - [ARD catalog](https://nhanaz.io.vn/.well-known/ai-catalog.json)
 - [Agent Skills index](https://nhanaz.io.vn/.well-known/agent-skills/index.json)
+- [Authentication note](https://nhanaz.io.vn/auth.md)
+- [Pricing note](https://nhanaz.io.vn/pricing.md)
+- [RFC 9727 API catalog](https://nhanaz.io.vn/.well-known/api-catalog)
+- [Schema map](https://nhanaz.io.vn/schema-map.xml)
 
 The archive content is read-only. It has no user account, authentication flow, webhook, or endpoint for changing data. A small public `GET /api/views?path=/...` counter increments view totals without accepting credentials. Read the canonical page before quoting a claim, and use the GitHub repository for source history and repository rules.

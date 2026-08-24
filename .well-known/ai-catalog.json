@@ -33,6 +33,18 @@
         "identity": "https://nhanaz.io.vn",
         "identityType": "https"
       }
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:api:views",
+      "displayName": "nhanaz.io.vn public view counter",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://nhanaz.io.vn/openapi.json",
+      "description": "A versioned, credential-free GET endpoint for aggregate page-view totals. It cannot change site content.",
+      "tags": ["api", "read-only-content", "page-views"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
     }
   ]
 }

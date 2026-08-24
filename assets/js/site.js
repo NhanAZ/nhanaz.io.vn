@@ -1954,7 +1954,7 @@ const initViewCounter = () => {
   metaList.append(item);
   metaList.classList.add("has-view-count");
 
-  window.fetch(`/api/views?path=${encodeURIComponent(pagePath)}`, {
+  window.fetch(`/api/v1/views?path=${encodeURIComponent(pagePath)}`, {
     headers: { Accept: "application/json" },
     credentials: "same-origin",
     cache: "no-store",

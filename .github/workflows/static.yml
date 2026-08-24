@@ -52,6 +52,7 @@ jobs:
             404.html
             agent.md
             agent-mode.md
+            auth.md
             CNAME
             about
             agent-instructions.md
@@ -72,11 +73,13 @@ jobs:
             llms.md
             llms.txt
             openapi.json
+            pricing.md
             posts
             projects
             privacy
             robots.txt
             sitemap.xml
+            schema-map.xml
             vibe-code
             .well-known
           )

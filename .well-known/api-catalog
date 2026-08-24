@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://nhanaz.io.vn/.well-known/api-catalog",
+      "item": [
+        {
+          "href": "https://nhanaz.io.vn/api/v1/views",
+          "service-desc": [
+            {
+              "href": "https://nhanaz.io.vn/openapi.json",
+              "type": "application/vnd.oai.openapi+json"
+            }
+          ],
+          "service-doc": [
+            {
+              "href": "https://nhanaz.io.vn/developers/",
+              "type": "text/html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "info": {
     "title": "nhanaz.io.vn read-only resources",
     "version": "2026-08-24",
-    "description": "A small OpenAPI description of the public resources on nhanaz.io.vn. Document routes are read-only retrieval. The only application-style route is a small public page-view counter, which does not accept credentials or change site content."
+    "description": "A small OpenAPI description of the public resources on nhanaz.io.vn. Document routes are read-only retrieval. The only application-style route is a small public page-view counter, which does not accept credentials or change site content. The versioned API surface is under /api/v1; /api/views remains a compatibility alias."
   },
   "servers": [
     {
@@ -237,6 +237,24 @@
               }
             }
           }
+        }
+      }
+    },
+    "/api/v1/views": {
+      "get": {
+        "operationId": "getAndIncrementPageViewsV1",
+        "summary": "Increment and read a public page-view count (v1)",
+        "description": "Versioned v1 route for the public page-view counter. The unversioned /api/views route remains available as a compatibility alias. This endpoint does not accept credentials and cannot change site content.",
+        "parameters": [
+          {
+            "$ref": "#/paths/~1api~1views/get/parameters/0"
+          }
+        ],
+        "responses": {
+          "200": { "$ref": "#/paths/~1api~1views/get/responses/200" },
+          "400": { "$ref": "#/paths/~1api~1views/get/responses/400" },
+          "405": { "$ref": "#/paths/~1api~1views/get/responses/405" },
+          "503": { "$ref": "#/paths/~1api~1views/get/responses/503" }
         }
       }
     }

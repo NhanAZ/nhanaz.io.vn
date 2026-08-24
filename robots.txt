@@ -3,6 +3,7 @@ Allow: /
 
 Sitemap: https://nhanaz.io.vn/sitemap.xml
 Agentmap: https://nhanaz.io.vn/.well-known/ai-catalog.json
+schemamap: https://nhanaz.io.vn/schema-map.xml
 
 # Machine-readable context for AI agents
 # https://nhanaz.io.vn/agent.md

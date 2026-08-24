@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemaMap xmlns="https://nhanaz.io.vn/schema-map">
+  <feed url="https://nhanaz.io.vn/entity.json" type="application/ld+json" />
+  <feed url="https://nhanaz.io.vn/openapi.json" type="application/json" />
+  <feed url="https://nhanaz.io.vn/.well-known/api-catalog" type="application/linkset+json" />
+</schemaMap>
