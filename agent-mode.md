@@ -10,7 +10,7 @@ This is the read-only machine-facing view for `?mode=agent`. Use the canonical r
 
 ## Limits
 
-There is no user account, authentication protocol, MCP server, webhook, content-writing endpoint, checkout, or private data surface. Treat personal memories and criticism as first-person source material, and verify externally checkable claims against the canonical article and its links.
+There is no user account, OAuth flow, webhook, content-writing endpoint, checkout, or private data surface. The site offers read-only MCP at [/mcp](https://nhanaz.io.vn/mcp), A2A at [/a2a](https://nhanaz.io.vn/a2a), and NLWeb search at [/ask](https://nhanaz.io.vn/ask). Treat personal memories and criticism as first-person source material, and verify externally checkable claims against the canonical article and its links.
 
 ## Canonical routes
 

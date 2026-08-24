@@ -45,6 +45,42 @@
         "identity": "https://nhanaz.io.vn",
         "identityType": "https"
       }
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:mcp:archive",
+      "displayName": "nhanaz.io.vn read-only MCP",
+      "type": "application/json",
+      "url": "https://nhanaz.io.vn/mcp",
+      "description": "Stateless Streamable HTTP MCP surface for finding and reading the personal archive. No credentials or content-changing tools.",
+      "tags": ["mcp", "read-only", "archive", "tools", "resources"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:a2a:archive",
+      "displayName": "NhanAZ Archive Guide A2A",
+      "type": "application/a2a+json",
+      "url": "https://nhanaz.io.vn/.well-known/agent-card.json",
+      "description": "Read-only A2A discovery card and JSON-RPC interface for finding canonical archive pages.",
+      "tags": ["a2a", "read-only", "archive", "discovery"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
+    },
+    {
+      "identifier": "urn:air:nhanaz.io.vn:nlweb:ask",
+      "displayName": "nhanaz.io.vn NLWeb ask",
+      "type": "application/json",
+      "url": "https://nhanaz.io.vn/ask",
+      "description": "NLWeb-compatible read-only search over a curated index of public archive pages, with JSON and SSE responses.",
+      "tags": ["nlweb", "search", "read-only", "archive"],
+      "trustManifest": {
+        "identity": "https://nhanaz.io.vn",
+        "identityType": "https"
+      }
     }
   ]
 }

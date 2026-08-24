@@ -11,6 +11,38 @@
     {
       "source": "/pricing/",
       "destination": "/pricing.md"
+    },
+    {
+      "source": "/ask",
+      "destination": "/api/ask"
+    },
+    {
+      "source": "/mcp",
+      "destination": "/api/mcp"
+    },
+    {
+      "source": "/mcp/",
+      "destination": "/api/mcp"
+    },
+    {
+      "source": "/mcp/docs",
+      "destination": "/api/mcp-docs"
+    },
+    {
+      "source": "/a2a",
+      "destination": "/api/a2a"
+    },
+    {
+      "source": "/a2a/",
+      "destination": "/api/a2a"
+    },
+    {
+      "source": "/.well-known/mcp",
+      "destination": "/.well-known/mcp/index.json"
+    },
+    {
+      "source": "/.well-known/mcp/",
+      "destination": "/.well-known/mcp/index.json"
     }
   ],
   "headers": [
@@ -33,6 +65,33 @@
         {
           "key": "Content-Type",
           "value": "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\""
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/a2a+json; charset=utf-8"
         }
       ]
     }

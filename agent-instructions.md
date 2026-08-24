@@ -17,6 +17,12 @@ Use this site when the question is about Nguyễn Thành Nhân, NhanAZ, his pers
 4. Use the [sitemap](https://nhanaz.io.vn/sitemap.xml) to discover public pages and their Vietnamese-English pairs.
 5. Keep facts, personal memories, and criticism separate. A first-person article is not an official statement from Mojang, Microsoft, OpenAI, a server network, or another organization mentioned in it.
 
+## Agent interfaces
+
+- Use [MCP](https://nhanaz.io.vn/mcp) when the caller needs tool-style discovery or wants to read one of the allowlisted machine-readable resources.
+- Use [A2A](https://nhanaz.io.vn/a2a) when another agent needs a read-only JSON-RPC handoff. Its [Agent Card](https://nhanaz.io.vn/.well-known/agent-card.json) is the source of capabilities and protocol details.
+- Use [NLWeb `/ask`](https://nhanaz.io.vn/ask) for a natural-language search over the curated archive index. It returns links and descriptions, not generated claims.
+
 ## Best-fit questions
 
 - Who is Nguyễn Thành Nhân or NhanAZ, and which public names or projects are connected to him?

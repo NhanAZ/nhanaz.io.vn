@@ -11,7 +11,7 @@ Personal blog, project archive, and living portfolio. Built with plain HTML, CSS
 - Developer notes: https://nhanaz.io.vn/developers/
 - Agent discovery: https://nhanaz.io.vn/.well-known/ai-catalog.json and https://nhanaz.io.vn/.well-known/agent-skills/index.json
 
-The site has no account, authentication flow, or endpoint for changing content. The OpenAPI document describes static GET resources plus the small public page-view counter at `/api/views`.
+The site has no account, authentication flow, or endpoint for changing content. It also exposes read-only MCP at `/mcp`, A2A at `/a2a`, and NLWeb-compatible archive search at `/ask`. The OpenAPI document describes those surfaces, static GET resources, and the small public page-view counter at `/api/views`.
 
 ## Preview locally
 

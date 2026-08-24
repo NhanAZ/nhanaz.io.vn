@@ -1,0 +1,34 @@
+{
+  "name": "nhanaz.io.vn read-only MCP",
+  "description": "Read-only tools and resources for finding and reading the personal archive of Nguyễn Thành Nhân - NhanAZ.",
+  "version": "1.0.0",
+  "serverUrl": "https://nhanaz.io.vn/mcp",
+  "transport": "streamable-http",
+  "protocolVersion": "2025-11-25",
+  "authentication": {
+    "required": false,
+    "description": "The public archive and its MCP surface do not require an account or credential."
+  },
+  "tools": [
+    {
+      "name": "find_archive_pages",
+      "description": "Find relevant canonical pages in the NhanAZ archive for a natural-language query.",
+      "readOnlyHint": true
+    },
+    {
+      "name": "read_archive_resource",
+      "description": "Read one allowlisted machine-readable document from nhanaz.io.vn.",
+      "readOnlyHint": true
+    },
+    {
+      "name": "open_archive_view",
+      "description": "Open the read-only archive viewer UI in an MCP Apps-capable host.",
+      "readOnlyHint": true
+    }
+  ],
+  "resources": [
+    "https://nhanaz.io.vn/llms.txt",
+    "https://nhanaz.io.vn/agent.md",
+    "https://nhanaz.io.vn/openapi.json"
+  ]
+}

@@ -88,6 +88,7 @@ jobs:
           cp -R "${public_paths[@]}" _site/
           mkdir -p _site/api
           cp api/llms.txt _site/api/llms.txt
+          cp api/llms.txt.md _site/api/llms.txt.md
           # Publish only the safe public agent guide under the conventional filename.
           # The repository's operational AGENTS.md is intentionally not copied.
           cp _site/agent.md _site/AGENTS.md

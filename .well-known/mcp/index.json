@@ -1,0 +1,9 @@
+{
+  "name": "nhanaz.io.vn read-only MCP",
+  "description": "Public read-only MCP surface for discovering and reading the NhanAZ personal archive.",
+  "version": "1.0.0",
+  "serverUrl": "https://nhanaz.io.vn/mcp",
+  "documentation": "https://nhanaz.io.vn/developers/",
+  "transport": "streamable-http",
+  "authentication": "none"
+}

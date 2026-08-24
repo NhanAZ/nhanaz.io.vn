@@ -1,0 +1,35 @@
+{
+  "name": "NhanAZ Archive Guide",
+  "description": "A read-only A2A agent that helps other agents find and cite the public personal archive of Nguyễn Thành Nhân - NhanAZ.",
+  "version": "1.0.0",
+  "supportedInterfaces": [
+    {
+      "url": "https://nhanaz.io.vn/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "0.3"
+    }
+  ],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": ["text/plain", "application/json"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "skills": [
+    {
+      "id": "archive-context",
+      "name": "Find archive context",
+      "description": "Find canonical pages about Nguyễn Thành Nhân, NhanAZ, code, PocketMine-MP, Minecraft Bedrock, projects and published milestones.",
+      "tags": ["archive", "identity", "PocketMine-MP", "Minecraft Bedrock", "technical writing"],
+      "examples": [
+        "Where should I read about NhanAZ's PocketMine-MP history?",
+        "Find the canonical project and developer resources for nhanaz.io.vn."
+      ],
+      "inputModes": ["text/plain"],
+      "outputModes": ["text/plain", "application/json"]
+    }
+  ],
+  "securitySchemes": {}
+}

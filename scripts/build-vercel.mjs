@@ -60,6 +60,7 @@ for (const relativePath of publicPaths) {
 const publicApiDirectory = path.join(output, "api");
 fs.mkdirSync(publicApiDirectory, { recursive: true });
 fs.cpSync(path.join(root, "api", "llms.txt"), path.join(publicApiDirectory, "llms.txt"));
+fs.cpSync(path.join(root, "api", "llms.txt.md"), path.join(publicApiDirectory, "llms.txt.md"));
 
 fs.cpSync(path.join(output, "agent.md"), path.join(output, "AGENTS.md"));
 
