@@ -1,11 +1,16 @@
 {
-  "name": "nhanaz.io.vn public counter MCP",
-  "description": "Read-only MCP product surface for aggregate page-view totals.",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.nhanaz/nhanaz-counter",
+  "title": "NhanAZ page counter",
+  "description": "Public read-only MCP product surface for aggregate page-view totals.",
   "version": "1.0.0",
+  "websiteUrl": "https://nhanaz.io.vn/",
   "serverUrl": "https://nhanaz.io.vn/mcp/product",
-  "url": "https://nhanaz.io.vn/mcp/product",
+  "serverCard": "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json",
+  "remotes": [{ "type": "streamable-http", "url": "https://nhanaz.io.vn/mcp/product" }],
   "transport": "streamable-http",
   "protocolVersion": "2025-11-25",
   "authentication": "none",
-  "readOnly": true
+  "readOnly": true,
+  "tools": ["read_page_counter", "describe_page_counter", "read_counter_endpoint_info"]
 }

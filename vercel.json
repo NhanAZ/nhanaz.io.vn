@@ -152,6 +152,15 @@
       ]
     },
     {
+      "source": "/.well-known/mcp-product/server-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/mcp-server-card+json; charset=utf-8"
+        }
+      ]
+    },
+    {
       "source": "/mcp/server-card",
       "headers": [
         {

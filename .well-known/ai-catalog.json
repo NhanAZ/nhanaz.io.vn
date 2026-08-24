@@ -63,6 +63,7 @@
       "displayName": "nhanaz.io.vn public counter MCP",
       "type": "application/json",
       "url": "https://nhanaz.io.vn/mcp/product",
+      "serverCard": "https://nhanaz.io.vn/.well-known/mcp/product/server-card.json",
       "description": "Read-only product MCP surface for aggregate page-view totals. It does not increment or mutate the counter.",
       "tags": ["mcp", "read-only", "counter", "product"],
       "trustManifest": {
