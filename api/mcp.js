@@ -69,7 +69,10 @@ function sendMcpResponse(request, response, payload, status = 200) {
   if (request.headers?.accept?.includes("text/event-stream")) {
     response.setHeader("Content-Type", "text/event-stream");
     response.setHeader("Cache-Control", "no-cache, no-transform");
-    response.status(status).end(`event: message\ndata: ${JSON.stringify(payload)}\n\n`);
+    response.setHeader("X-Accel-Buffering", "no");
+    response.status(status);
+    response.write(`event: message\ndata: ${JSON.stringify(payload)}\n\n`);
+    response.end();
     return;
   }
   response.setHeader("Content-Type", "application/json; charset=utf-8");
@@ -139,7 +142,10 @@ export async function handleMcp(request, response) {
     if (request.headers?.accept?.includes("text/event-stream")) {
       response.setHeader("Content-Type", "text/event-stream");
       response.setHeader("Cache-Control", "no-cache, no-transform");
-      response.status(200).end(`event: endpoint\ndata: https://nhanaz.io.vn/mcp\n\n`);
+      response.setHeader("X-Accel-Buffering", "no");
+      response.status(200);
+      response.write("event: endpoint\ndata: https://nhanaz.io.vn/mcp\n\n");
+      response.end();
       return;
     }
     response.setHeader("Content-Type", "application/json; charset=utf-8");

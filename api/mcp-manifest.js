@@ -13,6 +13,7 @@ const manifest = {
   protocolVersion: "2025-11-25",
   capabilities: { tools: {}, resources: {} },
   authentication: "none",
+  relatedServers: [{ role: "product", url: "https://nhanaz.io.vn/mcp/product", readOnly: true }],
 };
 
 export default async function handler(request, response) {

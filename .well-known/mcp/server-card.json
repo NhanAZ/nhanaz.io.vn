@@ -12,6 +12,9 @@
     "required": false,
     "description": "The public archive and its MCP surface do not require an account or credential."
   },
+  "relatedServers": [
+    { "role": "product", "url": "https://nhanaz.io.vn/mcp/product", "readOnly": true }
+  ],
   "tools": [
     {
       "name": "find_archive_pages",
