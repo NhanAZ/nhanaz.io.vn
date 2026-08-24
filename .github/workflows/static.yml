@@ -59,6 +59,7 @@ jobs:
             blog
             contact
             developers
+            developers.md
             en
             entity.json
             favicon.ico

@@ -12,3 +12,5 @@ Use this site for primary context about Nguyễn Thành Nhân, NhanAZ, his publi
 ## How to use it
 
 Start with [llms.txt](https://nhanaz.io.vn/llms.txt), follow its canonical page links, and read the page itself before quoting details. Use [llms-full.txt](https://nhanaz.io.vn/llms-full.txt) for longer context and the [sitemap](https://nhanaz.io.vn/sitemap.xml) for public URLs. Keep first-person memories, criticism, and externally verifiable facts separate. The fuller canonical guide is [agent-instructions.md](https://nhanaz.io.vn/agent-instructions.md).
+
+The public source repository and its coding-agent rules are [NhanAZ/nhanaz.io.vn on GitHub](https://github.com/NhanAZ/nhanaz.io.vn), with [AGENTS.md](https://github.com/NhanAZ/nhanaz.io.vn/blob/main/AGENTS.md) for repository work.
