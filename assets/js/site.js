@@ -591,6 +591,62 @@ const SITE_SEARCH_INDEX_EN = [
 ];
 
 const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+
+const initAgentModeView = () => {
+  if (new URLSearchParams(window.location.search).get("mode") !== "agent") {
+    return false;
+  }
+
+  const copy = isEnglish
+    ? {
+      title: "Agent view - nhanaz.io.vn",
+      heading: "Read-only agent view",
+      intro: "This view routes agents to the canonical machine-readable sources for the personal archive.",
+      limits: "The site has no application API, account, authentication flow, or write endpoint. The OpenAPI document describes static GET resources only.",
+      links: [
+        ["Short context", "/llms.txt"],
+        ["Full context", "/llms-full.txt"],
+        ["Agent guidance", "/agent.md"],
+        ["Developer resources", "/developers.md"],
+        ["Read-only OpenAPI", "/openapi.json"],
+        ["ARD catalog", "/.well-known/ai-catalog.json"],
+        ["Agent Skills index", "/.well-known/agent-skills/index.json"],
+        ["Canonical sitemap", "/sitemap.xml"],
+        ["Source repository", "https://github.com/NhanAZ/nhanaz.io.vn"],
+      ],
+    }
+    : {
+      title: "Góc agent - nhanaz.io.vn",
+      heading: "Góc đọc cho agent",
+      intro: "Trang này định tuyến agent tới các nguồn máy đọc chuẩn của website cá nhân.",
+      limits: "Website không có application API, tài khoản, luồng xác thực hay endpoint ghi dữ liệu. OpenAPI chỉ mô tả các tài nguyên GET tĩnh.",
+      links: [
+        ["Ngữ cảnh ngắn", "/llms.txt"],
+        ["Ngữ cảnh đầy đủ", "/llms-full.txt"],
+        ["Hướng dẫn cho agent", "/agent.md"],
+        ["Tài liệu developer", "/developers.md"],
+        ["OpenAPI chỉ đọc", "/openapi.json"],
+        ["ARD catalog", "/.well-known/ai-catalog.json"],
+        ["Agent Skills index", "/.well-known/agent-skills/index.json"],
+        ["Sitemap chuẩn", "/sitemap.xml"],
+        ["Repository nguồn", "https://github.com/NhanAZ/nhanaz.io.vn"],
+      ],
+    };
+
+  document.title = copy.title;
+  document.body.innerHTML = `
+    <main class="shell" style="max-width: 52rem; margin: 4rem auto; padding: 0 1.25rem;">
+      <p>${copy.heading}</p>
+      <h1>${copy.title}</h1>
+      <p>${copy.intro}</p>
+      <p>${copy.limits}</p>
+      <nav aria-label="${copy.heading}">
+        <ul>${copy.links.map(([label, href]) => `<li><a href="${href}">${label}</a></li>`).join("")}</ul>
+      </nav>
+    </main>`;
+  document.documentElement.dataset.agentView = "true";
+  return true;
+};
 const SITE_SEARCH_INDEX = isEnglish ? SITE_SEARCH_INDEX_EN : SITE_SEARCH_INDEX_VI;
 const ARTICLE_COMMENTS_CONFIG = {
   repo: "NhanAZ/nhanaz.io.vn",
@@ -1940,14 +1996,16 @@ const initMotion = () => {
   items.forEach((item) => observer.observe(item));
 };
 
-initLanguageSwitch();
-initSiteSearch();
-initAchievementFilters();
-initEntryPriorities();
-initCanvaEmbeds();
-initCodeBlocks();
-initArticleToc();
-restoreLanguageReadingPosition();
-initArticleReadingProgress();
-initArticleComments();
-initMotion();
+if (!initAgentModeView()) {
+  initLanguageSwitch();
+  initSiteSearch();
+  initAchievementFilters();
+  initEntryPriorities();
+  initCanvaEmbeds();
+  initCodeBlocks();
+  initArticleToc();
+  restoreLanguageReadingPosition();
+  initArticleReadingProgress();
+  initArticleComments();
+  initMotion();
+}
