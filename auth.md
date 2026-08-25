@@ -1,4 +1,4 @@
-# Authentication
+# auth.md - Authentication
 
 The public archive does not require authentication.
 
