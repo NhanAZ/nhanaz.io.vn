@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@upstash/redis": "^1.38.4",
-    "@vercel/functions": "^3.0.0",
+    "@vercel/functions": "^3.9.7",
     "@vercel/speed-insights": "^2.0.0"
   }
 }
