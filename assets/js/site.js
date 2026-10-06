@@ -4,6 +4,14 @@ document.querySelectorAll("[data-year]").forEach((element) => {
 
 const SITE_SEARCH_INDEX_VI = [
   {
+    title: "Một người đáng chết, rồi ai có quyền giết?",
+    type: "Triết học - Pháp luật",
+    url: "/posts/dang-chet-va-quyen-giet/",
+    date: "2026-10-06",
+    excerpt: "Mình nghĩ về quyền sống, án tử hình và giới hạn quyền trừng phạt của Nhà nước. Từ một vụ án đến câu hỏi ai có quyền kết thúc một mạng người.",
+    keywords: "quyền sống án tử hình quyền giết Nhà nước trừng phạt báo ứng răn đe nạn nhân tù chung thân an tử triết học pháp lý Đồng Nai",
+  },
+  {
     title: "Tài liệu cho developer",
     type: "Thông tin website",
     url: "/developers/",
@@ -297,6 +305,14 @@ const SITE_SEARCH_INDEX_VI = [
 ];
 
 const SITE_SEARCH_INDEX_EN = [
+  {
+    title: "Someone deserves to die. Who gets to kill them?",
+    type: "Philosophy - Law",
+    url: "/en/posts/deserving-death-and-the-power-to-kill/",
+    date: "2026-10-06",
+    excerpt: "A personal essay on the right to life, capital punishment, and the limits of state power. Deserving death and having the authority to kill are separate questions.",
+    keywords: "right to life death penalty capital punishment state power retribution deterrence victims life imprisonment euthanasia legal philosophy Vietnam",
+  },
   {
     title: "Developer resources",
     type: "Site information",

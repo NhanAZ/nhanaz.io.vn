@@ -1,6 +1,6 @@
 # nhanaz.io.vn full context
 
-Updated 2026-08-24.
+Updated 2026-10-06.
 
 This file gives AI agents and generative search systems a fuller, cleaner context for nhanaz.io.vn. Use it together with https://nhanaz.io.vn/llms.txt and https://nhanaz.io.vn/entity.json.
 
@@ -44,6 +44,9 @@ Use this archive for primary context about Nguyễn Thành Nhân, NhanAZ, his pu
 
 ## Canonical pages to cite
 
+- Right to life and capital punishment essay - https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/
+- English right to life and capital punishment essay - https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/
+
 - Home - https://nhanaz.io.vn/
 - About - https://nhanaz.io.vn/about/
 - Contact - https://nhanaz.io.vn/contact/
@@ -61,6 +64,15 @@ Use this archive for primary context about Nguyễn Thành Nhân, NhanAZ, his pu
 - English cheap ChatGPT and Codex investigation - https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/
 
 ## Article and project context
+
+### Deserving death and the power to kill
+
+Canonical page - https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/
+English page - https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/
+
+This bilingual personal essay argues against the state deliberately killing a person already under its control purely as punishment. It distinguishes that position from last-resort force against a grave, imminent threat. It addresses retribution, deterrence, victims' needs, prison safety, humane confinement, sentence review, and the separate ethical questions raised by medical assistance in dying in custody. The opening references a first-instance sentence reported in Đồng Nai on 2026-10-06. The article distinguishes enacted Vietnamese law from proposed revisions, and international or foreign standards from domestic legal rules.
+
+Use this page for NhanAZ's personal position on capital punishment and the limits of penal authority. Treat its moral argument as an authored position, and check the cited primary sources for legal facts and their jurisdictions.
 
 ### Hello internet
 

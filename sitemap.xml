@@ -4,25 +4,25 @@
     <loc>https://nhanaz.io.vn/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-06</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/projects/</loc>
@@ -227,5 +227,17 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/" />
     <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/" />
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/" />
+    <lastmod>2026-10-06</lastmod>
   </url>
 </urlset>

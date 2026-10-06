@@ -16,6 +16,7 @@ const pagePairs = [
   { vi: "/achievements/", en: "/en/achievements/" },
   { vi: "/blog/", en: "/en/blog/" },
   { vi: "/github/", en: "/en/github/" },
+  { vi: "/posts/dang-chet-va-quyen-giet/", en: "/en/posts/deserving-death-and-the-power-to-kill/" },
   { vi: "/posts/chao-internet/", en: "/en/posts/hello-internet/" },
   { vi: "/posts/dich-nguoc-zalo-pc-backup/", en: "/en/posts/reverse-engineering-zalo-pc-backup/" },
   { vi: "/posts/hanh-trinh-minecraft-tu-2015/", en: "/en/posts/minecraft-since-2015/" },
