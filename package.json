@@ -2,6 +2,11 @@
   "name": "nhanaz-io-vn",
   "private": true,
   "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "audio": "node scripts/article-audio.mjs",
+    "audio:check": "node scripts/article-audio.mjs --check"
+  },
   "engines": {
     "node": "24.x"
   },

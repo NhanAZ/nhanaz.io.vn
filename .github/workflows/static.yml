@@ -34,7 +34,18 @@ jobs:
       - name: Install dependencies
         run: npm ci --ignore-scripts
       - name: Validate JavaScript
-        run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs
+        run: node --check assets/js/site.js && node --check assets/js/theme.js && node --check assets/js/article-audio.js && node --check scripts/article-audio.mjs && node --check scripts/serve.mjs && node --check scripts/build-english.mjs && node --check scripts/check-seo.mjs
+      - name: Validate audio playlist logic
+        run: node --test scripts/article-audio.test.mjs
+      - name: Setup Python for audio checks
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: "3.12"
+      - name: Validate recordings against articles
+        run: |
+          python -m pip install beautifulsoup4==4.15.0
+          python -m unittest discover -s scripts -p 'test_article_audio.py'
+          npm run audio:check
       - name: Validate Vietnamese-English pages
         run: node scripts/build-english.mjs
       - name: Validate SEO metadata

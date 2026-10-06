@@ -1,0 +1,1863 @@
+{
+  "schemaVersion": 1,
+  "articles": {
+    "/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/": {
+      "title": "Why does a $1.50 ChatGPT Plus account with a three-hour warranty still sell?",
+      "language": "en",
+      "sourceHash": "5672eb08b89801f296fe3476a6c35f38c4aaca7bef06129afe0ae5571126d7d5",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 2237.266,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-cheap-chatgpt-plus-codex-account-pools-9router/e44efb0785a62197-001.mp3",
+          "duration": 896.902,
+          "bytes": 8969564,
+          "sha256": "e44efb0785a62197964cc9be503f6badef3b724578caf9c6ca4b80a9c6be1c5e"
+        },
+        {
+          "src": "/assets/audio/en-posts-cheap-chatgpt-plus-codex-account-pools-9router/43eb4205afe9fdc8-002.mp3",
+          "duration": 885.372,
+          "bytes": 8854364,
+          "sha256": "43eb4205afe9fdc88edc8bc71b600c5e5c533cffee178578b026bd37766704c0"
+        },
+        {
+          "src": "/assets/audio/en-posts-cheap-chatgpt-plus-codex-account-pools-9router/077f6c9149c042f3-003.mp3",
+          "duration": 454.992,
+          "bytes": 4550684,
+          "sha256": "077f6c9149c042f3552df5b3430be398f56c036dbf1f3b4ff04d66f60c503704"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Why does a $1.50 ChatGPT Plus account with a three-hour warranty still sell?",
+          "start": 0.0
+        },
+        {
+          "title": "A three-hour warranty does not stop the sale. It makes the sale possible",
+          "start": 118.987
+        },
+        {
+          "title": "Sellers profit because the loss already belongs to the customer",
+          "start": 259.519
+        },
+        {
+          "title": "Why do buyers keep lining up?",
+          "start": 383.808
+        },
+        {
+          "title": "Every bargain needs both sides to forgive themselves",
+          "start": 526.526
+        },
+        {
+          "title": "I found a market, not a few spare accounts changing hands",
+          "start": 605.544
+        },
+        {
+          "title": "Where does a $1.50 account travel?",
+          "start": 724.287
+        },
+        {
+          "title": "First, there has to be a supply",
+          "start": 775.015
+        },
+        {
+          "title": "Then each account gets a health check",
+          "start": 843.472
+        },
+        {
+          "title": "Packaging decides what the buyer thinks they bought",
+          "start": 904.622
+        },
+        {
+          "title": "Finally, a router moves the mess out of sight",
+          "start": 940.668
+        },
+        {
+          "title": "9Router does not create accounts. It makes the inventory look less chaotic",
+          "start": 973.132
+        },
+        {
+          "title": "What 9Router amplifies is not the account count but the usefulness of each account",
+          "start": 1065.626
+        },
+        {
+          "title": "Cheap supply, volume, and short warranties turn attrition into profit",
+          "start": 1121.104
+        },
+        {
+          "title": "“Thousands of accounts” is a number designed to make people dizzy",
+          "start": 1245.632
+        },
+        {
+          "title": "This market does not require a secret OpenAI hack",
+          "start": 1334.136
+        },
+        {
+          "title": "The buyer is gambling with more than $1.50",
+          "start": 1430.521
+        },
+        {
+          "title": "Even a router can forget to lock the door",
+          "start": 1541.704
+        },
+        {
+          "title": "The remaining costs fall on ordinary users too",
+          "start": 1629.24
+        },
+        {
+          "title": "I do not want open-source software to become the convenient villain",
+          "start": 1716.399
+        },
+        {
+          "title": "There are things I still do not know, and I am leaving them that way",
+          "start": 1806.496
+        },
+        {
+          "title": "If you still want to buy, do not call it a harmless bargain",
+          "start": 1891.06
+        },
+        {
+          "title": "What did I compare against?",
+          "start": 1976.732
+        },
+        {
+          "title": "Technical secrets do not keep this market alive. Consent to ambiguity does",
+          "start": 2027.491
+        }
+      ]
+    },
+    "/en/posts/deserving-death-and-the-power-to-kill/": {
+      "title": "Someone deserves to die. Who gets to kill them?",
+      "language": "en",
+      "sourceHash": "910285033cbca8e81d53b5fb9239942b13c57243f4f81b77468113c5d1eb7129",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 1062.985,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-deserving-death-and-the-power-to-kill/42a0400f792db1c3-001.mp3",
+          "duration": 890.761,
+          "bytes": 8908364,
+          "sha256": "42a0400f792db1c33eb869688a9332c74fe39298e761c408146ac201b09534d1"
+        },
+        {
+          "src": "/assets/audio/en-posts-deserving-death-and-the-power-to-kill/07f9d33cece86f41-002.mp3",
+          "duration": 172.224,
+          "bytes": 1722764,
+          "sha256": "07f9d33cece86f417139def108f9cb43de72a5381b452ae539c8d890d5e1fae9"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Someone deserves to die. Who gets to kill them?",
+          "start": 0.0
+        },
+        {
+          "title": "Assume the person is certainly guilty",
+          "start": 66.667
+        },
+        {
+          "title": "The right to life is not a good-behaviour certificate",
+          "start": 120.425
+        },
+        {
+          "title": "Life is not always what a person values most",
+          "start": 182.535
+        },
+        {
+          "title": "Whose life does that button save?",
+          "start": 243.932
+        },
+        {
+          "title": "The strongest arguments for execution deserve an answer",
+          "start": 327.436
+        },
+        {
+          "title": "A life must be paid for with a life",
+          "start": 347.515
+        },
+        {
+          "title": "People need to fear the punishment",
+          "start": 391.228
+        },
+        {
+          "title": "Some people cannot be rehabilitated",
+          "start": 455.26
+        },
+        {
+          "title": "Victims cannot be a passing acknowledgement",
+          "start": 502.944
+        },
+        {
+          "title": "Abolition does not make every prison sentence humane",
+          "start": 569.188
+        },
+        {
+          "title": "What if they keep killing in prison?",
+          "start": 674.248
+        },
+        {
+          "title": "Is wanting to die in prison an exercise of autonomy?",
+          "start": 733.771
+        },
+        {
+          "title": "Vietnam is narrowing the scope. Where should it stop?",
+          "start": 834.154
+        },
+        {
+          "title": "The boundary I want to keep",
+          "start": 909.631
+        },
+        {
+          "title": "Sources for thinking further",
+          "start": 985.635
+        }
+      ]
+    },
+    "/en/posts/hello-internet/": {
+      "title": "Hello internet, I rebuilt this little home.",
+      "language": "en",
+      "sourceHash": "bd3a9a342d4e1352269433058db2d250ea47911ee3401c1579fd6aab071f0e68",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 84.241,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-hello-internet/abaf49b839fc9543-001.mp3",
+          "duration": 84.241,
+          "bytes": 843164,
+          "sha256": "abaf49b839fc95431e43ee090693a7dd0727a70c3dfa579b1e926524d2055dad"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Hello internet, I rebuilt this little home.",
+          "start": 0.0
+        },
+        {
+          "title": "What will be here?",
+          "start": 26.883
+        },
+        {
+          "title": "Why so minimal?",
+          "start": 60.688
+        }
+      ]
+    },
+    "/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/": {
+      "title": "Minecraft Bedrock is killing the things that helped it grow.",
+      "language": "en",
+      "sourceHash": "9bb94e54d7e826a6ee7a883cb1e7ac9d4f2ff9f33a6999f5a981574f92d72494",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 5454.515,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/1a85e02dfc7b1601-001.mp3",
+          "duration": 898.495,
+          "bytes": 8985644,
+          "sha256": "1a85e02dfc7b160164aadb71697493ae737bc8c83de3f27d7e764e4fd6fb67ff"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/65c147af53a87c19-002.mp3",
+          "duration": 880.919,
+          "bytes": 8809724,
+          "sha256": "65c147af53a87c19bcaef29d221aaa420225c90bc3eabf77e1819e4c318ea513"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/0e0b3adfabf65dab-003.mp3",
+          "duration": 882.389,
+          "bytes": 8824604,
+          "sha256": "0e0b3adfabf65dab6b59df29c131717689619cbb3ed6f38020a9477df937519d"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/ec8c75a231f4739c-004.mp3",
+          "duration": 871.88,
+          "bytes": 8719484,
+          "sha256": "ec8c75a231f4739c7c1815d15c80ce788f1509b42792126e5986ee5c7c6e17c2"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/58db79419bf68cd5-005.mp3",
+          "duration": 887.608,
+          "bytes": 8876684,
+          "sha256": "58db79419bf68cd5dac4122e36f8f2577f96b3250bbf42aa865677217a0491c9"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/e930bfa5bde1dce6-006.mp3",
+          "duration": 891.055,
+          "bytes": 8911244,
+          "sha256": "e930bfa5bde1dce6870820a021d49d3a4b23151289d043a38febf19ebec81c28"
+        },
+        {
+          "src": "/assets/audio/en-posts-minecraft-bedrock-is-killing-the-things-that-helped-it-grow/0a34434fe650f1a0-007.mp3",
+          "duration": 142.169,
+          "bytes": 1422284,
+          "sha256": "0a34434fe650f1a058ad3f3fa8046e78ea6f3f50650db492a1ea71016777030f"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Minecraft Bedrock is killing the things that helped it grow.",
+          "start": 0.0
+        },
+        {
+          "title": "A death that did not happen overnight",
+          "start": 163.327
+        },
+        {
+          "title": "Lifeboat saved PMMP, but it could not manufacture a successor",
+          "start": 342.431
+        },
+        {
+          "title": "PocketMine-MP was a massive doorway",
+          "start": 615.874
+        },
+        {
+          "title": "NetherGames is a rare public accusation",
+          "start": 735.513
+        },
+        {
+          "title": "Zeqa is part of this story too",
+          "start": 1016.495
+        },
+        {
+          "title": "Debug symbols sound dry, but they are oxygen",
+          "start": 1574.076
+        },
+        {
+          "title": "The protocol is more open, but the ladder is still tilted",
+          "start": 1775.308
+        },
+        {
+          "title": "A partner is not just a nice badge",
+          "start": 2261.502
+        },
+        {
+          "title": "Dragonfly survives through a narrower path",
+          "start": 2407.79
+        },
+        {
+          "title": "Geyser makes the board look even more uneven",
+          "start": 2690.766
+        },
+        {
+          "title": "Why are other Bedrock projects still alive?",
+          "start": 3043.539
+        },
+        {
+          "title": "PMMP had problems of its own",
+          "start": 3811.507
+        },
+        {
+          "title": "Why I call this a way of killing",
+          "start": 3959.744
+        },
+        {
+          "title": "What if Mojang publishes the PDBs tomorrow?",
+          "start": 4106.703
+        },
+        {
+          "title": "Information wants to be free in Minecraft Bedrock",
+          "start": 4186.235
+        },
+        {
+          "title": "In Vietnam, this was never only software",
+          "start": 4292.008
+        },
+        {
+          "title": "Thank you, PocketMine-MP",
+          "start": 4448.35
+        },
+        {
+          "title": "Goodbye, NetherGames",
+          "start": 4570.52
+        },
+        {
+          "title": "What remains should stay open",
+          "start": 4667.61
+        },
+        {
+          "title": "No one needs to sign a death certificate",
+          "start": 4769.781
+        },
+        {
+          "title": "Sources worth reading",
+          "start": 4905.289
+        }
+      ]
+    },
+    "/en/posts/minecraft-since-2015/": {
+      "title": "Minecraft since 2015, before I knew what an IP was.",
+      "language": "en",
+      "sourceHash": "e631de01b0bcae0fe3ff9bb90d1e541f139fa2eaf98e9b6dbec1c3ca6374abd8",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 462.64,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-minecraft-since-2015/6e89d770641b9e23-001.mp3",
+          "duration": 462.64,
+          "bytes": 4627004,
+          "sha256": "6e89d770641b9e23cd11facd23726e51d98d20a07527439fd8663d5e3c087b0b"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Minecraft since 2015, before I knew what an IP was.",
+          "start": 0.0
+        },
+        {
+          "title": "Playing online before I understood IP addresses",
+          "start": 56.339
+        },
+        {
+          "title": "Old names from server lists",
+          "start": 123.997
+        },
+        {
+          "title": "Then I wanted my own server",
+          "start": 188.305
+        },
+        {
+          "title": "A server felt like a small home",
+          "start": 260.326
+        },
+        {
+          "title": "Then things became harder",
+          "start": 322.094
+        },
+        {
+          "title": "The destination moved beyond the game",
+          "start": 390.844
+        }
+      ]
+    },
+    "/en/posts/party-awareness-reflection-paper-notes/": {
+      "title": "A few notes for a better Party-awareness course reflection paper.",
+      "language": "en",
+      "sourceHash": "e9c51fda5359fbdaa77a3fcec52fe5949a87e0debf01c79953ffd0bc528c0499",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 538.845,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-party-awareness-reflection-paper-notes/9202b2e86282a1be-001.mp3",
+          "duration": 538.845,
+          "bytes": 5389004,
+          "sha256": "9202b2e86282a1be3a0c5f26a8ccaf40f873ad0ae25aa78f4cfb9641f3fffd28"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "A few notes for a better Party-awareness course reflection paper.",
+          "start": 0.0
+        },
+        {
+          "title": "Read the prompt before chasing good prose",
+          "start": 57.219
+        },
+        {
+          "title": "Theory should be accurate, but not copied mechanically",
+          "start": 113.556
+        },
+        {
+          "title": "Personal reflection is where the writer actually appears",
+          "start": 176.213
+        },
+        {
+          "title": "Do not be afraid to name what needs work",
+          "start": 248.536
+        },
+        {
+          "title": "Motivation to join the Party should be serious and real",
+          "start": 290.523
+        },
+        {
+          "title": "If the prompt includes an online action",
+          "start": 343.462
+        },
+        {
+          "title": "Clean presentation is part of the learning attitude",
+          "start": 390.251
+        },
+        {
+          "title": "A simple structure",
+          "start": 439.098
+        },
+        {
+          "title": "One last thing",
+          "start": 494.95
+        }
+      ]
+    },
+    "/en/posts/questions-slightly-too-large-for-one-lifetime/": {
+      "title": "Questions slightly too large for one lifetime.",
+      "language": "en",
+      "sourceHash": "a8b71646d14b7684a63d3f12cce0b2fc2c74c7a9a1de9b56b6a080f2eb119ca9",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 625.807,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-questions-slightly-too-large-for-one-lifetime/a3bf864092bac0d2-001.mp3",
+          "duration": 625.807,
+          "bytes": 6258764,
+          "sha256": "a3bf864092bac0d20c797f195ca0bf8807d976cf26be1c2cd2276268148c5bea"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Questions slightly too large for one lifetime.",
+          "start": 0.0
+        },
+        {
+          "title": "Why is there a universe",
+          "start": 55.867
+        },
+        {
+          "title": "Why these laws and not others",
+          "start": 100.968
+        },
+        {
+          "title": "What time really is",
+          "start": 139.835
+        },
+        {
+          "title": "What kind of thing can spacetime be if it bends",
+          "start": 182.503
+        },
+        {
+          "title": "What is inside a black hole",
+          "start": 222.379
+        },
+        {
+          "title": "How the quantum world actually works",
+          "start": 261.227
+        },
+        {
+          "title": "Where life begins",
+          "start": 306.544
+        },
+        {
+          "title": "Where the meaning of life comes from",
+          "start": 346.564
+        },
+        {
+          "title": "Whether people are truly free",
+          "start": 384.542
+        },
+        {
+          "title": "Whether anyone stands behind all of this",
+          "start": 421.017
+        },
+        {
+          "title": "Whether we live inside an information matrix",
+          "start": 461.926
+        },
+        {
+          "title": "Whether anyone else is out there",
+          "start": 496.822
+        },
+        {
+          "title": "I want to travel far enough to look back",
+          "start": 535.952
+        },
+        {
+          "title": "If I never find out",
+          "start": 574.068
+        }
+      ]
+    },
+    "/en/posts/reverse-engineering-zalo-pc-backup/": {
+      "title": "Who does Zalo PC backup encryption protect?",
+      "language": "en",
+      "sourceHash": "64ada79e6131436a75d5e8ae24ebfe4b9b08bdbb6f75e4b698d4716ae3c4eb13",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 777.929,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-reverse-engineering-zalo-pc-backup/0e4b737fb6710593-001.mp3",
+          "duration": 777.929,
+          "bytes": 7779884,
+          "sha256": "0e4b737fb6710593ae732aa00b3dc304bb993439463634750dbece710ef76673"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Who does Zalo PC backup encryption protect?",
+          "start": 0.0
+        },
+        {
+          "title": "A data export that has not quite been handed to the user",
+          "start": 69.353
+        },
+        {
+          "title": "The ZIP extension is only the sign on the door",
+          "start": 130.264
+        },
+        {
+          "title": "There is no need to defeat AES when key material remains in RAM",
+          "start": 206.794
+        },
+        {
+          "title": "If the goal is stopping hackers, the boundary is being drawn rather late",
+          "start": 306.554
+        },
+        {
+          "title": "If the goal is integrity, CBC has been assigned the wrong job",
+          "start": 361.329
+        },
+        {
+          "title": "If the goal is preventing edited data from being reimported, the case is still weak",
+          "start": 446.84
+        },
+        {
+          "title": "So what is Zalo actually trying to achieve?",
+          "start": 497.638
+        },
+        {
+          "title": "After decryption, the archive is still untrusted input",
+          "start": 569.702
+        },
+        {
+          "title": "A threat model shorter than most claims about encryption",
+          "start": 640.39
+        },
+        {
+          "title": "What remained after this investigation",
+          "start": 687.428
+        },
+        {
+          "title": "References",
+          "start": 752.396
+        }
+      ]
+    },
+    "/en/posts/what-is-pocketmine-mp/": {
+      "title": "What Is PocketMine-MP? Complete PMMP History, 2012-2026",
+      "language": "en",
+      "sourceHash": "794b6df0bc06865e881a32f6ff2c09c5515009793b6bc9862a253aec2b5bcccf",
+      "configHash": "4c10528e059f5c95eb9815283150729e653fc02889e4f8f5f592cc9de4b86019",
+      "voice": "Heart",
+      "engine": "Kokoro-82M-v1.0",
+      "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+      "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+      "duration": 5411.47,
+      "segments": [
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/6551af656a81c21e-001.mp3",
+          "duration": 894.393,
+          "bytes": 8944604,
+          "sha256": "6551af656a81c21e86fea5f62057c760b99f1e6f6073993de282d8e209176bda"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/e31106c94eaa67f6-002.mp3",
+          "duration": 899.687,
+          "bytes": 8997404,
+          "sha256": "e31106c94eaa67f65e287bb3942b1ee91fc9146865ee3763914ec96d6d41eff4"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/a7e945490a47b107-003.mp3",
+          "duration": 884.99,
+          "bytes": 8850524,
+          "sha256": "a7e945490a47b1079e8cd454a63e9fa859ade7effa2b3511928077366b69809b"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/309961a4e249f4e2-004.mp3",
+          "duration": 893.934,
+          "bytes": 8940044,
+          "sha256": "309961a4e249f4e2592d76651fe7bf93a69ebb5bcd0c15892674d391a37c9bf8"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/cd691b477889a9a1-005.mp3",
+          "duration": 893.99,
+          "bytes": 8940524,
+          "sha256": "cd691b477889a9a169b962042760de874b9a4037ca921c2314b7dd9614db27de"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/cda3a56f3978c31e-006.mp3",
+          "duration": 896.235,
+          "bytes": 8963084,
+          "sha256": "cda3a56f3978c31edc1711238ea1794288f264b303c2b67e6a290ae54c069221"
+        },
+        {
+          "src": "/assets/audio/en-posts-what-is-pocketmine-mp/30cc711ecae97336-007.mp3",
+          "duration": 48.241,
+          "bytes": 483164,
+          "sha256": "30cc711ecae97336b31e3ba6d323bbfbfa436e22db96c6ef28dd1accf315d252"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "What Is PocketMine-MP? Complete PMMP History, 2012-2026",
+          "start": 0.0
+        },
+        {
+          "title": "Before PocketMine, Minecraft PE multiplayer barely had a shape",
+          "start": 120.403
+        },
+        {
+          "title": "Mobile Minecraft was not yet Bedrock as we know it",
+          "start": 125.042
+        },
+        {
+          "title": "In 2013, PocketMine Realms came before external servers",
+          "start": 247.315
+        },
+        {
+          "title": "Why PocketMine-MP mattered",
+          "start": 385.31
+        },
+        {
+          "title": "How PocketMine-MP worked",
+          "start": 535.914
+        },
+        {
+          "title": "An independent server, not a BDS wrapper",
+          "start": 538.292
+        },
+        {
+          "title": "PHP lowered the entry barrier without removing the hard problems",
+          "start": 613.832
+        },
+        {
+          "title": "The plugin platform was the product",
+          "start": 699.714
+        },
+        {
+          "title": "PocketMine-MP history, 2012-2026",
+          "start": 750.956
+        },
+        {
+          "title": "2012-2013, from Pocket Minecraft PHP to an MCPE server",
+          "start": 756.278
+        },
+        {
+          "title": "2014-2015, community infrastructure takes shape",
+          "start": 866.492
+        },
+        {
+          "title": "By early 2015, a prototype had become an institution",
+          "start": 1021.844
+        },
+        {
+          "title": "Late 2015-2016, the founder leaves and forks multiply",
+          "start": 1076.707
+        },
+        {
+          "title": "In 2016, PocketMine forked in a million directions",
+          "start": 1179.691
+        },
+        {
+          "title": "Steadfast, Lifeboat and history outside the upstream",
+          "start": 1340.419
+        },
+        {
+          "title": "September 2016-2017, PMMP becomes the successor",
+          "start": 1390.135
+        },
+        {
+          "title": "2017-2018, Poggit and API 3 pull the ecosystem back toward one centre",
+          "start": 1533.706
+        },
+        {
+          "title": "API 3 was not a version bump, but eighteen months of surgery",
+          "start": 1681.498
+        },
+        {
+          "title": "2018-2023, PMMP matures while Bedrock gains an official BDS",
+          "start": 1890.68
+        },
+        {
+          "title": "2019, the Titanic warning describes the ending years in advance",
+          "start": 1982.297
+        },
+        {
+          "title": "2020-2021, Lifeboat turns dependence into paid work",
+          "start": 2135.798
+        },
+        {
+          "title": "2022-2023, API 5 arrives as the forum becomes an archive",
+          "start": 2264.626
+        },
+        {
+          "title": "2024, dktapps leaves and describes the human cost",
+          "start": 2406.555
+        },
+        {
+          "title": "2024-2026, protocol costs rise and the upstream ends",
+          "start": 2551.012
+        },
+        {
+          "title": "July 15, 2026, why did dktapps not hand PMMP to a successor?",
+          "start": 2787.65
+        },
+        {
+          "title": "PocketMine, PocketMine-MP and PMMP",
+          "start": 3087.232
+        },
+        {
+          "title": "An incomplete map of memorable forks",
+          "start": 3166.66
+        },
+        {
+          "title": "Poggit, PHAR and a plugin's lifecycle",
+          "start": 3311.308
+        },
+        {
+          "title": "What old plugins reveal about the servers people actually wanted",
+          "start": 3408.757
+        },
+        {
+          "title": "Why PHAR was both convenient and deceptive",
+          "start": 3494.267
+        },
+        {
+          "title": "Why PocketMine-MP plugins broke after updates",
+          "start": 3547.014
+        },
+        {
+          "title": "From API 2 to API 3",
+          "start": 3649.719
+        },
+        {
+          "title": "From API 3 to API 4 and API 5",
+          "start": 3704.324
+        },
+        {
+          "title": "Why PMMP accepted the pain",
+          "start": 3762.325
+        },
+        {
+          "title": "Why PocketMine-MP ended support",
+          "start": 3810.396
+        },
+        {
+          "title": "The direct cause was human",
+          "start": 3813.478
+        },
+        {
+          "title": "The structural cause was the cost of following a closed platform",
+          "start": 3886.812
+        },
+        {
+          "title": "The economic cause was a commons used more than it was sustained",
+          "start": 3960.965
+        },
+        {
+          "title": "Did Mojang contribute to the death of PocketMine-MP?",
+          "start": 4012.965
+        },
+        {
+          "title": "A “kill order” is not required to produce a killing result",
+          "start": 4017.211
+        },
+        {
+          "title": "How should the Shoghi, Mojang and Realms theory be read?",
+          "start": 4141.462
+        },
+        {
+          "title": "From collateral damage to partner-only access",
+          "start": 4212.991
+        },
+        {
+          "title": "The most reasonable conclusion",
+          "start": 4271.22
+        },
+        {
+          "title": "Is PocketMine-MP dead?",
+          "start": 4338.165
+        },
+        {
+          "title": "How long can a 5.44.3 server keep running?",
+          "start": 4432.06
+        },
+        {
+          "title": "A successor fork needs more than a name and logo",
+          "start": 4489.956
+        },
+        {
+          "title": "The technical and community legacy",
+          "start": 4545.789
+        },
+        {
+          "title": "The legacy of learning by repairing plugins",
+          "start": 4647.721
+        },
+        {
+          "title": "The legacy of protocol knowledge as a public resource",
+          "start": 4697.191
+        },
+        {
+          "title": "What the Internet has already lost",
+          "start": 4752.459
+        },
+        {
+          "title": "What should be preserved now",
+          "start": 4831.123
+        },
+        {
+          "title": "What may happen after PMMP",
+          "start": 4883.616
+        },
+        {
+          "title": "A history that should not end with “deprecated”",
+          "start": 4987.77
+        },
+        {
+          "title": "Sources and verification method",
+          "start": 5063.301
+        }
+      ]
+    },
+    "/posts/chao-internet/": {
+      "title": "Chào internet, mình dựng lại căn nhà này.",
+      "language": "vi",
+      "sourceHash": "124a61750c6593d1d36af77cf219ffeb37097579af0876d1224c90454f6c7425",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 78.54,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-chao-internet/a1f5ca813217a083-001.mp3",
+          "duration": 78.54,
+          "bytes": 786044,
+          "sha256": "a1f5ca813217a0832a6ca4094570ab65a2afe259e4543b1d54e7d64e678e8620"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Chào internet, mình dựng lại căn nhà này.",
+          "start": 0.0
+        },
+        {
+          "title": "Ở đây sẽ có gì?",
+          "start": 25.7
+        },
+        {
+          "title": "Tại sao lại tối giản?",
+          "start": 55.32
+        }
+      ]
+    },
+    "/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/": {
+      "title": "ChatGPT Plus 40.000 đồng chỉ bảo hành ba giờ, vì sao vẫn đông khách?",
+      "language": "vi",
+      "sourceHash": "f5965097346d321d5653d9781e496ea464f5d585f36f336ef720a013f74b7c00",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 2115.05,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/9bfb31e2cc6129f7-001.mp3",
+          "duration": 883.05,
+          "bytes": 8831084,
+          "sha256": "9bfb31e2cc6129f731dbeeb3c1968fca3f9342a05d003599bb1de71726793a9d"
+        },
+        {
+          "src": "/assets/audio/posts-chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/37beae250e4a7ba6-002.mp3",
+          "duration": 900.03,
+          "bytes": 9001004,
+          "sha256": "37beae250e4a7ba631f133d696cc98b65ebaeb3aba4ba89655c9cfada37ab170"
+        },
+        {
+          "src": "/assets/audio/posts-chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/471d9856f21a4d47-003.mp3",
+          "duration": 331.97,
+          "bytes": 3320444,
+          "sha256": "471d9856f21a4d472e5c698e20b4157b891fc6526477cc909a33f07ced346eaf"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "ChatGPT Plus 40.000 đồng chỉ bảo hành ba giờ, vì sao vẫn đông khách?",
+          "start": 0.0
+        },
+        {
+          "title": "Ba giờ bảo hành không làm khách bỏ đi. Nó giúp cuộc mua bán xảy ra",
+          "start": 106.55
+        },
+        {
+          "title": "Người bán có lời vì phần lỗ đã thuộc về khách",
+          "start": 245.48
+        },
+        {
+          "title": "Vì sao người mua vẫn xếp hàng?",
+          "start": 351.67
+        },
+        {
+          "title": "Cả người bán lẫn người mua đều có lý do để tự cho qua",
+          "start": 479.03
+        },
+        {
+          "title": "Mình nhìn thấy một cái chợ, không phải vài account bán lại cho vui",
+          "start": 547.98
+        },
+        {
+          "title": "Một account 40.000 đồng đi qua những đâu?",
+          "start": 663.14
+        },
+        {
+          "title": "Đầu tiên phải có nguồn hàng",
+          "start": 713.73
+        },
+        {
+          "title": "Sau đó account phải qua một vòng khám sức khỏe",
+          "start": 781.06
+        },
+        {
+          "title": "Khâu đóng gói quyết định khách tưởng mình đã mua gì",
+          "start": 839.78
+        },
+        {
+          "title": "Cuối cùng, router che phần hỗn loạn khỏi khách",
+          "start": 879.52
+        },
+        {
+          "title": "9Router không sinh account. Nó giúp cái kho đỡ lộ cảnh hỗn loạn",
+          "start": 907.61
+        },
+        {
+          "title": "Thứ 9Router khuếch đại không phải số account, mà là khả năng tận dụng từng account",
+          "start": 1006.67
+        },
+        {
+          "title": "Nguồn rẻ, bán nhiều và bảo hành ngắn biến hao hụt thành lợi nhuận",
+          "start": 1057.87
+        },
+        {
+          "title": "“Hàng nghìn account” là một con số dễ làm người ta hoa mắt",
+          "start": 1166.34
+        },
+        {
+          "title": "Không cần một vụ hack OpenAI bí mật để cái chợ này tồn tại",
+          "start": 1246.02
+        },
+        {
+          "title": "Người mua không chỉ đánh cược 40.000 đồng",
+          "start": 1346.68
+        },
+        {
+          "title": "Một chiếc router cũng có ngày để quên khóa cửa",
+          "start": 1454.9
+        },
+        {
+          "title": "Phần chi phí còn lại rơi xuống cả người dùng bình thường",
+          "start": 1543.77
+        },
+        {
+          "title": "Mình không muốn biến phần mềm open source thành thủ phạm tiện lợi",
+          "start": 1625.34
+        },
+        {
+          "title": "Có những chỗ mình vẫn chưa biết, và mình để chúng ở đó",
+          "start": 1703.89
+        },
+        {
+          "title": "Nếu vẫn muốn mua, ít nhất đừng gọi đó là một món hời vô hại",
+          "start": 1783.08
+        },
+        {
+          "title": "Mình đã đối chiếu những gì?",
+          "start": 1867.58
+        },
+        {
+          "title": "Cái chợ sống được vì cả hai phía chấp nhận không hỏi cho rõ",
+          "start": 1923.35
+        }
+      ]
+    },
+    "/posts/dang-chet-va-quyen-giet/": {
+      "title": "Một người đáng chết, rồi ai có quyền giết?",
+      "language": "vi",
+      "sourceHash": "375e46f4b3e7d38e275a3093aa870e99e5c781c1fa896fff12331058a56943a8",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 984.27,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-dang-chet-va-quyen-giet/b5146b244259273f-001.mp3",
+          "duration": 894.65,
+          "bytes": 8947244,
+          "sha256": "b5146b244259273f8c77dd19e65d62164cf8426c212eff296864226bd87aca80"
+        },
+        {
+          "src": "/assets/audio/posts-dang-chet-va-quyen-giet/92c58f113c3795d1-002.mp3",
+          "duration": 89.62,
+          "bytes": 896924,
+          "sha256": "92c58f113c3795d1aabf4b7c655352cf38d7c002db811f625096db47f2041501"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Một người đáng chết, rồi ai có quyền giết?",
+          "start": 0.0
+        },
+        {
+          "title": "Cứ giả sử người đó chắc chắn có tội",
+          "start": 57.77
+        },
+        {
+          "title": "Quyền sống đâu phải phiếu bé ngoan",
+          "start": 106.02
+        },
+        {
+          "title": "Sống cũng không phải lúc nào là điều quý nhất",
+          "start": 165.88
+        },
+        {
+          "title": "Bấm nút đó đang cứu ai?",
+          "start": 222.56
+        },
+        {
+          "title": "Những lý do giữ án tử hình cần được trả lời đàng hoàng",
+          "start": 299.56
+        },
+        {
+          "title": "Một mạng phải trả bằng một mạng",
+          "start": 320.33
+        },
+        {
+          "title": "Phải đủ sợ thì người ta mới không làm",
+          "start": 359.45
+        },
+        {
+          "title": "Có người không thể cải tạo",
+          "start": 417.53
+        },
+        {
+          "title": "Nạn nhân không thể chỉ còn là một câu nhắc cho đủ",
+          "start": 460.95
+        },
+        {
+          "title": "Bỏ tử hình rồi để người ta mục trong tù cũng chưa ổn",
+          "start": 526.62
+        },
+        {
+          "title": "Nếu người đó tiếp tục giết người trong tù thì sao?",
+          "start": 620.98
+        },
+        {
+          "title": "Muốn chết trong tù có phải quyền tự quyết?",
+          "start": 677.23
+        },
+        {
+          "title": "Việt Nam đang thu hẹp, nhưng dừng ở đâu?",
+          "start": 770.53
+        },
+        {
+          "title": "Ranh giới mình muốn giữ",
+          "start": 841.73
+        },
+        {
+          "title": "Những nguồn mình dùng để nghĩ tiếp",
+          "start": 911.23
+        }
+      ]
+    },
+    "/posts/dich-nguoc-zalo-pc-backup/": {
+      "title": "Zalo PC mã hóa bản backup để bảo vệ ai?",
+      "language": "vi",
+      "sourceHash": "d0013f87d7d7ba4a38abb18180dfc7fe42c8b9286cd8cfeb1332a36af6791e25",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 735.06,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-dich-nguoc-zalo-pc-backup/5a15176e791cd9cc-001.mp3",
+          "duration": 735.06,
+          "bytes": 7351244,
+          "sha256": "5a15176e791cd9cc44f72084dfe2f1db19c09df3a618332288483664ce97b53a"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Zalo PC mã hóa bản backup để bảo vệ ai?",
+          "start": 0.0
+        },
+        {
+          "title": "Một bản xuất dữ liệu nhưng chưa thật sự được trao cho người dùng",
+          "start": 65.94
+        },
+        {
+          "title": "Cái đuôi ZIP chỉ là tấm bảng treo ngoài cửa",
+          "start": 120.12
+        },
+        {
+          "title": "Không cần đánh bại AES khi dữ liệu dẫn đến khóa vẫn ở trong RAM",
+          "start": 191.17
+        },
+        {
+          "title": "Nếu mục tiêu là chống hacker thì ranh giới đang được đặt hơi muộn",
+          "start": 285.3
+        },
+        {
+          "title": "Nếu mục tiêu là chống sửa dữ liệu thì CBC đang bị giao nhầm nghề",
+          "start": 334.84
+        },
+        {
+          "title": "Nếu mục tiêu là ngăn người dùng sửa rồi import ngược thì vẫn chưa thuyết phục",
+          "start": 412.89
+        },
+        {
+          "title": "Vậy Zalo thật sự muốn đạt được điều gì?",
+          "start": 461.97
+        },
+        {
+          "title": "Sau lớp mã hóa vẫn còn một archive cần được đối xử như dữ liệu không tin cậy",
+          "start": 528.84
+        },
+        {
+          "title": "Threat model gọn hơn những lời quảng cáo về mã hóa",
+          "start": 599.18
+        },
+        {
+          "title": "Điều còn lại sau lần mổ xẻ này",
+          "start": 646.89
+        },
+        {
+          "title": "Tài liệu tham khảo",
+          "start": 708.87
+        }
+      ]
+    },
+    "/posts/hanh-trinh-minecraft-tu-2015/": {
+      "title": "Minecraft từ 2015, trước khi mình biết IP là gì.",
+      "language": "vi",
+      "sourceHash": "9bd4524c113d6a18d23a1ec267da6832653433d88df5891a2a667f3f919762f6",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 426.55,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-hanh-trinh-minecraft-tu-2015/efac251680a7118e-001.mp3",
+          "duration": 426.55,
+          "bytes": 4266044,
+          "sha256": "efac251680a7118eca50c2e083213b32f690afe57a7cb17f6c7b14216f257263"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Minecraft từ 2015, trước khi mình biết IP là gì.",
+          "start": 0.0
+        },
+        {
+          "title": "Chơi online khi còn chưa hiểu IP là gì",
+          "start": 52.87
+        },
+        {
+          "title": "Những cái tên cũ trên server list",
+          "start": 113.39
+        },
+        {
+          "title": "Tới lúc muốn có server riêng",
+          "start": 173.42
+        },
+        {
+          "title": "Server như một căn nhà nhỏ",
+          "start": 242.81
+        },
+        {
+          "title": "Rồi mọi thứ bắt đầu khó hơn",
+          "start": 298.44
+        },
+        {
+          "title": "Cái đích không nằm trong game nữa",
+          "start": 360.21
+        }
+      ]
+    },
+    "/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/": {
+      "title": "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng.",
+      "language": "vi",
+      "sourceHash": "ef4dad638ab589f9343b0d64feedb719bee532154a5b4db233f32f7ad2287eb3",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 447.01,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/c656fd3d9c182e6c-001.mp3",
+          "duration": 447.01,
+          "bytes": 4470764,
+          "sha256": "c656fd3d9c182e6c8e21f0dd18305bbfd3a8bca4e4a343acc2ede0591c77657c"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng.",
+          "start": 0.0
+        },
+        {
+          "title": "Đọc đề trước khi nghĩ tới văn hay",
+          "start": 44.27
+        },
+        {
+          "title": "Lý luận cần đúng, nhưng đừng biến bài thành bản chép",
+          "start": 84.36
+        },
+        {
+          "title": "Liên hệ bản thân là nơi bài bắt đầu có mặt người viết",
+          "start": 134.58
+        },
+        {
+          "title": "Đừng ngại nhận điểm cần sửa",
+          "start": 193.42
+        },
+        {
+          "title": "Động cơ vào Đảng nên viết cho đứng đắn và thật",
+          "start": 231.61
+        },
+        {
+          "title": "Nếu đề có yêu cầu thao tác trực tuyến",
+          "start": 274.75
+        },
+        {
+          "title": "Trình bày sạch là một phần của thái độ học",
+          "start": 314.44
+        },
+        {
+          "title": "Một khung bài dễ dùng",
+          "start": 357.38
+        },
+        {
+          "title": "Điều cuối cùng",
+          "start": 407.63
+        }
+      ]
+    },
+    "/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/": {
+      "title": "Mấy câu hỏi hơi quá khổ cho một đời người.",
+      "language": "vi",
+      "sourceHash": "ac4a9a8e13190af885e6f64b1a282b7b922ff0ca238d1ee8e7bbd8d47ab571f3",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 604.66,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/aa1c7c1446057185-001.mp3",
+          "duration": 604.66,
+          "bytes": 6047324,
+          "sha256": "aa1c7c14460571856f31f2ca0b64296720f7d06819187afac725b6d715f482f3"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Mấy câu hỏi hơi quá khổ cho một đời người.",
+          "start": 0.0
+        },
+        {
+          "title": "Vì sao lại có một vũ trụ",
+          "start": 53.91
+        },
+        {
+          "title": "Vì sao các định luật lại là những định luật này",
+          "start": 94.63
+        },
+        {
+          "title": "Thời gian thật ra là gì",
+          "start": 135.92
+        },
+        {
+          "title": "Không thời gian là thứ gì mà có thể cong",
+          "start": 176.38
+        },
+        {
+          "title": "Bên trong hố đen có gì",
+          "start": 213.87
+        },
+        {
+          "title": "Thế giới lượng tử thật sự vận hành ra sao",
+          "start": 252.25
+        },
+        {
+          "title": "Sự sống bắt đầu ở đâu",
+          "start": 296.24
+        },
+        {
+          "title": "Ý nghĩa của sự sống đến từ đâu",
+          "start": 336.22
+        },
+        {
+          "title": "Con người có thật sự được tự do",
+          "start": 373.15
+        },
+        {
+          "title": "Có ai đứng sau tất cả không",
+          "start": 409.07
+        },
+        {
+          "title": "Chúng ta có đang sống trong một ma trận thông tin",
+          "start": 448.51
+        },
+        {
+          "title": "Ngoài kia có ai không",
+          "start": 483.95
+        },
+        {
+          "title": "Mình muốn được đi xa và nhìn lại",
+          "start": 520.87
+        },
+        {
+          "title": "Nếu cuối cùng vẫn không biết",
+          "start": 553.03
+        }
+      ]
+    },
+    "/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/": {
+      "title": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn.",
+      "language": "vi",
+      "sourceHash": "b816e418059d216852e5f99ac1e311f13ecac8ef966b71dc46f7d3cf865ae118",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 5288.01,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/8f38422aa1f0b89d-001.mp3",
+          "duration": 884.2,
+          "bytes": 8842604,
+          "sha256": "8f38422aa1f0b89dba8af3fadbd8644455298d156249e2b6000a393663bb0066"
+        },
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/9717dbe19066e47a-002.mp3",
+          "duration": 892.44,
+          "bytes": 8924924,
+          "sha256": "9717dbe19066e47aba7cda006928f6c258cd24af2731fa94643e42a5d643cc2f"
+        },
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/927dfed0ceb06c5b-003.mp3",
+          "duration": 889.75,
+          "bytes": 8898044,
+          "sha256": "927dfed0ceb06c5b9a7ef5f184fa7739fe683399d2fd4d4eea3c9fd22423a030"
+        },
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/584b073312a941a2-004.mp3",
+          "duration": 886.95,
+          "bytes": 8870204,
+          "sha256": "584b073312a941a2c26a3f2400662a05505d4d899d2e9fc39d6a255cfc7eaf9a"
+        },
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/30052df2122d66ae-005.mp3",
+          "duration": 890.57,
+          "bytes": 8906444,
+          "sha256": "30052df2122d66ae27fe9865fa6a8d0ba80d65fdd2112a6df43cee555726fad7"
+        },
+        {
+          "src": "/assets/audio/posts-minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/d22928537a17dd20-006.mp3",
+          "duration": 844.1,
+          "bytes": 8441564,
+          "sha256": "d22928537a17dd20ec4ce6d79bf3940dfa01e0c0a5743fb3fbd51b922bc26a05"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn.",
+          "start": 0.0
+        },
+        {
+          "title": "Một cái chết không xảy ra trong một đêm",
+          "start": 147.0
+        },
+        {
+          "title": "Lifeboat đã cứu PMMP, nhưng không thể tạo ra người kế nhiệm",
+          "start": 321.36
+        },
+        {
+          "title": "PocketMine-MP từng là cánh cửa quá lớn",
+          "start": 611.31
+        },
+        {
+          "title": "NetherGames là lời cáo buộc công khai hiếm hoi",
+          "start": 730.01
+        },
+        {
+          "title": "Zeqa không đứng ngoài câu chuyện này",
+          "start": 1000.49
+        },
+        {
+          "title": "Debug symbols nghe khô, nhưng đó là oxy",
+          "start": 1556.76
+        },
+        {
+          "title": "Protocol đã mở hơn, nhưng chiếc thang vẫn lệch",
+          "start": 1743.44
+        },
+        {
+          "title": "Partner không chỉ là một cái logo đẹp",
+          "start": 2226.8
+        },
+        {
+          "title": "Dragonfly sống sót bằng một đường hẹp hơn",
+          "start": 2365.14
+        },
+        {
+          "title": "Geyser làm ván cờ lệch thêm",
+          "start": 2642.93
+        },
+        {
+          "title": "Vì sao những phần mềm Bedrock khác vẫn sống?",
+          "start": 2985.34
+        },
+        {
+          "title": "PMMP cũng có lỗi của chính nó",
+          "start": 3746.51
+        },
+        {
+          "title": "Vì sao mình gọi đây là một cách giết",
+          "start": 3886.17
+        },
+        {
+          "title": "Nếu ngày mai Mojang công khai PDB thì sao?",
+          "start": 4024.94
+        },
+        {
+          "title": "Information wants to be free trong Minecraft Bedrock",
+          "start": 4101.28
+        },
+        {
+          "title": "Ở Việt Nam, đây không chỉ là chuyện của phần mềm",
+          "start": 4192.63
+        },
+        {
+          "title": "Cảm ơn PocketMine-MP",
+          "start": 4349.3
+        },
+        {
+          "title": "Tạm biệt NetherGames",
+          "start": 4464.57
+        },
+        {
+          "title": "Điều còn lại nên được giữ mở",
+          "start": 4560.25
+        },
+        {
+          "title": "Không ai cần ký giấy khai tử",
+          "start": 4651.49
+        },
+        {
+          "title": "Đọc tiếp từ nguồn gốc",
+          "start": 4777.57
+        }
+      ]
+    },
+    "/posts/pocketmine-mp-la-gi/": {
+      "title": "PocketMine-MP là gì? Lịch sử PMMP từ 2012 đến 2026",
+      "language": "vi",
+      "sourceHash": "72ad0804b0941d030c29b061c8a04fffdac184f5ab810cd37d74a99a853d801f",
+      "configHash": "f6524954e80e049645a294f1a96b0aba86a26093b92078fef0eae0650f3c8a9b",
+      "voice": "Thái Sơn",
+      "engine": "VieNeu-TTS-v3-Turbo",
+      "modelRevision": "61b85e3d937fbbacb387714180e8182823512523",
+      "codecRevision": "ceff0d0749bfb3fa2d61149794ec6feef0d1e1ae",
+      "duration": 5202.05,
+      "segments": [
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/00adb2173c3f8fe3-001.mp3",
+          "duration": 887.49,
+          "bytes": 8875484,
+          "sha256": "00adb2173c3f8fe3a3ea06ab35f66bb6b684432b30e2e5fafc49d0b046e7b835"
+        },
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/15c212e8172c1b2c-002.mp3",
+          "duration": 886.9,
+          "bytes": 8869724,
+          "sha256": "15c212e8172c1b2cb5f1c231e495b2f11a1992bbe07b56e9b7197c844008f620"
+        },
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/4fc31fd358da0459-003.mp3",
+          "duration": 886.95,
+          "bytes": 8870204,
+          "sha256": "4fc31fd358da04595d3885fa69b02a4575ea186115cb4964117304e2371db237"
+        },
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/5d32c802916fecd4-004.mp3",
+          "duration": 896.54,
+          "bytes": 8965964,
+          "sha256": "5d32c802916fecd44dab9906a1bdb6bbbc4f418642a55f6a68db7bd9e5e44254"
+        },
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/cea7383f857d14b4-005.mp3",
+          "duration": 889.09,
+          "bytes": 8891564,
+          "sha256": "cea7383f857d14b409c9d2e3055561fd51e963dbb237051c789635a91f6ee61b"
+        },
+        {
+          "src": "/assets/audio/posts-pocketmine-mp-la-gi/43ea7671c3c83026-006.mp3",
+          "duration": 755.08,
+          "bytes": 7551404,
+          "sha256": "43ea7671c3c830261cb5e0289fef959d1b60f54b8a560566a24a0db7133cf7c6"
+        }
+      ],
+      "chapters": [
+        {
+          "title": "PocketMine-MP là gì? Lịch sử PMMP từ 2012 đến 2026",
+          "start": 0.0
+        },
+        {
+          "title": "Trước PocketMine, multiplayer Minecraft PE gần như chưa thành hình",
+          "start": 116.58
+        },
+        {
+          "title": "Minecraft trên điện thoại chưa phải Bedrock như ngày nay",
+          "start": 121.95
+        },
+        {
+          "title": "2013, PocketMine Realms đã đi trước external server",
+          "start": 252.84
+        },
+        {
+          "title": "Vì sao PocketMine-MP từng quan trọng đến vậy?",
+          "start": 397.48
+        },
+        {
+          "title": "PocketMine-MP hoạt động như thế nào?",
+          "start": 548.93
+        },
+        {
+          "title": "Nó là một server độc lập, không phải lớp bọc của BDS",
+          "start": 551.98
+        },
+        {
+          "title": "PHP giúp hạ thấp cửa vào, nhưng không xóa chi phí kỹ thuật",
+          "start": 628.59
+        },
+        {
+          "title": "Plugin là sản phẩm chính, vanilla chỉ là nền tối thiểu",
+          "start": 711.25
+        },
+        {
+          "title": "Lịch sử PocketMine-MP từ 2012 đến 2026",
+          "start": 760.34
+        },
+        {
+          "title": "2012–2013, từ Pocket Minecraft PHP đến server Minecraft PE",
+          "start": 766.51
+        },
+        {
+          "title": "2014–2015, hạ tầng cộng đồng hình thành",
+          "start": 882.04
+        },
+        {
+          "title": "Đầu 2015, dấu hiệu một prototype đã biến thành thể chế",
+          "start": 1056.23
+        },
+        {
+          "title": "Cuối 2015–2016, người sáng lập rời đi và các fork nở ra",
+          "start": 1114.86
+        },
+        {
+          "title": "2016, một triệu hướng fork và cuộc chiến về chữ “PocketMine”",
+          "start": 1222.76
+        },
+        {
+          "title": "Steadfast, Lifeboat và lịch sử nằm ngoài upstream",
+          "start": 1386.5
+        },
+        {
+          "title": "Tháng 09.2016–2017, PMMP trở thành người kế nhiệm",
+          "start": 1439.88
+        },
+        {
+          "title": "2017–2018, Poggit và API 3 đưa hệ sinh thái về một trục",
+          "start": 1579.17
+        },
+        {
+          "title": "API 3 không phải một lần đổi số, mà là hai năm đại phẫu",
+          "start": 1717.48
+        },
+        {
+          "title": "2018–2023, PMMP trưởng thành trong lúc Bedrock có BDS chính thức",
+          "start": 1914.14
+        },
+        {
+          "title": "2019, Titanic và cảnh báo đã nói trước phần kết",
+          "start": 1998.41
+        },
+        {
+          "title": "2020–2021, Lifeboat biến sự phụ thuộc thành tiền công",
+          "start": 2143.73
+        },
+        {
+          "title": "2022–2023, API 5 và lúc forum trở thành di tích",
+          "start": 2263.68
+        },
+        {
+          "title": "2024, dktapps rời đi và kể cái giá con người",
+          "start": 2394.94
+        },
+        {
+          "title": "2024–2026, chi phí cập nhật protocol tăng và upstream dừng lại",
+          "start": 2527.97
+        },
+        {
+          "title": "15.07.2026, vì sao dktapps không trao PMMP cho một người kế nhiệm?",
+          "start": 2746.14
+        },
+        {
+          "title": "PocketMine, PocketMine-MP và PMMP khác nhau thế nào?",
+          "start": 3080.63
+        },
+        {
+          "title": "Bản đồ không hoàn chỉnh của các fork đáng nhớ",
+          "start": 3156.42
+        },
+        {
+          "title": "Poggit, PHAR và vòng đời của một plugin",
+          "start": 3284.83
+        },
+        {
+          "title": "Những plugin cũ cho biết server PocketMine thực sự cần gì",
+          "start": 3378.73
+        },
+        {
+          "title": "Tại sao PHAR vừa tiện vừa che giấu sự mong manh",
+          "start": 3457.0
+        },
+        {
+          "title": "Vì sao plugin PocketMine-MP hay lỗi sau khi cập nhật?",
+          "start": 3506.83
+        },
+        {
+          "title": "Từ API 2 lên API 3",
+          "start": 3604.59
+        },
+        {
+          "title": "Từ API 3 lên API 4 và API 5",
+          "start": 3655.03
+        },
+        {
+          "title": "Vì sao PMMP chấp nhận làm người dùng đau?",
+          "start": 3708.6
+        },
+        {
+          "title": "Vì sao PocketMine-MP dừng hỗ trợ?",
+          "start": 3752.54
+        },
+        {
+          "title": "Nguyên nhân trực tiếp là con người",
+          "start": 3755.67
+        },
+        {
+          "title": "Nguyên nhân cấu trúc nằm ở chi phí theo kịp một nền tảng đóng",
+          "start": 3816.19
+        },
+        {
+          "title": "Nguyên nhân kinh tế là commons được dùng nhiều hơn được nuôi",
+          "start": 3884.6
+        },
+        {
+          "title": "Mojang có góp phần giết PocketMine-MP không?",
+          "start": 3928.67
+        },
+        {
+          "title": "Không cần một “lệnh giết” để tạo ra kết quả giết chết",
+          "start": 3932.04
+        },
+        {
+          "title": "Giả thuyết Shoghi, Mojang và Realms nên được đọc thế nào?",
+          "start": 4035.38
+        },
+        {
+          "title": "Từ collateral damage tới partner-only access",
+          "start": 4094.18
+        },
+        {
+          "title": "Kết luận hợp lý nhất",
+          "start": 4144.14
+        },
+        {
+          "title": "PocketMine-MP đã chết chưa?",
+          "start": 4201.74
+        },
+        {
+          "title": "Một server 5.44.3 còn chạy được bao lâu?",
+          "start": 4292.1
+        },
+        {
+          "title": "Một fork mới cần nhiều hơn tên và logo",
+          "start": 4351.37
+        },
+        {
+          "title": "Di sản kỹ thuật và cộng đồng",
+          "start": 4399.55
+        },
+        {
+          "title": "Di sản của việc học bằng cách sửa plugin",
+          "start": 4492.55
+        },
+        {
+          "title": "Di sản của protocol như tri thức công cộng",
+          "start": 4535.79
+        },
+        {
+          "title": "Những gì Internet đã làm mất",
+          "start": 4584.62
+        },
+        {
+          "title": "Những gì nên được lưu ngay lúc này",
+          "start": 4654.38
+        },
+        {
+          "title": "Điều gì có thể xảy ra sau PMMP?",
+          "start": 4703.77
+        },
+        {
+          "title": "Một lịch sử không nên kết thúc bằng chữ “deprecated”",
+          "start": 4804.5
+        },
+        {
+          "title": "Nguồn và cách đối chiếu",
+          "start": 4873.83
+        }
+      ]
+    }
+  }
+}

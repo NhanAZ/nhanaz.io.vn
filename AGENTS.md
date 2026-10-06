@@ -105,6 +105,20 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Biểu đồ kỹ thuật nên dùng SVG trong `assets/images/` khi cần tải xuống hoặc tái sử dụng.
 - Mục lục bài viết dùng `.article-toc`, nằm trong `.article-rail`. Không làm rail quá chật, không thêm hiệu ứng nặng và không phá mobile layout.
 
+## Bản nghe của bài viết
+
+- Bài Việt dùng VieNeu-TTS v3 Turbo, preset Thái Sơn mà NhanAZ đã chọn. Bài Anh dùng Kokoro v1.0, preset Heart. Cấu hình và bảng cách đọc tên riêng nằm trong `scripts/article-audio.json`, hướng dẫn đầy đủ ở `docs/article-audio.md`.
+- Khi thêm hoặc sửa bài ở `posts/` và `en/posts/`, chạy `npm run audio` rồi `npm run audio:check` trước khi bàn giao. Lệnh tạo tự bỏ qua bản ghi còn đúng và dùng cache từng đoạn. Không hỏi lại việc tạo audio cho bài mới.
+- Trang bài mới phải nạp module `/assets/js/article-audio.js` với query version hiện hành. Player được tạo sau `.article-header`, nằm ngoài `.prose` để không phá mục lục và cơ chế giữ vị trí đọc giữa hai ngôn ngữ.
+- Audio lấy từ nội dung của đúng trang Việt hoặc Anh, không dịch tự động và không đọc bài Việt bằng giọng Anh. Đọc toàn bộ văn xuôi, heading, tên liên kết và bảng. Code block được thay bằng câu báo có mã minh họa trên trang, không đánh vần mã nguồn hoặc URL.
+- Không giới hạn số ký tự, số từ hoặc tổng thời lượng bài. Chia đoạn để mô hình đọc, ghép ra đĩa và chia file khoảng 15 phút. Player phải tự phát phần tiếp theo và tua được trên tổng thời gian. Không âm thầm cắt bỏ đoạn cuối.
+- Commit MP3 và `assets/audio/index.json` cùng nội dung bài khi người dùng yêu cầu commit. Không commit `outputs/`, WAV cache, môi trường Python hoặc model weights. Workflow `.github/workflows/article-audio.yml` tự dựng audio còn thiếu sau khi bài hoặc cấu hình đổi trên `main` và chỉ cho bot commit tài nguyên audio.
+- Khi sửa thuật toán trích nội dung hoặc cách đọc, tăng phiên bản cấu hình tạo audio và dựng lại bản ghi chịu ảnh hưởng. Hash ở Python và player phải khớp, kể cả sau khi TOC và code block đã được enhance.
+- Không đổi sang API trả phí, clone giọng người thật, dùng giọng thiết bị làm fallback hoặc thêm thao tác bắt người đọc đăng nhập. Chỉ dùng các preset đã có quyền sử dụng rõ ràng. Giữ nguồn và thông tin giấy phép trong tài liệu audio.
+- Khi đổi giọng, mô hình, tốc độ gốc hoặc bảng phát âm, nghe mẫu Việt và Anh có câu hỏi, số, tên riêng và thuật ngữ. Kiểm tra đầu, giữa, cuối của bài dài. Không dùng kiểm tra waveform để kết luận giọng đã nghe tự nhiên.
+- Khi sửa player, dùng `npm run serve` để thử bằng server có HTTP Range. Kiểm tra phát, tạm dừng, tua tiến lùi, chọn đề mục, đổi tốc độ, chuyển phần tự động, bàn phím, light mode và dark mode trên desktop lẫn mobile. Mục lục, URL hash và chuyển ngôn ngữ giữa bài phải tiếp tục hoạt động.
+- Chính sách riêng tư Việt và Anh phải mô tả audio tạo sẵn, nơi tạo và phân phối, tải file sau thao tác nghe hoặc tua, cùng việc không lưu lịch sử nghe. Nếu thêm lưu vị trí hoặc thống kê nghe sau này, cập nhật hai chính sách trong cùng thay đổi.
+
 ## Dark mode và màu giao diện
 
 - Dark mode dùng các token màu ở đầu `assets/css/site.css`. Khi thêm block, bài viết hoặc tính năng mới, ưu tiên dùng `var(--ink)`, `var(--paper)`, `var(--soft)`, `var(--muted)`, `var(--line)` và các token semantic sẵn có thay vì viết màu sáng tối riêng trong từng selector.
