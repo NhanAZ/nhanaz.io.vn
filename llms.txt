@@ -84,6 +84,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Hồ sơ gần mười bốn năm của PocketMine-MP từ PocketMine Realms, Shoghi, thời kỳ fork, PMMP, Poggit và các major API đến áp lực Bedrock, ngày repo archive năm 2026, lần kế nhiệm thất bại và lý do dktapps muốn cộng đồng tự fork thay vì chờ một người được chỉ định: https://nhanaz.io.vn/posts/pocketmine-mp-la-gi/
 - Bài kể hành trình Minecraft từ 2015 của NhanAZ, từ YouTube, MCPE Master, server list, staff, command block đến PocketMine-MP và Công nghệ thông tin: https://nhanaz.io.vn/posts/hanh-trinh-minecraft-tu-2015/
 - Bài viết gom những câu hỏi hơi quá khổ NhanAZ vẫn muốn hiểu trong một đời người, từ đạo đức, sự sống và ý nghĩa đến thời gian, lượng tử, hố đen và vũ trụ: https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/
+- Bài thơ “Gửi những người đang cười...” nhìn vào tiếng cười, những điều chưa nói và câu hỏi còn ở lại dưới những ngày bình yên: https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/
 - Bài chia sẻ một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng, tập trung vào hiểu đề, lý luận, liên hệ bản thân và trình bày rõ ràng - https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/
 - Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
 
@@ -95,6 +96,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Công nghệ thông tin
 - PocketMine-MP
 - Minecraft Bedrock
+- Văn học và thơ Việt Nam
 - Web cá nhân
 - Các tổ chức GitHub như NhanAZ-Plugins, NhanAZ-Data, NhanAZ-Tools, NhanAZ-Drops, NhanAZ-Web, pm-pl, PMMPVN, Pockgin và các ngăn lưu trữ chọn lọc khác
 - Connect Brandbook
@@ -146,6 +148,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 ## Main English pages
 
 - Personal essay on the right to life, capital punishment, and the limits of state power - https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/
+- English translation of the Vietnamese poem “Gửi những người đang cười...” - https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/
 
 - Home: https://nhanaz.io.vn/en/
 - About: https://nhanaz.io.vn/en/about/
@@ -184,6 +187,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - Cheap ChatGPT and Codex account markets, account factories, trials, payment routes, account pools, AI relays, 9Router, quota arbitrage, and credential risk
 - Academic achievements, Youth Union work, Students’ Association work, and volunteering
 - Moral philosophy, free will, relativity, quantum physics, black holes, spacetime, and questions about extraterrestrial life
+- Vietnamese literature and poetry
 - Study notes, Party-awareness course reflection papers, revolutionary ethics, and personal reflection
 
 ## External links

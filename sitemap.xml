@@ -4,7 +4,7 @@
     <loc>https://nhanaz.io.vn/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/" />
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/</loc>
@@ -16,7 +16,7 @@
     <loc>https://nhanaz.io.vn/blog/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/blog/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/blog/" />
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/blog/</loc>
@@ -100,7 +100,7 @@
     <loc>https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/</loc>
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/" />
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://nhanaz.io.vn/en/about/</loc>
@@ -239,5 +239,17 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/" />
     <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/" />
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/" />
+    <lastmod>2026-11-13</lastmod>
   </url>
 </urlset>

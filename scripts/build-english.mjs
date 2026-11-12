@@ -33,6 +33,7 @@ const pagePairs = [
     en: "/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/",
   },
   { vi: "/posts/pocketmine-mp-la-gi/", en: "/en/posts/what-is-pocketmine-mp/" },
+  { vi: "/posts/gui-nhung-nguoi-dang-cuoi/", en: "/en/posts/to-those-who-are-laughing/" },
   { vi: "/projects/", en: "/en/projects/" },
   { vi: "/privacy/", en: "/en/privacy/" },
   { vi: "/vibe-code/", en: "/en/vibe-code/" },

@@ -78,8 +78,16 @@ const SITE_SEARCH_INDEX_VI = [
     title: "Bài viết",
     type: "Kho lưu trữ",
     url: "/blog/",
-    excerpt: "Các ghi chép của NhanAZ về code, việc học, triết học, vật lý và đời thường.",
+    excerpt: "Các ghi chép của NhanAZ về code, việc học, triết học, vật lý, văn học và đời thường.",
     keywords: "blog nhật ký bài viết kiến thức triết học vật lý",
+  },
+  {
+    title: "Gửi những người đang cười...",
+    type: "Văn học - Thơ",
+    url: "/posts/gui-nhung-nguoi-dang-cuoi/",
+    date: "2026-11-13",
+    excerpt: "Một bài thơ nhìn vào những tiếng cười dưới những ngày bình yên và những điều người ta chưa nói thành lời.",
+    keywords: "Gửi những người đang cười thơ văn học thơ về tiếng cười hạnh phúc bình yên câu hỏi im lặng điều chưa nói",
   },
   {
     title: "Minecraft Bedrock đang giết những thứ từng nuôi nó lớn",
@@ -306,6 +314,14 @@ const SITE_SEARCH_INDEX_VI = [
 
 const SITE_SEARCH_INDEX_EN = [
   {
+    title: "To Those Who Are Laughing...",
+    type: "Literature - Poetry",
+    url: "/en/posts/to-those-who-are-laughing/",
+    date: "2026-11-13",
+    excerpt: "A poem about laughter beneath peaceful days, the things left unsaid, and a question that stays.",
+    keywords: "To Those Who Are Laughing poetry literature laughter happiness peaceful days silence unspoken question Vietnamese poem",
+  },
+  {
     title: "Someone deserves to die. Who gets to kill them?",
     type: "Philosophy - Law",
     url: "/en/posts/deserving-death-and-the-power-to-kill/",
@@ -380,7 +396,7 @@ const SITE_SEARCH_INDEX_EN = [
     title: "Writing",
     type: "Archive",
     url: "/en/blog/",
-    excerpt: "NhanAZ’s notes on code, learning, projects, philosophy, physics, and everyday life.",
+    excerpt: "NhanAZ’s notes on code, learning, projects, philosophy, physics, literature, poetry, and everyday life.",
     keywords: "blog journal writing knowledge notes philosophy physics",
   },
   {

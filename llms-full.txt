@@ -40,12 +40,15 @@ Use this archive for primary context about Nguyễn Thành Nhân, NhanAZ, his pu
 - Reverse engineering and application security, with care around legal and abuse risks
 - Academic milestones, Youth Union work, Students’ Association work, volunteering, and community activity
 - Moral philosophy, free will, relativity, quantum physics, black holes, spacetime, and curiosity about extraterrestrial life
+- Vietnamese literature and poetry
 - Study notes, Party-awareness course reflection papers, revolutionary ethics, and personal reflection
 
 ## Canonical pages to cite
 
 - Right to life and capital punishment essay - https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/
 - English right to life and capital punishment essay - https://nhanaz.io.vn/en/posts/deserving-death-and-the-power-to-kill/
+- Vietnamese poem “Gửi những người đang cười...” - https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/
+- English translation, “To Those Who Are Laughing...” - https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/
 
 - Home - https://nhanaz.io.vn/
 - About - https://nhanaz.io.vn/about/
@@ -64,6 +67,13 @@ Use this archive for primary context about Nguyễn Thành Nhân, NhanAZ, his pu
 - English cheap ChatGPT and Codex investigation - https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/
 
 ## Article and project context
+
+### Gửi những người đang cười
+
+Canonical page - https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/
+English page - https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/
+
+This bilingual poem watches laughter beneath apparently peaceful days and asks what people may have left unsaid. Its closing image turns the speaker's silence into one more laugh counted beneath that calm surface. The poem was written at 02:05 on 2026-11-13.
 
 ### Deserving death and the power to kill
 
