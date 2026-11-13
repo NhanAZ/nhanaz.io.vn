@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
 
-  <meta name="description" content="Bài viết của Nguyễn Thành Nhân, NhanAZ, về code, việc học, dự án cá nhân, triết học, vật lý, thơ và đời thường.">
+  <meta name="description" content="Nơi lưu những ghi chép kỹ thuật, chuyện cá nhân, bài viết từ dự án và thơ.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Nguyễn Thành Nhân">
   <meta property="og:title" content="Bài viết của Nguyễn Thành Nhân - NhanAZ">
-  <meta property="og:description" content="Code, việc học, dự án cá nhân, triết học, vật lý, thơ và vài suy nghĩ đáng giữ lại.">
+  <meta property="og:description" content="Nơi lưu những ghi chép kỹ thuật, chuyện cá nhân, bài viết từ dự án và thơ.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="vi_VN">
   <meta property="og:locale:alternate" content="en_US">
@@ -21,7 +21,7 @@
   <meta property="og:image:alt" content="nhanaz.io.vn">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bài viết của Nguyễn Thành Nhân - NhanAZ">
-  <meta name="twitter:description" content="Code, việc học, dự án cá nhân, triết học, vật lý, thơ và vài suy nghĩ đáng giữ lại.">
+  <meta name="twitter:description" content="Nơi lưu những ghi chép kỹ thuật, chuyện cá nhân, bài viết từ dự án và thơ.">
   <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/web-preview.png">
   <meta name="twitter:image:alt" content="nhanaz.io.vn">
   <link rel="canonical" href="https://nhanaz.io.vn/blog/">
@@ -33,7 +33,7 @@
   <link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="author" href="/about/">
+  <link rel="author" href="/posts/gioi-thieu/">
   <link rel="me" href="https://github.com/NhanAZ">
   <link rel="alternate" type="text/plain" title="LLMs context" href="/llms.txt">
   <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
@@ -54,7 +54,7 @@
   </script>
   <link rel="preload" href="/assets/fonts/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <script defer src="/assets/js/theme.js?v=20260718-01"></script>
-  <link rel="stylesheet" href="/assets/css/site.css?v=20261113-01">
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261113-03">
   <script>
     window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
   </script>
@@ -78,20 +78,13 @@
   <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
   <header class="site-header shell">
     <a class="brand" href="/" aria-label="nhanaz.io.vn - Trang chủ"><span class="brand-mark" aria-hidden="true">“</span><span>nhanaz.io.vn</span></a>
-    <nav class="site-nav" aria-label="Điều hướng chính">
-      <a href="/blog/" aria-current="page">Bài viết</a>
-      <a href="/projects/">Dự án</a>
-      <a href="/vibe-code/">Vibe-code</a>
-      <a href="/github/">GitHub</a>
-      <a href="/achievements/">Dấu mốc</a>
-      <a href="/about/">Giới thiệu</a>
-    </nav>
+    <nav class="site-nav" aria-label="Tùy chọn giao diện và ngôn ngữ"></nav>
   </header>
 
   <section class="site-search shell" aria-label="Tìm kiếm toàn trang">
     <form class="site-search-box" role="search" data-site-search-form>
       <label for="site-search-input">Tìm kiếm</label>
-      <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, dự án, vibe-code..." data-site-search>
+      <input id="site-search-input" type="search" autocomplete="off" placeholder="Tìm bài viết, chủ đề, từ khóa..." data-site-search>
       <button class="site-search-submit" type="submit" aria-label="Mở kết quả đầu tiên" data-site-search-submit disabled>→</button>
     </form>
     <div class="site-search-results" data-site-search-results hidden></div>
@@ -102,9 +95,21 @@
       <div><p class="section-index">Index - 01</p><h1>Bài viết</h1></div>
       <p>Ghi chú kỹ thuật đã kiểm chứng, nhật ký viết đúng như mình nhớ và vài câu hỏi mình vẫn chưa có đáp án.</p>
     </header>
-    <div class="archive-toolbar"><span>Tất cả - ưu tiên, rồi mới nhất</span><span>10 bài</span></div>
+    <div class="archive-toolbar"><span>Tất cả - ưu tiên, rồi mới nhất</span><span>14 bài</span></div>
     <section class="archive entries" aria-label="Danh sách bài viết" data-entry-priority-list>
-      <a class="entry" href="/posts/gui-nhung-nguoi-dang-cuoi/">
+            <a class="entry" data-priority="2" href="/posts/gioi-thieu/">
+        <time datetime="2026-11-13">13.11.2026</time><span class="entry-type">Đã ghim - Giới thiệu</span><strong>Giới thiệu</strong><span class="read-time">6 phút</span><span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="entry" data-priority="1" href="/posts/dau-moc/">
+        <time datetime="2026-11-13">13.11.2026</time><span class="entry-type">Đã ghim - Dấu mốc</span><strong>Dấu mốc</strong><span class="read-time">15 phút</span><span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="entry" href="/posts/connect-brandbook/">
+        <time datetime="2026-11-13">13.11.2026</time><span class="entry-type">Đồ án tốt nghiệp</span><strong>Connect Brandbook, một lần rẽ ngang sang thiết kế</strong><span class="read-time">2 phút</span><span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="entry" href="/posts/glyph/">
+        <time datetime="2026-06-30">30.06.2026</time><span class="entry-type">Dự án Minecraft</span><strong>glyph, một tool sinh ra vì sợ một trang wiki biến mất</strong><span class="read-time">5 phút</span><span class="entry-arrow" aria-hidden="true">↗</span>
+      </a>
+<a class="entry" href="/posts/gui-nhung-nguoi-dang-cuoi/">
         <time datetime="2026-11-13">13.11.2026</time>
         <span class="entry-type">Văn học - Thơ</span>
         <strong>Gửi những người đang cười...</strong>
@@ -178,9 +183,9 @@
   </main>
 
   <footer class="site-footer shell">
-    <div><p class="footer-title">Viết để nhớ.</p><a class="footer-email" href="https://github.com/NhanAZ">GitHub NhanAZ ↗</a></div>
-    <div class="footer-meta"><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
+    <div><p class="footer-title">Cất lại những điều mình đã học và làm.</p><a class="footer-email" href="mailto:itsnhanaz@gmail.com">Liên hệ ↗</a></div>
+    <div class="footer-meta"><a href="/privacy/">Riêng tư</a><a href="/developers/">Tài nguyên developer</a><a href="https://github.com/NhanAZ/nhanaz.io.vn">Mã nguồn ↗</a><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Lên đầu trang ↑</a></div>
   </footer>
-  <script src="/assets/js/site.js?v=20261113-01" defer></script>
+  <script src="/assets/js/site.js?v=20261113-03" defer></script>
 </body>
 </html>

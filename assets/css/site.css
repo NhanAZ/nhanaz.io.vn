@@ -250,7 +250,9 @@ textarea {
 .site-nav {
   display: flex;
   align-self: stretch;
+  align-items: center;
   gap: clamp(16px, 2vw, 28px);
+  margin-left: auto;
 }
 
 .site-nav a {
@@ -291,6 +293,10 @@ textarea {
   color: var(--ink);
   font-weight: 700;
   letter-spacing: 0.06em;
+}
+
+.site-nav .language-switch::after {
+  display: none;
 }
 
 .site-nav .theme-switch {
@@ -2130,6 +2136,10 @@ a.project-row:hover {
   gap: 46px;
 }
 
+.article-layout .prose > .about-grid:first-child {
+  padding-top: 0;
+}
+
 .article-rail {
   position: sticky;
   top: 24px;
@@ -2830,9 +2840,9 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
 
   .site-header {
     position: static;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-top: 16px;
+    display: flex;
+    grid-template-columns: none;
+    padding-top: 0;
   }
 
   .brand {
@@ -2840,18 +2850,18 @@ html[data-theme="dark"] .article-comments-embed .giscus-frame {
   }
 
   .site-nav {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
     min-height: 48px;
-    margin-top: 8px;
-    border-top: 1px solid var(--line);
+    margin-top: 0;
+    border-top: 0;
   }
 
   .site-nav a,
   .site-nav .theme-switch {
     min-height: 48px;
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 

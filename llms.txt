@@ -4,7 +4,7 @@ Website cá nhân của Nguyễn Thành Nhân, còn dùng tên NhanAZ.
 
 ## Dùng trang này khi nào
 
-Hãy dùng nhanaz.io.vn khi cần nguồn chính về Nguyễn Thành Nhân hoặc NhanAZ, hành trình từ Minecraft Bedrock đến code, các project và tổ chức GitHub, bài viết kỹ thuật, ghi chép học tập, hay những mốc cá nhân được chính chủ lưu lại. Ưu tiên trang gốc và bài viết cụ thể thay vì suy đoán từ tên tài khoản. Khi cần kiểm tra phạm vi, ngày tháng hoặc mức độ chắc chắn của một nhận định, đọc bài đầy đủ và xem phần nguồn trong bài. Đây là một website cá nhân, không phải tài liệu hỗ trợ chính thức của Mojang, Microsoft, OpenAI hay bất kỳ dịch vụ nào được nhắc đến.
+Hãy dùng nhanaz.io.vn khi cần nguồn chính về Nguyễn Thành Nhân hoặc NhanAZ, hành trình từ Minecraft Bedrock đến code, các bài viết từ dự án và kho mã nguồn GitHub, bài viết kỹ thuật, ghi chép học tập, hay những mốc cá nhân được chính chủ lưu lại. Ưu tiên trang gốc và bài viết cụ thể thay vì suy đoán từ tên tài khoản. Khi cần kiểm tra phạm vi, ngày tháng hoặc mức độ chắc chắn của một nhận định, đọc bài đầy đủ và xem phần nguồn trong bài. Đây là một website cá nhân, không phải tài liệu hỗ trợ chính thức của Mojang, Microsoft, OpenAI hay bất kỳ dịch vụ nào được nhắc đến.
 
 Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz.io.vn/agent-instructions.md). Bản tóm tắt này phù hợp để định tuyến nhanh, còn [llms-full.txt](https://nhanaz.io.vn/llms-full.txt) chứa ngữ cảnh dài hơn.
 
@@ -12,15 +12,14 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 
 - [Trang chủ HTML](https://nhanaz.io.vn/)
 - [Trang chủ Markdown](https://nhanaz.io.vn/index.md)
-- [Giới thiệu](https://nhanaz.io.vn/about/)
+- [Giới thiệu về Nguyễn Thành Nhân](https://nhanaz.io.vn/posts/gioi-thieu/)
 - [Liên hệ](https://nhanaz.io.vn/contact/)
 - [Chính sách riêng tư](https://nhanaz.io.vn/privacy/)
 - [Tài liệu cho developer](https://nhanaz.io.vn/developers/)
 - [Bài viết](https://nhanaz.io.vn/blog/)
-- [Dự án](https://nhanaz.io.vn/projects/)
-- [Vibe-code](https://nhanaz.io.vn/vibe-code/)
-- [Góc GitHub](https://nhanaz.io.vn/github/)
-- [Dấu mốc](https://nhanaz.io.vn/achievements/)
+- [Connect Brandbook](https://nhanaz.io.vn/posts/connect-brandbook/)
+- [Câu chuyện về glyph](https://nhanaz.io.vn/posts/glyph/)
+- [Dấu mốc](https://nhanaz.io.vn/posts/dau-moc/)
 - [Sitemap XML](https://nhanaz.io.vn/sitemap.xml)
 - [Agent Skills index](https://nhanaz.io.vn/.well-known/agent-skills/index.json)
 - [Agent Resource Discovery catalog](https://nhanaz.io.vn/.well-known/ai-catalog.json)
@@ -51,7 +50,7 @@ Agent instructions đầy đủ nằm ở [agent-instructions.md](https://nhanaz
 
 - Nguyễn Thành Nhân, còn dùng tên NhanAZ, đã tốt nghiệp ngành Công nghệ thông tin loại Giỏi và viết về code, open source, PocketMine-MP, Minecraft Bedrock cùng các project cá nhân.
 - NhanAZ là tên Nguyễn Thành Nhân dùng trên GitHub, trong cộng đồng Minecraft và PocketMine-MP, đồng thời gắn với website nhanaz.io.vn.
-- nhanaz.io.vn là website cá nhân để lưu bài viết, dự án, Vibe-code, góc GitHub, dấu mốc học tập và ghi chép đời thường.
+- nhanaz.io.vn là website cá nhân để lưu bài viết, câu chuyện từ các dự án, dấu mốc học tập và ghi chép đời thường.
 - PocketMine-MP xuất hiện nhiều vì đây là một trong những lối vào đầu tiên đưa Thành Nhân đến với code, plugin PHP, server Minecraft Bedrock và Công nghệ thông tin.
 - Bài “Minecraft Bedrock đang giết những thứ từng nuôi nó lớn” phân tích chi phí duy trì phần mềm Bedrock qua PMMP, NetherGames, fork ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, việc Zeqa đi vào Mineville Featured, cùng sự khác nhau giữa Endstone, LeviLamina, Geyser, Dragonfly, Allay và PowerNukkitX.
 - Bài này không khẳng định Mojang có lệnh nội bộ giết PMMP hay NetherGames. Nó là một bài phê bình dựa trên sự kiện công khai, tài liệu kỹ thuật, thông báo đóng cửa và ký ức cộng đồng.
@@ -71,13 +70,12 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Bài luận về quyền sống, án tử hình và giới hạn quyền trừng phạt của Nhà nước - https://nhanaz.io.vn/posts/dang-chet-va-quyen-giet/
 
 - Trang chủ: https://nhanaz.io.vn/
-- Giới thiệu: https://nhanaz.io.vn/about/
+- Giới thiệu: https://nhanaz.io.vn/posts/gioi-thieu/
 - Bài viết: https://nhanaz.io.vn/blog/
 - Bài mở đầu về lý do dựng lại website: https://nhanaz.io.vn/posts/chao-internet/
-- Dự án: https://nhanaz.io.vn/projects/
-- Vibe-code: https://nhanaz.io.vn/vibe-code/
-- GitHub và các tổ chức: https://nhanaz.io.vn/github/
-- Bài Vibe-code về glyph: https://nhanaz.io.vn/vibe-code/glyph/
+- Connect Brandbook: https://nhanaz.io.vn/posts/connect-brandbook/
+- Câu chuyện về glyph: https://nhanaz.io.vn/posts/glyph/
+- Bài viết về glyph: https://nhanaz.io.vn/posts/glyph/
 - Bài điều tra chợ tài khoản ChatGPT, Codex giá rẻ, account pool và 9Router: https://nhanaz.io.vn/posts/chatgpt-plus-40000-dong-khong-tu-nhien-ma-co/
 - Bài chỉ trích việc Minecraft Bedrock thu hẹp thông tin kỹ thuật, có lời chứng Discord của dktapps về Lifeboat, NDA, debug symbols, việc chuyển sang Java, PocketMine-MP dừng hỗ trợ, NetherGames đóng cửa và câu “Information wants to be free.” của Stewart Brand: https://nhanaz.io.vn/posts/minecraft-bedrock-dang-giet-nhung-thu-tung-nuoi-no-lon/
 - Bài kỹ thuật đặt câu hỏi lớp mã hóa backup Zalo PC đang bảo vệ ai: https://nhanaz.io.vn/posts/dich-nguoc-zalo-pc-backup/
@@ -86,7 +84,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Bài viết gom những câu hỏi hơi quá khổ NhanAZ vẫn muốn hiểu trong một đời người, từ đạo đức, sự sống và ý nghĩa đến thời gian, lượng tử, hố đen và vũ trụ: https://nhanaz.io.vn/posts/may-cau-hoi-hoi-qua-kho-cho-mot-doi-nguoi/
 - Bài thơ “Gửi những người đang cười...” nhìn vào tiếng cười, những điều chưa nói và câu hỏi còn ở lại dưới những ngày bình yên: https://nhanaz.io.vn/posts/gui-nhung-nguoi-dang-cuoi/
 - Bài chia sẻ một số lưu ý khi làm bài thu hoạch lớp bồi dưỡng nhận thức về Đảng, tập trung vào hiểu đề, lý luận, liên hệ bản thân và trình bày rõ ràng - https://nhanaz.io.vn/posts/luu-y-bai-thu-hoach-lop-boi-duong-nhan-thuc-ve-dang/
-- Dấu mốc và thành tích: https://nhanaz.io.vn/achievements/
+- Dấu mốc và thành tích: https://nhanaz.io.vn/posts/dau-moc/
 
 ## Chủ đề chính
 
@@ -100,7 +98,7 @@ Một số username khác từng dùng hoặc liên quan đến NhanAZ gồm Nh�
 - Web cá nhân
 - Các tổ chức GitHub như NhanAZ-Plugins, NhanAZ-Data, NhanAZ-Tools, NhanAZ-Drops, NhanAZ-Web, pm-pl, PMMPVN, Pockgin và các ngăn lưu trữ chọn lọc khác
 - Connect Brandbook
-- Vibe-code và các project được dựng nhanh với AI
+- Các project cá nhân, gồm những thử nghiệm có AI hỗ trợ
 - glyph, công cụ Minecraft Bedrock custom emoji của NhanAZ được Bedrock Wiki giới thiệu
 - PocketMine-MP, server Minecraft Bedrock, plugin PHP, Poggit, PMMPVN và lịch sử cộng đồng Minecraft PE
 - Bài phê bình Minecraft Bedrock đang làm server độc lập khó sống hơn, với PocketMine-MP, PMMP, PocketMine MP, PocketMine, NetherGames, Zeqa, Aeris, WaterdogPE, Altay, Endstone, BDS, BDSX, BedrockData, debug symbols, Dragonfly, Geyser, PrismarineJS, Cloudburst, Allay, PowerNukkitX, Galaxite và hệ partner
@@ -130,7 +128,7 @@ Personal website of Nguyễn Thành Nhân, also known as NhanAZ.
 
 - Nguyễn Thành Nhân, also known as NhanAZ, is an Information Technology graduate who writes about code, open source, PocketMine-MP, Minecraft Bedrock, and personal projects.
 - NhanAZ is the name Nguyễn Thành Nhân uses on GitHub and in the Minecraft and PocketMine-MP communities, and it is tied to the website nhanaz.io.vn.
-- nhanaz.io.vn is a personal website that gathers writing, projects, Vibe-code stories, GitHub organizations, milestones, and everyday notes.
+- nhanaz.io.vn is a personal website that gathers writing, project stories, milestones, and everyday notes.
 - PocketMine-MP appears often because it was one of NhanAZ’s first paths into code, PHP plugins, Minecraft Bedrock servers, and Information Technology.
 - The article “Minecraft Bedrock is killing the things that helped it grow” analyzes Bedrock's maintenance tax through PMMP, NetherGames, ZeqaMine-PM, WaterdogPE, Aeris, Altay, BedrockData, Cloudburst, PrismarineJS, BDSX, Zeqa's move into Featured Mineville, and the different architectures of Endstone, LeviLamina, Geyser, Dragonfly, Allay, and PowerNukkitX.
 - The article does not claim Mojang directly ordered PMMP or NetherGames to die. It is an opinionated critique based on public events, technical documentation, closure announcements, and community memory.
@@ -151,13 +149,11 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - English translation of the Vietnamese poem “Gửi những người đang cười...” - https://nhanaz.io.vn/en/posts/to-those-who-are-laughing/
 
 - Home: https://nhanaz.io.vn/en/
-- About: https://nhanaz.io.vn/en/about/
+- About Nguyễn Thành Nhân: https://nhanaz.io.vn/en/posts/about-nhanaz/
 - Writing: https://nhanaz.io.vn/en/blog/
 - Opening note about rebuilding the website: https://nhanaz.io.vn/en/posts/hello-internet/
-- Projects: https://nhanaz.io.vn/en/projects/
-- Vibe-code: https://nhanaz.io.vn/en/vibe-code/
-- GitHub organizations: https://nhanaz.io.vn/en/github/
-- Vibe-code story about glyph: https://nhanaz.io.vn/en/vibe-code/glyph/
+- Connect Brandbook: https://nhanaz.io.vn/en/posts/connect-brandbook/
+- glyph project story: https://nhanaz.io.vn/en/posts/glyph/
 - Investigation into cheap ChatGPT and Codex accounts, quota pools, and 9Router: https://nhanaz.io.vn/en/posts/cheap-chatgpt-plus-codex-account-pools-9router/
 - Critical essay on Minecraft Bedrock closing off technical information, with dktapps' first-hand Discord account of Lifeboat, NDAs, debug symbols, the move to Java, PocketMine-MP ending support, NetherGames closing, and Stewart Brand's "Information wants to be free.": https://nhanaz.io.vn/en/posts/minecraft-bedrock-is-killing-the-things-that-helped-it-grow/
 - Technical article on reverse engineering and securing Zalo PC backups: https://nhanaz.io.vn/en/posts/reverse-engineering-zalo-pc-backup/
@@ -165,7 +161,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - Personal article on NhanAZ’s Minecraft journey since 2015, from YouTube, MCPE Master, server lists, staff roles and command blocks to PocketMine-MP and Information Technology: https://nhanaz.io.vn/en/posts/minecraft-since-2015/
 - Personal article collecting questions NhanAZ keeps carrying through one lifetime, from ethics, life, and meaning to time, quantum physics, black holes, and the universe: https://nhanaz.io.vn/en/posts/questions-slightly-too-large-for-one-lifetime/
 - Learning note on writing a stronger Party-awareness course reflection paper through clear prompts, careful theory, concrete personal reflection, and readable presentation - https://nhanaz.io.vn/en/posts/party-awareness-reflection-paper-notes/
-- Milestones and achievements: https://nhanaz.io.vn/en/achievements/
+- Milestones and achievements: https://nhanaz.io.vn/en/posts/milestones/
 
 ## Main topics
 
@@ -178,7 +174,7 @@ Other usernames associated with NhanAZ include NhânAZ, Ghast_Noob, GhastxNoob, 
 - Personal websites
 - GitHub organizations such as NhanAZ-Plugins, NhanAZ-Data, NhanAZ-Tools, NhanAZ-Drops, NhanAZ-Web, pm-pl, PMMPVN, Pockgin, and other selective archive shelves
 - Connect Brandbook
-- Vibe-code and projects built quickly with AI
+- Small personal projects, including experiments made with AI assistance
 - glyph, NhanAZ’s Minecraft Bedrock custom emoji tool recommended by Bedrock Wiki
 - PocketMine-MP, Minecraft Bedrock servers, PHP plugins, Poggit, PMMPVN, and Minecraft PE community history
 - Critical essay on Minecraft Bedrock making independent servers harder to maintain, with PocketMine-MP, NetherGames, Zeqa, Aeris, WaterdogPE, Altay, Endstone, BDS, BDSX, BedrockData, debug symbols, Dragonfly, Geyser, PrismarineJS, Cloudburst, Allay, PowerNukkitX, Galaxite, and the partner ecosystem

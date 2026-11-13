@@ -2,7 +2,7 @@
 
 This scoped file covers identity and contact context for the personal archive. It is read-only and should be used with the canonical pages below.
 
-- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/about/)
+- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/posts/gioi-thieu/)
 - [Contact](https://nhanaz.io.vn/contact/)
 - [Privacy notice](https://nhanaz.io.vn/privacy/)
 - [Site identity graph](https://nhanaz.io.vn/entity.json)

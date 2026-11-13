@@ -38,7 +38,11 @@ Do not treat this personal site as a support channel, a legal opinion, a securit
 
 ## Public routes
 
-- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/about/)
+- [Writing index](https://nhanaz.io.vn/blog/)
+- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/posts/gioi-thieu/)
+- [Personal milestones](https://nhanaz.io.vn/posts/dau-moc/)
+- [Connect Brandbook](https://nhanaz.io.vn/posts/connect-brandbook/)
+- [glyph project story](https://nhanaz.io.vn/posts/glyph/)
 - [Contact](https://nhanaz.io.vn/contact/)
 - [Privacy](https://nhanaz.io.vn/privacy/)
 - [GitHub profile](https://github.com/NhanAZ)

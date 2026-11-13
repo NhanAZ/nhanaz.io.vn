@@ -42,7 +42,8 @@ const publicPaths = [
   "sandbox.json",
   "sitemap.xml",
   "schema-map.xml",
-  "vibe-code",
+  "vibe",
+  "vibe-code", // Legacy paths serve the noindex redirects.
   ".well-known",
 ];
 

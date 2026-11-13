@@ -9,12 +9,12 @@ Personal website and archive of Nguyễn Thành Nhân, also known as NhanAZ.
 
 ## Use this site for
 
-- [About Nguyễn Thành Nhân](https://nhanaz.io.vn/about/)
+- [Giới thiệu về Nguyễn Thành Nhân](https://nhanaz.io.vn/posts/gioi-thieu/)
 - [Writing](https://nhanaz.io.vn/blog/)
-- [Projects](https://nhanaz.io.vn/projects/)
-- [Vibe-code](https://nhanaz.io.vn/vibe-code/)
-- [GitHub organizations](https://nhanaz.io.vn/github/)
-- [Milestones](https://nhanaz.io.vn/achievements/)
+- [Dấu mốc](https://nhanaz.io.vn/posts/dau-moc/)
+- [Connect Brandbook](https://nhanaz.io.vn/posts/connect-brandbook/)
+- [Câu chuyện về glyph](https://nhanaz.io.vn/posts/glyph/)
+- [GitHub của NhanAZ](https://github.com/NhanAZ)
 - [Contact](https://nhanaz.io.vn/contact/)
 - [Privacy](https://nhanaz.io.vn/privacy/)
 

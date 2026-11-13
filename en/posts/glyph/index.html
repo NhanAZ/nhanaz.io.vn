@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+
+  <meta name="description" content="The story of glyph, a Minecraft Bedrock custom emoji tool built for a personal need and later recommended by Bedrock Wiki.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nguyễn Thành Nhân">
+  <meta name="keywords" content="NhanAZ glyph, Minecraft Bedrock, custom emoji, glyph atlas, Bedrock Wiki, PocketMine-MP, personal project">
+  <meta property="og:title" content="glyph, a tool born from the fear that a wiki might disappear">
+  <meta property="og:description" content="The story of glyph, a Minecraft Bedrock custom emoji tool built for a personal need and later recommended by Bedrock Wiki.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
+  <meta property="og:url" content="https://nhanaz.io.vn/en/posts/glyph/">
+  <meta property="og:site_name" content="nhanaz.io.vn">
+  <meta property="og:image" content="https://nhanaz.io.vn/assets/images/web-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="nhanaz.io.vn">
+  <meta property="article:published_time" content="2026-06-30">
+  <meta property="article:modified_time" content="2026-11-13">
+  <meta property="article:author" content="Nguyễn Thành Nhân">
+  <meta property="article:section" content="Minecraft project">
+  <meta property="article:tag" content="Minecraft Bedrock">
+  <meta property="article:tag" content="Custom emoji">
+  <meta property="article:tag" content="Personal project">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="glyph, a tool born from the fear that a wiki might disappear">
+  <meta name="twitter:description" content="The story of glyph, a Minecraft Bedrock custom emoji tool built for a personal need and later recommended by Bedrock Wiki.">
+  <meta name="twitter:image" content="https://nhanaz.io.vn/assets/images/web-preview.png">
+  <meta name="twitter:image:alt" content="nhanaz.io.vn">
+  <link rel="canonical" href="https://nhanaz.io.vn/en/posts/glyph/">
+  <link rel="alternate" hreflang="vi" href="https://nhanaz.io.vn/posts/glyph/">
+  <link rel="alternate" hreflang="en" href="https://nhanaz.io.vn/en/posts/glyph/">
+  <link rel="alternate" hreflang="x-default" href="https://nhanaz.io.vn/posts/glyph/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="author" href="/en/posts/about-nhanaz/">
+  <link rel="me" href="https://github.com/NhanAZ">
+  <link rel="alternate" type="text/plain" title="LLMs context" href="/llms.txt">
+  <link rel="alternate" type="text/plain" title="Full AI context" href="/llms-full.txt">
+  <link rel="alternate" type="application/ld+json" title="Entity graph" href="/entity.json">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let theme = null;
+      try {
+        const stored = window.localStorage.getItem("nhanaz-color-theme");
+        if (stored === "light" || stored === "dark") theme = stored;
+      } catch {}
+      if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#11110f" : "#ffffff");
+    })();
+  </script>
+  <link rel="preload" href="/assets/fonts/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="/assets/js/theme.js?v=20260718-01"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=20261113-03">
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "https://nhanaz.io.vn/en/posts/glyph/#post",
+      "mainEntityOfPage": "https://nhanaz.io.vn/en/posts/glyph/",
+      "headline": "glyph, a tool born from the fear that a wiki might disappear",
+      "description": "The story of glyph, a Minecraft Bedrock custom emoji tool built for a personal need and later recommended by Bedrock Wiki.",
+      "datePublished": "2026-06-30",
+      "dateModified": "2026-11-13",
+      "inLanguage": "en",
+      "articleSection": [
+        "Minecraft Bedrock"
+      ],
+      "keywords": [
+        "glyph",
+        "Minecraft Bedrock",
+        "custom emoji",
+        "glyph atlas",
+        "Bedrock Wiki"
+      ],
+      "image": [
+        "https://nhanaz.io.vn/assets/images/web-preview-16x9.png",
+        "https://nhanaz.io.vn/assets/images/web-preview-4x3.png",
+        "https://nhanaz.io.vn/assets/images/web-preview-1x1.png"
+      ],
+      "author": {
+        "@id": "https://nhanaz.io.vn/#person"
+      },
+      "publisher": {
+        "@id": "https://nhanaz.io.vn/#person"
+      },
+      "mentions": [
+        "https://github.com/NhanAZ/glyph",
+        "https://nhanaz.github.io/glyph/",
+        "https://wiki.bedrock.dev/text/custom-emojis"
+      ],
+      "about": [
+        "Minecraft Bedrock",
+        "Custom emoji",
+        "Glyph atlas"
+      ]
+    }
+  </script>
+  <title>glyph, a tool born from the fear that a wiki might disappear - Nguyễn Thành Nhân - NhanAZ</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="/en/" aria-label="nhanaz.io.vn - Home"><span class="brand-mark" aria-hidden="true">“</span><span>nhanaz.io.vn</span></a>
+    <nav class="site-nav" aria-label="Utility controls"></nav>
+  </header>
+
+  <section class="site-search shell" aria-label="Site-wide search">
+    <form class="site-search-box" role="search" data-site-search-form>
+      <label for="site-search-input">Search</label>
+      <input id="site-search-input" type="search" autocomplete="off" placeholder="Search writing and topics..." data-site-search>
+      <button class="site-search-submit" type="submit" aria-label="Open first result" data-site-search-submit disabled>→</button>
+    </form>
+    <div class="site-search-results" data-site-search-results hidden></div>
+  </section>
+
+  <main id="main" class="shell">
+    <article>
+      <header class="article-header">
+        <div class="article-meta">
+          <span>Minecraft project</span>
+          <ul>
+            <li>30.06.2026</li>
+            <li>Minecraft Bedrock</li>
+            <li>5 min read</li>
+          </ul>
+        </div>
+        <div class="article-title">
+          <h1>glyph, a tool born from the fear that a wiki might disappear.</h1>
+          <p>Some projects begin with a very small worry. With glyph, it was the thought that if a familiar guide stopped working one day, I would still have a tool of my own to use.</p>
+        </div>
+      </header>
+
+      <div class="article-layout">
+        <aside class="article-rail"><a class="text-link" href="/en/blog/">← All writing</a></aside>
+        <div class="prose">
+          <p><a class="text-link" href="https://github.com/NhanAZ/glyph">glyph</a> is one of the projects I consider most successful, at least within the part of the Minecraft Bedrock community I have reached. It did not begin as a big product. It began with one very specific personal need.</p>
+          <p>I used to keep the Bedrock Wiki Custom Emojis guide close at hand. It explains how glyph atlases can be used to add custom emoji to Minecraft Bedrock. I worried that the wiki or its converter might stop working someday, so I made my own version to be safe. That was the whole idea, and then I started building a tool.</p>
+
+          <h2>The custom emoji problem in Bedrock</h2>
+          <p>In Minecraft Bedrock, custom emoji textures usually live in files such as <code>glyph_E0.png</code> and <code>glyph_E1.png</code>. Each file is a glyph grid, and every cell maps to a character in the private-use range. To put an emoji in the game, a resource-pack creator needs to know which cell it occupies and copy the matching character.</p>
+          <p>It does not sound too difficult, but it is easy to get lost while doing it. One wrong prefix, row, column, or character and the game displays the wrong thing. For people building servers, packs, or add-ons, a small tool that can inspect an atlas, convert between hex and characters, and copy them quickly saves a surprising amount of time.</p>
+
+          <h2>What glyph does</h2>
+          <p>The repository describes glyph as a static, client-side toolkit for creating and editing 16x16 Minecraft glyph atlases. There is no backend. Everything happens in the user’s browser.</p>
+          <ul>
+            <li>Generate a 256-character grid from a hex prefix such as <code>E0</code>.</li>
+            <li>Open a template, an empty atlas, or an example atlas.</li>
+            <li>Upload a <code>glyph_XX.png</code> file to inspect each cell, clear it, replace it, copy it, or download it separately.</li>
+            <li>Convert between hexadecimal code points and actual characters.</li>
+            <li>Export the atlas, character rows, reference text, font JSON, and metadata JSON.</li>
+            <li>Replace a glyph with a Minecraft texture bundled in the tool.</li>
+          </ul>
+          <p>What I like about this project is that it does not try to grow beyond the need. It stays in its lane - a small tool for a small problem, one that happens surprisingly often when people work with custom emoji.</p>
+
+          <h2>From a personal tool to Bedrock Wiki</h2>
+          <p>The best part came later, when Bedrock Wiki’s developers found glyph and added it to the Custom Emojis guide. In the section about getting characters for in-game emoji, the wiki recommends the Glyph Web Tool by @NhanAZ alongside another Unicode lookup site.</p>
+          <p>So the tool I made because I feared the wiki might disappear ended up back on that very wiki as a recommended link. From then on, glyph was no longer something I kept just for myself. Minecraft Bedrock creators around the world could come across it naturally while reading the documentation.</p>
+
+          <h2>A detour through PocketMine-MP</h2>
+          <p>Beyond Bedrock Wiki, glyph was also added to a useful-links list maintained by the PocketMine-MP community on Discord. It was not a grand launch. It was more like a tool proving useful enough to be picked up, placed where it belonged, and found by whoever needed it.</p>
+          <p>I prefer being found that way. No loud promotion. A small tool sitting in the useful-links list of the community that actually needs it is already enough for me.</p>
+
+          <h2>A small project that went further than expected</h2>
+          <p>glyph started with a real need. I kept the scope small enough to begin right away, made the first version for myself, then refined it until other people could use it too.</p>
+          <p>As more people found it, the tool had to follow real needs. Export options, metadata, font JSON, a texture picker, and the script that pulls textures from Mojang’s bedrock-samples all helped it grow beyond an experiment into something worth maintaining.</p>
+
+          <h2>Links</h2>
+          <ul>
+            <li><a class="text-link" href="https://github.com/NhanAZ/glyph">Source code on GitHub</a></li>
+            <li><a class="text-link" href="https://nhanaz.github.io/glyph/">Live version on GitHub Pages</a></li>
+            <li><a class="text-link" href="https://wiki.bedrock.dev/text/custom-emojis">Bedrock Wiki’s Custom Emojis guide</a></li>
+          </ul>
+
+          <p class="article-end">- Nguyễn Thành Nhân - 30.06.2026</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer shell">
+    <div><p class="footer-title">Keeping what I learn and make.</p><a class="footer-email" href="mailto:itsnhanaz@gmail.com">Get in touch ↗</a></div>
+    <div class="footer-meta"><a href="/en/privacy/">Privacy</a><a href="/en/developers/">Developer resources</a><a href="https://github.com/NhanAZ/nhanaz.io.vn">Source repo ↗</a><span>© <span data-year>2026</span> NhanAZ</span><span>Set in Space Grotesk</span><a href="#main">Back to top ↑</a></div>
+  </footer>
+  <script src="/assets/js/site.js?v=20261113-03" defer></script>
+</body>
+</html>

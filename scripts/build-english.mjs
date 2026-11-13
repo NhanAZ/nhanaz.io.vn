@@ -10,12 +10,13 @@ const baseUrl = "https://nhanaz.io.vn";
 const pagePairs = [
   { vi: "/", en: "/en/" },
   { vi: "/404.html", en: "/en/404.html" },
-  { vi: "/about/", en: "/en/about/" },
   { vi: "/contact/", en: "/en/contact/" },
   { vi: "/developers/", en: "/en/developers/" },
-  { vi: "/achievements/", en: "/en/achievements/" },
   { vi: "/blog/", en: "/en/blog/" },
-  { vi: "/github/", en: "/en/github/" },
+  { vi: "/posts/gioi-thieu/", en: "/en/posts/about-nhanaz/" },
+  { vi: "/posts/dau-moc/", en: "/en/posts/milestones/" },
+  { vi: "/posts/connect-brandbook/", en: "/en/posts/connect-brandbook/" },
+  { vi: "/posts/glyph/", en: "/en/posts/glyph/" },
   { vi: "/posts/dang-chet-va-quyen-giet/", en: "/en/posts/deserving-death-and-the-power-to-kill/" },
   { vi: "/posts/chao-internet/", en: "/en/posts/hello-internet/" },
   { vi: "/posts/dich-nguoc-zalo-pc-backup/", en: "/en/posts/reverse-engineering-zalo-pc-backup/" },
@@ -34,10 +35,7 @@ const pagePairs = [
   },
   { vi: "/posts/pocketmine-mp-la-gi/", en: "/en/posts/what-is-pocketmine-mp/" },
   { vi: "/posts/gui-nhung-nguoi-dang-cuoi/", en: "/en/posts/to-those-who-are-laughing/" },
-  { vi: "/projects/", en: "/en/projects/" },
   { vi: "/privacy/", en: "/en/privacy/" },
-  { vi: "/vibe-code/", en: "/en/vibe-code/" },
-  { vi: "/vibe-code/glyph/", en: "/en/vibe-code/glyph/" },
 ];
 
 const routeToFile = (route) => {

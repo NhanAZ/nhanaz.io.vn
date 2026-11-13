@@ -42,11 +42,12 @@ Tài liệu này là ghi chú vận hành cho agent khi sửa project `nhanaz.io
 - Trang chủ ở `index.html`.
 - Bài viết tiếng Việt ở `posts/<slug>/index.html`.
 - Blog index ở `blog/index.html`.
-- Dự án ở `projects/index.html`.
-- Vibe-code ở `vibe-code/index.html` và từng project ở `vibe-code/<slug>/index.html`.
-- Góc GitHub ở `github/index.html`, dùng để mô tả các tổ chức GitHub liên quan đến NhanAZ.
-- Dấu mốc và thành tích ở `achievements/index.html`.
-- Giới thiệu ở `about/index.html`.
+- Các câu chuyện về dự án nằm trong bài viết, gồm `posts/connect-brandbook/index.html` và `posts/glyph/index.html`.
+- Bài dấu mốc nằm ở `posts/dau-moc/index.html`, bài giới thiệu nằm ở `posts/gioi-thieu/index.html`.
+- Các bản tiếng Anh tương ứng nằm trong `en/posts/`, với slug tiếng Anh rõ nghĩa.
+- Các URL cũ `/projects/`, `/vibe/`, `/github/`, `/achievements/` và `/about/` chỉ phục vụ chuyển hướng `noindex`. Không đưa chúng vào sitemap hoặc menu. Trang GitHub cũ chuyển về trang chủ, không chuyển dữ liệu thành bài viết.
+- Blog ghim bài Giới thiệu và Dấu mốc ở đầu danh sách.
+- Header chỉ có logo, nút giao diện sáng/tối và liên kết đổi ngôn ngữ. Footer dùng chung một cấu trúc trên mọi trang tiếng Việt và một cấu trúc tương ứng trên mọi trang tiếng Anh.
 - Bản tiếng Anh nằm trong thư mục `en/` và được biên tập thủ công song song với bản Việt. `scripts/build-english.mjs` chỉ kiểm tra cặp trang, canonical và hreflang, không dịch hoặc ghi đè file HTML.
 - Slug của bài tiếng Anh trong `en/posts/` phải được viết bằng tiếng Anh rõ nghĩa, không dùng lại slug tiếng Việt chỉ để hai thư mục trông giống nhau.
 - Khi đổi slug đã public, giữ URL cũ bằng một trang chuyển hướng `noindex`, đặt canonical về URL mới, bảo toàn query và hash bằng JavaScript, đồng thời bỏ URL cũ khỏi sitemap và cập nhật toàn bộ link nội bộ, hreflang, search index cùng nguồn máy đọc.
